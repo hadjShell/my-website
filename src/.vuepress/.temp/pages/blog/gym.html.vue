@@ -1,18 +1,121 @@
-<template><div><h2 id="technique" tabindex="-1"><a class="header-anchor" href="#technique"><span>Technique</span></a></h2>
+<template><div><h2 id="📝-plan" tabindex="-1"><a class="header-anchor" href="#📝-plan"><span>📝 Plan</span></a></h2>
+<div class="hint-container important">
+<p class="hint-container-title">Important</p>
+<p><strong>三分化</strong></p>
+</div>
+<h3 id="循环一" tabindex="-1"><a class="header-anchor" href="#循环一"><span>循环一</span></a></h3>
+<hr>
+<h4 id="推" tabindex="-1"><a class="header-anchor" href="#推"><span>推</span></a></h4>
+<ul>
+<li>蝴蝶机夹胸</li>
+<li>杠铃平板卧推</li>
+<li>哑铃上斜卧推</li>
+<li>哑铃推肩</li>
+<li>龙门架夹胸</li>
+<li>单臂绳索下拉</li>
+<li>碎颅者</li>
+<li>哑铃飞鸟</li>
+</ul>
+<h4 id="拉" tabindex="-1"><a class="header-anchor" href="#拉"><span>拉</span></a></h4>
+<ul>
+<li>俯身杠铃划船</li>
+<li>宽距高位下拉</li>
+<li>中距对握高位下拉</li>
+<li>坐姿中距划船</li>
+<li>牧师凳弯举</li>
+<li>正手杠铃弯举</li>
+<li>反向绳索飞鸟</li>
+</ul>
+<h4 id="腿" tabindex="-1"><a class="header-anchor" href="#腿"><span>腿</span></a></h4>
+<ul>
+<li>腿屈伸</li>
+<li>深蹲</li>
+<li>保加利亚分腿蹲</li>
+<li>腿举</li>
+</ul>
+<h3 id="循环二" tabindex="-1"><a class="header-anchor" href="#循环二"><span>循环二</span></a></h3>
+<hr>
+<h4 id="推-1" tabindex="-1"><a class="header-anchor" href="#推-1"><span>推</span></a></h4>
+<ul>
+<li>双杠臂屈伸</li>
+<li>杠铃上斜卧推</li>
+<li>哑铃平板卧推</li>
+<li>哑铃推肩</li>
+<li>单臂绳索下拉</li>
+<li>碎颅者</li>
+<li>哑铃飞鸟</li>
+</ul>
+<h4 id="拉-1" tabindex="-1"><a class="header-anchor" href="#拉-1"><span>拉</span></a></h4>
+<ul>
+<li>反手高位下拉</li>
+<li>坐姿窄距划船</li>
+<li>单边绳索下拉</li>
+<li>直臂下压</li>
+<li>牧师凳弯举</li>
+<li>正手杠铃弯举</li>
+<li>反向绳索飞鸟</li>
+</ul>
+<h4 id="腿-1" tabindex="-1"><a class="header-anchor" href="#腿-1"><span>腿</span></a></h4>
+<ul>
+<li>硬拉</li>
+<li>反向腿屈伸</li>
+<li>腿内收</li>
+<li>提踵</li>
+</ul>
+<h2 id="⛓️-technique" tabindex="-1"><a class="header-anchor" href="#⛓️-technique"><span>⛓️ Technique</span></a></h2>
 <h3 id="chest" tabindex="-1"><a class="header-anchor" href="#chest"><span>Chest</span></a></h3>
+<hr>
+<div class="hint-container tip">
+<p class="hint-container-title">Tips</p>
+<p>推类动作要注意桡侧虎口发力</p>
+</div>
+<h4 id="上斜卧推" tabindex="-1"><a class="header-anchor" href="#上斜卧推"><span>上斜卧推</span></a></h4>
+<ul>
+<li>针对上胸</li>
+<li>哑铃略微内扣</li>
+<li>压肋，腰不要反弓，不要翘头</li>
+</ul>
+<h4 id="蝴蝶机夹胸" tabindex="-1"><a class="header-anchor" href="#蝴蝶机夹胸"><span>蝴蝶机夹胸</span></a></h4>
+<ul>
+<li>针对中胸</li>
+<li>身体直立或微微前倾，全握虎口发力</li>
+<li>想象两个肘往里靠，而不是手</li>
+<li>肘抬高不要掉</li>
+</ul>
+<h4 id="龙门架夹胸" tabindex="-1"><a class="header-anchor" href="#龙门架夹胸"><span>龙门架夹胸</span></a></h4>
+<div class="hint-container info">
+<p class="hint-container-title">针对下胸外沿</p>
+<ul>
+<li>吸气至挺胸启动位，直立</li>
+<li>正手握把手，往腹股沟夹，贴近身体</li>
+</ul>
+</div>
+<h4 id="双杠臂屈伸" tabindex="-1"><a class="header-anchor" href="#双杠臂屈伸"><span>双杠臂屈伸</span></a></h4>
+<ul>
+<li>针对下胸</li>
+<li>握距 80 厘米左右</li>
+<li>吸满气中立位撑起，整个身体前倾位来做</li>
+</ul>
 <h3 id="back" tabindex="-1"><a class="header-anchor" href="#back"><span>Back</span></a></h3>
 <hr>
+<h4 id="杠铃俯身划船" tabindex="-1"><a class="header-anchor" href="#杠铃俯身划船"><span>杠铃俯身划船</span></a></h4>
 <h4 id="宽距高位下拉" tabindex="-1"><a class="header-anchor" href="#宽距高位下拉"><span>宽距高位下拉</span></a></h4>
 <ul>
-<li>针对大圆肌，主上下回旋，无肩屈肩伸</li>
+<li>针对大圆肌，主上下回旋，少肩屈肩伸</li>
 <li>拉到眼睛即可</li>
-<li>手向桡偏，全握，大拇指食指发力</li>
+<li><strong>手向桡偏，全握，大拇指食指发力</strong></li>
 </ul>
 <h4 id="反手高位下拉" tabindex="-1"><a class="header-anchor" href="#反手高位下拉"><span>反手高位下拉</span></a></h4>
 <ul>
 <li>针对背阔，主肩屈肩伸</li>
-<li>身体微前倾，拉到腹肌能保持躯干稳定，肩不弯起来的的极限</li>
-<li>手向尺偏，半握，后三指发力</li>
+<li>身体<strong>微前倾</strong>，拉到腹肌能保持躯干稳定，肩不弯起来的的极限</li>
+<li><strong>手向尺偏，半握，后三指发力</strong></li>
+</ul>
+<h4 id="中距对握高位下拉" tabindex="-1"><a class="header-anchor" href="#中距对握高位下拉"><span>中距对握高位下拉</span></a></h4>
+<ul>
+<li>前两者的结合</li>
+<li>身体保持<strong>中立位</strong>，往后坐一点</li>
+<li><strong>向下拉</strong>到最紧</li>
 </ul>
 <h4 id="坐姿窄距划船" tabindex="-1"><a class="header-anchor" href="#坐姿窄距划船"><span>坐姿窄距划船</span></a></h4>
 <ul>
@@ -39,6 +142,13 @@
 <li><strong>肩胛主动后缩</strong>带着肩，不是肩带着肩胛骨</li>
 </ul>
 </div>
+<h4 id="单边绳索下拉" tabindex="-1"><a class="header-anchor" href="#单边绳索下拉"><span>单边绳索下拉</span></a></h4>
+<ul>
+<li>针对背阔肌下沿</li>
+<li><strong>大臂外旋</strong>预先拉长背阔肌</li>
+<li><strong>脚往前踩骨盆微后倾</strong></li>
+<li>可做肩伸也可做肩内旋</li>
+</ul>
 <h4 id="直臂下压" tabindex="-1"><a class="header-anchor" href="#直臂下压"><span>直臂下压</span></a></h4>
 <ul>
 <li>宽距，1.5 倍肩宽</li>
@@ -46,7 +156,7 @@
 </ul>
 <div class="hint-container tip">
 <p class="hint-container-title">Tips</p>
-<p>这里的抬肘指的是伸直手臂自然抬起，全程保持</p>
+<p>这里的抬肘指的是伸直手臂（不锁死）自然抬起，全程保持</p>
 </div>
 <div class="hint-container info">
 <p class="hint-container-title">针对大圆</p>
@@ -64,20 +174,60 @@
 </ul>
 </div>
 <h3 id="leg" tabindex="-1"><a class="header-anchor" href="#leg"><span>Leg</span></a></h3>
+<hr>
 <h3 id="shoulder" tabindex="-1"><a class="header-anchor" href="#shoulder"><span>Shoulder</span></a></h3>
+<hr>
 <h3 id="arm" tabindex="-1"><a class="header-anchor" href="#arm"><span>Arm</span></a></h3>
+<hr>
+<h4 id="牧师凳弯举" tabindex="-1"><a class="header-anchor" href="#牧师凳弯举"><span>牧师凳弯举</span></a></h4>
+<ul>
+<li>针对二头主体</li>
+<li>肩屈位弯举</li>
+</ul>
+<h4 id="正手杠铃弯举" tabindex="-1"><a class="header-anchor" href="#正手杠铃弯举"><span>正手杠铃弯举</span></a></h4>
+<ul>
+<li>针对肱肌</li>
+<li><strong>微微肩前屈</strong></li>
+<li>最高位微微停顿</li>
+</ul>
+<h4 id="单手绳索下拉" tabindex="-1"><a class="header-anchor" href="#单手绳索下拉"><span>单手绳索下拉</span></a></h4>
+<ul>
+<li>针对三头外侧头</li>
+<li>肩伸位置做</li>
+<li>注重顶峰收缩，最高位可以加一个尺偏（手腕向内）</li>
+</ul>
+<h4 id="碎颅者" tabindex="-1"><a class="header-anchor" href="#碎颅者"><span>碎颅者</span></a></h4>
+<ul>
+<li>针对三头长头</li>
+<li>反手握杠铃</li>
+<li>起始位把杠铃放在肩膀正上方，髋伸位微夹腿蹬住地</li>
+<li><strong>肩前屈，腰贴近</strong>后启动</li>
+</ul>
 <h3 id="core" tabindex="-1"><a class="header-anchor" href="#core"><span>Core</span></a></h3>
 <hr>
 <h4 id="悬垂举腿" tabindex="-1"><a class="header-anchor" href="#悬垂举腿"><span>悬垂举腿</span></a></h4>
 <ul>
+<li>腹肌整体训练</li>
 <li>收紧背部，避免缝匠肌发力</li>
-<li>高抬腿，低下放</li>
+<li>高抬腿<strong>卷腹</strong>，低下放</li>
+</ul>
+<h4 id="反向山羊挺身" tabindex="-1"><a class="header-anchor" href="#反向山羊挺身"><span>反向山羊挺身</span></a></h4>
+<ul>
+<li>等长收缩功能训练</li>
+<li><strong>向上向远端走</strong>而不是卷腹，幅度小</li>
+<li>进阶：伸直手臂，旋转，单臂冲肩，双手推肩</li>
+</ul>
+<h4 id="龙门架磕头" tabindex="-1"><a class="header-anchor" href="#龙门架磕头"><span>龙门架磕头</span></a></h4>
+<ul>
+<li>腹直肌肌肥大训练</li>
+<li>绳索尾端放在颈后</li>
+<li>屁股位置全程不动，<strong>不要往屁股去坐</strong></li>
 </ul>
 <h3 id="misc" tabindex="-1"><a class="header-anchor" href="#misc"><span>Misc</span></a></h3>
 <hr>
 <h4 id="呼吸" tabindex="-1"><a class="header-anchor" href="#呼吸"><span>呼吸</span></a></h4>
-<div class="hint-container tip">
-<p class="hint-container-title">Tips</p>
+<div class="hint-container important">
+<p class="hint-container-title">Important</p>
 <p>呼吸能力就是控制姿势的能力</p>
 </div>
 </div></template>

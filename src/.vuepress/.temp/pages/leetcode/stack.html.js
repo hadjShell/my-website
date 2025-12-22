@@ -1,3 +1,16 @@
 import comp from "/Users/hadjshell/Documents/OneDrive/Personal-Projects/myblog/my-docs/src/.vuepress/.temp/pages/leetcode/stack.html.vue"
-const data = JSON.parse("{\"path\":\"/leetcode/stack.html\",\"title\":\"Stack\",\"lang\":\"en-US\",\"frontmatter\":{\"title\":\"Stack\",\"author\":\"David Zhang aka Hadjshell\",\"order\":6,\"isOriginal\":true,\"footer\":false,\"editLink\":false,\"description\":\"💡FIFO ⭐Q155. Min Stack Consider each node in the stack having a minimum value Q225. Implement Stack using Queues Q232. Implement Queue using Stacks Q682. Baseball Game Q735. As...\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"Stack\\\",\\\"image\\\":[\\\"\\\"],\\\"dateModified\\\":null,\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"David Zhang aka Hadjshell\\\"}]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/leetcode/stack.html\"}],[\"meta\",{\"property\":\"og:site_name\",\"content\":\"Hadjshell's Field\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"Stack\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"💡FIFO ⭐Q155. Min Stack Consider each node in the stack having a minimum value Q225. Implement Stack using Queues Q232. Implement Queue using Stacks Q682. Baseball Game Q735. As...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"en-US\"}],[\"meta\",{\"property\":\"article:author\",\"content\":\"David Zhang aka Hadjshell\"}]]},\"git\":{},\"readingTime\":{\"minutes\":5.97,\"words\":1791},\"filePathRelative\":\"leetcode/stack.md\",\"excerpt\":\"\",\"copyright\":{\"author\":\"David Zhang aka Hadjshell\"},\"autoDesc\":true}")
+const data = JSON.parse("{\"path\":\"/leetcode/stack.html\",\"title\":\"Stack\",\"lang\":\"en-US\",\"frontmatter\":{\"title\":\"Stack\",\"author\":\"David Zhang aka Hadjshell\",\"order\":6,\"isOriginal\":true,\"footer\":false,\"editLink\":false},\"readingTime\":{\"minutes\":0.05,\"words\":15},\"filePathRelative\":\"leetcode/stack.md\",\"excerpt\":\"\",\"copyright\":{\"author\":\"David Zhang aka Hadjshell\"}}")
 export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

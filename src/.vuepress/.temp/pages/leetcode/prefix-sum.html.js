@@ -1,3 +1,16 @@
 import comp from "/Users/hadjshell/Documents/OneDrive/Personal-Projects/myblog/my-docs/src/.vuepress/.temp/pages/leetcode/prefix-sum.html.vue"
-const data = JSON.parse("{\"path\":\"/leetcode/prefix-sum.html\",\"title\":\"Prefix Sum\",\"lang\":\"en-US\",\"frontmatter\":{\"title\":\"Prefix Sum\",\"author\":\"David Zhang aka Hadjshell\",\"order\":8,\"isOriginal\":true,\"footer\":false,\"editLink\":false,\"description\":\"🧠 Mindset Sum of previous elements and itself for each slot Extended to state of previous elements plus the current element (状态的叠加) Subarray/Range sum problems Compute the sum ...\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"Prefix Sum\\\",\\\"image\\\":[\\\"\\\"],\\\"dateModified\\\":null,\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"David Zhang aka Hadjshell\\\"}]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/leetcode/prefix-sum.html\"}],[\"meta\",{\"property\":\"og:site_name\",\"content\":\"Hadjshell's Field\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"Prefix Sum\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"🧠 Mindset Sum of previous elements and itself for each slot Extended to state of previous elements plus the current element (状态的叠加) Subarray/Range sum problems Compute the sum ...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"en-US\"}],[\"meta\",{\"property\":\"article:author\",\"content\":\"David Zhang aka Hadjshell\"}]]},\"git\":{},\"readingTime\":{\"minutes\":3.68,\"words\":1104},\"filePathRelative\":\"leetcode/prefix-sum.md\",\"excerpt\":\"\",\"copyright\":{\"author\":\"David Zhang aka Hadjshell\"},\"autoDesc\":true}")
+const data = JSON.parse("{\"path\":\"/leetcode/prefix-sum.html\",\"title\":\"Prefix Sum\",\"lang\":\"en-US\",\"frontmatter\":{\"title\":\"Prefix Sum\",\"author\":\"David Zhang aka Hadjshell\",\"order\":8,\"isOriginal\":true,\"footer\":false,\"editLink\":false,\"description\":\"💡Questions Q303. Range Sum Query - Immutable ⭐Q304. Range Sum Query 2D - Immutable Q1314. Matrix Block Sum Variant of Q304 ⭐Q238. Product of Array Except Self Prefix and suffix...\"},\"readingTime\":{\"minutes\":3.48,\"words\":1043},\"filePathRelative\":\"leetcode/prefix-sum.md\",\"excerpt\":\"\",\"copyright\":{\"author\":\"David Zhang aka Hadjshell\"},\"autoDesc\":true}")
 export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

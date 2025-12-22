@@ -1,0 +1,203 @@
+<template><div><h2 id="🧠-concept" tabindex="-1"><a class="header-anchor" href="#🧠-concept"><span>🧠 Concept</span></a></h2>
+<ul>
+<li>
+<p>Also called <strong>Hash Map</strong>, <strong>Dictionary</strong></p>
+</li>
+<li>
+<p>A data structure which can <strong>map keys to values</strong>. A hash table uses a <strong>hash function</strong> to compute an index into an array of buckets or slots, from which the desired value can be found</p>
+</li>
+<li>
+<p>Key has to be unique, value can be the same</p>
+</li>
+</ul>
+<h3 id="perfect-hashing" tabindex="-1"><a class="header-anchor" href="#perfect-hashing"><span>Perfect hashing</span></a></h3>
+<ul>
+<li>
+<p>Suppose key values within range <code v-pre>0</code> to <code v-pre>N-1</code> and use an array of size <code v-pre>N</code> to store records</p>
+</li>
+<li>
+<p>Then a key can correspond directly to the array location of its associated record</p>
+</li>
+<li>
+<p>Searching and insertion would require only a single array access and thus <code v-pre>O(1)</code></p>
+</li>
+<li>
+<p>However, perfect hashing is rarely practical to implement</p>
+</li>
+</ul>
+<h3 id="hash-function" tabindex="-1"><a class="header-anchor" href="#hash-function"><span>Hash function</span></a></h3>
+<ul>
+<li>
+<p><strong>One-way</strong> function</p>
+</li>
+<li>
+<p>Idempotent</p>
+</li>
+<li>
+<Mermaid code="eJxLL0osyFDwCbLm8tbQ8E6t1NRU0NW1U/CI9kgszlBwK81LLsnMz4vl8gAL+2ho5OQnJ4KENDW5ABNoEWk="></Mermaid></li>
+<li>
+<p>Two important issues in Hashing (<strong>防，治思想</strong>)</p>
+<ul>
+<li>
+<p>How to define a good hash function?</p>
+<div class="hint-container important">
+<p class="hint-container-title">Important</p>
+<p>Need to ensure hash function is reasonably random, which means key will be evenly distributed and so reduces key collisions</p>
+</div>
+</li>
+<li>
+<p>How to resolve key collisions?</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="collision-resolution-strategies" tabindex="-1"><a class="header-anchor" href="#collision-resolution-strategies"><span>Collision resolution strategies</span></a></h3>
+<ul>
+<li>
+<p><strong>Separate Chaining</strong></p>
+<ul>
+<li>Build a linked list for each of the table position</li>
+</ul>
+</li>
+<li>
+<p><strong>Linear Probing</strong></p>
+<ul>
+<li>
+<p>No linked list, just array</p>
+</li>
+<li>
+<p>When a key collides with a previously inserted key we simply place it in the <strong>next available unused location</strong> to the right (if reaching the end go the beginning)</p>
+<div class="hint-container tip">
+<p class="hint-container-title">Tips</p>
+<p>There is possibly a key collision in a sequential non-null elements between <code v-pre>null</code> and <code v-pre>null</code></p>
+</div>
+</li>
+<li>
+<p>Searching</p>
+<ul>
+<li>
+<p>Find the position using hash function</p>
+</li>
+<li>
+<p>Search from here upwards through array looking for key</p>
+</li>
+<li>
+<p>Searching is deemed <strong>unsuccessful if we reach an empty location or end up back where we started</strong></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Deletion</p>
+<ul>
+<li>
+<p>Cannot directly delete the element (new <code v-pre>null</code> may affect searching)</p>
+</li>
+<li>
+<p>Two possible approaches</p>
+<ul>
+<li>
+<p>Using a special <strong>Ilinking</strong> (empty character) to <strong>mark a deletion</strong> - searching does not stop if this character is encountered</p>
+<blockquote>
+<p>Simple but can be slow for searching</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Delete the contiguous occupied cells to the right and reinsert them</strong></p>
+<blockquote>
+<p>More costly but faster searching</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="pros-cons" tabindex="-1"><a class="header-anchor" href="#pros-cons"><span>Pros &amp; Cons</span></a></h3>
+<ul>
+<li>
+<p>Pros</p>
+<ul>
+<li>
+<p>Fast operations: search, insertion, deletion take <code v-pre>O(1)</code> on average</p>
+</li>
+<li>
+<p>Flexible keys: most data types can be used for keys, as long as they're hashable</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Cons</p>
+<ul>
+<li>
+<p>Slow worst case: operations take <code v-pre>O(N)</code> in the worst case</p>
+</li>
+<li>
+<p><strong>Unordered</strong>: keys are not stored in a special order</p>
+</li>
+<li>
+<p>Single-directional lookups: look up the value for a given key is <code v-pre>O(1)</code>, but look up the key for a given value is <code v-pre>O(N)</code></p>
+</li>
+<li>
+<p>Not cache-friendly: usage of linked list with separate chaining solution</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="performance" tabindex="-1"><a class="header-anchor" href="#performance"><span>Performance</span></a></h3>
+<ul>
+<li>
+<p><strong>Initial Capacity</strong></p>
+<ul>
+<li>It is the capacity of HashMap at the time of its creation (It is the number of buckets a HashMap can hold when the HashMap is instantiated)</li>
+</ul>
+</li>
+<li>
+<p><strong>Load Factor</strong></p>
+<ul>
+<li>It is the percent value of the capacity after which the capacity of HashMap is to be increased (It is the percentage fill of buckets after which Rehashing takes place)</li>
+</ul>
+</li>
+<li>
+<p>Threshold</p>
+<ul>
+<li>Load Factor × Initial Capacity</li>
+</ul>
+</li>
+<li>
+<p>Rehashing</p>
+<ul>
+<li>It is the process of <strong>doubling</strong> the capacity of the HashMap after it reaches its Threshold</li>
+</ul>
+</li>
+<li>
+<p>If the initial capacity is kept higher then rehashing will never be done. But by keeping it higher increases the time complexity of iteration. So it should be chosen very cleverly to increase performance. The expected number of values should be taken into account to set the initial capacity. The most generally preferred load factor value is <strong>0.75</strong> which provides a good deal between time and space costs. The load factor’s value varies between 0 and 1.</p>
+</li>
+<li>
+<p>When Hash Map operations cost <code v-pre>O(N)</code> time?</p>
+<ul>
+<li>
+<p>Hash collisions</p>
+<ul>
+<li>If all our keys caused hash collisions, we'd be at risk of having to walk through all of our values for a single lookup (one big linked list). This is unlikely, but it could happen.</li>
+</ul>
+</li>
+<li>
+<p>Dynamic array resizing</p>
+<ul>
+<li>Suppose we keep adding more items to our hash map. As the number of keys and values in our hash map exceeds the number of indices in the underlying array, hash collisions become inevitable. To mitigate this, we could expand our underlying array whenever things start to get crowded. That requires allocating a larger array and rehashing all of our existing keys to figure out their new position—O(n) time.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="🛠️-pattern" tabindex="-1"><a class="header-anchor" href="#🛠️-pattern"><span>🛠️ Pattern</span></a></h2>
+<ul>
+<li>If the values of keys are limited, <strong>bucket array</strong> instead of hash table can be used to increase the performance</li>
+<li><strong>Combine hash map with other data structures</strong> to improve time performance</li>
+<li><code v-pre>int + int -&gt; long</code></li>
+</ul>
+</div></template>
+
+

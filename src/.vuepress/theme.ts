@@ -7,7 +7,7 @@ import { getDirname, path } from "vuepress/utils";
 const __dirname = getDirname(import.meta.url);
 
 export default hopeTheme({
-  hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
+  hostname: "https://hadjshell.netlify.app/",
 
   author: {
     name: "Hadjshell",
@@ -37,6 +37,8 @@ export default hopeTheme({
       },
     },
   },
+
+  breadcrumb: false,
 
   // These features are enabled for demo, only preserve features you need here
   markdown: {

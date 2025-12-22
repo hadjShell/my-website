@@ -1,3 +1,16 @@
 import comp from "/Users/hadjshell/Documents/OneDrive/Personal-Projects/myblog/my-docs/src/.vuepress/.temp/pages/leetcode/tree.html.vue"
-const data = JSON.parse("{\"path\":\"/leetcode/tree.html\",\"title\":\"Binary Tree\",\"lang\":\"en-US\",\"frontmatter\":{\"title\":\"Binary Tree\",\"author\":\"David Zhang aka Hadjshell\",\"order\":11,\"isOriginal\":true,\"footer\":false,\"editLink\":false,\"description\":\"🧠​ Mindset 遍历 递归：DFS 层序：BFS 分解子问题（子树） 递归 DFS 只需要思考一个节点上需要做什么，其他交给递归 递归算法的时间复杂度 = 递归树的节点个数 x 每个节点的时间复杂度 递归算法的空间复杂度 = 递归树的高度 + 算法申请的存储空间 🛠️ Tricks Morris traversal for inorder 栈...\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"Binary Tree\\\",\\\"image\\\":[\\\"\\\"],\\\"dateModified\\\":null,\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"David Zhang aka Hadjshell\\\"}]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://vuepress-theme-hope-docs-demo.netlify.app/leetcode/tree.html\"}],[\"meta\",{\"property\":\"og:site_name\",\"content\":\"Hadjshell's Field\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"Binary Tree\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"🧠​ Mindset 遍历 递归：DFS 层序：BFS 分解子问题（子树） 递归 DFS 只需要思考一个节点上需要做什么，其他交给递归 递归算法的时间复杂度 = 递归树的节点个数 x 每个节点的时间复杂度 递归算法的空间复杂度 = 递归树的高度 + 算法申请的存储空间 🛠️ Tricks Morris traversal for inorder 栈...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"en-US\"}],[\"meta\",{\"property\":\"article:author\",\"content\":\"David Zhang aka Hadjshell\"}]]},\"git\":{},\"readingTime\":{\"minutes\":13.85,\"words\":4154},\"filePathRelative\":\"leetcode/tree.md\",\"excerpt\":\"\",\"copyright\":{\"author\":\"David Zhang aka Hadjshell\"},\"autoDesc\":true}")
+const data = JSON.parse("{\"path\":\"/leetcode/tree.html\",\"title\":\"Binary Tree\",\"lang\":\"en-US\",\"frontmatter\":{\"title\":\"Binary Tree\",\"author\":\"David Zhang aka Hadjshell\",\"order\":11,\"isOriginal\":true,\"footer\":false,\"editLink\":false},\"readingTime\":{\"minutes\":0.05,\"words\":16},\"filePathRelative\":\"leetcode/tree.md\",\"excerpt\":\"\",\"copyright\":{\"author\":\"David Zhang aka Hadjshell\"}}")
 export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

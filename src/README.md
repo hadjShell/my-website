@@ -4,8 +4,7 @@ icon: house
 title: Home
 heroImage: "/logo.png"
 heroAlt: Hadjshell's logo
-bgImage: https://theme-hope-assets.vuejs.press/bg/6-light.svg
-bgImageDark: https://theme-hope-assets.vuejs.press/bg/6-dark.svg
+
 bgImageStyle:
   background-attachment: fixed
 heroText: Hadjshell's Field
