@@ -116,6 +116,72 @@ export const enSidebar = sidebar({
           prefix: "bst/",
           children: "structure",
         },
+        {
+          text: "Graph",
+          collapsible: true,
+          prefix: "graph/",
+          children: [
+            "concept",
+            {
+              text: "⭐️Bipartite Graph",
+              collapsible: true,
+              prefix: "bipartition/",
+              children: "structure",
+            },
+            {
+              text: "⭐️Topological Sort",
+              collapsible: true,
+              prefix: "topological-order/",
+              children: "structure",
+            },
+            {
+              text: "⭐️Eulerian Graph",
+              collapsible: true,
+              prefix: "eulerian-graph/",
+              children: "structure",
+            },
+            {
+              text: "⭐️Union Find",
+              collapsible: true,
+              prefix: "union-find/",
+              children: "structure",
+            },
+            {
+              text: "⭐️Shortest Path Problem",
+              collapsible: true,
+              prefix: "shortest-path/",
+              children: [
+                "concept",
+                {
+                  text: "Dijkstra's Algorithm",
+                  collapsible: true,
+                  prefix: "dijkstra/",
+                  children: "structure",
+                },
+              ],
+            },
+            {
+              text: "⭐️Minimum Spanning Tree",
+              collapsible: true,
+              prefix: "mst/",
+              children: [
+                "concept",
+                {
+                  text: "Kruskal's Algorithm",
+                  collapsible: true,
+                  prefix: "kruskal/",
+                  children: "structure",
+                },
+                {
+                  text: "Prim's Algorithm",
+                  collapsible: true,
+                  prefix: "prim/",
+                  children: "structure",
+                },
+              ],
+            },
+          ],
+        },
         "recursion",
         "math",
         "bit",

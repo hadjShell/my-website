@@ -1,4 +1,7 @@
-<template><div><h3 id="q9-palindrome-number" tabindex="-1"><a class="header-anchor" href="#q9-palindrome-number"><span>Q9. <a href="https://leetcode.com/problems/palindrome-number/" target="_blank" rel="noopener noreferrer">Palindrome Number</a></span></a></h3>
+<template><div><ul>
+<li>Multiplying probabilities will result in precision errors. Take log probabilities to sum up numbers instead of multiplying them.</li>
+</ul>
+<h3 id="q9-palindrome-number" tabindex="-1"><a class="header-anchor" href="#q9-palindrome-number"><span>Q9. <a href="https://leetcode.com/problems/palindrome-number/" target="_blank" rel="noopener noreferrer">Palindrome Number</a></span></a></h3>
 <ul>
 <li>
 <div class="language-java line-numbers-mode" data-highlighter="shiki" data-ext="java" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code class="language-java"><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">class</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> Solution</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>

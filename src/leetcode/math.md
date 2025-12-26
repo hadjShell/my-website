@@ -7,6 +7,8 @@ footer: false
 editLink: false
 ---
 
+- Multiplying probabilities will result in precision errors. Take log probabilities to sum up numbers instead of multiplying them.
+
 ### Q9. [Palindrome Number](https://leetcode.com/problems/palindrome-number/)
 
 - ```java
