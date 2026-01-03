@@ -106,20 +106,41 @@
 </ul>
 <h2 id="​-mindset" tabindex="-1"><a class="header-anchor" href="#​-mindset"><span>💡​ Mindset</span></a></h2>
 <ul>
-<li><strong>遍历</strong>
+<li>
+<p><strong>遍历</strong></p>
 <ul>
 <li>递归：DFS</li>
 <li>层序：BFS</li>
 </ul>
 </li>
-<li><strong>分解子问题（子树）</strong>
+<li>
+<p><strong>分解子问题（子树）</strong></p>
 <ul>
 <li>递归 DFS</li>
 </ul>
 </li>
-<li><strong><mark>只需要思考一个节点上需要做什么，其他交给递归</mark></strong></li>
-<li><strong>递归算法的时间复杂度 = 递归树的节点个数 x 每个节点的时间复杂度</strong></li>
-<li><strong>递归算法的空间复杂度 = 递归树的高度 + 算法申请的存储空间</strong></li>
+</ul>
+<div class="hint-container tip">
+<p class="hint-container-title">Coding Style</p>
+<ul>
+<li>
+<p>遍历设置函数名为 <code v-pre>traverse/dfs/backtrack</code>，函数不要有返回值，通过外部变量来控制递归的终止</p>
+</li>
+<li>
+<p>分解问题函数有返回值，函数名称有清晰意义</p>
+</li>
+</ul>
+</div>
+<ul>
+<li>
+<p><strong><mark>只需要思考一个节点上需要做什么，其他交给递归</mark></strong></p>
+</li>
+<li>
+<p><strong>递归算法的时间复杂度 = 递归树的节点个数 x 每个节点的时间复杂度</strong></p>
+</li>
+<li>
+<p><strong>递归算法的空间复杂度 = 递归树的高度 + 算法申请的存储空间</strong></p>
+</li>
 </ul>
 <h2 id="🛠️-tricks" tabindex="-1"><a class="header-anchor" href="#🛠️-tricks"><span>🛠️ Tricks</span></a></h2>
 <ul>

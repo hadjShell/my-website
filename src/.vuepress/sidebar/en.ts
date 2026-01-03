@@ -182,6 +182,22 @@ export const enSidebar = sidebar({
             },
           ],
         },
+        {
+          text: "Backtracking",
+          collapsible: true,
+          prefix: "backtrack/",
+          children: [
+            "concept",
+            {
+              text: "⭐️Permutation & Combination & Subset",
+              collapsible: true,
+              prefix: "per-com-sub/",
+              children: "structure",
+            },
+            "sudoku",
+            "n-queen",
+          ],
+        },
         "recursion",
         "math",
         "bit",
