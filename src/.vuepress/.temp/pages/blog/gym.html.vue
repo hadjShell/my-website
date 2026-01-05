@@ -1,11 +1,10 @@
-<template><div><h2 id="📝-plan" tabindex="-1"><a class="header-anchor" href="#📝-plan"><span>📝 Plan</span></a></h2>
-<div class="hint-container important">
-<p class="hint-container-title">Important</p>
-<p><strong>三分化</strong></p>
-</div>
+<template><div><h2 id="📝-plan-三分化" tabindex="-1"><a class="header-anchor" href="#📝-plan-三分化"><span>📝 Plan - 三分化</span></a></h2>
 <h3 id="循环一" tabindex="-1"><a class="header-anchor" href="#循环一"><span>循环一</span></a></h3>
-<hr>
-<h4 id="推" tabindex="-1"><a class="header-anchor" href="#推"><span>推</span></a></h4>
+<Tabs :data='[{"id":"推"},{"id":"拉"},{"id":"腿"}]'>
+<template #title0="{ value, isActive }">推</template>
+<template #title1="{ value, isActive }">拉</template>
+<template #title2="{ value, isActive }">腿</template>
+<template #tab0="{ value, isActive }">
 <ul>
 <li>蝴蝶机夹胸</li>
 <li>杠铃平板卧推</li>
@@ -16,7 +15,8 @@
 <li>碎颅者</li>
 <li>哑铃飞鸟</li>
 </ul>
-<h4 id="拉" tabindex="-1"><a class="header-anchor" href="#拉"><span>拉</span></a></h4>
+</template>
+<template #tab1="{ value, isActive }">
 <ul>
 <li>俯身杠铃划船</li>
 <li>宽距高位下拉</li>
@@ -26,16 +26,22 @@
 <li>正手杠铃弯举</li>
 <li>反向绳索飞鸟</li>
 </ul>
-<h4 id="腿" tabindex="-1"><a class="header-anchor" href="#腿"><span>腿</span></a></h4>
+</template>
+<template #tab2="{ value, isActive }">
 <ul>
 <li>腿屈伸</li>
 <li>深蹲</li>
 <li>保加利亚分腿蹲</li>
 <li>腿举</li>
 </ul>
+</template>
+</Tabs>
 <h3 id="循环二" tabindex="-1"><a class="header-anchor" href="#循环二"><span>循环二</span></a></h3>
-<hr>
-<h4 id="推-1" tabindex="-1"><a class="header-anchor" href="#推-1"><span>推</span></a></h4>
+<Tabs :data='[{"id":"推"},{"id":"拉"},{"id":"腿"}]'>
+<template #title0="{ value, isActive }">推</template>
+<template #title1="{ value, isActive }">拉</template>
+<template #title2="{ value, isActive }">腿</template>
+<template #tab0="{ value, isActive }">
 <ul>
 <li>双杠臂屈伸</li>
 <li>杠铃上斜卧推</li>
@@ -45,7 +51,8 @@
 <li>碎颅者</li>
 <li>哑铃飞鸟</li>
 </ul>
-<h4 id="拉-1" tabindex="-1"><a class="header-anchor" href="#拉-1"><span>拉</span></a></h4>
+</template>
+<template #tab1="{ value, isActive }">
 <ul>
 <li>反手高位下拉</li>
 <li>坐姿窄距划船</li>
@@ -55,14 +62,21 @@
 <li>正手杠铃弯举</li>
 <li>反向绳索飞鸟</li>
 </ul>
-<h4 id="腿-1" tabindex="-1"><a class="header-anchor" href="#腿-1"><span>腿</span></a></h4>
+</template>
+<template #tab2="{ value, isActive }">
 <ul>
 <li>硬拉</li>
 <li>反向腿屈伸</li>
 <li>腿内收</li>
 <li>提踵</li>
 </ul>
+</template>
+</Tabs>
 <h2 id="⛓️-technique" tabindex="-1"><a class="header-anchor" href="#⛓️-technique"><span>⛓️ Technique</span></a></h2>
+<div class="hint-container important">
+<p class="hint-container-title">Important</p>
+<p>呼吸能力就是控制姿势的能力</p>
+</div>
 <h3 id="chest" tabindex="-1"><a class="header-anchor" href="#chest"><span>Chest</span></a></h3>
 <hr>
 <div class="hint-container tip">
@@ -223,13 +237,6 @@
 <li>绳索尾端放在颈后</li>
 <li>屁股位置全程不动，<strong>不要往屁股去坐</strong></li>
 </ul>
-<h3 id="misc" tabindex="-1"><a class="header-anchor" href="#misc"><span>Misc</span></a></h3>
-<hr>
-<h4 id="呼吸" tabindex="-1"><a class="header-anchor" href="#呼吸"><span>呼吸</span></a></h4>
-<div class="hint-container important">
-<p class="hint-container-title">Important</p>
-<p>呼吸能力就是控制姿势的能力</p>
-</div>
 </div></template>
 
 
