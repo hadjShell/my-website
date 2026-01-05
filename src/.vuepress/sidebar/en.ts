@@ -189,13 +189,15 @@ export const enSidebar = sidebar({
           children: [
             "concept",
             {
-              text: "⭐️Permutation & Combination & Subset",
+              text: "Permutation & Combination & Subset",
               collapsible: true,
               prefix: "per-com-sub/",
               children: "structure",
             },
             "sudoku",
             "n-queen",
+            "generate-parentheses",
+            "problems",
           ],
         },
         "recursion",

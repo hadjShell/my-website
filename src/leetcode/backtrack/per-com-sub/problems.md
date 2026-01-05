@@ -9,39 +9,6 @@ editLink: false
 
 ## :bulb: First Viriation
 
-### Q17. [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
-
-- ```java
-  class Solution {
-      static final String[] PHONE_MAP = {"", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
-
-
-      public List<String> letterCombinations(String digits) {
-          List<String> result = new ArrayList<>();
-          StringBuilder path = new StringBuilder();
-
-          backtrack(digits, 0, path, result);
-
-          return result;
-      }
-
-      private void backtrack(String digits, int start, StringBuilder path, List<String> result) {
-          if (path.length() == digits.length()) {
-              result.add(path.toString());
-              return;
-          }
-
-          char num = digits.charAt(start);
-          String letters = PHONE_MAP[num - '1'];
-          for (int i = 0; i < letters.length(); i++) {
-              path.append(letters.charAt(i));
-              backtrack(digits, start + 1, path, result);
-              path.setLength(path.length() - 1);
-          }
-      }
-  }
-  ```
-
 ### Q46. [Permutations](https://leetcode.com/problems/permutations/)
 
 - ```java

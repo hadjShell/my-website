@@ -13,6 +13,6 @@ bgImageStyle:
   background-position: center
   background-size: cover
 
-copyright: CC 4.0 Licensed, Copyright © 2020-present Hadjshell
+copyright: CC 4.0 Licensed, Copyright © 2025-present Hadjshell
 footer: Theme by <a href="https://theme-hope.vuejs.press/" target="_blank">VuePress Theme Hope</a>
 ---
