@@ -54,7 +54,3 @@ Shortest path problem
 - In practical, we use **two hash set and a temp hash set** to mimic traditional bfs queue to save time.
 
 - Another optimisation is to always bfs the queue which has fewer nodes first.
-
-```
-
-```

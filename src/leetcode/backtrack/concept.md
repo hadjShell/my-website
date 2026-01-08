@@ -25,10 +25,11 @@ editLink: false
   - **Choice list**: the choices that can be made at this chance node
   - **End condition**: the condition for reaching the bottom of the decision tree where you cannot make any more choices, or for reaching some nodes in the decision tree where the condition has been met
 
-::: important
+::: important Difference between Backtracking and DFS
 
-Backtracking focuses on the edges, which means the **choice list** at each chance node;
-DFS focuses on the vertices.
+**Backtracking focuses on the edges**, meaning it emphasizes the choice list at each decision point: you make a choice, traverse the corresponding edge, and then recursively explore the child node.
+
+**DFS focuses on the vertices**, emphasizing what happens at each node, such as **preorder** and **postorder** operations. (Inorder traversal is generally less relevant for n-ary trees or graph DFS.)
 
 :::
 

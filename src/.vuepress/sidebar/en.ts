@@ -147,6 +147,10 @@ export const enSidebar = sidebar({
               children: "structure",
             },
             {
+              text: "⭐️Island Problem",
+              link: "island.md",
+            },
+            {
               text: "⭐️BFS",
               collapsible: true,
               prefix: "bfs/",

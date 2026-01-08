@@ -24,9 +24,9 @@
 </li>
 </ul>
 <div class="hint-container important">
-<p class="hint-container-title">Important</p>
-<p>Backtracking focuses on the edges, which means the <strong>choice list</strong> at each chance node;<br>
-DFS focuses on the vertices.</p>
+<p class="hint-container-title">Difference between Backtracking and DFS</p>
+<p><strong>Backtracking focuses on the edges</strong>, meaning it emphasizes the choice list at each decision point: you make a choice, traverse the corresponding edge, and then recursively explore the child node.</p>
+<p><strong>DFS focuses on the vertices</strong>, emphasizing what happens at each node, such as <strong>preorder</strong> and <strong>postorder</strong> operations. (Inorder traversal is generally less relevant for n-ary trees or graph DFS.)</p>
 </div>
 <h2 id="🛠️-algorithm" tabindex="-1"><a class="header-anchor" href="#🛠️-algorithm"><span>🛠️ Algorithm</span></a></h2>
 <ul>
