@@ -147,6 +147,12 @@ export const enSidebar = sidebar({
               children: "structure",
             },
             {
+              text: "⭐️BFS",
+              collapsible: true,
+              prefix: "bfs/",
+              children: "structure",
+            },
+            {
               text: "⭐️Shortest Path Problem",
               collapsible: true,
               prefix: "shortest-path/",

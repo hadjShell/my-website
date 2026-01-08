@@ -131,13 +131,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Time to Read A Book",
-    "headers": [],
-    "path": "/books/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Leetcode Crackbook",
     "headers": [
       {
@@ -375,6 +368,13 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "Time to Read A Book",
+    "headers": [],
+    "path": "/books/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Programming Notes",
     "headers": [],
     "path": "/notes/",
@@ -426,302 +426,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Clean Code - Robert Martin",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Why Clean Code is Important?",
-        "slug": "why-clean-code-is-important",
-        "link": "#why-clean-code-is-important",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Guideline",
-        "slug": "guideline",
-        "link": "#guideline",
-        "children": [
-          {
-            "level": 3,
-            "title": "Names",
-            "slug": "names",
-            "link": "#names",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Functions",
-            "slug": "functions",
-            "link": "#functions",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Comments",
-            "slug": "comments",
-            "link": "#comments",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Formatting",
-            "slug": "formatting",
-            "link": "#formatting",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/books/coding/Clean-code.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Craftsmanship",
-    "headers": [],
-    "path": "/books/coding/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "The Pragmatic Programmer - Andrew Hunt & David Thomas",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Intro",
-        "slug": "intro",
-        "link": "#intro",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Tips",
-        "slug": "tips",
-        "link": "#tips",
-        "children": [
-          {
-            "level": 3,
-            "title": "Tip 1: Care About Your Craft",
-            "slug": "tip-1-care-about-your-craft",
-            "link": "#tip-1-care-about-your-craft",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Tip 2: Think! About Your Work",
-            "slug": "tip-2-think-about-your-work",
-            "link": "#tip-2-think-about-your-work",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Tip 3: Provide Options. Don't Make Lame Execuses",
-            "slug": "tip-3-provide-options-don-t-make-lame-execuses",
-            "link": "#tip-3-provide-options-don-t-make-lame-execuses",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Tip 4: Don't Live with Broken Windows",
-            "slug": "tip-4-don-t-live-with-broken-windows",
-            "link": "#tip-4-don-t-live-with-broken-windows",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Tip 5: Be a Catalyst for Change",
-            "slug": "tip-5-be-a-catalyst-for-change",
-            "link": "#tip-5-be-a-catalyst-for-change",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Tip 6: Remember the Big Picture",
-            "slug": "tip-6-remember-the-big-picture",
-            "link": "#tip-6-remember-the-big-picture",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Tip 7: Make Quality a Requirements Issue",
-            "slug": "tip-7-make-quality-a-requirements-issue",
-            "link": "#tip-7-make-quality-a-requirements-issue",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Tip 8: Invest Regularly in Your Knowledge Portfolio",
-            "slug": "tip-8-invest-regularly-in-your-knowledge-portfolio",
-            "link": "#tip-8-invest-regularly-in-your-knowledge-portfolio",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Tip 9: Critically Analyse What You Read and Hear",
-            "slug": "tip-9-critically-analyse-what-you-read-and-hear",
-            "link": "#tip-9-critically-analyse-what-you-read-and-hear",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Tip 10: It's both What You Say and the Way You Say It",
-            "slug": "tip-10-it-s-both-what-you-say-and-the-way-you-say-it",
-            "link": "#tip-10-it-s-both-what-you-say-and-the-way-you-say-it",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Tip 11: DRY --- Don't Repeat Yourself",
-            "slug": "tip-11-dry-don-t-repeat-yourself",
-            "link": "#tip-11-dry-don-t-repeat-yourself",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Tip 12: Make It Easy to Reuse",
-            "slug": "tip-12-make-it-easy-to-reuse",
-            "link": "#tip-12-make-it-easy-to-reuse",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Tip 13: Eliminate Effects Between Unrelated Things",
-            "slug": "tip-13-eliminate-effects-between-unrelated-things",
-            "link": "#tip-13-eliminate-effects-between-unrelated-things",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/books/coding/The-Pragmatic-Programmer.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Economy & Finance",
-    "headers": [],
-    "path": "/books/economy/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "How Countries Go Broke? The Big Cycle - Ray Dalio",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Part 1 Overview of the Big Debt Cycle",
-        "slug": "part-1-overview-of-the-big-debt-cycle",
-        "link": "#part-1-overview-of-the-big-debt-cycle",
-        "children": [
-          {
-            "level": 3,
-            "title": "Research Questions",
-            "slug": "research-questions",
-            "link": "#research-questions",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Interesting Facts",
-            "slug": "interesting-facts",
-            "link": "#interesting-facts",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Invaluable Ideas",
-            "slug": "invaluable-ideas",
-            "link": "#invaluable-ideas",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Personal Insights",
-            "slug": "personal-insights",
-            "link": "#personal-insights",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/books/economy/how-countries-go-broke-the-big-cycle.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Economy & Finance",
-    "headers": [],
-    "path": "/books/mindset/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "认知觉醒 - 周岭",
-    "headers": [
-      {
-        "level": 2,
-        "title": "内观自己",
-        "slug": "内观自己",
-        "link": "#内观自己",
-        "children": [
-          {
-            "level": 3,
-            "title": "大脑",
-            "slug": "大脑",
-            "link": "#大脑",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "天性",
-            "slug": "天性",
-            "link": "#天性",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "恐惧",
-            "slug": "恐惧",
-            "link": "#恐惧",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "反馈",
-            "slug": "反馈",
-            "link": "#反馈",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "外观世界",
-        "slug": "外观世界",
-        "link": "#外观世界",
-        "children": [
-          {
-            "level": 3,
-            "title": "专注",
-            "slug": "专注",
-            "link": "#专注",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "学习",
-            "slug": "学习",
-            "link": "#学习",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/books/mindset/%E8%AE%A4%E7%9F%A5%E8%A7%89%E9%86%92.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Array Concept & Pattern",
     "headers": [
       {
@@ -740,6 +444,106 @@ export const SEARCH_INDEX = [
       }
     ],
     "path": "/leetcode/array/concept.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Binary Search Tree Concept & Pattern",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🧠 Concept",
+        "slug": "🧠-concept",
+        "link": "#🧠-concept",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🛠️ Pattern",
+        "slug": "🛠️-pattern",
+        "link": "#🛠️-pattern",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/bst/concept.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Binary Search Tree Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Q95. Unique Binary Search Trees II",
+        "slug": "q95-unique-binary-search-trees-ii",
+        "link": "#q95-unique-binary-search-trees-ii",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐ Q96. Unique Binary Search Trees",
+        "slug": "q96-unique-binary-search-trees",
+        "link": "#q96-unique-binary-search-trees",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q98. Validate Binary Search Tree",
+        "slug": "q98-validate-binary-search-tree",
+        "link": "#q98-validate-binary-search-tree",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q173. Binary Search Tree Iterator",
+        "slug": "q173-binary-search-tree-iterator",
+        "link": "#q173-binary-search-tree-iterator",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q230. Kth Smallest Element in a BST",
+        "slug": "q230-kth-smallest-element-in-a-bst",
+        "link": "#q230-kth-smallest-element-in-a-bst",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q450. Delete Node in a BST",
+        "slug": "q450-delete-node-in-a-bst",
+        "link": "#q450-delete-node-in-a-bst",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q530. Minimum Absolute Difference in BST",
+        "slug": "q530-minimum-absolute-difference-in-bst",
+        "link": "#q530-minimum-absolute-difference-in-bst",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q538. Convert BST to Greater Tree",
+        "slug": "q538-convert-bst-to-greater-tree",
+        "link": "#q538-convert-bst-to-greater-tree",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q700. Search in a Binary Search Tree",
+        "slug": "q700-search-in-a-binary-search-tree",
+        "link": "#q700-search-in-a-binary-search-tree",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q701. Insert into a Binary Search Tree",
+        "slug": "q701-insert-into-a-binary-search-tree",
+        "link": "#q701-insert-into-a-binary-search-tree",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/bst/problems.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -919,106 +723,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Binary Search Tree Concept & Pattern",
-    "headers": [
-      {
-        "level": 2,
-        "title": "🧠 Concept",
-        "slug": "🧠-concept",
-        "link": "#🧠-concept",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🛠️ Pattern",
-        "slug": "🛠️-pattern",
-        "link": "#🛠️-pattern",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/bst/concept.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Binary Search Tree Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Q95. Unique Binary Search Trees II",
-        "slug": "q95-unique-binary-search-trees-ii",
-        "link": "#q95-unique-binary-search-trees-ii",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐ Q96. Unique Binary Search Trees",
-        "slug": "q96-unique-binary-search-trees",
-        "link": "#q96-unique-binary-search-trees",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q98. Validate Binary Search Tree",
-        "slug": "q98-validate-binary-search-tree",
-        "link": "#q98-validate-binary-search-tree",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q173. Binary Search Tree Iterator",
-        "slug": "q173-binary-search-tree-iterator",
-        "link": "#q173-binary-search-tree-iterator",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q230. Kth Smallest Element in a BST",
-        "slug": "q230-kth-smallest-element-in-a-bst",
-        "link": "#q230-kth-smallest-element-in-a-bst",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q450. Delete Node in a BST",
-        "slug": "q450-delete-node-in-a-bst",
-        "link": "#q450-delete-node-in-a-bst",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q530. Minimum Absolute Difference in BST",
-        "slug": "q530-minimum-absolute-difference-in-bst",
-        "link": "#q530-minimum-absolute-difference-in-bst",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q538. Convert BST to Greater Tree",
-        "slug": "q538-convert-bst-to-greater-tree",
-        "link": "#q538-convert-bst-to-greater-tree",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q700. Search in a Binary Search Tree",
-        "slug": "q700-search-in-a-binary-search-tree",
-        "link": "#q700-search-in-a-binary-search-tree",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q701. Insert into a Binary Search Tree",
-        "slug": "q701-insert-into-a-binary-search-tree",
-        "link": "#q701-insert-into-a-binary-search-tree",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/bst/problems.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Difference Array Problems",
     "headers": [
       {
@@ -1052,65 +756,6 @@ export const SEARCH_INDEX = [
       }
     ],
     "path": "/leetcode/difference-array/pattern.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Graph Concept & Pattern",
-    "headers": [
-      {
-        "level": 2,
-        "title": "🧠 Concept",
-        "slug": "🧠-concept",
-        "link": "#🧠-concept",
-        "children": [
-          {
-            "level": 3,
-            "title": "Definition",
-            "slug": "definition",
-            "link": "#definition",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Types",
-            "slug": "types",
-            "link": "#types",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Connectivity",
-            "slug": "connectivity",
-            "link": "#connectivity",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Implementations",
-            "slug": "implementations",
-            "link": "#implementations",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "🛠️ Pattern",
-        "slug": "🛠️-pattern",
-        "link": "#🛠️-pattern",
-        "children": [
-          {
-            "level": 3,
-            "title": "Traversal",
-            "slug": "traversal",
-            "link": "#traversal",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/leetcode/graph/concept.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -1321,53 +966,61 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Interval Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Q56. Merge Intervals",
-        "slug": "q56-merge-intervals",
-        "link": "#q56-merge-intervals",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q57. Insert Interval",
-        "slug": "q57-insert-interval",
-        "link": "#q57-insert-interval",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q228. Summary Ranges",
-        "slug": "q228-summary-ranges",
-        "link": "#q228-summary-ranges",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q452. Minimum Number of Arrows to Burst Balloons",
-        "slug": "q452-minimum-number-of-arrows-to-burst-balloons",
-        "link": "#q452-minimum-number-of-arrows-to-burst-balloons",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/interval/interval.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Interval Concept",
+    "title": "Graph Concept & Pattern",
     "headers": [
       {
         "level": 2,
         "title": "🧠 Concept",
         "slug": "🧠-concept",
         "link": "#🧠-concept",
-        "children": []
+        "children": [
+          {
+            "level": 3,
+            "title": "Definition",
+            "slug": "definition",
+            "link": "#definition",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Types",
+            "slug": "types",
+            "link": "#types",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Connectivity",
+            "slug": "connectivity",
+            "link": "#connectivity",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Implementations",
+            "slug": "implementations",
+            "link": "#implementations",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "🛠️ Pattern",
+        "slug": "🛠️-pattern",
+        "link": "#🛠️-pattern",
+        "children": [
+          {
+            "level": 3,
+            "title": "Traversal",
+            "slug": "traversal",
+            "link": "#traversal",
+            "children": []
+          }
+        ]
       }
     ],
-    "path": "/leetcode/interval/pattern.html",
+    "path": "/leetcode/graph/concept.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -1494,31 +1147,53 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Queue Concept",
-    "headers": [],
-    "path": "/leetcode/queue/concept.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Queue Problems",
+    "title": "Interval Problems",
     "headers": [
       {
         "level": 3,
-        "title": "❤️Q649. Dota2 Senate",
-        "slug": "q649-dota2-senate",
-        "link": "#q649-dota2-senate",
+        "title": "Q56. Merge Intervals",
+        "slug": "q56-merge-intervals",
+        "link": "#q56-merge-intervals",
         "children": []
       },
       {
         "level": 3,
-        "title": "Q933. Number of Recent Calls",
-        "slug": "q933-number-of-recent-calls",
-        "link": "#q933-number-of-recent-calls",
+        "title": "⭐Q57. Insert Interval",
+        "slug": "q57-insert-interval",
+        "link": "#q57-insert-interval",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q228. Summary Ranges",
+        "slug": "q228-summary-ranges",
+        "link": "#q228-summary-ranges",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q452. Minimum Number of Arrows to Burst Balloons",
+        "slug": "q452-minimum-number-of-arrows-to-burst-balloons",
+        "link": "#q452-minimum-number-of-arrows-to-burst-balloons",
         "children": []
       }
     ],
-    "path": "/leetcode/queue/problems.html",
+    "path": "/leetcode/interval/interval.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Interval Concept",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🧠 Concept",
+        "slug": "🧠-concept",
+        "link": "#🧠-concept",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/interval/pattern.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -1637,6 +1312,35 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "Queue Concept",
+    "headers": [],
+    "path": "/leetcode/queue/concept.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Queue Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "❤️Q649. Dota2 Senate",
+        "slug": "q649-dota2-senate",
+        "link": "#q649-dota2-senate",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q933. Number of Recent Calls",
+        "slug": "q933-number-of-recent-calls",
+        "link": "#q933-number-of-recent-calls",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/queue/problems.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Binary Tree Concept & Pattern",
     "headers": [
       {
@@ -1684,6 +1388,302 @@ export const SEARCH_INDEX = [
       }
     ],
     "path": "/leetcode/two-pointer/concept.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Clean Code - Robert Martin",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Why Clean Code is Important?",
+        "slug": "why-clean-code-is-important",
+        "link": "#why-clean-code-is-important",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Guideline",
+        "slug": "guideline",
+        "link": "#guideline",
+        "children": [
+          {
+            "level": 3,
+            "title": "Names",
+            "slug": "names",
+            "link": "#names",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Functions",
+            "slug": "functions",
+            "link": "#functions",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Comments",
+            "slug": "comments",
+            "link": "#comments",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Formatting",
+            "slug": "formatting",
+            "link": "#formatting",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/books/coding/Clean-code.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Craftsmanship",
+    "headers": [],
+    "path": "/books/coding/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "The Pragmatic Programmer - Andrew Hunt & David Thomas",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Intro",
+        "slug": "intro",
+        "link": "#intro",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Tips",
+        "slug": "tips",
+        "link": "#tips",
+        "children": [
+          {
+            "level": 3,
+            "title": "Tip 1: Care About Your Craft",
+            "slug": "tip-1-care-about-your-craft",
+            "link": "#tip-1-care-about-your-craft",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Tip 2: Think! About Your Work",
+            "slug": "tip-2-think-about-your-work",
+            "link": "#tip-2-think-about-your-work",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Tip 3: Provide Options. Don't Make Lame Execuses",
+            "slug": "tip-3-provide-options-don-t-make-lame-execuses",
+            "link": "#tip-3-provide-options-don-t-make-lame-execuses",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Tip 4: Don't Live with Broken Windows",
+            "slug": "tip-4-don-t-live-with-broken-windows",
+            "link": "#tip-4-don-t-live-with-broken-windows",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Tip 5: Be a Catalyst for Change",
+            "slug": "tip-5-be-a-catalyst-for-change",
+            "link": "#tip-5-be-a-catalyst-for-change",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Tip 6: Remember the Big Picture",
+            "slug": "tip-6-remember-the-big-picture",
+            "link": "#tip-6-remember-the-big-picture",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Tip 7: Make Quality a Requirements Issue",
+            "slug": "tip-7-make-quality-a-requirements-issue",
+            "link": "#tip-7-make-quality-a-requirements-issue",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Tip 8: Invest Regularly in Your Knowledge Portfolio",
+            "slug": "tip-8-invest-regularly-in-your-knowledge-portfolio",
+            "link": "#tip-8-invest-regularly-in-your-knowledge-portfolio",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Tip 9: Critically Analyse What You Read and Hear",
+            "slug": "tip-9-critically-analyse-what-you-read-and-hear",
+            "link": "#tip-9-critically-analyse-what-you-read-and-hear",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Tip 10: It's both What You Say and the Way You Say It",
+            "slug": "tip-10-it-s-both-what-you-say-and-the-way-you-say-it",
+            "link": "#tip-10-it-s-both-what-you-say-and-the-way-you-say-it",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Tip 11: DRY --- Don't Repeat Yourself",
+            "slug": "tip-11-dry-don-t-repeat-yourself",
+            "link": "#tip-11-dry-don-t-repeat-yourself",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Tip 12: Make It Easy to Reuse",
+            "slug": "tip-12-make-it-easy-to-reuse",
+            "link": "#tip-12-make-it-easy-to-reuse",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Tip 13: Eliminate Effects Between Unrelated Things",
+            "slug": "tip-13-eliminate-effects-between-unrelated-things",
+            "link": "#tip-13-eliminate-effects-between-unrelated-things",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/books/coding/The-Pragmatic-Programmer.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Economy & Finance",
+    "headers": [],
+    "path": "/books/mindset/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "认知觉醒 - 周岭",
+    "headers": [
+      {
+        "level": 2,
+        "title": "内观自己",
+        "slug": "内观自己",
+        "link": "#内观自己",
+        "children": [
+          {
+            "level": 3,
+            "title": "大脑",
+            "slug": "大脑",
+            "link": "#大脑",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "天性",
+            "slug": "天性",
+            "link": "#天性",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "恐惧",
+            "slug": "恐惧",
+            "link": "#恐惧",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "反馈",
+            "slug": "反馈",
+            "link": "#反馈",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "外观世界",
+        "slug": "外观世界",
+        "link": "#外观世界",
+        "children": [
+          {
+            "level": 3,
+            "title": "专注",
+            "slug": "专注",
+            "link": "#专注",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "学习",
+            "slug": "学习",
+            "link": "#学习",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/books/mindset/%E8%AE%A4%E7%9F%A5%E8%A7%89%E9%86%92.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Economy & Finance",
+    "headers": [],
+    "path": "/books/economy/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "How Countries Go Broke? The Big Cycle - Ray Dalio",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Part 1 Overview of the Big Debt Cycle",
+        "slug": "part-1-overview-of-the-big-debt-cycle",
+        "link": "#part-1-overview-of-the-big-debt-cycle",
+        "children": [
+          {
+            "level": 3,
+            "title": "Research Questions",
+            "slug": "research-questions",
+            "link": "#research-questions",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Interesting Facts",
+            "slug": "interesting-facts",
+            "link": "#interesting-facts",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Invaluable Ideas",
+            "slug": "invaluable-ideas",
+            "link": "#invaluable-ideas",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Personal Insights",
+            "slug": "personal-insights",
+            "link": "#personal-insights",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/books/economy/how-countries-go-broke-the-big-cycle.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2368,42 +2368,6 @@ export const SEARCH_INDEX = [
       }
     ],
     "path": "/notes/framework/spring.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Useful Resources",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Algorithms",
-        "slug": "algorithms",
-        "link": "#algorithms",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Operating System",
-        "slug": "operating-system",
-        "link": "#operating-system",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Articles",
-        "slug": "articles",
-        "link": "#articles",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Misc",
-        "slug": "misc",
-        "link": "#misc",
-        "children": []
-      }
-    ],
-    "path": "/notes/resource/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -3897,6 +3861,42 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "Useful Resources",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Algorithms",
+        "slug": "algorithms",
+        "link": "#algorithms",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Operating System",
+        "slug": "operating-system",
+        "link": "#operating-system",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Articles",
+        "slug": "articles",
+        "link": "#articles",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Misc",
+        "slug": "misc",
+        "link": "#misc",
+        "children": []
+      }
+    ],
+    "path": "/notes/resource/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "1D Array Problems",
     "headers": [
       {
@@ -4228,6 +4228,92 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "Graph BFS Concept & Pattern",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🧠 Concept",
+        "slug": "🧠-concept",
+        "link": "#🧠-concept",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🛠️ Trick: Bidirectional BFS",
+        "slug": "🛠️-trick-bidirectional-bfs",
+        "link": "#🛠️-trick-bidirectional-bfs",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/graph/bfs/concept.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Graph BFS Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "⭐Q127. Word Ladder",
+        "slug": "q127-word-ladder",
+        "link": "#q127-word-ladder",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q365. Water and Jug Problem",
+        "slug": "q365-water-and-jug-problem",
+        "link": "#q365-water-and-jug-problem",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q433. Minimum Genetic Mutation",
+        "slug": "q433-minimum-genetic-mutation",
+        "link": "#q433-minimum-genetic-mutation",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "❤️Q752. Open the Lock",
+        "slug": "q752-open-the-lock",
+        "link": "#q752-open-the-lock",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q773. Sliding Puzzle",
+        "slug": "q773-sliding-puzzle",
+        "link": "#q773-sliding-puzzle",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q909. Snakes and Ladders",
+        "slug": "q909-snakes-and-ladders",
+        "link": "#q909-snakes-and-ladders",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "❤️Q994. Rotting Oranges",
+        "slug": "q994-rotting-oranges",
+        "link": "#q994-rotting-oranges",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q1926. Nearest Exit from Entrance in Maze",
+        "slug": "q1926-nearest-exit-from-entrance-in-maze",
+        "link": "#q1926-nearest-exit-from-entrance-in-maze",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/graph/bfs/problems.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Eulerian Graph Concept & Pattern",
     "headers": [
       {
@@ -4287,21 +4373,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Shortest Path Concept & Pattern",
-    "headers": [
-      {
-        "level": 2,
-        "title": "🧠 Concept",
-        "slug": "🧠-concept",
-        "link": "#🧠-concept",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/graph/shortest-path/concept.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Topological Sort Concept & Pattern",
     "headers": [
       {
@@ -4346,65 +4417,7 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Union Find Concept & Pattern",
-    "headers": [
-      {
-        "level": 2,
-        "title": "🧠 Concept",
-        "slug": "🧠-concept",
-        "link": "#🧠-concept",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🛠️ Algorithm",
-        "slug": "🛠️-algorithm",
-        "link": "#🛠️-algorithm",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/graph/union-find/concept.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Union Find Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Q130. Surrounded Regions",
-        "slug": "q130-surrounded-regions",
-        "link": "#q130-surrounded-regions",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q547. Number of Provinces",
-        "slug": "q547-number-of-provinces",
-        "link": "#q547-number-of-provinces",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q947. Most Stones Removed with Same Row or Column",
-        "slug": "q947-most-stones-removed-with-same-row-or-column",
-        "link": "#q947-most-stones-removed-with-same-row-or-column",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q990. Satisfiability of Equality Equations",
-        "slug": "q990-satisfiability-of-equality-equations",
-        "link": "#q990-satisfiability-of-equality-equations",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/graph/union-find/problems.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Monotonic Queue Concept",
+    "title": "Shortest Path Concept & Pattern",
     "headers": [
       {
         "level": 2,
@@ -4414,22 +4427,7 @@ export const SEARCH_INDEX = [
         "children": []
       }
     ],
-    "path": "/leetcode/queue/monoqueue/pattern.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Monotonic Queue Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "⭐Q239. Sliding Window Maximum",
-        "slug": "q239-sliding-window-maximum",
-        "link": "#q239-sliding-window-maximum",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/queue/monoqueue/problems.html",
+    "path": "/leetcode/graph/shortest-path/concept.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -4516,6 +4514,64 @@ export const SEARCH_INDEX = [
       }
     ],
     "path": "/leetcode/stack/monostack/problems.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Union Find Concept & Pattern",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🧠 Concept",
+        "slug": "🧠-concept",
+        "link": "#🧠-concept",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🛠️ Algorithm",
+        "slug": "🛠️-algorithm",
+        "link": "#🛠️-algorithm",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/graph/union-find/concept.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Union Find Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Q130. Surrounded Regions",
+        "slug": "q130-surrounded-regions",
+        "link": "#q130-surrounded-regions",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q547. Number of Provinces",
+        "slug": "q547-number-of-provinces",
+        "link": "#q547-number-of-provinces",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q947. Most Stones Removed with Same Row or Column",
+        "slug": "q947-most-stones-removed-with-same-row-or-column",
+        "link": "#q947-most-stones-removed-with-same-row-or-column",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q990. Satisfiability of Equality Equations",
+        "slug": "q990-satisfiability-of-equality-equations",
+        "link": "#q990-satisfiability-of-equality-equations",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/graph/union-find/problems.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -4652,6 +4708,36 @@ export const SEARCH_INDEX = [
       }
     ],
     "path": "/leetcode/stack/problems/valid-parenthese.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Monotonic Queue Concept",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🧠 Concept",
+        "slug": "🧠-concept",
+        "link": "#🧠-concept",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/queue/monoqueue/pattern.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Monotonic Queue Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "⭐Q239. Sliding Window Maximum",
+        "slug": "q239-sliding-window-maximum",
+        "link": "#q239-sliding-window-maximum",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/queue/monoqueue/problems.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -5431,16 +5517,16 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Backtrack",
+    "title": "Bst",
     "headers": [],
-    "path": "/leetcode/backtrack/",
+    "path": "/leetcode/bst/",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "Bst",
+    "title": "Backtrack",
     "headers": [],
-    "path": "/leetcode/bst/",
+    "path": "/leetcode/backtrack/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -5452,13 +5538,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Graph",
-    "headers": [],
-    "path": "/leetcode/graph/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Hashtable",
     "headers": [],
     "path": "/leetcode/hashtable/",
@@ -5466,9 +5545,9 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Interval",
+    "title": "Graph",
     "headers": [],
-    "path": "/leetcode/interval/",
+    "path": "/leetcode/graph/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -5480,9 +5559,9 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Queue",
+    "title": "Interval",
     "headers": [],
-    "path": "/leetcode/queue/",
+    "path": "/leetcode/interval/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -5497,6 +5576,13 @@ export const SEARCH_INDEX = [
     "title": "Stack",
     "headers": [],
     "path": "/leetcode/stack/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Queue",
+    "headers": [],
+    "path": "/leetcode/queue/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -5536,6 +5622,13 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "Bfs",
+    "headers": [],
+    "path": "/leetcode/graph/bfs/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Eulerian Graph",
     "headers": [],
     "path": "/leetcode/graph/eulerian-graph/",
@@ -5550,13 +5643,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Shortest Path",
-    "headers": [],
-    "path": "/leetcode/graph/shortest-path/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Topological Order",
     "headers": [],
     "path": "/leetcode/graph/topological-order/",
@@ -5564,16 +5650,9 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Union Find",
+    "title": "Shortest Path",
     "headers": [],
-    "path": "/leetcode/graph/union-find/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Monoqueue",
-    "headers": [],
-    "path": "/leetcode/queue/monoqueue/",
+    "path": "/leetcode/graph/shortest-path/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -5585,9 +5664,23 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "Union Find",
+    "headers": [],
+    "path": "/leetcode/graph/union-find/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Problems",
     "headers": [],
     "path": "/leetcode/stack/problems/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Monoqueue",
+    "headers": [],
+    "path": "/leetcode/queue/monoqueue/",
     "pathLocale": "/",
     "extraFields": []
   },
