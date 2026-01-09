@@ -26,6 +26,7 @@ export const enSidebar = sidebar({
       icon: "devicon:leetcode",
       collapsible: true,
       children: [
+        "complexity",
         {
           text: "Array",
           collapsible: true,
