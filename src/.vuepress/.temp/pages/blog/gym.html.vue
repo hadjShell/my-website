@@ -207,8 +207,8 @@
 <h4 id="单手绳索下拉" tabindex="-1"><a class="header-anchor" href="#单手绳索下拉"><span>单手绳索下拉</span></a></h4>
 <ul>
 <li>针对三头外侧头</li>
-<li>肩伸位置做</li>
-<li>注重顶峰收缩，最高位可以加一个尺偏（手腕向内）</li>
+<li>夹肘，肩伸位置做</li>
+<li>注重顶峰收缩，最高位可以加一个尺偏，或者全程保持尺偏</li>
 </ul>
 <h4 id="碎颅者" tabindex="-1"><a class="header-anchor" href="#碎颅者"><span>碎颅者</span></a></h4>
 <ul>
@@ -216,6 +216,13 @@
 <li>反手握杠铃</li>
 <li>起始位把杠铃放在肩膀正上方，髋伸位微夹腿蹬住地</li>
 <li><strong>肩前屈，腰贴近</strong>后启动</li>
+<li>杠铃往额头放，向斜上方推</li>
+</ul>
+<h4 id="绳索直杆下压" tabindex="-1"><a class="header-anchor" href="#绳索直杆下压"><span>绳索直杆下压</span></a></h4>
+<ul>
+<li>针对三头外侧头</li>
+<li>不必过度内旋，大臂贴近身体伸直到不挤压锁骨即可</li>
+<li>虎口发力掰杠</li>
 </ul>
 <h3 id="core" tabindex="-1"><a class="header-anchor" href="#core"><span>Core</span></a></h3>
 <hr>

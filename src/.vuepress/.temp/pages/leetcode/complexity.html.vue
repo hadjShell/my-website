@@ -261,6 +261,18 @@ M834 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">â€
 <p class="hint-container-title">Tips</p>
 <p>In practical, notice the influence of constant factor. E.g., hash table is slower than array despite both operations are <span v-pre class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span>.</p>
 </div>
+<h2 id="links" tabindex="-1"><a class="header-anchor" href="#links"><span>Links</span></a></h2>
+<ul>
+<li>
+<p><a href="https://www.bigocheatsheet.com/" target="_blank" rel="noopener noreferrer">Big O Cheat Sheet</a></p>
+</li>
+<li>
+<p><a href="https://github.com/trekhleb/javascript-algorithms" target="_blank" rel="noopener noreferrer">https://github.com/trekhleb/javascript-algorithms</a></p>
+</li>
+<li>
+<p><a href="https://github.com/TheAlgorithms/Java" target="_blank" rel="noopener noreferrer">https://github.com/TheAlgorithms/Java</a></p>
+</li>
+</ul>
 </div></template>
 
 

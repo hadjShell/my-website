@@ -168,3 +168,10 @@ Dynamic array resizes cost being averaged out to $O(1)$ per insertion.
 In practical, notice the influence of constant factor. E.g., hash table is slower than array despite both operations are $O(1)$.
 
 :::
+
+## Links
+
+- [Big O Cheat Sheet](https://www.bigocheatsheet.com/)
+
+- <https://github.com/trekhleb/javascript-algorithms>
+- <https://github.com/TheAlgorithms/Java>
