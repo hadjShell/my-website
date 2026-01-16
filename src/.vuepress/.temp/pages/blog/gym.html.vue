@@ -73,10 +73,18 @@
 </template>
 </Tabs>
 <h2 id="⛓️-technique" tabindex="-1"><a class="header-anchor" href="#⛓️-technique"><span>⛓️ Technique</span></a></h2>
-<div class="hint-container important">
-<p class="hint-container-title">Important</p>
-<p>呼吸能力就是控制姿势的能力</p>
-</div>
+<h3 id="通用" tabindex="-1"><a class="header-anchor" href="#通用"><span>通用</span></a></h3>
+<ul>
+<li>呼吸能力就是控制姿势的能力</li>
+<li>意识上和动作的趋势对抗，维持身体的中立
+<ul>
+<li>拉背手臂内旋抵抗外旋</li>
+<li>推胸手臂外旋抵抗内旋</li>
+<li>三头下压手臂外旋抵抗锁骨内旋</li>
+<li>飞肩手臂内旋抵抗外旋</li>
+</ul>
+</li>
+</ul>
 <h3 id="chest" tabindex="-1"><a class="header-anchor" href="#chest"><span>Chest</span></a></h3>
 <hr>
 <div class="hint-container tip">

@@ -211,6 +211,12 @@ export const enSidebar = sidebar({
             "problems",
           ],
         },
+        {
+          text: "Dynamic Programming",
+          collapsible: true,
+          prefix: "dp/",
+          children: "structure",
+        },
         "recursion",
         "math",
         "bit",
