@@ -267,6 +267,8 @@ editLink: false
 
 - [Solution](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/solutions/7462220/backtracking-with-divide-and-conquer-and-u5vl)
 
+- **Cannot** use DP as Q416.
+
 - 球视角一：球必须进入盒子，从 k 个盒子里选一个进入
 
   - 复杂度 $O(k^n)$，注意是指数级不是阶乘级，因为是球视角

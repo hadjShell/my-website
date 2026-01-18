@@ -262,6 +262,9 @@ First, we take the element and do backtrack. Before going to the &quot;don't tak
 <p><a href="https://leetcode.com/problems/partition-to-k-equal-sum-subsets/solutions/7462220/backtracking-with-divide-and-conquer-and-u5vl" target="_blank" rel="noopener noreferrer">Solution</a></p>
 </li>
 <li>
+<p><strong>Cannot</strong> use DP as Q416.</p>
+</li>
+<li>
 <p>球视角一：球必须进入盒子，从 k 个盒子里选一个进入</p>
 <ul>
 <li>复杂度 <span v-pre class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>k</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(k^n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>，注意是指数级不是阶乘级，因为是球视角</li>

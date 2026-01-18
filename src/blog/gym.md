@@ -5,6 +5,8 @@ category:
   - Fitness
 tag:
   - Gym
+sticky: true
+star: true
 footer: false
 editLink: false
 ---
