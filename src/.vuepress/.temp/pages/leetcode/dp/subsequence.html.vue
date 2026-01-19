@@ -1,6 +1,6 @@
 <template><div><div class="hint-container important">
 <p class="hint-container-title">Problem domain</p>
-<p>Ask for a valid longest subsequence.</p>
+<p>Ask for a valid <strong>longest subsequence</strong>.</p>
 <p>A <strong>subsequence</strong> is a sequence that can be derived from another sequence by deleting some or no elements without changing the order of the remaining elements.</p>
 </div>
 <ul>

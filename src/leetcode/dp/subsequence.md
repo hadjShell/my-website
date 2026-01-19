@@ -9,7 +9,7 @@ editLink: false
 
 ::: important Problem domain
 
-Ask for a valid longest subsequence.
+Ask for a valid **longest subsequence**.
 
 A **subsequence** is a sequence that can be derived from another sequence by deleting some or no elements without changing the order of the remaining elements.
 
