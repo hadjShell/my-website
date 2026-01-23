@@ -45,10 +45,20 @@ editLink: false
 
 - [Boyer–Moore majority vote algorithm](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_majority_vote_algorithm)
 
-::: tip Tips for Boyer-Moore Algorithm
+  ::: tip Tips for Boyer-Moore Algorithm
 
-If a second pass is not performed and there is no majority, the algorithm will not detect that no majority exists.
+  If a second pass is not performed and there is no majority, the algorithm will not detect that no majority exists.
 
-:::
+  :::
 
 - 环形数组
+
+  ::: tip
+
+  **Maintain two pointers `start` and `end`. `start` points to the first valid element, `end` points to the last valid element**.
+
+  Move `start` or `end` when adding and deleting elements from the start or the end of the array.
+
+  When `start` or `end` is out of bound (`< 0 or >= arr.length`), We can use the modulo operation `%` to make them go around to the beginning or end of the array and continue working, thus achieving the effect of a circular array.
+
+  :::

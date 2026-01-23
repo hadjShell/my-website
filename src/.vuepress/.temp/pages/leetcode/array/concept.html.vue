@@ -73,14 +73,20 @@
 </li>
 <li>
 <p><a href="https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_majority_vote_algorithm" target="_blank" rel="noopener noreferrer">Boyer–Moore majority vote algorithm</a></p>
-</li>
-</ul>
 <div class="hint-container tip">
 <p class="hint-container-title">Tips for Boyer-Moore Algorithm</p>
 <p>If a second pass is not performed and there is no majority, the algorithm will not detect that no majority exists.</p>
 </div>
-<ul>
-<li>环形数组</li>
+</li>
+<li>
+<p>环形数组</p>
+<div class="hint-container tip">
+<p class="hint-container-title">Tips</p>
+<p><strong>Maintain two pointers <code v-pre>start</code> and <code v-pre>end</code>. <code v-pre>start</code> points to the first valid element, <code v-pre>end</code> points to the last valid element</strong>.</p>
+<p>Move <code v-pre>start</code> or <code v-pre>end</code> when adding and deleting elements from the start or the end of the array.</p>
+<p>When <code v-pre>start</code> or <code v-pre>end</code> is out of bound (<code v-pre>&lt; 0 or &gt;= arr.length</code>), We can use the modulo operation <code v-pre>%</code> to make them go around to the beginning or end of the array and continue working, thus achieving the effect of a circular array.</p>
+</div>
+</li>
 </ul>
 </div></template>
 

@@ -218,6 +218,7 @@ export const enSidebar = sidebar({
           children: [
             "concept",
             "fibonacci",
+            "house-robber",
             "subsequence",
             "knapsack",
             "shortest-path",
