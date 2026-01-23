@@ -1,6 +1,7 @@
 <template><div><div class="hint-container important">
 <p class="hint-container-title">Problem Domain</p>
-<p>Shortest path problem</p>
+<p><strong>Shortest path problem from one state to another state, edge weight == 1</strong>.<br>
+Normally the start state and end state is given, so bidirectional BFS can be used.</p>
 </div>
 <h2 id="🧠-concept" tabindex="-1"><a class="header-anchor" href="#🧠-concept"><span>🧠 Concept</span></a></h2>
 <ul>

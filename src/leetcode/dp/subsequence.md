@@ -1,7 +1,6 @@
 ---
 title: Subsequence Problem
 author: David Zhang aka Hadjshell
-order: 2
 isOriginal: true
 footer: false
 editLink: false

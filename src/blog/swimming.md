@@ -11,7 +11,7 @@ editLink: false
 
 ## 蛙泳
 
-**Push-Pull-Glide**
+**Pull-Kick-Glide**
 
 1. 分手；
 2. 先抬头，自然高肘划水至大臂收紧肋骨两侧，小臂手掌向上贴近身体，口吸气；

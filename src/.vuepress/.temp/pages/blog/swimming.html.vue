@@ -1,5 +1,5 @@
 <template><div><h2 id="蛙泳" tabindex="-1"><a class="header-anchor" href="#蛙泳"><span>蛙泳</span></a></h2>
-<p><strong>Push-Pull-Glide</strong></p>
+<p><strong>Pull-Kick-Glide</strong></p>
 <ol>
 <li>分手；</li>
 <li>先抬头，自然高肘划水至大臂收紧肋骨两侧，小臂手掌向上贴近身体，口吸气；</li>

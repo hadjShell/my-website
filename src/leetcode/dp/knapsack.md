@@ -1,7 +1,6 @@
 ---
 title: Knapsack Problem
 author: David Zhang aka Hadjshell
-order: 3
 isOriginal: true
 footer: false
 editLink: false

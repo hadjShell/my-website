@@ -1,7 +1,6 @@
 ---
 title: Dynamic Programming Concept & Pattern
 author: David Zhang aka Hadjshell
-order: 1
 isOriginal: true
 footer: false
 editLink: false

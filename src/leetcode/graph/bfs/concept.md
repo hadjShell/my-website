@@ -9,7 +9,8 @@ editLink: false
 
 ::: important Problem Domain
 
-Shortest path problem
+**Shortest path problem from one state to another state, edge weight == 1**.
+Normally the start state and end state is given, so bidirectional BFS can be used.
 
 :::
 
