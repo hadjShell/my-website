@@ -1,5 +1,5 @@
 ---
-title: Other Backtracking Problem
+title: Other Backtracking Problems
 author: David Zhang aka Hadjshell
 isOriginal: true
 footer: false

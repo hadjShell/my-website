@@ -6,6 +6,12 @@ footer: false
 editLink: false
 ---
 
+- 1-dimentional array: [Q198](#q198-house-robber).
+- Circular array: [Q213](#q213-house-robber-ii).
+- Binary tree: [Q337](#starq337-house-robber-iii).
+
+---
+
 ### Q198. [House Robber](https://leetcode.com/problems/house-robber/)
 
 - ```java

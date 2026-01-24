@@ -18,6 +18,7 @@
 </ul>
 </li>
 </ul>
+<hr>
 <h3 id="q279-perfect-squares" tabindex="-1"><a class="header-anchor" href="#q279-perfect-squares"><span>Q279. <a href="https://leetcode.com/problems/perfect-squares/" target="_blank" rel="noopener noreferrer">Perfect Squares</a></span></a></h3>
 <ul>
 <li>

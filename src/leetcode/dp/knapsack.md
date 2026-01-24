@@ -21,6 +21,8 @@ Given `n` items where each item has some weight and profit associated with it an
   - **Bounded knapsack**: there are certain number of copies of each item
   - **Unbounded knapsack**: no upper bound on the number of copies of each kind of item
 
+---
+
 ### Q279. [Perfect Squares](https://leetcode.com/problems/perfect-squares/)
 
 - ```java

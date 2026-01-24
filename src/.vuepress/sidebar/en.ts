@@ -223,6 +223,8 @@ export const enSidebar = sidebar({
             "knapsack",
             "shortest-path",
             "optimal-game",
+            "stock",
+            "problems",
           ],
         },
         "recursion",
