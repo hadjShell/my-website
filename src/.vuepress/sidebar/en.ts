@@ -106,6 +106,12 @@ export const enSidebar = sidebar({
           children: "structure",
         },
         {
+          text: "Binary Search",
+          collapsible: true,
+          prefix: "binary-search/",
+          children: "structure",
+        },
+        {
           text: "Binary Tree",
           collapsible: true,
           prefix: "tree/",

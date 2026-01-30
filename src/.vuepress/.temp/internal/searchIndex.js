@@ -664,57 +664,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Economy & Finance",
-    "headers": [],
-    "path": "/books/economy/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "How Countries Go Broke? The Big Cycle - Ray Dalio",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Part 1 Overview of the Big Debt Cycle",
-        "slug": "part-1-overview-of-the-big-debt-cycle",
-        "link": "#part-1-overview-of-the-big-debt-cycle",
-        "children": [
-          {
-            "level": 3,
-            "title": "Research Questions",
-            "slug": "research-questions",
-            "link": "#research-questions",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Interesting Facts",
-            "slug": "interesting-facts",
-            "link": "#interesting-facts",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Invaluable Ideas",
-            "slug": "invaluable-ideas",
-            "link": "#invaluable-ideas",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Personal Insights",
-            "slug": "personal-insights",
-            "link": "#personal-insights",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/books/economy/how-countries-go-broke-the-big-cycle.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Clean Code - Robert Martin",
     "headers": [
       {
@@ -960,38 +909,53 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Useful Resources",
+    "title": "Economy & Finance",
+    "headers": [],
+    "path": "/books/economy/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "How Countries Go Broke? The Big Cycle - Ray Dalio",
     "headers": [
       {
         "level": 2,
-        "title": "Algorithms",
-        "slug": "algorithms",
-        "link": "#algorithms",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Operating System",
-        "slug": "operating-system",
-        "link": "#operating-system",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Articles",
-        "slug": "articles",
-        "link": "#articles",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Misc",
-        "slug": "misc",
-        "link": "#misc",
-        "children": []
+        "title": "Part 1 Overview of the Big Debt Cycle",
+        "slug": "part-1-overview-of-the-big-debt-cycle",
+        "link": "#part-1-overview-of-the-big-debt-cycle",
+        "children": [
+          {
+            "level": 3,
+            "title": "Research Questions",
+            "slug": "research-questions",
+            "link": "#research-questions",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Interesting Facts",
+            "slug": "interesting-facts",
+            "link": "#interesting-facts",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Invaluable Ideas",
+            "slug": "invaluable-ideas",
+            "link": "#invaluable-ideas",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Personal Insights",
+            "slug": "personal-insights",
+            "link": "#personal-insights",
+            "children": []
+          }
+        ]
       }
     ],
-    "path": "/notes/resource/",
+    "path": "/books/economy/how-countries-go-broke-the-big-cycle.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -3169,6 +3133,42 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "Useful Resources",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Algorithms",
+        "slug": "algorithms",
+        "link": "#algorithms",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Operating System",
+        "slug": "operating-system",
+        "link": "#operating-system",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Articles",
+        "slug": "articles",
+        "link": "#articles",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Misc",
+        "slug": "misc",
+        "link": "#misc",
+        "children": []
+      }
+    ],
+    "path": "/notes/resource/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Array Concept & Pattern",
     "headers": [
       {
@@ -3187,6 +3187,134 @@ export const SEARCH_INDEX = [
       }
     ],
     "path": "/leetcode/array/concept.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Binary Search Concept & Pattern",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🧠 Concept",
+        "slug": "🧠-concept",
+        "link": "#🧠-concept",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🛠️ Algorithm",
+        "slug": "🛠️-algorithm",
+        "link": "#🛠️-algorithm",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/binary-search/concept.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Binary Search Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "⭐Q33. Search in Rotated Sorted Array",
+        "slug": "q33-search-in-rotated-sorted-array",
+        "link": "#q33-search-in-rotated-sorted-array",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q34. Find First and Last Position of Element in Sorted Array",
+        "slug": "q34-find-first-and-last-position-of-element-in-sorted-array",
+        "link": "#q34-find-first-and-last-position-of-element-in-sorted-array",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q35. Search Insert Position",
+        "slug": "q35-search-insert-position",
+        "link": "#q35-search-insert-position",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q74. Search a 2D Matrix",
+        "slug": "q74-search-a-2d-matrix",
+        "link": "#q74-search-a-2d-matrix",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q81. Search in Rotated Sorted Array II",
+        "slug": "q81-search-in-rotated-sorted-array-ii",
+        "link": "#q81-search-in-rotated-sorted-array-ii",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q153. Find Minimum in Rotated Sorted Array",
+        "slug": "q153-find-minimum-in-rotated-sorted-array",
+        "link": "#q153-find-minimum-in-rotated-sorted-array",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q154. Find Minimum in Rotated Sorted Array II",
+        "slug": "q154-find-minimum-in-rotated-sorted-array-ii",
+        "link": "#q154-find-minimum-in-rotated-sorted-array-ii",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q162. Find Peak Element",
+        "slug": "q162-find-peak-element",
+        "link": "#q162-find-peak-element",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q278. First Bad Version",
+        "slug": "q278-first-bad-version",
+        "link": "#q278-first-bad-version",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q410. Split Array Largest Sum",
+        "slug": "q410-split-array-largest-sum",
+        "link": "#q410-split-array-largest-sum",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q704. Binary Search",
+        "slug": "q704-binary-search",
+        "link": "#q704-binary-search",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q729. My Calendar I",
+        "slug": "q729-my-calendar-i",
+        "link": "#q729-my-calendar-i",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q875. Koko Eating Bananas",
+        "slug": "q875-koko-eating-bananas",
+        "link": "#q875-koko-eating-bananas",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q1011. Capacity To Ship Packages Within D Days",
+        "slug": "q1011-capacity-to-ship-packages-within-d-days",
+        "link": "#q1011-capacity-to-ship-packages-within-d-days",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/binary-search/problems.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -4035,6 +4163,70 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "Greedy Algorithm Concept & Pattern",
+    "headers": [],
+    "path": "/leetcode/greedy/concept.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Greedy Algorithm Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "⭐Q45. Jump Game II",
+        "slug": "q45-jump-game-ii",
+        "link": "#q45-jump-game-ii",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q55. Jump Game",
+        "slug": "q55-jump-game",
+        "link": "#q55-jump-game",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q134. Gas Station",
+        "slug": "q134-gas-station",
+        "link": "#q134-gas-station",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q435. Non-overlapping Intervals",
+        "slug": "q435-non-overlapping-intervals",
+        "link": "#q435-non-overlapping-intervals",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q452. Minimum Number of Arrows to Burst Balloons",
+        "slug": "q452-minimum-number-of-arrows-to-burst-balloons",
+        "link": "#q452-minimum-number-of-arrows-to-burst-balloons",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐1024. Video Stitching",
+        "slug": "_1024-video-stitching",
+        "link": "#_1024-video-stitching",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q1717. Maximum Score From Removing Substrings",
+        "slug": "q1717-maximum-score-from-removing-substrings",
+        "link": "#q1717-maximum-score-from-removing-substrings",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/greedy/problems.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Hashtable Concept & Pattern",
     "headers": [
       {
@@ -4241,121 +4433,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Greedy Algorithm Concept & Pattern",
-    "headers": [],
-    "path": "/leetcode/greedy/concept.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Greedy Algorithm Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "⭐Q45. Jump Game II",
-        "slug": "q45-jump-game-ii",
-        "link": "#q45-jump-game-ii",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q55. Jump Game",
-        "slug": "q55-jump-game",
-        "link": "#q55-jump-game",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q134. Gas Station",
-        "slug": "q134-gas-station",
-        "link": "#q134-gas-station",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q435. Non-overlapping Intervals",
-        "slug": "q435-non-overlapping-intervals",
-        "link": "#q435-non-overlapping-intervals",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q452. Minimum Number of Arrows to Burst Balloons",
-        "slug": "q452-minimum-number-of-arrows-to-burst-balloons",
-        "link": "#q452-minimum-number-of-arrows-to-burst-balloons",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐1024. Video Stitching",
-        "slug": "_1024-video-stitching",
-        "link": "#_1024-video-stitching",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q1717. Maximum Score From Removing Substrings",
-        "slug": "q1717-maximum-score-from-removing-substrings",
-        "link": "#q1717-maximum-score-from-removing-substrings",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/greedy/problems.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Interval Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Q56. Merge Intervals",
-        "slug": "q56-merge-intervals",
-        "link": "#q56-merge-intervals",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q57. Insert Interval",
-        "slug": "q57-insert-interval",
-        "link": "#q57-insert-interval",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q228. Summary Ranges",
-        "slug": "q228-summary-ranges",
-        "link": "#q228-summary-ranges",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q452. Minimum Number of Arrows to Burst Balloons",
-        "slug": "q452-minimum-number-of-arrows-to-burst-balloons",
-        "link": "#q452-minimum-number-of-arrows-to-burst-balloons",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/interval/interval.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Interval Concept",
-    "headers": [
-      {
-        "level": 2,
-        "title": "🧠 Concept",
-        "slug": "🧠-concept",
-        "link": "#🧠-concept",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/interval/pattern.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Prefix Sum Concept & Pattern",
     "headers": [
       {
@@ -4474,6 +4551,57 @@ export const SEARCH_INDEX = [
       }
     ],
     "path": "/leetcode/prefix-sum/problems.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Interval Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Q56. Merge Intervals",
+        "slug": "q56-merge-intervals",
+        "link": "#q56-merge-intervals",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q57. Insert Interval",
+        "slug": "q57-insert-interval",
+        "link": "#q57-insert-interval",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q228. Summary Ranges",
+        "slug": "q228-summary-ranges",
+        "link": "#q228-summary-ranges",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q452. Minimum Number of Arrows to Burst Balloons",
+        "slug": "q452-minimum-number-of-arrows-to-burst-balloons",
+        "link": "#q452-minimum-number-of-arrows-to-burst-balloons",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/interval/interval.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Interval Concept",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🧠 Concept",
+        "slug": "🧠-concept",
+        "link": "#🧠-concept",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/interval/pattern.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -4621,28 +4749,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Two Pointer Concept & Pattern",
-    "headers": [
-      {
-        "level": 2,
-        "title": "🧠 Linked List Concept",
-        "slug": "🧠-linked-list-concept",
-        "link": "#🧠-linked-list-concept",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🛠️ Pattern",
-        "slug": "🛠️-pattern",
-        "link": "#🛠️-pattern",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/two-pointer/concept.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Binary Tree Concept & Pattern",
     "headers": [
       {
@@ -4668,6 +4774,28 @@ export const SEARCH_INDEX = [
       }
     ],
     "path": "/leetcode/tree/concept.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Two Pointer Concept & Pattern",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🧠 Linked List Concept",
+        "slug": "🧠-linked-list-concept",
+        "link": "#🧠-linked-list-concept",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🛠️ Pattern",
+        "slug": "🛠️-pattern",
+        "link": "#🛠️-pattern",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/two-pointer/concept.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -5089,21 +5217,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Minimum Spanning Tree Concept & Pattern",
-    "headers": [
-      {
-        "level": 2,
-        "title": "🧠 Concept",
-        "slug": "🧠-concept",
-        "link": "#🧠-concept",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/graph/mst/concept.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Shortest Path Concept & Pattern",
     "headers": [
       {
@@ -5159,6 +5272,51 @@ export const SEARCH_INDEX = [
       }
     ],
     "path": "/leetcode/graph/eulerian-graph/problems.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Minimum Spanning Tree Concept & Pattern",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🧠 Concept",
+        "slug": "🧠-concept",
+        "link": "#🧠-concept",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/graph/mst/concept.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Monotonic Queue Concept",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🧠 Concept",
+        "slug": "🧠-concept",
+        "link": "#🧠-concept",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/queue/monoqueue/pattern.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Monotonic Queue Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "⭐Q239. Sliding Window Maximum",
+        "slug": "q239-sliding-window-maximum",
+        "link": "#q239-sliding-window-maximum",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/queue/monoqueue/problems.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -5261,36 +5419,6 @@ export const SEARCH_INDEX = [
       }
     ],
     "path": "/leetcode/graph/union-find/problems.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Monotonic Queue Concept",
-    "headers": [
-      {
-        "level": 2,
-        "title": "🧠 Concept",
-        "slug": "🧠-concept",
-        "link": "#🧠-concept",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/queue/monoqueue/pattern.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Monotonic Queue Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "⭐Q239. Sliding Window Maximum",
-        "slug": "q239-sliding-window-maximum",
-        "link": "#q239-sliding-window-maximum",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/queue/monoqueue/problems.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -6104,79 +6232,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Prim's Algorithm Concept & Pattern",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Concept",
-        "slug": "concept",
-        "link": "#concept",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Algorithm",
-        "slug": "algorithm",
-        "link": "#algorithm",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Complexity",
-        "slug": "complexity",
-        "link": "#complexity",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Cut theory",
-        "slug": "cut-theory",
-        "link": "#cut-theory",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/graph/mst/prim/concept.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Prim's Algorithm Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Q1584. Min Cost to Connect All Points",
-        "slug": "q1584-min-cost-to-connect-all-points",
-        "link": "#q1584-min-cost-to-connect-all-points",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/graph/mst/prim/problems.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Kruskal's Algorithm Concept & Pattern",
-    "headers": [],
-    "path": "/leetcode/graph/mst/kruskal/concept.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Kruskal's Algorithm Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Q1584. Min Cost to Connect All Points",
-        "slug": "q1584-min-cost-to-connect-all-points",
-        "link": "#q1584-min-cost-to-connect-all-points",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/graph/mst/kruskal/problems.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Dijkstra's Algorithm Concept & Pattern",
     "headers": [
       {
@@ -6271,6 +6326,79 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "Kruskal's Algorithm Concept & Pattern",
+    "headers": [],
+    "path": "/leetcode/graph/mst/kruskal/concept.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Kruskal's Algorithm Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Q1584. Min Cost to Connect All Points",
+        "slug": "q1584-min-cost-to-connect-all-points",
+        "link": "#q1584-min-cost-to-connect-all-points",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/graph/mst/kruskal/problems.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Prim's Algorithm Concept & Pattern",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Concept",
+        "slug": "concept",
+        "link": "#concept",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Algorithm",
+        "slug": "algorithm",
+        "link": "#algorithm",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Complexity",
+        "slug": "complexity",
+        "link": "#complexity",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Cut theory",
+        "slug": "cut-theory",
+        "link": "#cut-theory",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/graph/mst/prim/concept.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Prim's Algorithm Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Q1584. Min Cost to Connect All Points",
+        "slug": "q1584-min-cost-to-connect-all-points",
+        "link": "#q1584-min-cost-to-connect-all-points",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/graph/mst/prim/problems.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "",
     "headers": [],
     "path": "/404.html",
@@ -6288,6 +6416,13 @@ export const SEARCH_INDEX = [
     "title": "Array",
     "headers": [],
     "path": "/leetcode/array/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Binary Search",
+    "headers": [],
+    "path": "/leetcode/binary-search/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -6327,13 +6462,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Hashtable",
-    "headers": [],
-    "path": "/leetcode/hashtable/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Greedy",
     "headers": [],
     "path": "/leetcode/greedy/",
@@ -6341,9 +6469,9 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Interval",
+    "title": "Hashtable",
     "headers": [],
-    "path": "/leetcode/interval/",
+    "path": "/leetcode/hashtable/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -6351,6 +6479,13 @@ export const SEARCH_INDEX = [
     "title": "Prefix Sum",
     "headers": [],
     "path": "/leetcode/prefix-sum/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Interval",
+    "headers": [],
+    "path": "/leetcode/interval/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -6376,16 +6511,16 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Two Pointer",
+    "title": "Tree",
     "headers": [],
-    "path": "/leetcode/two-pointer/",
+    "path": "/leetcode/tree/",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "Tree",
+    "title": "Two Pointer",
     "headers": [],
-    "path": "/leetcode/tree/",
+    "path": "/leetcode/two-pointer/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -6418,13 +6553,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Mst",
-    "headers": [],
-    "path": "/leetcode/graph/mst/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Shortest Path",
     "headers": [],
     "path": "/leetcode/graph/shortest-path/",
@@ -6439,6 +6567,20 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "Mst",
+    "headers": [],
+    "path": "/leetcode/graph/mst/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Monoqueue",
+    "headers": [],
+    "path": "/leetcode/queue/monoqueue/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Topological Order",
     "headers": [],
     "path": "/leetcode/graph/topological-order/",
@@ -6449,13 +6591,6 @@ export const SEARCH_INDEX = [
     "title": "Union Find",
     "headers": [],
     "path": "/leetcode/graph/union-find/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Monoqueue",
-    "headers": [],
-    "path": "/leetcode/queue/monoqueue/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -6488,9 +6623,9 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Prim",
+    "title": "Dijkstra",
     "headers": [],
-    "path": "/leetcode/graph/mst/prim/",
+    "path": "/leetcode/graph/shortest-path/dijkstra/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -6502,9 +6637,9 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Dijkstra",
+    "title": "Prim",
     "headers": [],
-    "path": "/leetcode/graph/shortest-path/dijkstra/",
+    "path": "/leetcode/graph/mst/prim/",
     "pathLocale": "/",
     "extraFields": []
   },
