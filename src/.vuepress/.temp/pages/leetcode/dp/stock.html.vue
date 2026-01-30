@@ -22,6 +22,9 @@
 <li><code v-pre>k = +inf</code> with transaction fee: <a href="#q714-best-time-to-buy-and-sell-stock-with-transaction-fee">Q714</a>. Same as Q122. Treat transaction fee as increasement on stock price</li>
 </ul>
 </li>
+<li>
+<p><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/solutions/108870/Most-consistent-ways-of-dealing-with-the-series-of-stock-problems/" target="_blank" rel="noopener noreferrer">A great explanation on leetcode</a>. The definition of <code v-pre>memo</code> is not exactly like mine, but the idea is the same.</p>
+</li>
 </ul>
 <hr>
 <h3 id="q121-best-time-to-buy-and-sell-stock" tabindex="-1"><a class="header-anchor" href="#q121-best-time-to-buy-and-sell-stock"><span>Q121. <a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/" target="_blank" rel="noopener noreferrer">Best Time to Buy and Sell Stock</a></span></a></h3>

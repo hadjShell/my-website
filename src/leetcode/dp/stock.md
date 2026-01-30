@@ -21,12 +21,15 @@ Note: You may not engage in multiple transactions simultaneously (i.e., you must
   - `memo[i][k][j]`: the maximum profit you can achieve from i^th^ day with at most k transactions, j = 0 means no stock holding, j = 1 means holding one stock
 
 - Variations
+
   - Father of all: [Q188](#heartq188-best-time-to-buy-and-sell-stock-iv).
   - `k = 1`: [Q121](#q121-best-time-to-buy-and-sell-stock).
   - `k = 2`: [Q123](#q123-best-time-to-buy-and-sell-stock-iii).
   - `k = +inf`: [Q122](#q122-best-time-to-buy-and-sell-stock-ii). We don't need state `k` anymore
   - `k = +inf` with cooldown: [Q309](#q309-best-time-to-buy-and-sell-stock-with-cooldown). We don't need state `k` anymore. `j` have 4 possible states instead of 2.
   - `k = +inf` with transaction fee: [Q714](#q714-best-time-to-buy-and-sell-stock-with-transaction-fee). Same as Q122. Treat transaction fee as increasement on stock price
+
+- [A great explanation on leetcode](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/solutions/108870/Most-consistent-ways-of-dealing-with-the-series-of-stock-problems/). The definition of `memo` is not exactly like mine, but the idea is the same.
 
 ---
 

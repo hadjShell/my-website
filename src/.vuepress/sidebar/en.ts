@@ -227,6 +227,12 @@ export const enSidebar = sidebar({
             "problems",
           ],
         },
+        {
+          text: "Greedy Algorithm",
+          collapsible: true,
+          prefix: "greedy/",
+          children: "structure",
+        },
         "recursion",
         "math",
         "bit",
