@@ -114,6 +114,31 @@ editLink: false
   }
   ```
 
+### Q108. [Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
+
+- ```java
+  class Solution {
+      public TreeNode sortedArrayToBST(int[] nums) {
+          return arrToBST(nums, 0, nums.length - 1);
+      }
+
+      private TreeNode arrToBST(int[] nums, int l, int r) {
+          if (l > r)
+              return null;
+
+          if (l == r)
+              return new TreeNode(nums[l]);
+
+          int mid = l + (r - l) / 2;
+          TreeNode root = new TreeNode(nums[mid]);
+          root.left = arrToBST(nums, l, mid - 1);
+          root.right = arrToBST(nums, mid + 1, r);
+
+          return root;
+      }
+  }
+  ```
+
 ### :star:Q173. [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
 
 - ```java
@@ -182,7 +207,6 @@ editLink: false
   ```
 
 - Follow up solution
-
   - Every `TreeNode` maintain another information `size` which store the size of current subtree whose root node is current node
 
 ### :star:Q450. [Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/)

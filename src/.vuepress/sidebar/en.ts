@@ -26,6 +26,7 @@ export const enSidebar = sidebar({
       icon: "devicon:leetcode",
       collapsible: true,
       children: [
+        "interview-template",
         "complexity",
         {
           text: "Array",
@@ -122,6 +123,17 @@ export const enSidebar = sidebar({
           collapsible: true,
           prefix: "bst/",
           children: "structure",
+        },
+        {
+          text: "Heap",
+          collapsible: true,
+          prefix: "heap/",
+          children: [
+            "concept",
+            "merge-sorted-lists",
+            "find-kth-biggest",
+            "problems",
+          ],
         },
         {
           text: "Graph",

@@ -10,6 +10,44 @@ editLink: false
 - **遍历** or **分解子问题**
 - **多叉树**
 
+### :heart:Q23. [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
+
+- ```java
+  class Solution {
+      public ListNode mergeKLists(ListNode[] lists) {
+          return merge(lists, 0, lists.length - 1);
+      }
+
+      public ListNode merge(ListNode[] lists, int left, int right) {
+          if (left > right)
+              return null;
+          else if (left == right)
+              return lists[left];
+          else {
+              int mid = left + (right - left) / 2;
+              ListNode leftList = merge(lists, left, mid), rightList = merge(lists, mid + 1, right);
+              return mergeTwoLists(leftList, rightList);
+          }
+      }
+
+      public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+          if(l1 == null)
+              return l2;
+          if(l2 == null)
+              return l1;
+
+          if(l1.val >= l2.val) {
+              l2.next = mergeTwoLists(l1, l2.next);
+              return l2;
+          }
+          else {
+              l1.next = mergeTwoLists(l1.next, l2);
+              return l1;
+          }
+      }
+  }
+  ```
+
 ### Q341. [Flatten Nested List Iterator](https://leetcode.com/problems/flatten-nested-list-iterator/)
 
 - 实际上是**遍历一个多叉树**
@@ -72,7 +110,6 @@ editLink: false
   ```
 
 - **出栈压栈 flatten 第一个 list，实现惰性 flatten**
-
   - ```java
     public class NestedIterator implements Iterator<Integer> {
         private LinkedList<NestedInteger> list;
@@ -106,7 +143,6 @@ editLink: false
 ### Q427. [Construct Quad Tree](https://leetcode.com/problems/construct-quad-tree/)
 
 - Follow-up: Assuming you have got a constructed quad tree, now you are required to implement a `public Node set(int[][] grid, int x, int y, int val)` to reconstruct the quad tree.
-
   - Calculate which one at which level is the changed node, bfs get it and reconstruct it, and then insert the new subtree back
 
   ```java
