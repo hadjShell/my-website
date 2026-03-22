@@ -2,7 +2,7 @@
 title: Gym Workouts
 date: 2025-12-17
 category:
-  - Fitness
+  - Sports
 tag:
   - Gym
 sticky: true

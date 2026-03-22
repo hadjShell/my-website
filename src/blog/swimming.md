@@ -2,7 +2,7 @@
 title: Swimming
 date: 2026-01-18
 category:
-  - Fitness
+  - Sports
 tag:
   - Swim
 footer: false
