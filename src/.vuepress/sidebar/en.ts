@@ -285,5 +285,7 @@ export const enSidebar = sidebar({
     },
   ],
 
+  "/tft/": "structure",
+
   "/": [""],
 });

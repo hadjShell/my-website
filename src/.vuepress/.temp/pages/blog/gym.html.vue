@@ -73,7 +73,8 @@
 </template>
 </Tabs>
 <h2 id="⛓️-technique" tabindex="-1"><a class="header-anchor" href="#⛓️-technique"><span>⛓️ Technique</span></a></h2>
-<h3 id="通用" tabindex="-1"><a class="header-anchor" href="#通用"><span>通用</span></a></h3>
+<div class="hint-container important">
+<p class="hint-container-title">通用</p>
 <ul>
 <li>呼吸能力就是控制姿势的能力</li>
 <li>意识上和动作的趋势对抗，维持身体的中立
@@ -85,6 +86,7 @@
 </ul>
 </li>
 </ul>
+</div>
 <h3 id="chest" tabindex="-1"><a class="header-anchor" href="#chest"><span>Chest</span></a></h3>
 <hr>
 <div class="hint-container tip">
@@ -146,7 +148,7 @@
 <li>大腿后侧蹬住发力</li>
 </ul>
 <div class="hint-container tip">
-<p class="hint-container-title">Self tip</p>
+<p class="hint-container-title">Tips</p>
 <p>注意颈椎段中立位</p>
 </div>
 <div class="hint-container info">
@@ -197,6 +199,54 @@
 </div>
 <h3 id="leg" tabindex="-1"><a class="header-anchor" href="#leg"><span>Leg</span></a></h3>
 <hr>
+<h4 id="深蹲" tabindex="-1"><a class="header-anchor" href="#深蹲"><span>深蹲</span></a></h4>
+<ol>
+<li>
+<p>站距：标准站距与肩同宽，因人而异微调；<br>
+窄站距针对大腿外侧，宽站距针对大腿内侧；</p>
+</li>
+<li>
+<p>脚尖朝向：外展15°-30°<br>
+脚尖外展不充分容易导致低头，脚尖外展太多腰部不稳；</p>
+</li>
+<li>
+<p>膝关节<br>
+预动作放松，不必绷紧大腿肌肉，不要锁死膝关节；<br>
+下蹲时<strong>膝关节和髋关节同时下降</strong>，不要孤立屈膝；<br>
+大腿平行的半蹲膝关节压力最大，全蹲反而减少膝关节压力；<br>
+膝关节自然超过脚尖；<br>
+膝关节运动轨迹与脚尖一致，<strong>对准第二第三脚趾</strong>；</p>
+</li>
+<li>
+<p>踝关节<br>
+深蹲蹲到底部时，踝关节微微向前，身体坐到踝关节上，而不是直直的往下坐；</p>
+</li>
+<li>
+<p>髋关节<br>
+下蹲屈髋时躯干要保持稳定，不要往前趴；<br>
+屈髋幅度要到<strong>膝髋平衡</strong>的位置，也就是肩膀在大腿中间；<br>
+起来时，髋关节比膝关节早起0.3-0.4秒，也就是稍微抬屁股再起；</p>
+</li>
+<li>
+<p>视线：平视前方，看远方，稳定；</p>
+</li>
+<li>
+<p>握姿握距：舒适为主<br>
+建议滚花处量一个大拇指；<br>
+原则上窄为好，因为手臂可以贴近躯干；<br>
+建议全握；<br>
+手腕保持中立位；</p>
+</li>
+<li>
+<p>肘关节<br>
+预备姿势时，稍微内收肩胛骨，肘关节自然在躯干两侧；<br>
+全程肘关节和躯干平行；<br>
+肘关节只是起到稳定作用，不参与发力；</p>
+</li>
+<li>
+<p>挺胸：<strong>向上吸气挺不是向前挺</strong>。</p>
+</li>
+</ol>
 <h3 id="shoulder" tabindex="-1"><a class="header-anchor" href="#shoulder"><span>Shoulder</span></a></h3>
 <hr>
 <h3 id="arm" tabindex="-1"><a class="header-anchor" href="#arm"><span>Arm</span></a></h3>
