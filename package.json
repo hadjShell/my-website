@@ -24,5 +24,8 @@
     "onlyBuiltDependencies": [
       "esbuild"
     ]
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
   }
 }

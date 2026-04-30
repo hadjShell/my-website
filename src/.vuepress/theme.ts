@@ -4,6 +4,9 @@ import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
 import { getDirname, path } from "vuepress/utils";
+
+import "dotenv/config";
+
 const __dirname = getDirname(import.meta.url);
 
 export default hopeTheme({
@@ -109,6 +112,15 @@ export default hopeTheme({
     // revealjs: {
     //   plugins: ["highlight", "math", "search", "notes", "zoom"],
     // },
+  },
+
+  encrypt: {
+    config: {
+      "/blog/bq.html": {
+        password: process.env.PASSWORD,
+        hint: "666",
+      },
+    },
   },
 
   plugins: {

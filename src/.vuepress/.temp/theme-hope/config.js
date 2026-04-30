@@ -5,6 +5,8 @@ import { h } from "vue"
 import { resolveComponent } from "vue"
 import { Blog, BloggerInfo, SocialMedias, setupBlog } from "/Users/hadjshell/Documents/OneDrive/Personal-Projects/myblog/my-docs/node_modules/.pnpm/vuepress-theme-hope@2.0.0-rc.98_@vuepress+plugin-search@2.0.0-rc.121_vuepress@2.0.0-rc._1c9cfe0e8e6f1f6fa6d4160963cb9d3e/node_modules/vuepress-theme-hope/lib/bundle/exports/blog.js";
 import "/Users/hadjshell/Documents/OneDrive/Personal-Projects/myblog/my-docs/node_modules/.pnpm/vuepress-theme-hope@2.0.0-rc.98_@vuepress+plugin-search@2.0.0-rc.121_vuepress@2.0.0-rc._1c9cfe0e8e6f1f6fa6d4160963cb9d3e/node_modules/vuepress-theme-hope/lib/bundle/styles/blog/bundle.scss";
+import { GlobalEncrypt, LocalEncrypt } from "/Users/hadjshell/Documents/OneDrive/Personal-Projects/myblog/my-docs/node_modules/.pnpm/vuepress-theme-hope@2.0.0-rc.98_@vuepress+plugin-search@2.0.0-rc.121_vuepress@2.0.0-rc._1c9cfe0e8e6f1f6fa6d4160963cb9d3e/node_modules/vuepress-theme-hope/lib/bundle/exports/encrypt.js";
+import "/Users/hadjshell/Documents/OneDrive/Personal-Projects/myblog/my-docs/node_modules/.pnpm/vuepress-theme-hope@2.0.0-rc.98_@vuepress+plugin-search@2.0.0-rc.121_vuepress@2.0.0-rc._1c9cfe0e8e6f1f6fa6d4160963cb9d3e/node_modules/vuepress-theme-hope/lib/bundle/styles/encrypt/bundle.scss"
 
 import "/Users/hadjshell/Documents/OneDrive/Personal-Projects/myblog/my-docs/node_modules/.pnpm/@vuepress+helper@2.0.0-rc.118_vuepress@2.0.0-rc.26_@vuepress+bundler-vite@2.0.0-rc.26_@_9011571cf4b04dafa84d0eacd1d6eea4/node_modules/@vuepress/helper/lib/client/styles/colors.css";
 import "/Users/hadjshell/Documents/OneDrive/Personal-Projects/myblog/my-docs/node_modules/.pnpm/@vuepress+helper@2.0.0-rc.118_vuepress@2.0.0-rc.26_@vuepress+bundler-vite@2.0.0-rc.26_@_9011571cf4b04dafa84d0eacd1d6eea4/node_modules/@vuepress/helper/lib/client/styles/normalize.css";
@@ -39,6 +41,8 @@ export default {
 
     app.component("BloggerInfo", BloggerInfo);
     app.component("SocialMedias", SocialMedias);
+    app.component("GlobalEncrypt", GlobalEncrypt);
+    app.component("LocalEncrypt", LocalEncrypt);
   },
   setup: () => {
     setupDarkMode();

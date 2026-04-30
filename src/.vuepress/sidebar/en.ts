@@ -17,6 +17,13 @@ export const enSidebar = sidebar({
       collapsible: true,
       children: "structure",
     },
+    {
+      text: "Operating System",
+      icon: "ix:operating-system-settings",
+      prefix: "os/",
+      collapsible: true,
+      children: "structure",
+    },
     "resource/",
   ],
 
