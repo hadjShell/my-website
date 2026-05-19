@@ -138,6 +138,14 @@ Any operating system must multiplex processes onto the underlying hardware, isol
 
 ## History of Operating System
 
-Batch processing (Just libraries) -> System call (protection) -> Multiprogramming -> PC (networking, windowing systems, user-level threads, drivers. etc.)
+Open Shop -> Batch Processing -> Multiprogramming -> Timesharing -> Concurrent Programming -> Personal Computing -> Distributed System
 
-> Read Section 2.6 in Chapter Introduction in OSTEP.
+::: info Difference between Multiprogramming and Timesharing
+
+Multiprogramming means keeping multiple programs in memory so the CPU always has something to run. Timesharing extends multiprogramming that gives each user/process a small CPU time slice rapidly.
+
+For multiprogramming, CPU switches mostly when process waits for I/O. For timesharing, CPU switches even if process is still running or after a timer interrupt.
+
+:::
+
+> Read Section 2.6 in Chapter Introduction in OSTEP, "The Evolution of Operating System, Per Brinch Hansen.".

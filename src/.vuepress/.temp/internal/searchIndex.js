@@ -556,6 +556,78 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "海克斯",
+    "headers": [],
+    "path": "/tft/hex.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "装备",
+    "headers": [
+      {
+        "level": 2,
+        "title": "装备价值及格线",
+        "slug": "装备价值及格线",
+        "link": "#装备价值及格线",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "属性与机制价值",
+        "slug": "属性与机制价值",
+        "link": "#属性与机制价值",
+        "children": [
+          {
+            "level": 3,
+            "title": "基础散件数值",
+            "slug": "基础散件数值",
+            "link": "#基础散件数值",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "特殊数值",
+            "slug": "特殊数值",
+            "link": "#特殊数值",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "机制数值",
+            "slug": "机制数值",
+            "link": "#机制数值",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "装备分类及排名",
+        "slug": "装备分类及排名",
+        "link": "#装备分类及排名",
+        "children": []
+      }
+    ],
+    "path": "/tft/item.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "经济",
+    "headers": [],
+    "path": "/tft/money.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "站位",
+    "headers": [],
+    "path": "/tft/pos.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Leetcode 174. Dungeon Game",
     "headers": [
       {
@@ -1081,78 +1153,6 @@ export const SEARCH_INDEX = [
       }
     ],
     "path": "/books/mindset/%E8%AE%A4%E7%9F%A5%E8%A7%89%E9%86%92.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "海克斯",
-    "headers": [],
-    "path": "/tft/hex.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "装备",
-    "headers": [
-      {
-        "level": 2,
-        "title": "装备价值及格线",
-        "slug": "装备价值及格线",
-        "link": "#装备价值及格线",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "属性与机制价值",
-        "slug": "属性与机制价值",
-        "link": "#属性与机制价值",
-        "children": [
-          {
-            "level": 3,
-            "title": "基础散件数值",
-            "slug": "基础散件数值",
-            "link": "#基础散件数值",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "特殊数值",
-            "slug": "特殊数值",
-            "link": "#特殊数值",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "机制数值",
-            "slug": "机制数值",
-            "link": "#机制数值",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "装备分类及排名",
-        "slug": "装备分类及排名",
-        "link": "#装备分类及排名",
-        "children": []
-      }
-    ],
-    "path": "/tft/item.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "经济",
-    "headers": [],
-    "path": "/tft/money.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "站位",
-    "headers": [],
-    "path": "/tft/pos.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -1841,53 +1841,211 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Economy & Finance",
-    "headers": [],
-    "path": "/books/economy/",
+    "title": "Introduction",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Why to Learn Operating System?",
+        "slug": "why-to-learn-operating-system",
+        "link": "#why-to-learn-operating-system",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "What is Operating System?",
+        "slug": "what-is-operating-system",
+        "link": "#what-is-operating-system",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "How does OS Make the System Easy to Use?",
+        "slug": "how-does-os-make-the-system-easy-to-use",
+        "link": "#how-does-os-make-the-system-easy-to-use",
+        "children": [
+          {
+            "level": 3,
+            "title": "Virtualization",
+            "slug": "virtualization",
+            "link": "#virtualization",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Service Provider",
+            "slug": "service-provider",
+            "link": "#service-provider",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Resource Manager",
+            "slug": "resource-manager",
+            "link": "#resource-manager",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Concurrency",
+        "slug": "concurrency",
+        "link": "#concurrency",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Persistence",
+        "slug": "persistence",
+        "link": "#persistence",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Design Goals",
+        "slug": "design-goals",
+        "link": "#design-goals",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "History of Operating System",
+        "slug": "history-of-operating-system",
+        "link": "#history-of-operating-system",
+        "children": []
+      }
+    ],
+    "path": "/notes/os/introduction.html",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "How Countries Go Broke? The Big Cycle - Ray Dalio",
+    "title": "OS Organization",
     "headers": [
       {
         "level": 2,
-        "title": "Part 1 Overview of the Big Debt Cycle",
-        "slug": "part-1-overview-of-the-big-debt-cycle",
-        "link": "#part-1-overview-of-the-big-debt-cycle",
+        "title": "System Call",
+        "slug": "system-call",
+        "link": "#system-call",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Shell",
+        "slug": "shell",
+        "link": "#shell",
+        "children": []
+      }
+    ],
+    "path": "/notes/os/os-organization.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Process",
+    "headers": [
+      {
+        "level": 2,
+        "title": "The Abstraction: A Process",
+        "slug": "the-abstraction-a-process",
+        "link": "#the-abstraction-a-process",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Process API",
+        "slug": "process-api",
+        "link": "#process-api",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Process Creation",
+        "slug": "process-creation",
+        "link": "#process-creation",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Memory Layout",
+        "slug": "memory-layout",
+        "link": "#memory-layout",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Process State",
+        "slug": "process-state",
+        "link": "#process-state",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Process Identifier",
+        "slug": "process-identifier",
+        "link": "#process-identifier",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Process Control Primitives API",
+        "slug": "process-control-primitives-api",
+        "link": "#process-control-primitives-api",
         "children": [
           {
             "level": 3,
-            "title": "Research Questions",
-            "slug": "research-questions",
-            "link": "#research-questions",
+            "title": "The fork() System Call",
+            "slug": "the-fork-system-call",
+            "link": "#the-fork-system-call",
             "children": []
           },
           {
             "level": 3,
-            "title": "Interesting Facts",
-            "slug": "interesting-facts",
-            "link": "#interesting-facts",
+            "title": "The wait() System Call",
+            "slug": "the-wait-system-call",
+            "link": "#the-wait-system-call",
             "children": []
           },
           {
             "level": 3,
-            "title": "Invaluable Ideas",
-            "slug": "invaluable-ideas",
-            "link": "#invaluable-ideas",
+            "title": "The exec() System Call",
+            "slug": "the-exec-system-call",
+            "link": "#the-exec-system-call",
             "children": []
           },
           {
             "level": 3,
-            "title": "Personal Insights",
-            "slug": "personal-insights",
-            "link": "#personal-insights",
+            "title": "Why? Motivating the API",
+            "slug": "why-motivating-the-api",
+            "link": "#why-motivating-the-api",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "IPC",
+        "slug": "ipc",
+        "link": "#ipc",
+        "children": [
+          {
+            "level": 3,
+            "title": "Pipes",
+            "slug": "pipes",
+            "link": "#pipes",
             "children": []
           }
         ]
       }
     ],
-    "path": "/books/economy/how-countries-go-broke-the-big-cycle.html",
+    "path": "/notes/os/process.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "References",
+    "headers": [],
+    "path": "/notes/os/reference.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -1928,7 +2086,7 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Array Concept & Pattern",
+    "title": "Backtracking Concept & Pattern",
     "headers": [
       {
         "level": 2,
@@ -1939,13 +2097,166 @@ export const SEARCH_INDEX = [
       },
       {
         "level": 2,
-        "title": "🛠️ Pattern",
-        "slug": "🛠️-pattern",
-        "link": "#🛠️-pattern",
+        "title": "🛠️ Algorithm",
+        "slug": "🛠️-algorithm",
+        "link": "#🛠️-algorithm",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "球盒模型 (Balls-into-bins Problem)",
+        "slug": "球盒模型-balls-into-bins-problem",
+        "link": "#球盒模型-balls-into-bins-problem",
+        "children": [
+          {
+            "level": 3,
+            "title": "两种视角理解排列",
+            "slug": "两种视角理解排列",
+            "link": "#两种视角理解排列",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "两种视角理解组合",
+            "slug": "两种视角理解组合",
+            "link": "#两种视角理解组合",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "复杂度分析",
+            "slug": "复杂度分析",
+            "link": "#复杂度分析",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/leetcode/backtrack/concept.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Generate Parentheses Problem",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Properties of a valid parentheses combination",
+        "slug": "properties-of-a-valid-parentheses-combination",
+        "link": "#properties-of-a-valid-parentheses-combination",
+        "children": [
+          {
+            "level": 3,
+            "title": "Q22. Generate Parentheses",
+            "slug": "q22-generate-parentheses",
+            "link": "#q22-generate-parentheses",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/leetcode/backtrack/generate-parentheses.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "N-Queen Problem",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Q51. N-Queens",
+        "slug": "q51-n-queens",
+        "link": "#q51-n-queens",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q52. N-Queens II",
+        "slug": "q52-n-queens-ii",
+        "link": "#q52-n-queens-ii",
         "children": []
       }
     ],
-    "path": "/leetcode/array/concept.html",
+    "path": "/leetcode/backtrack/n-queen.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Other Backtracking Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Q17. Letter Combinations of a Phone Number",
+        "slug": "q17-letter-combinations-of-a-phone-number",
+        "link": "#q17-letter-combinations-of-a-phone-number",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q79. Word Search",
+        "slug": "q79-word-search",
+        "link": "#q79-word-search",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q93. Restore IP Addresses",
+        "slug": "q93-restore-ip-addresses",
+        "link": "#q93-restore-ip-addresses",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q131. Palindrome Partitioning",
+        "slug": "q131-palindrome-partitioning",
+        "link": "#q131-palindrome-partitioning",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q491. Non-decreasing Subsequences",
+        "slug": "q491-non-decreasing-subsequences",
+        "link": "#q491-non-decreasing-subsequences",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q698. Partition to K Equal Sum Subsets",
+        "slug": "q698-partition-to-k-equal-sum-subsets",
+        "link": "#q698-partition-to-k-equal-sum-subsets",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q967. Numbers With Same Consecutive Differences",
+        "slug": "q967-numbers-with-same-consecutive-differences",
+        "link": "#q967-numbers-with-same-consecutive-differences",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q980. Unique Paths III",
+        "slug": "q980-unique-paths-iii",
+        "link": "#q980-unique-paths-iii",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/backtrack/problems.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Sudoku Problem",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Q37. Sudoku Solver",
+        "slug": "q37-sudoku-solver",
+        "link": "#q37-sudoku-solver",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/backtrack/sudoku.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -3439,7 +3750,7 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Backtracking Concept & Pattern",
+    "title": "Array Concept & Pattern",
     "headers": [
       {
         "level": 2,
@@ -3450,166 +3761,13 @@ export const SEARCH_INDEX = [
       },
       {
         "level": 2,
-        "title": "🛠️ Algorithm",
-        "slug": "🛠️-algorithm",
-        "link": "#🛠️-algorithm",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "球盒模型 (Balls-into-bins Problem)",
-        "slug": "球盒模型-balls-into-bins-problem",
-        "link": "#球盒模型-balls-into-bins-problem",
-        "children": [
-          {
-            "level": 3,
-            "title": "两种视角理解排列",
-            "slug": "两种视角理解排列",
-            "link": "#两种视角理解排列",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "两种视角理解组合",
-            "slug": "两种视角理解组合",
-            "link": "#两种视角理解组合",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "复杂度分析",
-            "slug": "复杂度分析",
-            "link": "#复杂度分析",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/leetcode/backtrack/concept.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Generate Parentheses Problem",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Properties of a valid parentheses combination",
-        "slug": "properties-of-a-valid-parentheses-combination",
-        "link": "#properties-of-a-valid-parentheses-combination",
-        "children": [
-          {
-            "level": 3,
-            "title": "Q22. Generate Parentheses",
-            "slug": "q22-generate-parentheses",
-            "link": "#q22-generate-parentheses",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/leetcode/backtrack/generate-parentheses.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "N-Queen Problem",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Q51. N-Queens",
-        "slug": "q51-n-queens",
-        "link": "#q51-n-queens",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q52. N-Queens II",
-        "slug": "q52-n-queens-ii",
-        "link": "#q52-n-queens-ii",
+        "title": "🛠️ Pattern",
+        "slug": "🛠️-pattern",
+        "link": "#🛠️-pattern",
         "children": []
       }
     ],
-    "path": "/leetcode/backtrack/n-queen.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Other Backtracking Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Q17. Letter Combinations of a Phone Number",
-        "slug": "q17-letter-combinations-of-a-phone-number",
-        "link": "#q17-letter-combinations-of-a-phone-number",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q79. Word Search",
-        "slug": "q79-word-search",
-        "link": "#q79-word-search",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q93. Restore IP Addresses",
-        "slug": "q93-restore-ip-addresses",
-        "link": "#q93-restore-ip-addresses",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q131. Palindrome Partitioning",
-        "slug": "q131-palindrome-partitioning",
-        "link": "#q131-palindrome-partitioning",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q491. Non-decreasing Subsequences",
-        "slug": "q491-non-decreasing-subsequences",
-        "link": "#q491-non-decreasing-subsequences",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q698. Partition to K Equal Sum Subsets",
-        "slug": "q698-partition-to-k-equal-sum-subsets",
-        "link": "#q698-partition-to-k-equal-sum-subsets",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q967. Numbers With Same Consecutive Differences",
-        "slug": "q967-numbers-with-same-consecutive-differences",
-        "link": "#q967-numbers-with-same-consecutive-differences",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q980. Unique Paths III",
-        "slug": "q980-unique-paths-iii",
-        "link": "#q980-unique-paths-iii",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/backtrack/problems.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Sudoku Problem",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Q37. Sudoku Solver",
-        "slug": "q37-sudoku-solver",
-        "link": "#q37-sudoku-solver",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/backtrack/sudoku.html",
+    "path": "/leetcode/array/concept.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -3742,150 +3900,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Introduction",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Why to Learn Operating System?",
-        "slug": "why-to-learn-operating-system",
-        "link": "#why-to-learn-operating-system",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "What is Operating System?",
-        "slug": "what-is-operating-system",
-        "link": "#what-is-operating-system",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "How does OS Make the System Easy to Use?",
-        "slug": "how-does-os-make-the-system-easy-to-use",
-        "link": "#how-does-os-make-the-system-easy-to-use",
-        "children": [
-          {
-            "level": 3,
-            "title": "Virtualization",
-            "slug": "virtualization",
-            "link": "#virtualization",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Service Provider",
-            "slug": "service-provider",
-            "link": "#service-provider",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Resource Manager",
-            "slug": "resource-manager",
-            "link": "#resource-manager",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Concurrency",
-        "slug": "concurrency",
-        "link": "#concurrency",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Persistence",
-        "slug": "persistence",
-        "link": "#persistence",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Design Goals",
-        "slug": "design-goals",
-        "link": "#design-goals",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "History of Operating System",
-        "slug": "history-of-operating-system",
-        "link": "#history-of-operating-system",
-        "children": []
-      }
-    ],
-    "path": "/notes/os/introduction.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "OS Organization",
-    "headers": [
-      {
-        "level": 2,
-        "title": "System Call",
-        "slug": "system-call",
-        "link": "#system-call",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Shell",
-        "slug": "shell",
-        "link": "#shell",
-        "children": []
-      }
-    ],
-    "path": "/notes/os/os-organization.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Process",
-    "headers": [
-      {
-        "level": 2,
-        "title": "The Abstraction: A Process",
-        "slug": "the-abstraction-a-process",
-        "link": "#the-abstraction-a-process",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Process API",
-        "slug": "process-api",
-        "link": "#process-api",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Process Creation",
-        "slug": "process-creation",
-        "link": "#process-creation",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Process State",
-        "slug": "process-state",
-        "link": "#process-state",
-        "children": []
-      }
-    ],
-    "path": "/notes/os/process.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "References",
-    "headers": [],
-    "path": "/notes/os/reference.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Binary Search Tree Concept & Pattern",
     "headers": [
       {
@@ -3993,39 +4007,53 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Difference Array Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Q1094. Car Pooling",
-        "slug": "q1094-car-pooling",
-        "link": "#q1094-car-pooling",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q1109. Corporate Flight Bookings",
-        "slug": "q1109-corporate-flight-bookings",
-        "link": "#q1109-corporate-flight-bookings",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/difference-array/difference-array.html",
+    "title": "Economy & Finance",
+    "headers": [],
+    "path": "/books/economy/",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "Difference Array Concept",
+    "title": "How Countries Go Broke? The Big Cycle - Ray Dalio",
     "headers": [
       {
         "level": 2,
-        "title": "🧠 Concept",
-        "slug": "🧠-concept",
-        "link": "#🧠-concept",
-        "children": []
+        "title": "Part 1 Overview of the Big Debt Cycle",
+        "slug": "part-1-overview-of-the-big-debt-cycle",
+        "link": "#part-1-overview-of-the-big-debt-cycle",
+        "children": [
+          {
+            "level": 3,
+            "title": "Research Questions",
+            "slug": "research-questions",
+            "link": "#research-questions",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Interesting Facts",
+            "slug": "interesting-facts",
+            "link": "#interesting-facts",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Invaluable Ideas",
+            "slug": "invaluable-ideas",
+            "link": "#invaluable-ideas",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Personal Insights",
+            "slug": "personal-insights",
+            "link": "#personal-insights",
+            "children": []
+          }
+        ]
       }
     ],
-    "path": "/leetcode/difference-array/pattern.html",
+    "path": "/books/economy/how-countries-go-broke-the-big-cycle.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -4445,66 +4473,119 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Greedy Algorithm Concept & Pattern",
-    "headers": [],
-    "path": "/leetcode/greedy/concept.html",
+    "title": "Graph Concept & Pattern",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🧠 Concept",
+        "slug": "🧠-concept",
+        "link": "#🧠-concept",
+        "children": [
+          {
+            "level": 3,
+            "title": "Definition",
+            "slug": "definition",
+            "link": "#definition",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Types",
+            "slug": "types",
+            "link": "#types",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Connectivity",
+            "slug": "connectivity",
+            "link": "#connectivity",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Implementations",
+            "slug": "implementations",
+            "link": "#implementations",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "🛠️ Pattern",
+        "slug": "🛠️-pattern",
+        "link": "#🛠️-pattern",
+        "children": [
+          {
+            "level": 3,
+            "title": "Traversal",
+            "slug": "traversal",
+            "link": "#traversal",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/leetcode/graph/concept.html",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "Greedy Algorithm Problems",
+    "title": "Island Problem",
     "headers": [
       {
-        "level": 3,
-        "title": "⭐Q45. Jump Game II",
-        "slug": "q45-jump-game-ii",
-        "link": "#q45-jump-game-ii",
+        "level": 2,
+        "title": "Flood Fill Algorithm",
+        "slug": "flood-fill-algorithm",
+        "link": "#flood-fill-algorithm",
         "children": []
       },
       {
-        "level": 3,
-        "title": "Q55. Jump Game",
-        "slug": "q55-jump-game",
-        "link": "#q55-jump-game",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q134. Gas Station",
-        "slug": "q134-gas-station",
-        "link": "#q134-gas-station",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q435. Non-overlapping Intervals",
-        "slug": "q435-non-overlapping-intervals",
-        "link": "#q435-non-overlapping-intervals",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q452. Minimum Number of Arrows to Burst Balloons",
-        "slug": "q452-minimum-number-of-arrows-to-burst-balloons",
-        "link": "#q452-minimum-number-of-arrows-to-burst-balloons",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐1024. Video Stitching",
-        "slug": "_1024-video-stitching",
-        "link": "#_1024-video-stitching",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q1717. Maximum Score From Removing Substrings",
-        "slug": "q1717-maximum-score-from-removing-substrings",
-        "link": "#q1717-maximum-score-from-removing-substrings",
-        "children": []
+        "level": 2,
+        "title": "Questions",
+        "slug": "questions",
+        "link": "#questions",
+        "children": [
+          {
+            "level": 3,
+            "title": "⭐Q200. Number of Islands",
+            "slug": "q200-number-of-islands",
+            "link": "#q200-number-of-islands",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "⭐Q694. Number of Distinct Islands",
+            "slug": "q694-number-of-distinct-islands",
+            "link": "#q694-number-of-distinct-islands",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Q695. Max Area of Island",
+            "slug": "q695-max-area-of-island",
+            "link": "#q695-max-area-of-island",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Q1254. Number of Closed Islands",
+            "slug": "q1254-number-of-closed-islands",
+            "link": "#q1254-number-of-closed-islands",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Q1905. Count Sub Islands",
+            "slug": "q1905-count-sub-islands",
+            "link": "#q1905-count-sub-islands",
+            "children": []
+          }
+        ]
       }
     ],
-    "path": "/leetcode/greedy/problems.html",
+    "path": "/leetcode/graph/island.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -4860,6 +4941,107 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "Difference Array Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Q1094. Car Pooling",
+        "slug": "q1094-car-pooling",
+        "link": "#q1094-car-pooling",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q1109. Corporate Flight Bookings",
+        "slug": "q1109-corporate-flight-bookings",
+        "link": "#q1109-corporate-flight-bookings",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/difference-array/difference-array.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Difference Array Concept",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🧠 Concept",
+        "slug": "🧠-concept",
+        "link": "#🧠-concept",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/difference-array/pattern.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Greedy Algorithm Concept & Pattern",
+    "headers": [],
+    "path": "/leetcode/greedy/concept.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Greedy Algorithm Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "⭐Q45. Jump Game II",
+        "slug": "q45-jump-game-ii",
+        "link": "#q45-jump-game-ii",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q55. Jump Game",
+        "slug": "q55-jump-game",
+        "link": "#q55-jump-game",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q134. Gas Station",
+        "slug": "q134-gas-station",
+        "link": "#q134-gas-station",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q435. Non-overlapping Intervals",
+        "slug": "q435-non-overlapping-intervals",
+        "link": "#q435-non-overlapping-intervals",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q452. Minimum Number of Arrows to Burst Balloons",
+        "slug": "q452-minimum-number-of-arrows-to-burst-balloons",
+        "link": "#q452-minimum-number-of-arrows-to-burst-balloons",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐1024. Video Stitching",
+        "slug": "_1024-video-stitching",
+        "link": "#_1024-video-stitching",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q1717. Maximum Score From Removing Substrings",
+        "slug": "q1717-maximum-score-from-removing-substrings",
+        "link": "#q1717-maximum-score-from-removing-substrings",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/greedy/problems.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Prefix Sum Concept & Pattern",
     "headers": [
       {
@@ -5011,123 +5193,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Graph Concept & Pattern",
-    "headers": [
-      {
-        "level": 2,
-        "title": "🧠 Concept",
-        "slug": "🧠-concept",
-        "link": "#🧠-concept",
-        "children": [
-          {
-            "level": 3,
-            "title": "Definition",
-            "slug": "definition",
-            "link": "#definition",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Types",
-            "slug": "types",
-            "link": "#types",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Connectivity",
-            "slug": "connectivity",
-            "link": "#connectivity",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Implementations",
-            "slug": "implementations",
-            "link": "#implementations",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "🛠️ Pattern",
-        "slug": "🛠️-pattern",
-        "link": "#🛠️-pattern",
-        "children": [
-          {
-            "level": 3,
-            "title": "Traversal",
-            "slug": "traversal",
-            "link": "#traversal",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/leetcode/graph/concept.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Island Problem",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Flood Fill Algorithm",
-        "slug": "flood-fill-algorithm",
-        "link": "#flood-fill-algorithm",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Questions",
-        "slug": "questions",
-        "link": "#questions",
-        "children": [
-          {
-            "level": 3,
-            "title": "⭐Q200. Number of Islands",
-            "slug": "q200-number-of-islands",
-            "link": "#q200-number-of-islands",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "⭐Q694. Number of Distinct Islands",
-            "slug": "q694-number-of-distinct-islands",
-            "link": "#q694-number-of-distinct-islands",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Q695. Max Area of Island",
-            "slug": "q695-max-area-of-island",
-            "link": "#q695-max-area-of-island",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Q1254. Number of Closed Islands",
-            "slug": "q1254-number-of-closed-islands",
-            "link": "#q1254-number-of-closed-islands",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Q1905. Count Sub Islands",
-            "slug": "q1905-count-sub-islands",
-            "link": "#q1905-count-sub-islands",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/leetcode/graph/island.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Sliding Window Concept & Pattern",
     "headers": [
       {
@@ -5235,6 +5300,35 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "Two Pointer Concept & Pattern",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🧠 Linked List Concept",
+        "slug": "🧠-linked-list-concept",
+        "link": "#🧠-linked-list-concept",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🛠️ Pattern",
+        "slug": "🛠️-pattern",
+        "link": "#🛠️-pattern",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/two-pointer/concept.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Stack Concept",
+    "headers": [],
+    "path": "/leetcode/stack/concept.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Binary Tree Concept & Pattern",
     "headers": [
       {
@@ -5264,31 +5358,249 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Stack Concept",
-    "headers": [],
-    "path": "/leetcode/stack/concept.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Two Pointer Concept & Pattern",
+    "title": "Graph BFS Concept & Pattern",
     "headers": [
       {
         "level": 2,
-        "title": "🧠 Linked List Concept",
-        "slug": "🧠-linked-list-concept",
-        "link": "#🧠-linked-list-concept",
+        "title": "🧠 Concept",
+        "slug": "🧠-concept",
+        "link": "#🧠-concept",
         "children": []
       },
       {
         "level": 2,
-        "title": "🛠️ Pattern",
-        "slug": "🛠️-pattern",
-        "link": "#🛠️-pattern",
+        "title": "🛠️ Trick: Bidirectional BFS",
+        "slug": "🛠️-trick-bidirectional-bfs",
+        "link": "#🛠️-trick-bidirectional-bfs",
         "children": []
       }
     ],
-    "path": "/leetcode/two-pointer/concept.html",
+    "path": "/leetcode/graph/bfs/concept.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Graph BFS Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "⭐Q127. Word Ladder",
+        "slug": "q127-word-ladder",
+        "link": "#q127-word-ladder",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q365. Water and Jug Problem",
+        "slug": "q365-water-and-jug-problem",
+        "link": "#q365-water-and-jug-problem",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q433. Minimum Genetic Mutation",
+        "slug": "q433-minimum-genetic-mutation",
+        "link": "#q433-minimum-genetic-mutation",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "❤️Q752. Open the Lock",
+        "slug": "q752-open-the-lock",
+        "link": "#q752-open-the-lock",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q773. Sliding Puzzle",
+        "slug": "q773-sliding-puzzle",
+        "link": "#q773-sliding-puzzle",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q909. Snakes and Ladders",
+        "slug": "q909-snakes-and-ladders",
+        "link": "#q909-snakes-and-ladders",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "❤️Q994. Rotting Oranges",
+        "slug": "q994-rotting-oranges",
+        "link": "#q994-rotting-oranges",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q1926. Nearest Exit from Entrance in Maze",
+        "slug": "q1926-nearest-exit-from-entrance-in-maze",
+        "link": "#q1926-nearest-exit-from-entrance-in-maze",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/graph/bfs/problems.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Permutation & Combination & Subset Concept & Pattern",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Definition",
+        "slug": "definition",
+        "link": "#definition",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Three Variations",
+        "slug": "three-variations",
+        "link": "#three-variations",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Decision Tree",
+        "slug": "decision-tree",
+        "link": "#decision-tree",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/backtrack/per-com-sub/concept.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Permutation & Combination & Subset Problems",
+    "headers": [
+      {
+        "level": 2,
+        "title": "💡 First Viriation",
+        "slug": "first-viriation",
+        "link": "#first-viriation",
+        "children": [
+          {
+            "level": 3,
+            "title": "Q46. Permutations",
+            "slug": "q46-permutations",
+            "link": "#q46-permutations",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Q77. Combinations",
+            "slug": "q77-combinations",
+            "link": "#q77-combinations",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Q78. Subsets",
+            "slug": "q78-subsets",
+            "link": "#q78-subsets",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Q216. Combination Sum III",
+            "slug": "q216-combination-sum-iii",
+            "link": "#q216-combination-sum-iii",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "💡 Second Viriation",
+        "slug": "second-viriation",
+        "link": "#second-viriation",
+        "children": [
+          {
+            "level": 3,
+            "title": "Q40. Combination Sum II",
+            "slug": "q40-combination-sum-ii",
+            "link": "#q40-combination-sum-ii",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Q47. Permutations II",
+            "slug": "q47-permutations-ii",
+            "link": "#q47-permutations-ii",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Q90. Subsets II",
+            "slug": "q90-subsets-ii",
+            "link": "#q90-subsets-ii",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "💡 Third Viriation",
+        "slug": "third-viriation",
+        "link": "#third-viriation",
+        "children": [
+          {
+            "level": 3,
+            "title": "Q39. Combination Sum",
+            "slug": "q39-combination-sum",
+            "link": "#q39-combination-sum",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/leetcode/backtrack/per-com-sub/problems.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Eulerian Graph Concept & Pattern",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🧠 Concept",
+        "slug": "🧠-concept",
+        "link": "#🧠-concept",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🛠️ Algorithm",
+        "slug": "🛠️-algorithm",
+        "link": "#🛠️-algorithm",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/graph/eulerian-graph/concept.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Eulerian Graph Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "⭐Q332. Reconstruct Itinerary",
+        "slug": "q332-reconstruct-itinerary",
+        "link": "#q332-reconstruct-itinerary",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q2097. Valid Arrangement of Pairs",
+        "slug": "q2097-valid-arrangement-of-pairs",
+        "link": "#q2097-valid-arrangement-of-pairs",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/graph/eulerian-graph/problems.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -5470,371 +5782,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Permutation & Combination & Subset Concept & Pattern",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Definition",
-        "slug": "definition",
-        "link": "#definition",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Three Variations",
-        "slug": "three-variations",
-        "link": "#three-variations",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Decision Tree",
-        "slug": "decision-tree",
-        "link": "#decision-tree",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/backtrack/per-com-sub/concept.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Permutation & Combination & Subset Problems",
-    "headers": [
-      {
-        "level": 2,
-        "title": "💡 First Viriation",
-        "slug": "first-viriation",
-        "link": "#first-viriation",
-        "children": [
-          {
-            "level": 3,
-            "title": "Q46. Permutations",
-            "slug": "q46-permutations",
-            "link": "#q46-permutations",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Q77. Combinations",
-            "slug": "q77-combinations",
-            "link": "#q77-combinations",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Q78. Subsets",
-            "slug": "q78-subsets",
-            "link": "#q78-subsets",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Q216. Combination Sum III",
-            "slug": "q216-combination-sum-iii",
-            "link": "#q216-combination-sum-iii",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "💡 Second Viriation",
-        "slug": "second-viriation",
-        "link": "#second-viriation",
-        "children": [
-          {
-            "level": 3,
-            "title": "Q40. Combination Sum II",
-            "slug": "q40-combination-sum-ii",
-            "link": "#q40-combination-sum-ii",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Q47. Permutations II",
-            "slug": "q47-permutations-ii",
-            "link": "#q47-permutations-ii",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Q90. Subsets II",
-            "slug": "q90-subsets-ii",
-            "link": "#q90-subsets-ii",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "💡 Third Viriation",
-        "slug": "third-viriation",
-        "link": "#third-viriation",
-        "children": [
-          {
-            "level": 3,
-            "title": "Q39. Combination Sum",
-            "slug": "q39-combination-sum",
-            "link": "#q39-combination-sum",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/leetcode/backtrack/per-com-sub/problems.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Monotonic Queue Concept",
-    "headers": [
-      {
-        "level": 2,
-        "title": "🧠 Concept",
-        "slug": "🧠-concept",
-        "link": "#🧠-concept",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/queue/monoqueue/pattern.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Monotonic Queue Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "⭐Q239. Sliding Window Maximum",
-        "slug": "q239-sliding-window-maximum",
-        "link": "#q239-sliding-window-maximum",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/queue/monoqueue/problems.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Graph BFS Concept & Pattern",
-    "headers": [
-      {
-        "level": 2,
-        "title": "🧠 Concept",
-        "slug": "🧠-concept",
-        "link": "#🧠-concept",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🛠️ Trick: Bidirectional BFS",
-        "slug": "🛠️-trick-bidirectional-bfs",
-        "link": "#🛠️-trick-bidirectional-bfs",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/graph/bfs/concept.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Graph BFS Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "⭐Q127. Word Ladder",
-        "slug": "q127-word-ladder",
-        "link": "#q127-word-ladder",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q365. Water and Jug Problem",
-        "slug": "q365-water-and-jug-problem",
-        "link": "#q365-water-and-jug-problem",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q433. Minimum Genetic Mutation",
-        "slug": "q433-minimum-genetic-mutation",
-        "link": "#q433-minimum-genetic-mutation",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "❤️Q752. Open the Lock",
-        "slug": "q752-open-the-lock",
-        "link": "#q752-open-the-lock",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q773. Sliding Puzzle",
-        "slug": "q773-sliding-puzzle",
-        "link": "#q773-sliding-puzzle",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q909. Snakes and Ladders",
-        "slug": "q909-snakes-and-ladders",
-        "link": "#q909-snakes-and-ladders",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "❤️Q994. Rotting Oranges",
-        "slug": "q994-rotting-oranges",
-        "link": "#q994-rotting-oranges",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q1926. Nearest Exit from Entrance in Maze",
-        "slug": "q1926-nearest-exit-from-entrance-in-maze",
-        "link": "#q1926-nearest-exit-from-entrance-in-maze",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/graph/bfs/problems.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Eulerian Graph Concept & Pattern",
-    "headers": [
-      {
-        "level": 2,
-        "title": "🧠 Concept",
-        "slug": "🧠-concept",
-        "link": "#🧠-concept",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🛠️ Algorithm",
-        "slug": "🛠️-algorithm",
-        "link": "#🛠️-algorithm",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/graph/eulerian-graph/concept.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Eulerian Graph Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "⭐Q332. Reconstruct Itinerary",
-        "slug": "q332-reconstruct-itinerary",
-        "link": "#q332-reconstruct-itinerary",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q2097. Valid Arrangement of Pairs",
-        "slug": "q2097-valid-arrangement-of-pairs",
-        "link": "#q2097-valid-arrangement-of-pairs",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/graph/eulerian-graph/problems.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Minimum Spanning Tree Concept & Pattern",
-    "headers": [
-      {
-        "level": 2,
-        "title": "🧠 Concept",
-        "slug": "🧠-concept",
-        "link": "#🧠-concept",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/graph/mst/concept.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Union Find Concept & Pattern",
-    "headers": [
-      {
-        "level": 2,
-        "title": "🧠 Concept",
-        "slug": "🧠-concept",
-        "link": "#🧠-concept",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🛠️ Algorithm",
-        "slug": "🛠️-algorithm",
-        "link": "#🛠️-algorithm",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/graph/union-find/concept.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Union Find Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Q130. Surrounded Regions",
-        "slug": "q130-surrounded-regions",
-        "link": "#q130-surrounded-regions",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q547. Number of Provinces",
-        "slug": "q547-number-of-provinces",
-        "link": "#q547-number-of-provinces",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q947. Most Stones Removed with Same Row or Column",
-        "slug": "q947-most-stones-removed-with-same-row-or-column",
-        "link": "#q947-most-stones-removed-with-same-row-or-column",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q990. Satisfiability of Equality Equations",
-        "slug": "q990-satisfiability-of-equality-equations",
-        "link": "#q990-satisfiability-of-equality-equations",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/graph/union-find/problems.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Shortest Path Concept & Pattern",
-    "headers": [
-      {
-        "level": 2,
-        "title": "🧠 Concept",
-        "slug": "🧠-concept",
-        "link": "#🧠-concept",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/graph/shortest-path/concept.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Bipartite Graph Concept & Pattern",
     "headers": [
       {
@@ -5868,6 +5815,36 @@ export const SEARCH_INDEX = [
       }
     ],
     "path": "/leetcode/graph/bipartition/problems.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Minimum Spanning Tree Concept & Pattern",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🧠 Concept",
+        "slug": "🧠-concept",
+        "link": "#🧠-concept",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/graph/mst/concept.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Shortest Path Concept & Pattern",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🧠 Concept",
+        "slug": "🧠-concept",
+        "link": "#🧠-concept",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/graph/shortest-path/concept.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -5912,6 +5889,364 @@ export const SEARCH_INDEX = [
       }
     ],
     "path": "/leetcode/graph/topological-order/problems.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Fast and Slow Two Pointer Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Q141. Linked List Cycle",
+        "slug": "q141-linked-list-cycle",
+        "link": "#q141-linked-list-cycle",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q142. Linked List Cycle II",
+        "slug": "q142-linked-list-cycle-ii",
+        "link": "#q142-linked-list-cycle-ii",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q876. Middle of the Linked List",
+        "slug": "q876-middle-of-the-linked-list",
+        "link": "#q876-middle-of-the-linked-list",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q2095. Delete the Middle Node of a Linked List",
+        "slug": "q2095-delete-the-middle-node-of-a-linked-list",
+        "link": "#q2095-delete-the-middle-node-of-a-linked-list",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q2130. Maximum Twin Sum of a Linked List",
+        "slug": "q2130-maximum-twin-sum-of-a-linked-list",
+        "link": "#q2130-maximum-twin-sum-of-a-linked-list",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/two-pointer/problems/fast-slow.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Left and Right Two Pointer Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "⭐Q11. Container With Most Water",
+        "slug": "q11-container-with-most-water",
+        "link": "#q11-container-with-most-water",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q125. Valid Palindrome",
+        "slug": "q125-valid-palindrome",
+        "link": "#q125-valid-palindrome",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q345. Reverse Vowels of a String",
+        "slug": "q345-reverse-vowels-of-a-string",
+        "link": "#q345-reverse-vowels-of-a-string",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/two-pointer/problems/left-right.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "nSum Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Q1. Two Sum",
+        "slug": "q1-two-sum",
+        "link": "#q1-two-sum",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q15. 3Sum",
+        "slug": "q15-3sum",
+        "link": "#q15-3sum",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q167. Two Sum II - Input Array Is Sorted",
+        "slug": "q167-two-sum-ii-input-array-is-sorted",
+        "link": "#q167-two-sum-ii-input-array-is-sorted",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/two-pointer/problems/nsum.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Two Lists or One List Two Pointer Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Q2. Add Two Numbers",
+        "slug": "q2-add-two-numbers",
+        "link": "#q2-add-two-numbers",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q19. Remove Nth Node From End of List",
+        "slug": "q19-remove-nth-node-from-end-of-list",
+        "link": "#q19-remove-nth-node-from-end-of-list",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q21. Merge Two Sorted Lists",
+        "slug": "q21-merge-two-sorted-lists",
+        "link": "#q21-merge-two-sorted-lists",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q23. Merge k Sorted Lists",
+        "slug": "q23-merge-k-sorted-lists",
+        "link": "#q23-merge-k-sorted-lists",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q25. Reverse Nodes in k-Group",
+        "slug": "q25-reverse-nodes-in-k-group",
+        "link": "#q25-reverse-nodes-in-k-group",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q61. Rotate List",
+        "slug": "q61-rotate-list",
+        "link": "#q61-rotate-list",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q82. Remove Duplicates from Sorted List II",
+        "slug": "q82-remove-duplicates-from-sorted-list-ii",
+        "link": "#q82-remove-duplicates-from-sorted-list-ii",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q86. Partition List",
+        "slug": "q86-partition-list",
+        "link": "#q86-partition-list",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q92. Reverse Linked List II",
+        "slug": "q92-reverse-linked-list-ii",
+        "link": "#q92-reverse-linked-list-ii",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q160. Intersection of Two Linked Lists",
+        "slug": "q160-intersection-of-two-linked-lists",
+        "link": "#q160-intersection-of-two-linked-lists",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q328. Odd Even Linked List",
+        "slug": "q328-odd-even-linked-list",
+        "link": "#q328-odd-even-linked-list",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q283. Move Zeroes",
+        "slug": "q283-move-zeroes",
+        "link": "#q283-move-zeroes",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q392. Is Subsequence",
+        "slug": "q392-is-subsequence",
+        "link": "#q392-is-subsequence",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q443. String Compression",
+        "slug": "q443-string-compression",
+        "link": "#q443-string-compression",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q725. Split Linked List in Parts",
+        "slug": "q725-split-linked-list-in-parts",
+        "link": "#q725-split-linked-list-in-parts",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q1047. Remove All Adjacent Duplicates In String",
+        "slug": "q1047-remove-all-adjacent-duplicates-in-string",
+        "link": "#q1047-remove-all-adjacent-duplicates-in-string",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q2807. Insert Greatest Common Divisors in Linked List",
+        "slug": "q2807-insert-greatest-common-divisors-in-linked-list",
+        "link": "#q2807-insert-greatest-common-divisors-in-linked-list",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q2181. Merge Nodes in Between Zeros",
+        "slug": "q2181-merge-nodes-in-between-zeros",
+        "link": "#q2181-merge-nodes-in-between-zeros",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q3217. Delete Nodes From Linked List Present in Array",
+        "slug": "q3217-delete-nodes-from-linked-list-present-in-array",
+        "link": "#q3217-delete-nodes-from-linked-list-present-in-array",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/two-pointer/problems/two-lists.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Monotonic Queue Concept",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🧠 Concept",
+        "slug": "🧠-concept",
+        "link": "#🧠-concept",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/queue/monoqueue/pattern.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Monotonic Queue Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "⭐Q239. Sliding Window Maximum",
+        "slug": "q239-sliding-window-maximum",
+        "link": "#q239-sliding-window-maximum",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/queue/monoqueue/problems.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Monotonic Stack Concept & Pattern",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🧠 Concept",
+        "slug": "🧠-concept",
+        "link": "#🧠-concept",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🛠️ Pattern",
+        "slug": "🛠️-pattern",
+        "link": "#🛠️-pattern",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/stack/monostack/pattern.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Monotonic Stack Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Q84. Largest Rectangle in Histogram",
+        "slug": "q84-largest-rectangle-in-histogram",
+        "link": "#q84-largest-rectangle-in-histogram",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "❤️Q456. 132 Pattern",
+        "slug": "q456-132-pattern",
+        "link": "#q456-132-pattern",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q496. Next Greater Element I",
+        "slug": "q496-next-greater-element-i",
+        "link": "#q496-next-greater-element-i",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q503. Next Greater Element II",
+        "slug": "q503-next-greater-element-ii",
+        "link": "#q503-next-greater-element-ii",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q654. Maximum Binary Tree",
+        "slug": "q654-maximum-binary-tree",
+        "link": "#q654-maximum-binary-tree",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q739. Daily Temperatures",
+        "slug": "q739-daily-temperatures",
+        "link": "#q739-daily-temperatures",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q901. Online Stock Span",
+        "slug": "q901-online-stock-span",
+        "link": "#q901-online-stock-span",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q1019. Next Greater Node In Linked List",
+        "slug": "q1019-next-greater-node-in-linked-list",
+        "link": "#q1019-next-greater-node-in-linked-list",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/stack/monostack/problems.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -6261,92 +6596,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Monotonic Stack Concept & Pattern",
-    "headers": [
-      {
-        "level": 2,
-        "title": "🧠 Concept",
-        "slug": "🧠-concept",
-        "link": "#🧠-concept",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🛠️ Pattern",
-        "slug": "🛠️-pattern",
-        "link": "#🛠️-pattern",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/stack/monostack/pattern.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Monotonic Stack Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Q84. Largest Rectangle in Histogram",
-        "slug": "q84-largest-rectangle-in-histogram",
-        "link": "#q84-largest-rectangle-in-histogram",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "❤️Q456. 132 Pattern",
-        "slug": "q456-132-pattern",
-        "link": "#q456-132-pattern",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q496. Next Greater Element I",
-        "slug": "q496-next-greater-element-i",
-        "link": "#q496-next-greater-element-i",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q503. Next Greater Element II",
-        "slug": "q503-next-greater-element-ii",
-        "link": "#q503-next-greater-element-ii",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q654. Maximum Binary Tree",
-        "slug": "q654-maximum-binary-tree",
-        "link": "#q654-maximum-binary-tree",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q739. Daily Temperatures",
-        "slug": "q739-daily-temperatures",
-        "link": "#q739-daily-temperatures",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q901. Online Stock Span",
-        "slug": "q901-online-stock-span",
-        "link": "#q901-online-stock-span",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q1019. Next Greater Node In Linked List",
-        "slug": "q1019-next-greater-node-in-linked-list",
-        "link": "#q1019-next-greater-node-in-linked-list",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/stack/monostack/problems.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Stack FIFO Problems",
     "headers": [
       {
@@ -6483,244 +6732,60 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Fast and Slow Two Pointer Problems",
+    "title": "Union Find Concept & Pattern",
     "headers": [
       {
-        "level": 3,
-        "title": "Q141. Linked List Cycle",
-        "slug": "q141-linked-list-cycle",
-        "link": "#q141-linked-list-cycle",
+        "level": 2,
+        "title": "🧠 Concept",
+        "slug": "🧠-concept",
+        "link": "#🧠-concept",
         "children": []
       },
       {
-        "level": 3,
-        "title": "Q142. Linked List Cycle II",
-        "slug": "q142-linked-list-cycle-ii",
-        "link": "#q142-linked-list-cycle-ii",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q876. Middle of the Linked List",
-        "slug": "q876-middle-of-the-linked-list",
-        "link": "#q876-middle-of-the-linked-list",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q2095. Delete the Middle Node of a Linked List",
-        "slug": "q2095-delete-the-middle-node-of-a-linked-list",
-        "link": "#q2095-delete-the-middle-node-of-a-linked-list",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q2130. Maximum Twin Sum of a Linked List",
-        "slug": "q2130-maximum-twin-sum-of-a-linked-list",
-        "link": "#q2130-maximum-twin-sum-of-a-linked-list",
+        "level": 2,
+        "title": "🛠️ Algorithm",
+        "slug": "🛠️-algorithm",
+        "link": "#🛠️-algorithm",
         "children": []
       }
     ],
-    "path": "/leetcode/two-pointer/problems/fast-slow.html",
+    "path": "/leetcode/graph/union-find/concept.html",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "Left and Right Two Pointer Problems",
+    "title": "Union Find Problems",
     "headers": [
       {
         "level": 3,
-        "title": "⭐Q11. Container With Most Water",
-        "slug": "q11-container-with-most-water",
-        "link": "#q11-container-with-most-water",
+        "title": "Q130. Surrounded Regions",
+        "slug": "q130-surrounded-regions",
+        "link": "#q130-surrounded-regions",
         "children": []
       },
       {
         "level": 3,
-        "title": "Q125. Valid Palindrome",
-        "slug": "q125-valid-palindrome",
-        "link": "#q125-valid-palindrome",
+        "title": "Q547. Number of Provinces",
+        "slug": "q547-number-of-provinces",
+        "link": "#q547-number-of-provinces",
         "children": []
       },
       {
         "level": 3,
-        "title": "Q345. Reverse Vowels of a String",
-        "slug": "q345-reverse-vowels-of-a-string",
-        "link": "#q345-reverse-vowels-of-a-string",
+        "title": "Q947. Most Stones Removed with Same Row or Column",
+        "slug": "q947-most-stones-removed-with-same-row-or-column",
+        "link": "#q947-most-stones-removed-with-same-row-or-column",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q990. Satisfiability of Equality Equations",
+        "slug": "q990-satisfiability-of-equality-equations",
+        "link": "#q990-satisfiability-of-equality-equations",
         "children": []
       }
     ],
-    "path": "/leetcode/two-pointer/problems/left-right.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "nSum Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Q1. Two Sum",
-        "slug": "q1-two-sum",
-        "link": "#q1-two-sum",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q15. 3Sum",
-        "slug": "q15-3sum",
-        "link": "#q15-3sum",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q167. Two Sum II - Input Array Is Sorted",
-        "slug": "q167-two-sum-ii-input-array-is-sorted",
-        "link": "#q167-two-sum-ii-input-array-is-sorted",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/two-pointer/problems/nsum.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Two Lists or One List Two Pointer Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Q2. Add Two Numbers",
-        "slug": "q2-add-two-numbers",
-        "link": "#q2-add-two-numbers",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q19. Remove Nth Node From End of List",
-        "slug": "q19-remove-nth-node-from-end-of-list",
-        "link": "#q19-remove-nth-node-from-end-of-list",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q21. Merge Two Sorted Lists",
-        "slug": "q21-merge-two-sorted-lists",
-        "link": "#q21-merge-two-sorted-lists",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q23. Merge k Sorted Lists",
-        "slug": "q23-merge-k-sorted-lists",
-        "link": "#q23-merge-k-sorted-lists",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q25. Reverse Nodes in k-Group",
-        "slug": "q25-reverse-nodes-in-k-group",
-        "link": "#q25-reverse-nodes-in-k-group",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q61. Rotate List",
-        "slug": "q61-rotate-list",
-        "link": "#q61-rotate-list",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q82. Remove Duplicates from Sorted List II",
-        "slug": "q82-remove-duplicates-from-sorted-list-ii",
-        "link": "#q82-remove-duplicates-from-sorted-list-ii",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q86. Partition List",
-        "slug": "q86-partition-list",
-        "link": "#q86-partition-list",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q92. Reverse Linked List II",
-        "slug": "q92-reverse-linked-list-ii",
-        "link": "#q92-reverse-linked-list-ii",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q160. Intersection of Two Linked Lists",
-        "slug": "q160-intersection-of-two-linked-lists",
-        "link": "#q160-intersection-of-two-linked-lists",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q328. Odd Even Linked List",
-        "slug": "q328-odd-even-linked-list",
-        "link": "#q328-odd-even-linked-list",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q283. Move Zeroes",
-        "slug": "q283-move-zeroes",
-        "link": "#q283-move-zeroes",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q392. Is Subsequence",
-        "slug": "q392-is-subsequence",
-        "link": "#q392-is-subsequence",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q443. String Compression",
-        "slug": "q443-string-compression",
-        "link": "#q443-string-compression",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q725. Split Linked List in Parts",
-        "slug": "q725-split-linked-list-in-parts",
-        "link": "#q725-split-linked-list-in-parts",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q1047. Remove All Adjacent Duplicates In String",
-        "slug": "q1047-remove-all-adjacent-duplicates-in-string",
-        "link": "#q1047-remove-all-adjacent-duplicates-in-string",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q2807. Insert Greatest Common Divisors in Linked List",
-        "slug": "q2807-insert-greatest-common-divisors-in-linked-list",
-        "link": "#q2807-insert-greatest-common-divisors-in-linked-list",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q2181. Merge Nodes in Between Zeros",
-        "slug": "q2181-merge-nodes-in-between-zeros",
-        "link": "#q2181-merge-nodes-in-between-zeros",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q3217. Delete Nodes From Linked List Present in Array",
-        "slug": "q3217-delete-nodes-from-linked-list-present-in-array",
-        "link": "#q3217-delete-nodes-from-linked-list-present-in-array",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/two-pointer/problems/two-lists.html",
+    "path": "/leetcode/graph/union-find/problems.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -6899,13 +6964,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Leetcode",
-    "headers": [],
-    "path": "/blog/leetcode/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Tft",
     "headers": [],
     "path": "/tft/",
@@ -6913,23 +6971,9 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Array",
+    "title": "Leetcode",
     "headers": [],
-    "path": "/leetcode/array/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Backtrack",
-    "headers": [],
-    "path": "/leetcode/backtrack/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Binary Search",
-    "headers": [],
-    "path": "/leetcode/binary-search/",
+    "path": "/blog/leetcode/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -6941,16 +6985,30 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Bst",
+    "title": "Backtrack",
     "headers": [],
-    "path": "/leetcode/bst/",
+    "path": "/leetcode/backtrack/",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "Difference Array",
+    "title": "Array",
     "headers": [],
-    "path": "/leetcode/difference-array/",
+    "path": "/leetcode/array/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Binary Search",
+    "headers": [],
+    "path": "/leetcode/binary-search/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Bst",
+    "headers": [],
+    "path": "/leetcode/bst/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -6962,9 +7020,9 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Greedy",
+    "title": "Graph",
     "headers": [],
-    "path": "/leetcode/greedy/",
+    "path": "/leetcode/graph/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -6990,6 +7048,20 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "Difference Array",
+    "headers": [],
+    "path": "/leetcode/difference-array/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Greedy",
+    "headers": [],
+    "path": "/leetcode/greedy/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Prefix Sum",
     "headers": [],
     "path": "/leetcode/prefix-sum/",
@@ -7004,30 +7076,9 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Graph",
-    "headers": [],
-    "path": "/leetcode/graph/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Sliding Window",
     "headers": [],
     "path": "/leetcode/sliding-window/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Tree",
-    "headers": [],
-    "path": "/leetcode/tree/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Stack",
-    "headers": [],
-    "path": "/leetcode/stack/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -7039,23 +7090,16 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Problems",
+    "title": "Stack",
     "headers": [],
-    "path": "/leetcode/array/problems/",
+    "path": "/leetcode/stack/",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "Per Com Sub",
+    "title": "Tree",
     "headers": [],
-    "path": "/leetcode/backtrack/per-com-sub/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Monoqueue",
-    "headers": [],
-    "path": "/leetcode/queue/monoqueue/",
+    "path": "/leetcode/tree/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -7067,9 +7111,30 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "Per Com Sub",
+    "headers": [],
+    "path": "/leetcode/backtrack/per-com-sub/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Eulerian Graph",
     "headers": [],
     "path": "/leetcode/graph/eulerian-graph/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Problems",
+    "headers": [],
+    "path": "/leetcode/array/problems/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Bipartition",
+    "headers": [],
+    "path": "/leetcode/graph/bipartition/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -7081,23 +7146,9 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Union Find",
-    "headers": [],
-    "path": "/leetcode/graph/union-find/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Shortest Path",
     "headers": [],
     "path": "/leetcode/graph/shortest-path/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Bipartition",
-    "headers": [],
-    "path": "/leetcode/graph/bipartition/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -7111,7 +7162,14 @@ export const SEARCH_INDEX = [
   {
     "title": "Problems",
     "headers": [],
-    "path": "/leetcode/tree/problems/",
+    "path": "/leetcode/two-pointer/problems/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Monoqueue",
+    "headers": [],
+    "path": "/leetcode/queue/monoqueue/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -7125,14 +7183,21 @@ export const SEARCH_INDEX = [
   {
     "title": "Problems",
     "headers": [],
-    "path": "/leetcode/stack/problems/",
+    "path": "/leetcode/tree/problems/",
     "pathLocale": "/",
     "extraFields": []
   },
   {
     "title": "Problems",
     "headers": [],
-    "path": "/leetcode/two-pointer/problems/",
+    "path": "/leetcode/stack/problems/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Union Find",
+    "headers": [],
+    "path": "/leetcode/graph/union-find/",
     "pathLocale": "/",
     "extraFields": []
   },

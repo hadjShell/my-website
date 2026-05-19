@@ -92,9 +92,14 @@ How is reliability achieved, in the face of failures in hardware and software?</
 </ul>
 <p>Any operating system must multiplex processes onto the underlying hardware, isolate processes from each other, and provide mechanisms for controlled inter-process communication.</p>
 <h2 id="history-of-operating-system" tabindex="-1"><a class="header-anchor" href="#history-of-operating-system"><span>History of Operating System</span></a></h2>
-<p>Batch processing (Just libraries) -&gt; System call (protection) -&gt; Multiprogramming -&gt; PC (networking, windowing systems, user-level threads, drivers. etc.)</p>
+<p>Open Shop -&gt; Batch Processing -&gt; Multiprogramming -&gt; Timesharing -&gt; Concurrent Programming -&gt; Personal Computing -&gt; Distributed System</p>
+<div class="hint-container info">
+<p class="hint-container-title">Difference between Multiprogramming and Timesharing</p>
+<p>Multiprogramming means keeping multiple programs in memory so the CPU always has something to run. Timesharing extends multiprogramming that gives each user/process a small CPU time slice rapidly.</p>
+<p>For multiprogramming, CPU switches mostly when process waits for I/O. For timesharing, CPU switches even if process is still running or after a timer interrupt.</p>
+</div>
 <blockquote>
-<p>Read Section 2.6 in Chapter Introduction in OSTEP.</p>
+<p>Read Section 2.6 in Chapter Introduction in OSTEP, &quot;The Evolution of Operating System, Per Brinch Hansen.&quot;.</p>
 </blockquote>
 </div></template>
 
