@@ -1,7 +1,6 @@
 <template><div><h2 id="_2sum" tabindex="-1"><a class="header-anchor" href="#_2sum"><span>2Sum</span></a></h2>
 <h3 id="clarification" tabindex="-1"><a class="header-anchor" href="#clarification"><span>Clarification</span></a></h3>
 <p>The inputs are an integer array <code v-pre>nums</code> and an integer <code v-pre>target</code>, return the indices of two numbers that add up to target.</p>
-<p>Clarifying questions I would ask:</p>
 <ul>
 <li>Are numbers sorted? (Usually no)</li>
 <li>Can there be negative numbers? (Yes)</li>
@@ -19,11 +18,7 @@
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h3 id="brute-force-approach" tabindex="-1"><a class="header-anchor" href="#brute-force-approach"><span>Brute Force Approach</span></a></h3>
 <p>My first idea is to try every pair of numbers. We can use two loops to check all two sums against the target value to find the answer. This works but is inefficient for large arrays because the time complexity will be <span v-pre class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n²)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> due to nested loops checking every pair.</p>
 <h3 id="optimized-approach-two-pointer" tabindex="-1"><a class="header-anchor" href="#optimized-approach-two-pointer"><span>Optimized Approach (Two Pointer)</span></a></h3>
-<p>At this point I’d ask: is there anything about the input that I can exploit? If the array were sorted, I might be able to do better. What I’ll do is place two pointers — one at the start of the array and one at the end. So something like:</p>
-<ul>
-<li>left starts at index 0</li>
-<li>right starts at the last index.</li>
-</ul>
+<p>At this point I’d ask: is there anything about the input that I can exploit? If the array were sorted, I might be able to do better. What I’ll do is place two pointers — one at the start of the array and one at the end.</p>
 <p>Then in each step I check the sum of those two numbers.</p>
 <p>For example,</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code class="language-"><span class="line"><span>nums = [2,7,11,15]</span></span>

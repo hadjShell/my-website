@@ -18,8 +18,6 @@ editLink: false
 
 The inputs are an integer array `nums` and an integer `target`, return the indices of two numbers that add up to target.
 
-Clarifying questions I would ask:
-
 - Are numbers sorted? (Usually no)
 - Can there be negative numbers? (Yes)
 - Will there be an integer overflow?
@@ -48,10 +46,7 @@ My first idea is to try every pair of numbers. We can use two loops to check all
 
 ### Optimized Approach (Two Pointer)
 
-At this point I’d ask: is there anything about the input that I can exploit? If the array were sorted, I might be able to do better. What I’ll do is place two pointers — one at the start of the array and one at the end. So something like:
-
-- left starts at index 0
-- right starts at the last index.
+At this point I’d ask: is there anything about the input that I can exploit? If the array were sorted, I might be able to do better. What I’ll do is place two pointers — one at the start of the array and one at the end.
 
 Then in each step I check the sum of those two numbers.
 
