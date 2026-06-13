@@ -12,7 +12,6 @@ editLink: false
 - **Subarray, Substring min/max** problem
 
 - Dynamically **resizable** window
-
   - When to **increase the window**
   - When to **shrink the window**
   - How to update the result (what is the operation **when window size changes**)
@@ -22,7 +21,6 @@ editLink: false
 - Close-open range `[)`
 
 - Framework
-
   - **右滑找到一个解的终点， 左滑找到下一解的起点**
 
   - ```java

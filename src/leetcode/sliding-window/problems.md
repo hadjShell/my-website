@@ -32,49 +32,49 @@ editLink: false
 ### :heart:Q76. [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
 
 - ```java
-  class Solution {
-      public String minWindow(String s, String t) {
-          if (t.length() > s.length())
-              return "";
+    class Solution {
+        public String minWindow(String s, String t) {
+            int left = 0, right = 0;
+            int[] required = buildDictionary(t);
+            int count = 0;      // how many characters of t inculded in the window
+            int l = 0, r = Integer.MAX_VALUE;
 
-          int left = 0, right = 0;
-          // window
-          int len = 0;
-          int[] required = new int[128];
-          for (char c : t.toCharArray())
-              required[c]++;
-          // result
-          int l = 0, r = Integer.MAX_VALUE;
+            while (right < s.length()) {
+                char cr = s.charAt(right);
+                if (required[cr] > 0)   count++;
+                required[cr]--;
+                right++;
 
-          while (right < s.length()) {
-              while (right < s.length() && !isValidSubstring(len, t)) {
-                  char rc = s.charAt(right);
-                  right++;
-                  if (required[rc] > 0)
-                      len++;
-                  required[rc]--;
-              }
-              while (isValidSubstring(len, t)) {
-                  if (right - left < r - l) {
-                      l = left;
-                      r = right;
-                  }
+                while (left < right && isValidSubstring(count, t.length())) {
+                    if (r - l > right - left) {
+                        r = right;
+                        l = left;
+                    }
 
-                  char lc = s.charAt(left);
-                  left++;
-                  if (required[lc] == 0)
-                      len--;
-                  required[lc]++;
-              }
-          }
+                    char cl = s.charAt(left);
+                    if (required[cl] == 0)   count--;
+                    required[cl]++;
+                    left++;
+                }
+            }
 
-          return r == Integer.MAX_VALUE ? "" : s.substring(l, r);
-      }
+            return r == Integer.MAX_VALUE ? "" : s.substring(l, r);
+        }
 
-      private boolean isValidSubstring(int len, String t) {
-          return len == t.length();
-      }
-  }
+        private int[] buildDictionary(String t) {
+            int[] required = new int[128];
+
+            for (char c : t.toCharArray()) {
+                required[c]++;
+            }
+
+            return required;
+        }
+
+        private boolean isValidSubstring(int count, int length) {
+            return count == length;
+        }
+    }
   ```
 
 ### Q151. [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/)
@@ -127,28 +127,24 @@ editLink: false
 ### :star:Q209. [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)
 
 - ```java
-  class Solution {
-      public int minSubArrayLen(int target, int[] nums) {
-          int left = 0, right = 0, sum = 0, minLength = nums.length + 1;
+    class Solution {
+        public int minSubArrayLen(int target, int[] nums) {
+            int left = 0, right = 0;
+            int sum = 0;
+            int minLen = Integer.MAX_VALUE;
 
-          while (right < nums.length) {
-              sum += nums[right];
-              right++;
+            while (right < nums.length) {
+                sum += nums[right++];
 
-              while (sum >= target) {
-                  minLength = Math.min(length(left, right), minLength);
-                  sum -= nums[left];
-                  left++;
-              }
-          }
+                while (left < right && sum >= target) {
+                    minLen = Math.min(minLen, right - left);
+                    sum -= nums[left++];
+                }
+            }
 
-          return minLength == (nums.length + 1) ? 0 : minLength;
-      }
-
-      private int length(int left, int right) {
-          return right - left;
-      }
-  }
+            return minLen == Integer.MAX_VALUE ? 0 : minLen;
+        }
+    }
   ```
 
 ### :star:Q438. [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
@@ -259,6 +255,35 @@ editLink: false
               j++;
           }
           return maxSum * 1.0 / k;
+      }
+  }
+  ```
+
+### 904. [Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)
+
+- ```java
+  class Solution {
+      // find the longest subarray that has maximum two values
+      public int totalFruit(int[] fruits) {
+          int left = 0, right = 0;
+          Map<Integer, Integer> bucket = new HashMap();
+          int max = 0;
+
+          while (right < fruits.length) {
+              while (left < right && !bucket.containsKey(fruits[right]) && bucket.size() >= 2) {
+                  int fruitL = fruits[left];
+                  bucket.put(fruitL, bucket.get(fruitL) - 1);
+                  if (bucket.get(fruitL) == 0)      bucket.remove(fruitL);
+                  left++;
+              }
+
+              int fruitR = fruits[right];
+              bucket.put(fruitR, bucket.getOrDefault(fruitR, 0) + 1);
+              right++;
+              max = Math.max(max, right - left);
+          }
+
+          return max;
       }
   }
   ```
