@@ -54,3 +54,76 @@ editLink: false
       }
   }
   ```
+
+### :star:Q1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
+
+- ```java
+  class Solution {
+      public int longestSubarray(int[] nums, int limit) {
+          int left = 0, right = 0;
+          MonotonicQueueMax mqMax = new MonotonicQueueMax();
+          MonotonicQueueMin mqMin = new MonotonicQueueMin();
+          int max = 0;
+
+          while (right < nums.length) {
+              // increase window
+              mqMax.add(nums[right]);
+              mqMin.add(nums[right]);
+              right++;
+
+              // shrink window
+              while (left < right && mqMax.getMax() - mqMin.getMin() > limit) {
+                  mqMax.remove(nums[left]);
+                  mqMin.remove(nums[left]);
+                  left++;
+              }
+
+              max = Math.max(max, right - left);
+          }
+
+          return max;
+      }
+
+      class MonotonicQueueMax{
+          Deque<Integer> q = new ArrayDeque<>();
+
+          public void add(int x) {
+              while (!q.isEmpty() && q.getLast() < x) {
+                  q.removeLast();
+              }
+              q.offer(x);
+          }
+
+          public void remove(int x) {
+              if (q.peek() == x) {
+                  q.poll();
+              }
+          }
+
+          public int getMax() {
+              return q.peek();
+          }
+      }
+
+      class MonotonicQueueMin{
+          Deque<Integer> q = new ArrayDeque<>();
+
+          public void add(int x) {
+              while (!q.isEmpty() && q.getLast() > x) {
+                  q.removeLast();
+              }
+              q.offer(x);
+          }
+
+          public void remove(int x) {
+              if (q.peek() == x) {
+                  q.poll();
+              }
+          }
+
+          public int getMin() {
+              return q.peek();
+          }
+      }
+  }
+  ```

@@ -12,34 +12,31 @@ editLink: false
 - ```java
   class Solution {
       public boolean isValid(String s) {
-          // length can not be divided by 2: false
-          if (s.length() % 2 != 0)
-              return false;
+          if (s.length() % 2 != 0)    return false;
 
           Deque<Character> stack = new ArrayDeque<>();
+
           for (char c : s.toCharArray()) {
-              switch (c) {
-                  case '(', '{', '[' -> stack.push(c);
-                  case ')', '}', ']' -> {
-                      if (stack.isEmpty())
+              switch(c) {
+                  case '(', '[', '{'  -> stack.push(c);
+                  case ')' -> {
+                      if (stack.isEmpty() || stack.peek() != '(')
                           return false;
-                      else {
-                          char prev = stack.pop();
-                          switch (prev) {
-                              case '(' -> {
-                                  if (c != ')')   return false;
-                              }
-                              case '{' -> {
-                                  if (c != '}')   return false;
-                              }
-                              case '[' -> {
-                                  if (c != ']')   return false;
-                              }
-                          }
-                      }
+                      stack.pop();
+                  }
+                  case ']' -> {
+                      if (stack.isEmpty() || stack.peek() != '[')
+                          return false;
+                      stack.pop();
+                  }
+                  case '}' -> {
+                      if (stack.isEmpty() || stack.peek() != '{')
+                          return false;
+                      stack.pop();
                   }
               }
           }
+
           return stack.isEmpty();
       }
   }

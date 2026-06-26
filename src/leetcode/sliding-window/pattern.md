@@ -20,23 +20,24 @@ editLink: false
 
 - Close-open range `[)`
 
-- Framework
-  - **右滑找到一个解的终点， 左滑找到下一解的起点**
+## Framework
 
-  - ```java
-    int left = 0, right = 0;
-    Window window;
-    Result result;
+- **右滑找到一个解的终点， 左滑找到下一解的起点**
 
-    while (right < nums.size()) {
-        window.addLast(nums[right]);
-        right++;
-      	if (window.isQualified())	update(result);					// 找最大
+- ```java
+  int left = 0, right = 0;
+  Window window;
+  Result result;
 
-        while (left < right && window needs to shrink) {
-            if (window.isQualified())	update(result);			// 找最小
-          	window.removeFirst(nums[left]);
-            left++;
-        }
+  while (right < nums.size()) {
+    // increase window
+    window.addLast(nums[right]);
+    right++;
+
+    // shrink window
+    while (left < right && window needs to shrink) {
+      window.removeFirst(nums[left]);
+      left++;
     }
-    ```
+  }
+  ```

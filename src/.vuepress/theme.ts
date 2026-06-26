@@ -125,7 +125,7 @@ export default hopeTheme({
 
   plugins: {
     blog: {
-      excerptLength: 300,
+      excerptLength: 0,
       filter: ({ frontmatter, filePathRelative }) =>
         !frontmatter.home &&
         filePathRelative &&

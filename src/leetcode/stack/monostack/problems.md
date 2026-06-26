@@ -41,6 +41,39 @@ editLink: false
   }
   ```
 
+### :star:Q402. [Remove K Digits](https://leetcode.com/problems/remove-k-digits/)
+
+- ```java
+  class Solution {
+      public String removeKdigits(String num, int k) {
+          Deque<Integer> monostack = new ArrayDeque<>();    // increasing
+
+          for (char c : num.toCharArray()) {
+              int digit = c - '0';
+              while (k > 0 && !monostack.isEmpty() && digit < monostack.peek()) {
+                  monostack.pop();
+                  k--;
+              }
+              monostack.push(digit);
+          }
+
+          while (k > 0 && !monostack.isEmpty()) {
+              monostack.pop();
+              k--;
+          }
+
+          StringBuilder sb = new StringBuilder();
+          while (!monostack.isEmpty()) {
+              sb.append(monostack.pop());
+          }
+          while (sb.length() > 0 && sb.charAt(sb.length() - 1) == '0')
+              sb.setLength(sb.length() - 1);
+
+          return sb.length() == 0 ? "0" : sb.reverse().toString();
+      }
+  }
+  ```
+
 ### :heart:Q456. [132 Pattern](https://leetcode.com/problems/132-pattern/)
 
 - https://leetcode.com/problems/132-pattern/solutions/5605502/detailed-explanation-using-monotonic-stack-approach-java-defeat-91
@@ -67,48 +100,41 @@ editLink: false
   }
   ```
 
-### Q496. [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/)
+### :star:Q496. [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/)
 
 - ```java
   class Solution {
       public int[] nextGreaterElement(int[] nums1, int[] nums2) {
-          Map<Integer, Integer> ele2IndMap = getEle2IndMap(nums2);
-          int[] nextGreater = nextGreater(nums2);
+          int[] nextGreater = getNextGreater(nums2);
+          Map<Integer, Integer> value2Index = mapping(nums2);
           int[] result = new int[nums1.length];
 
           for (int i = 0; i < nums1.length; i++) {
-              int index = ele2IndMap.get(nums1[i]);
-              result[i] = nextGreater[index];
+              result[i] = nextGreater[value2Index.get(nums1[i])];
           }
 
           return result;
       }
 
-      private Map<Integer, Integer> getEle2IndMap(int[] nums2) {
-          Map<Integer, Integer> ele2IndMap = new HashMap<>();
+      private int[] getNextGreater(int[] nums) {
+          Deque<Integer> monostack = new ArrayDeque<>();
+          int[] nextGreater = new int[nums.length];
 
-          for (int i = 0; i < nums2.length; i++) {
-              ele2IndMap.put(nums2[i], i);
+          for (int i = nums.length - 1; i >= 0; i--) {
+              while (!monostack.isEmpty() && monostack.peek() < nums[i])
+                  monostack.pop();
+              nextGreater[i] = monostack.isEmpty() ? -1 : monostack.peek();
+              monostack.push(nums[i]);
           }
 
-          return ele2IndMap;
+          return nextGreater;
       }
 
-      private int[] nextGreater(int[] nums2) {
-          Deque<Integer> monoStack = new ArrayDeque<>();
-          int[] result = new int[nums2.length];
-
-          Arrays.fill(result, -1);
-
-          for (int i = 0; i < nums2.length; i++) {
-              while (!monoStack.isEmpty() && nums2[i] > nums2[monoStack.peek()]) {
-                  int index = monoStack.pop();
-                  result[index] = nums2[i];
-              }
-              monoStack.push(i);
-          }
-
-          return result;
+      private Map<Integer, Integer> mapping(int[] nums) {
+          Map<Integer, Integer> value2Index = new HashMap<>();
+          for (int i = 0; i < nums.length; i++)
+              value2Index.put(nums[i], i);
+          return value2Index;
       }
   }
   ```

@@ -1,5 +1,5 @@
 ---
-title: Stack FIFO Problems
+title: Stack LIFO Problems
 author: David Zhang aka Hadjshell
 order: 1
 isOriginal: true
@@ -12,46 +12,33 @@ editLink: false
 - Consider **each node in the stack having a minimum value**
 
 - ```java
+  // question is how to keep track of min value?
+  // maintain a min variable
+  // But what if pop min value out, how can we update `min`?
+  // maintain a hashmap, for each element on the stack, recording the min value underneath it, including itself
   class MinStack {
-      private class Node {
-          int val;
-          int min;
-
-          public Node() {}
-
-          public Node(int val, int min) {
-              this.val = val;
-              this.min = min;
-          }
-      }
-
-      private Deque<Node> stack;
-      private int min;
+      private Deque<int[]> stack;
+      int min;
 
       public MinStack() {
-          this.stack = new ArrayDeque<>();
-          this.min = 0;
+          stack = new ArrayDeque<>();
       }
 
-      public void push(int val) {
-          if (stack.isEmpty())
-              min = val;
-          else
-              min = Math.min(min, val);
-          stack.addFirst(new Node(val, min));
+      public void push(int value) {
+          min = stack.isEmpty() ? value : Math.min(value, stack.peek()[1]);
+          stack.push(new int[] {value, min});
       }
 
       public void pop() {
-          stack.removeFirst();
-          if (!stack.isEmpty())   min = stack.getFirst().min;
+          stack.pop();
       }
 
       public int top() {
-          return stack.getFirst().val;
+          return stack.peek()[0];
       }
 
       public int getMin() {
-          return min;
+          return stack.peek()[1];
       }
   }
   ```
@@ -208,20 +195,19 @@ editLink: false
 
 - ```java
   class Solution {
-    public boolean validateStackSequences(int[] pushed, int[] popped) {
-      Deque<Integer> stack = new ArrayDeque<>();
-      int i = 0; // popped's index
+      public boolean validateStackSequences(int[] pushed, int[] popped) {
+          Deque<Integer> stack = new ArrayDeque<>();
 
-      for (int x : pushed) {
-        stack.push(x);
-        while (!stack.isEmpty() && stack.peek() == popped[i]) {
-          stack.pop();
-          ++i;
-        }
+          for (int i = 0, j = 0; i < pushed.length; i++) {
+              stack.push(pushed[i]);
+              while (!stack.isEmpty() && stack.peek() == popped[j]) {
+                  stack.pop();
+                  j++;
+              }
+          }
+
+          return stack.isEmpty();
       }
-
-      return stack.isEmpty();
-    }
   }
   ```
 

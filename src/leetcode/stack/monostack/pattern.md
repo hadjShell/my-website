@@ -9,12 +9,14 @@ editLink: false
 
 ## 🧠 Concept
 
-- **Next greater/smaller value** or **Last greater/smaller value** problem
-- Leverage stack to maintain a monotonically **increasing or decreasing list**
+- Leverage stack to maintain a monotonically **increasing or decreasing list**:
+  - Every element in the array should be pushed into the stack.
+  - Pop smaller values, then push new big value (decreasing stack)
+  - Pop bigger values, then push new small value (increasing stack)
 
-  - Pop smaller values, then push new big value
-
-  - Pop biggers values, then push new small value
+- Problem types
+  - **Next greater/smaller value** or **Previous greater/smaller value** problem.
+  - Remove elements while keeping order and optimizing result.
 
 ## 🛠️ Pattern
 

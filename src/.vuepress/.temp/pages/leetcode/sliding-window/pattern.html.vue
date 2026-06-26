@@ -17,8 +17,8 @@
 <li>
 <p>Close-open range <code v-pre>[)</code></p>
 </li>
-<li>
-<p>Framework</p>
+</ul>
+<h2 id="framework" tabindex="-1"><a class="header-anchor" href="#framework"><span>Framework</span></a></h2>
 <ul>
 <li>
 <p><strong>右滑找到一个解的终点， 左滑找到下一解的起点</strong></p>
@@ -29,19 +29,17 @@
 <span class="line"><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">Result</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> result</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">while</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> (right </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">&#x3C;</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> nums</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">size</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">) {</span></span>
-<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">    window</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">addLast</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(nums[right]);</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">    right</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">++;</span></span>
-<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">  	if</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> (</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">window</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">isQualified</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">)	</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">update</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">(result)</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">					// 找最大</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  // increase window</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">  window</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">addLast</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(nums[right]);</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">  right</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">++;</span></span>
 <span class="line"></span>
-<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    while</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> (left </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">&#x3C;</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> right </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">&#x26;&#x26;</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> window needs to shrink) {</span></span>
-<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        if</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> (</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">window</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">isQualified</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">)	</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">update</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">(result)</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">			// 找最小</span></span>
-<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">      	window</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">removeFirst</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(nums[left]);</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">        left</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">++;</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">    }</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  // shrink window</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">  while</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> (left </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">&#x3C;</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> right </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">&#x26;&#x26;</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> window needs to shrink) {</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">    window</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">removeFirst</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(nums[left]);</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">    left</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">++;</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">  }</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">}</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-</ul>
-</li>
 </ul>
 </div></template>
 
