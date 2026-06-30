@@ -7,6 +7,35 @@ footer: false
 editLink: false
 ---
 
+### :star:Q238. [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
+
+- Prefix and suffix product
+
+- ```java
+  class Solution {
+      public int[] productExceptSelf(int[] nums) {
+          int[] preProduct = new int[nums.length + 1];
+          int[] suffProduct = new int[nums.length + 1];
+          int[] answer = new int[nums.length];
+
+          preProduct[0] = 1;
+          for (int i = 0; i < nums.length; i++) {
+              preProduct[i + 1] = preProduct[i] * nums[i];
+          }
+          suffProduct[nums.length] = 1;
+          for (int i = nums.length - 1; i >= 0; i--) {
+              suffProduct[i] = suffProduct[i + 1] * nums[i];
+          }
+
+          for (int i = 0; i < nums.length; i++) {
+              answer[i] = preProduct[i] * suffProduct[i + 1];
+          }
+
+          return answer;
+      }
+  }
+  ```
+
 ### Q303. [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/)
 
 - ```java
@@ -54,6 +83,25 @@ editLink: false
   }
   ```
 
+### Q724. [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/)
+
+- ```java
+  class Solution {
+      public int pivotIndex(int[] nums) {
+          int[] preSum = new int[nums.length + 1];
+          for (int i = 1; i < preSum.length; i++) {
+              preSum[i] = preSum[i - 1] + nums[i - 1];
+          }
+          int sum = preSum[preSum.length - 1];
+          for (int i = 1; i < preSum.length; i++) {
+              if (preSum[i - 1] == sum - preSum[i])
+                  return i - 1;
+          }
+          return -1;
+      }
+  }
+  ```
+
 ### Q1314. [Matrix Block Sum](https://leetcode.com/problems/matrix-block-sum/)
 
 - Variant of Q304
@@ -85,48 +133,6 @@ editLink: false
   }
   ```
 
-### :star:Q238. [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
-
-- Prefix and suffix product
-
-- ```java
-  class Solution {
-      public int[] productExceptSelf(int[] nums) {
-          int[] ans = new int[nums.length];
-          ans[0] = nums[0];
-          for (int i = 1; i < ans.length; i++) {
-              ans[i] = ans[i - 1] * nums[i];
-          }
-          int product = 1;
-          for (int i = ans.length - 1; i > 0; i--) {
-              ans[i] = ans[i - 1] * product;
-              product *= nums[i];
-          }
-          ans[0] = product;
-          return ans;
-      }
-  }
-  ```
-
-### Q724. [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/)
-
-- ```java
-  class Solution {
-      public int pivotIndex(int[] nums) {
-          int[] preSum = new int[nums.length + 1];
-          for (int i = 1; i < preSum.length; i++) {
-              preSum[i] = preSum[i - 1] + nums[i - 1];
-          }
-          int sum = preSum[preSum.length - 1];
-          for (int i = 1; i < preSum.length; i++) {
-              if (preSum[i - 1] == sum - preSum[i])
-                  return i - 1;
-          }
-          return -1;
-      }
-  }
-  ```
-
 ### Q1732. [Find the Highest Altitude](https://leetcode.com/problems/find-the-highest-altitude/)
 
 - ```java
@@ -143,26 +149,26 @@ editLink: false
   }
   ```
 
-## :bulb:With Hashtable
+## --- :bulb: **With Hashtable** ---
 
 ### :star:Q525. [Contiguous Array](https://leetcode.com/problems/contiguous-array/)
 
 - ```java
   class Solution {
       public int findMaxLength(int[] nums) {
-          Map<Integer, Integer> preSum = new HashMap<>();
-          preSum.put(0, 0);
-          int sum = 0, maxLen = 0;
-          for (int i = 1; i <= nums.length; i++) {
-              sum += (nums[i - 1] == 0 ? -1 : 1);
-              if (preSum.containsKey(sum)) {
-                  int len = i - preSum.get(sum);
-                  maxLen = Math.max(len, maxLen);
-              }
+          Map<Integer, Integer> sum2Index = new HashMap<>();  // mapping to the lowest index in preSum
+          int sum = 0, max = 0;
+
+          sum2Index.put(0, -1);
+          for (int i = 0; i < nums.length; i++) {
+              sum += nums[i] == 1 ? 1 : -1;
+              if (sum2Index.containsKey(sum))
+                  max = Math.max(max, i - sum2Index.get(sum));
               else
-                  preSum.put(sum, i);
+                  sum2Index.put(sum, i);
           }
-          return maxLen;
+
+          return max;
       }
   }
   ```

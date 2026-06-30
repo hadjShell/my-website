@@ -13,7 +13,7 @@ Binary tree is all about making decision on **what logic needs to be executed an
 
 :::
 
-## :bulb:Pre-order
+## --- :bulb:Pre-order ---
 
 ### Q112. [Path Sum](https://leetcode.com/problems/path-sum/)
 
@@ -112,50 +112,43 @@ Binary tree is all about making decision on **what logic needs to be executed an
 
 - **Solve right subtree first**
 
-- ```java
-  class Solution {
-      public Node connect(Node root) {
-          traverse(root, null, false);
+```java
+class Solution {
+    public Node connect(Node root) {
+        dfs(root, null);
 
-          return root;
-      }
+        return root;
+    }
 
-      public void traverse(Node root, Node father, boolean isLeft) {
-          if (root == null)
-              return;
+    private void dfs(Node root, Node parent) {
+        if (root == null)   return;
 
-          if (father == null)
-              root.next = null;
-          else {
-              if (isLeft && father.right != null) {
-                  root.next = father.right;
-              }
-              else {
-                  Node next = father.next;
-                  while (next != null) {
-                      if (next.left == null && next.right == null)
-                          next = next.next;
-                      else
-                          break;
-                  }
+        Node next = getNextNode(root, parent);
+        root.next = next;
 
-                  if (next != null) {
-                      if (next.left != null)
-                          root.next = next.left;
-                      else
-                          root.next = next.right;
-                  }
-                  else
-                      root.next = null;
-              }
-          }
+        dfs(root.right, root);
+        dfs(root.left, root);
+    }
 
-        	// solve right subtree first
-          traverse(root.right, root, false);
-          traverse(root.left, root, true);
-      }
-  }
-  ```
+    private Node getNextNode(Node root, Node parent) {
+        if (parent == null)                     return null;
+
+        boolean isLeft = root == parent.left;
+
+        if (isLeft && parent.right != null)     return parent.right;
+        else {
+            Node pNext = parent.next;
+            while (pNext != null) {
+                if (pNext.left != null)         return pNext.left;
+                else if (pNext.right != null)   return pNext.right;
+                else                            pNext = pNext.next;
+            }
+        }
+
+        return null;
+    }
+}
+```
 
 ### Q144. [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)
 
@@ -212,32 +205,64 @@ Binary tree is all about making decision on **what logic needs to be executed an
 
 ### :star:Q1372. [Longest ZigZag Path in a Binary Tree](https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree/)
 
-- ```java
-  class Solution {
-      private int longest = 0;
+- Traversal
 
-      public int longestZigZag(TreeNode root) {
-          traverse(root, true, -1);
+```java
+class Solution {
+    int longest = 0;
 
-          return longest;
-      }
+    public int longestZigZag(TreeNode root) {
+        dfs(root, 0, false);
 
-      private void traverse(TreeNode root, boolean fromLeft, int length) {
-          if (root == null)
-              return;
+        return longest;
+    }
 
-          longest = Math.max(length + 1, longest);
-          if (fromLeft) {
-              traverse(root.left, true, 0);
-              traverse(root.right, false, length + 1);
-          }
-          else {
-              traverse(root.left, true, length + 1);
-              traverse(root.right, false, 0);
-          }
-      }
-  }
-  ```
+    private void dfs(TreeNode root, int count, boolean fromLeft) {
+        if (root == null) {
+            longest = Math.max(longest, count - 1);
+            return;
+        }
+
+        if (fromLeft) {
+            dfs(root.left, 1, true);
+            dfs(root.right, count + 1, false);
+        }
+        else {
+            dfs(root.left, count + 1, true);
+            dfs(root.right, 1, false);
+        }
+    }
+}
+```
+
+- Divide and conquer
+
+```java
+class Solution {
+    private int longest = 0;
+
+    public int longestZigZag(TreeNode root) {
+        longestZigZagFrom(root);
+
+        return longest;
+    }
+
+    private int[] longestZigZagFrom(TreeNode root) {
+        int[] len = {-1, -1};     // [left, right]
+
+        if (root == null)       return len;
+
+        int[] left = longestZigZagFrom(root.left);
+        int[] right = longestZigZagFrom(root.right);
+        len[0] = left[1] + 1;
+        len[1] = right[0] + 1;
+        longest = Math.max(longest, len[0]);
+        longest = Math.max(longest, len[1]);
+
+        return len;
+    }
+}
+```
 
 ### Q1448. [Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/)
 
@@ -370,60 +395,6 @@ Binary tree is all about making decision on **what logic needs to be executed an
   }
   ```
 
-### :star:Q236. [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
-
-- **遍历**
-
-  ```java
-  class Solution {
-      private TreeNode lca;
-
-      public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-          traverse(root, p, q);
-
-          return lca;
-      }
-
-      private boolean[] traverse(TreeNode root, TreeNode p, TreeNode q) {
-          boolean[] hasPQ = new boolean[2];
-
-          if (root == null)
-              return hasPQ;
-
-          boolean[] left = traverse(root.left, p, q);
-          boolean[] right = traverse(root.right, p, q);
-
-          hasPQ[0] = left[0] || right[0] || root == p;
-          hasPQ[1] = left[1] || right[1] || root == q;
-          if (hasPQ[0] && hasPQ[1] && lca == null)
-              lca = root;
-
-          return hasPQ;
-      }
-  }
-  ```
-
-- **分解**
-
-```java
-class Solution {
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        if (root == null)
-            return null;
-
-        if (root == p || root == q)
-            return root;
-
-        TreeNode left = lowestCommonAncestor(root.left, p, q);
-        TreeNode right = lowestCommonAncestor(root.right, p, q);
-        if (left != null && right != null)
-            return root;
-
-        return left == null ? right : left;
-    }
-}
-```
-
 ### Q543. [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)
 
 - ```java
@@ -491,78 +462,71 @@ class Solution {
 
 - **遍历思想**
 
-  ```java
-  class Solution {
-      int depth = 0;
-      int max = 0;
+```java
+class Solution {
+    int depth = 0;
+    int max = 0;
 
-      public int maxDepth(TreeNode root) {
-          traverse(root);
-          return max;
-      }
+    public int maxDepth(TreeNode root) {
+        traverse(root);
+        return max;
+    }
 
-      private void traverse(TreeNode root) {
-          if (root == null)
-              return;
+    private void traverse(TreeNode root) {
+        if (root == null)
+            return;
 
-          depth++;
-          max = Math.max(depth, max);
-          traverse(root.left);
-          traverse(root.right);
-          depth--;
-      }
-  }
-  ```
+        depth++;
+        max = Math.max(depth, max);
+        traverse(root.left);
+        traverse(root.right);
+        depth--;
+    }
+}
+```
 
 - **分解思想**
 
-  ```java
-  class Solution {
-      public int maxDepth(TreeNode root) {
-          return root == null ? 0 :
-              1 + Math.max(maxDepth(root.left), maxDepth(root.right));
-      }
-  }
-  ```
+```java
+class Solution {
+    public int maxDepth(TreeNode root) {
+        return root == null ? 0 :
+            1 + Math.max(maxDepth(root.left), maxDepth(root.right));
+    }
+}
+```
 
 ### :star:Q437. [Path Sum III](https://leetcode.com/problems/path-sum-iii/)
 
 - **DFS + Prefix sum**
 
-- ```java
-  class Solution {
-      private int count = 0;
+```java
+class Solution {
+    int count = 0;
+    public int pathSum(TreeNode root, int targetSum) {
+        Map<Long, Integer> preSum2Count = new HashMap<>();
+        preSum2Count.put(0l, 1);
 
-      public int pathSum(TreeNode root, int targetSum) {
-          Map<Long, Integer> prefixSum = new HashMap<>();
-          prefixSum.put(0l, 1);
+        dfs(root, 0, targetSum, preSum2Count);
 
-          traverse(root, prefixSum, 0l, targetSum);
+        return count;
+    }
 
-          return count;
-      }
+    private void dfs(TreeNode root, long sum, int target, Map<Long, Integer> preSum2Count) {
+        if (root == null)       return;
 
-      private void traverse(TreeNode root, Map<Long, Integer> prefixSum,
-                              long sum, int targetSum) {
-          if (root == null)
-              return;
+        sum += root.val;
+        long complement = sum - target;
+        count += preSum2Count.getOrDefault(complement, 0);
+        preSum2Count.put(sum, preSum2Count.getOrDefault(sum, 0) + 1);
 
-          sum = sum + root.val;
-          count += countValidPath(prefixSum, sum, targetSum);
-          prefixSum.put(sum, prefixSum.getOrDefault(sum, 0) + 1);
+        dfs(root.left, sum, target, preSum2Count);
+        dfs(root.right, sum, target, preSum2Count);
 
-          traverse(root.left, prefixSum, sum, targetSum);
-          traverse(root.right, prefixSum, sum, targetSum);
-
-          prefixSum.put(sum, prefixSum.get(sum) - 1);
-      }
-
-      private int countValidPath(Map<Long, Integer> prefixSum,
-                                  long sum, int targetSum) {
-          return prefixSum.getOrDefault(sum - targetSum, 0);
-      }
-  }
-  ```
+        preSum2Count.computeIfPresent(sum, (k, v) -> v == 1 ? null : v - 1);
+    }
+}
+```
 
 ### Q1644. [Lowest Common Ancestor of a Binary Tree ii](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-ii/)
 
@@ -633,79 +597,6 @@ class Solution {
   }
   ```
 
-### :star:Q1373. [Maximum Sum BST in Binary Tree](https://leetcode.com/problems/maximum-sum-bst-in-binary-tree/)
-
-- ```java
-  class Solution {
-      private int sum = 0;
-
-      public int maxSumBST(TreeNode root) {
-          dfs(root);
-          return sum;
-      }
-
-      private Node dfs(TreeNode root) {
-          if (root == null)
-              return new Node(true, null, null, 0);
-          Node leftNode = dfs(root.left);
-          Node rightNode = dfs(root.right);
-          Node res = null;
-          if (leftNode.isBST && rightNode.isBST) {
-              TreeNode leftMax = leftNode.max, rightMin = rightNode.min;
-              if (leftMax == null && rightMin == null) {
-                  res = new Node(true, root, root, root.val);
-              }
-              else if (leftMax == null) {
-                  if (root.val >= rightMin.val)
-                      res = new Node(false);
-                  else
-                      res = new Node(true, root, rightNode.max,
-                                      root.val + rightNode.sum);
-              }
-              else if (rightMin == null) {
-                  if (root.val <= leftMax.val)
-                      res = new Node(false);
-                  else
-                      res = new Node(true, leftNode.min, root,
-                                      root.val + leftNode.sum);
-              }
-              else {
-                  if (root.val <= leftMax.val || root.val >= rightMin.val)
-                      res = new Node(false);
-                  else
-                      res = new Node(true, leftNode.min, rightNode.max,
-                                      root.val + leftNode.sum + rightNode.sum);
-              }
-          }
-          else
-              res = new Node(false);
-
-          if (res.isBST) {
-              sum = Math.max(sum, res.sum);
-          }
-          return res;
-      }
-
-      private class Node {
-          boolean isBST;
-          TreeNode min;
-          TreeNode max;
-          int sum;
-
-          public Node() {}
-          public Node(boolean isBST) {
-              this.isBST = isBST;
-          }
-          public Node(boolean isBST, TreeNode min, TreeNode max, int sum) {
-              this.isBST = isBST;
-              this.max = max;
-              this.min = min;
-              this.sum = sum;
-          }
-      }
-  }
-  ```
-
 ### :star:Q1367. [Linked List in Binary Tree](https://leetcode.com/problems/linked-list-in-binary-tree/)
 
 - ```java
@@ -731,7 +622,58 @@ class Solution {
   }
   ```
 
-## :bulb:Deserialisation
+## --- :bulb:Serialisation ---
+
+- 如果你的序列化结果中**不包含空指针的信息**，且你只给出**一种**遍历顺序，那么你无法还原出唯一的一棵二叉树。
+- 如果你的序列化结果中**不包含空指针的信息**，且你会给出**两种**遍历顺序，分两种情况：
+  - 如果你给出的是**前序和中序**，或者**后序和中序**，那么你可以还原出唯一的一棵二叉树。
+  - 如果你给出前序和后序，那么你无法还原出唯一的一棵二叉树。
+- 如果你的序列化结果中**包含空指针的信息**，且你只给出**一种**遍历顺序，也要分两种情况：
+  - 如果你给出的是**前序**或者**后序**，那么你可以还原出唯一的一棵二叉树。
+  - 如果你给出的是中序，那么你无法还原出唯一的一棵二叉树。
+
+### :star:Q297. [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+
+```java
+public class Codec {
+    // Encodes a tree to a single string.
+    public String serialize(TreeNode root) {
+        StringBuilder sb = new StringBuilder();
+        _serialize(root, sb);
+        System.out.println(sb.toString());
+        return sb.toString();
+    }
+
+    // Decodes your encoded data to tree.
+    public TreeNode deserialize(String data) {
+        String[] arr = data.split(",");
+        Deque<String> preorder = new ArrayDeque<>(Arrays.asList(arr));
+        return _deserialize(preorder);
+    }
+
+    private void _serialize(TreeNode root, StringBuilder sb) {
+        if (root == null) {
+            sb.append("#,");
+            return;
+        }
+        sb.append(root.val).append(',');
+        _serialize(root.left, sb);
+        _serialize(root.right, sb);
+    }
+
+    private TreeNode _deserialize(Deque<String> preorder) {
+        String s = preorder.removeFirst();
+        if (s.equals("#"))
+            return null;
+        TreeNode root = new TreeNode(Integer.parseInt(s));
+        root.left = _deserialize(preorder);
+        root.right = _deserialize(preorder);
+        return root;
+    }
+}
+```
+
+## --- :bulb:Deserialisation ---
 
 ### :star:Q105. [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
 
@@ -873,57 +815,6 @@ class Solution {
           TreeNode rightNode = _buildTree(preorder, left + l - _left + 2, right,
                                           postOrder, l + 1, _right - 1);
           return new TreeNode(preorder[left], leftNode, rightNode);
-      }
-  }
-  ```
-
-## :bulb:Serialisation
-
-- 如果你的序列化结果中**不包含空指针的信息**，且你只给出**一种**遍历顺序，那么你无法还原出唯一的一棵二叉树。
-- 如果你的序列化结果中**不包含空指针的信息**，且你会给出**两种**遍历顺序，分两种情况：
-  - 如果你给出的是**前序和中序**，或者**后序和中序**，那么你可以还原出唯一的一棵二叉树。
-  - 如果你给出前序和后序，那么你无法还原出唯一的一棵二叉树。
-- 如果你的序列化结果中**包含空指针的信息**，且你只给出**一种**遍历顺序，也要分两种情况：
-  - 如果你给出的是**前序**或者**后序**，那么你可以还原出唯一的一棵二叉树。
-  - 如果你给出的是中序，那么你无法还原出唯一的一棵二叉树。
-
-### :star:Q297. [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
-
-- ```java
-  public class Codec {
-      // Encodes a tree to a single string.
-      public String serialize(TreeNode root) {
-          StringBuilder sb = new StringBuilder();
-          _serialize(root, sb);
-          System.out.println(sb.toString());
-          return sb.toString();
-      }
-
-      // Decodes your encoded data to tree.
-      public TreeNode deserialize(String data) {
-          String[] arr = data.split(",");
-          Deque<String> preorder = new ArrayDeque<>(Arrays.asList(arr));
-          return _deserialize(preorder);
-      }
-
-      private void _serialize(TreeNode root, StringBuilder sb) {
-          if (root == null) {
-              sb.append("#,");
-              return;
-          }
-          sb.append(root.val).append(',');
-          _serialize(root.left, sb);
-          _serialize(root.right, sb);
-      }
-
-      private TreeNode _deserialize(Deque<String> preorder) {
-          String s = preorder.removeFirst();
-          if (s.equals("#"))
-              return null;
-          TreeNode root = new TreeNode(Integer.parseInt(s));
-          root.left = _deserialize(preorder);
-          root.right = _deserialize(preorder);
-          return root;
       }
   }
   ```

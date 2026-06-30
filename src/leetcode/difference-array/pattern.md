@@ -15,6 +15,8 @@ editLink: false
 
 - **区间增减**
 
+## Template
+
 - ```java
   class Difference {
       private int[] diff;
@@ -37,14 +39,11 @@ editLink: false
       }
 
       public int[] result() {
-          int[] res = new int[diff.length];
-
-          res[0] = diff[0];
           for (int i = 1; i < diff.length; i++) {
-              res[i] = res[i - 1] + diff[i];
+              diff[i] += diff[i - 1];
           }
 
-          return res;
+          return diff;
       }
   }
   ```

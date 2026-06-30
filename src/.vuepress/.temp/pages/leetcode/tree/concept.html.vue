@@ -10,10 +10,10 @@
 <p><strong>Perfect binary tree</strong>: every node except leaf nodes has exactly two child nodes, all leaf nodes are at the same level</p>
 </li>
 <li>
-<p><strong>Full binary tree</strong>: every node except leaf nodes has zero or two child nodes</p>
+<p><strong>Complete binary tree</strong>: a binary tree in which every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible</p>
 </li>
 <li>
-<p><strong>Complete binary tree</strong>: a binary tree in which every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible</p>
+<p><strong>Full binary tree</strong>: every node except leaf nodes has zero or two child nodes</p>
 </li>
 <li>
 <p><strong>Balanced Binary Tree</strong>: The heights of any node’s left and right subtrees differ by at most one</p>
@@ -53,18 +53,18 @@
 </ul>
 </li>
 <li>
-<div class="language-java line-numbers-mode" data-highlighter="shiki" data-ext="java" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code class="language-java"><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">void</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> traverseDFS</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">(</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">TreeNode</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> root) {</span></span>
+<div class="language-java line-numbers-mode" data-highlighter="shiki" data-ext="java" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code class="language-java"><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">void</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> dfs</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">(</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">TreeNode</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> root) {</span></span>
 <span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    if</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> (root </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">==</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> null</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">) {</span></span>
 <span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        return</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">    }</span></span>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    // preorder</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">    traverse</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">(</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">root</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">left</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">)</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">    dfs</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">(</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">root</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">left</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">)</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    // inorder</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">    traverse</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">(</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">root</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">right</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">)</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">    dfs</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">(</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">root</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">right</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">)</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    // postorder</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">}</span></span>
-<span class="line"><span style="--shiki-light:#986801;--shiki-dark:#D19A66">			  1</span></span>
-<span class="line"><span style="--shiki-light:#986801;--shiki-dark:#D19A66">    2</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">    	  3</span></span>
+<span class="line"><span style="--shiki-light:#986801;--shiki-dark:#D19A66">        1</span></span>
+<span class="line"><span style="--shiki-light:#986801;--shiki-dark:#D19A66">    2</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">    	3</span></span>
 <span class="line"><span style="--shiki-light:#986801;--shiki-dark:#D19A66">  4</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">   5</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">   6</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">   7</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">// Example: 	[1,2,3,4,5,6,7]</span></span>
@@ -78,7 +78,7 @@
 <p>BFS</p>
 <ul>
 <li>
-<div class="language-java line-numbers-mode" data-highlighter="shiki" data-ext="java" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code class="language-java"><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">void</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> traverseBFS</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">(</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">TreeNode</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> root) {</span></span>
+<div class="language-java line-numbers-mode" data-highlighter="shiki" data-ext="java" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code class="language-java"><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">void</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> bfs</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">(</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">TreeNode</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> root) {</span></span>
 <span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    if</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> (root </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">==</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> null</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">)</span></span>
 <span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        return</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
 <span class="line"></span>

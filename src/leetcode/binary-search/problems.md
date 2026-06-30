@@ -7,6 +7,8 @@ footer: false
 editLink: false
 ---
 
+## --- :bulb: Basic Idea ---
+
 ### :star:Q33. [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 
 - ```java
@@ -46,6 +48,56 @@ editLink: false
           }
 
           return left;
+      }
+  }
+  ```
+
+- ```java
+    // [            ][  ]
+    // [    ][          ]
+    // [        ][      ]
+    // [                ]
+  class Solution {
+      public int search(int[] nums, int target) {
+          return binarySearch(nums, 0, nums.length - 1, target);
+      }
+
+      // [i, j]
+      private int binarySearch(int[] nums, int i, int j, int target) {
+          if (i > j)  return -1;
+
+          int middle = i + (j - i) / 2;
+
+          if (nums[middle] > target) {
+              if (isPure(i, j, nums) || !isMoreLarge(i, j, nums))
+                  return binarySearch(nums, i, middle - 1, target);
+              else {
+                  int left = binarySearch(nums, i, middle - 1, target);
+                  int right = binarySearch(nums, middle + 1, j, target);
+                  return left != -1 ? left : right;
+              }
+          }
+          else if (nums[middle] < target) {
+              if (isPure(i, j, nums) || isMoreLarge(i, j, nums))
+                  return binarySearch(nums, middle + 1, j, target);
+              else {
+                  int left = binarySearch(nums, i, middle - 1, target);
+                  int right = binarySearch(nums, middle + 1, j, target);
+                  return left != -1 ? left : right;
+              }
+          }
+          else
+              return middle;
+      }
+
+      private boolean isPure(int i, int j, int[] nums) {
+          return nums[i] < nums[j];
+      }
+
+      // does subarray contains more large elements, even counts as more large
+      private boolean isMoreLarge(int i, int j, int[] nums) {
+          int middle = i + (j - i) / 2;
+          return nums[middle] > nums[j];
       }
   }
   ```
@@ -333,65 +385,6 @@ editLink: false
   }
   ```
 
-### :star:Q410. [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/)
-
-- Famous book allocation problem.
-
-- Same question as [Q1011](#q1011-capacity-to-ship-packages-within-d-days).
-
-- ```java
-  class Solution {
-      // O(nlogm)
-      public int splitArray(int[] nums, int k) {
-          int[] ps = prefixSum(nums);
-          int left = 0, right = ps[ps.length - 1];
-
-          while (left < right) {
-              int mid = left + (right - left) / 2;
-              int split = getSplitNumber(ps, mid);
-
-              if (split <= k)
-                  right = mid;
-              else
-                  left = mid + 1;
-          }
-
-          return right;
-      }
-
-      // O(n)
-      private int getSplitNumber(int[] ps, int sum) {
-          int count = 0, start = 0, end = 0;
-
-          while (end < ps.length - 1) {
-              if (getRangeSum(ps, start, end) <= sum)
-                  end++;
-              else {
-                  if (start == end)   return Integer.MAX_VALUE;
-
-                  count++;
-                  start = end;
-              }
-          }
-
-          return count + 1;
-      }
-
-      // [i...j] in nums
-      // O(1)
-      private int getRangeSum(int[] ps, int i, int j) {
-          return ps[j + 1] - ps[i];
-      }
-
-      // O(n)
-      private int[] prefixSum(int[] nums) {
-          int[] ps = new int[nums.length + 1];
-          for (int i = 1; i <= nums.length; i++)    ps[i] = ps[i - 1] + nums[i - 1];
-          return ps;
-      }
-  }
-  ```
-
 ### Q704. [Binary Search](https://leetcode.com/problems/binary-search/)
 
 - ```java
@@ -460,7 +453,53 @@ editLink: false
   }
   ```
 
-### :star:Q875. [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
+## --- :bulb: Guess Answer ---
+
+### :heart:Q410. [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/)
+
+- Famous book allocation problem.
+
+- ```java
+  class Solution {
+      public int splitArray(int[] nums, int k) {
+          // subarray sum range
+          int minLimit = Arrays.stream(nums).max().getAsInt(),
+              maxLimit = Arrays.stream(nums).sum();
+          return findLargestLimit(nums, k, minLimit, maxLimit);
+      }
+
+      // O(NlogSum)
+      private int findLargestLimit(int[] nums, int k, int l, int r) {
+          if (l == r)     return l;
+
+          int mid = l + (r - l) / 2;
+          if (isValidLimit(nums, k, mid))
+              return findLargestLimit(nums, k, l, mid);
+          else
+              return findLargestLimit(nums, k, mid + 1, r);
+      }
+
+      // O(N)
+      private boolean isValidLimit(int[] nums, int k, int limit) {
+          // every subarray sum cannot exceed limit
+          int count = 0, sum = 0;
+          for (int num : nums) {
+              sum += num;
+              if (sum > limit) {
+                  count++;
+                  sum = num;
+              }
+          }
+
+          return count + 1 <= k;
+      }
+  }
+  ```
+
+- Follow-up: What if you were allowed to choose elements in any order, not necessarily sequentially as given in the main question?
+  HINT: It remains a binary search for X, but checking the validity of X should be done with sorting before greedy.
+
+### :heart:Q875. [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
 
 - ```java
   class Solution {
@@ -492,7 +531,37 @@ editLink: false
   }
   ```
 
-### Q1011. [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/)
+- ```java
+    // sum of pile[i] / k == h, find min k， round up
+    // f(k) = t, a monotonic decreasing function, target = h
+  class Solution {
+      public int minEatingSpeed(int[] piles, int h) {
+          return binarySearch(piles, h, 1, 1000_000_000);
+      }
+
+      private int binarySearch(int[] piles, int h, int l, int r) {
+          if (l > r)  return -1;
+          if (l == r) return l;
+
+          int mid = l + (r - l) / 2;
+          int time = calcTime(piles, mid);
+
+          if (time > h)
+              return binarySearch(piles, h, mid + 1, r);
+          else
+              return binarySearch(piles, h, l, mid);
+      }
+
+      private int calcTime(int[] piles, int speed) {
+          int time = 0;
+          for (int pile : piles)
+              time += Math.ceilDiv(pile, speed);
+          return time;
+      }
+  }
+  ```
+
+### :star: Q1011. [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/)
 
 - ```java
   class Solution {
@@ -524,6 +593,47 @@ editLink: false
               }
           }
           return time + 1;
+      }
+  }
+  ```
+
+### :star: Q1231. [Divide Chocolate](https://leetcode.com/problems/divide-chocolate/)
+
+- ![Problem Description](/assets/image/leetcode/leetcode1231.png)
+
+- ```java
+  class Solution {
+      public int maximizeSweetness(int[] sweetness, int k) {
+          int minSweet = Arrays.stream(sweetness).min().getAsInt(),
+              maxSweet = Arrays.stream(sweetness).sum();
+
+          if (k == 0)     return maxSweet;
+          return findLargestSweet(sweetness, k + 1, minSweet, maxSweet);
+      }
+
+      private int findLargestSweet(int[] sweetness, int chunks, int min, int max) {
+          if (min == max)     return min;
+
+          int mid = min + (max - min) / 2 + 1;
+          if (isValidSweet(sweetness, chunks, mid))
+              return findLargestSweet(sweetness, chunks, mid, max);
+          else
+              return findLargestSweet(sweetness, chunks, min, mid - 1);
+
+      }
+
+      private boolean isValidSweet(int[] sweetness, int chunks, int bottomSweet) {
+          // every subarray sum should be at least bottomSweet and the count of subarrays should be greater than or equal to chunks
+          int count = 0, sum = 0;
+          for (int sweet : sweetness) {
+              sum += sweet;
+              if (sum >= bottomSweet) {
+                  count++;
+                  sum = 0;
+              }
+          }
+
+          return count >= chunks;
       }
   }
   ```

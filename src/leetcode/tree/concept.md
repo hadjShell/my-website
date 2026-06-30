@@ -15,16 +15,15 @@ editLink: false
 
 - **Perfect binary tree**: every node except leaf nodes has exactly two child nodes, all leaf nodes are at the same level
 
-- **Full binary tree**: every node except leaf nodes has zero or two child nodes
-
 - **Complete binary tree**: a binary tree in which every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible
+
+- **Full binary tree**: every node except leaf nodes has zero or two child nodes
 
 - **Balanced Binary Tree**: The heights of any node’s left and right subtrees differ by at most one
 
 - ![](/assets/image/leetcode/trees.png)
 
 - Implementation
-
   - **Tree node**
 
   - **Array** for complete binary tree
@@ -34,28 +33,25 @@ editLink: false
   - **Hash table**
 
 - Traversal
-
   - **DFS**
-
     - **Three different orders represents three different times when the specific operation is operating on the node**
-
       - **Pre-order**: operates when the procedure call of current node is just pushed onto the stack
       - **In-order**: operates when the left subtree's operation is executed and the right subtree's operation is about to executed
       - **Post-order**: operates when the the procedure call of current node is about to be popped out from the stack
 
     - ```java
-      void traverseDFS(TreeNode root) {
+      void dfs(TreeNode root) {
           if (root == null) {
               return;
           }
           // preorder
-          traverse(root.left);
+          dfs(root.left);
           // inorder
-          traverse(root.right);
+          dfs(root.right);
           // postorder
       }
-      			  1
-          2    	  3
+              1
+          2    	3
         4   5   6   7
 
       // Example: 	[1,2,3,4,5,6,7]
@@ -65,9 +61,8 @@ editLink: false
       ```
 
   - BFS
-
     - ```java
-      void traverseBFS(TreeNode root) {
+      void bfs(TreeNode root) {
           if (root == null)
               return;
 
@@ -92,7 +87,6 @@ editLink: false
 ## :bulb:​ Mindset
 
 - **遍历**
-
   - 递归：DFS
   - 层序：BFS
 
@@ -117,7 +111,6 @@ editLink: false
 - **Morris traversal** for inorder
 
 - **栈模拟递归**
-
   - ```java
     class Solution {
         private Stack<TreeNode> stk = new Stack<>();

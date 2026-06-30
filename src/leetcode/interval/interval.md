@@ -43,29 +43,47 @@ editLink: false
   class Solution {
       public int[][] insert(int[][] intervals, int[] newInterval) {
           List<int[]> result = new ArrayList<>();
+
           int i = 0;
-
           for (; i < intervals.length; i++) {
-              int istart = intervals[i][0], iend = intervals[i][1];
-              int start = newInterval[0], end = newInterval[1];
+              int[] interval = intervals[i];
+              int sp = interval[0], ep = interval[1], sc = newInterval[0], ec = newInterval[1];
 
-              if (end < istart)
+              // old gap new
+              // sp ep sc ec
+              if (ep < sc) {
+                  result.add(interval);
+              }
+              // old overlap new
+              // sp sc ep ec
+              else if (sc <= ep && sc > sp && ec > ep) {
+                  newInterval[0] = sp;
+                  newInterval[1] = ec;
+              }
+              // old overshadow new
+              // sp sc ec ep
+              else if (sc >= sp && ec <= ep)      break;
+              // new overshadow old
+              // sc sp ep ec
+              else if (sc <= sp && ec >= ep)      continue;
+              // new overlap old
+              // sc sp ec ep
+              else if (sp <= ec && sp > sc && ep > ec) {
+                  newInterval[0] = sc;
+                  newInterval[1] = ep;
+              }
+              // new gap old
+              // sc ec sp ep
+              else if (ec < sp) {
+                  result.add(newInterval);
                   break;
-              else if (start > iend)
-                  result.add(new int[] {istart, iend});
-              else {
-                  // merge intervals
-                  newInterval[0] = Math.min(start, istart);
-                  newInterval[1] = Math.max(end, iend);
               }
           }
 
-          result.add(newInterval);
-
-          for (; i < intervals.length; i++) {
-              int istart = intervals[i][0], iend = intervals[i][1];
-              result.add(new int[] {istart, iend});
-          }
+          if (i == intervals.length)
+              result.add(newInterval);
+          else
+              for (; i < intervals.length; i++)   result.add(intervals[i]);
 
           return result.toArray(new int[0][]);
       }

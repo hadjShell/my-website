@@ -312,6 +312,41 @@ editLink: false
   }
   ```
 
+### Q1151. [Minimum Swaps to Group All 1's Together](https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together/)
+
+- ![](/assets/image/leetcode/leetcode1151.png)
+
+```java
+class Solution {
+    public int minSwaps(int[] data) {
+        int totalOnes = 0;
+        for (int d : data)
+            if (d == 1) totalOnes++;
+
+        if (totalOnes <= 1)   return 0;
+
+        int left = 0, right = 0;
+        int zeros = 0;
+        int min = Integer.MAX_VALUE;
+
+        while (right < totalOnes) {
+            if (data[right] == 0)   zeros++;
+            right++;
+        }
+        min = zeros;
+        while (right < data.length) {
+            if (data[left] == 0)    zeros--;
+            if (data[right] == 0)   zeros++;
+            left++;
+            right++;
+            min = Math.min(min, zeros);
+        }
+
+        return min;
+    }
+}
+```
+
 ### Q1234. [Replace the Substring for Balanced String](https://leetcode.com/problems/replace-the-substring-for-balanced-string/)
 
 - ```java
@@ -373,6 +408,32 @@ editLink: false
       }
   }
   ```
+
+### Q1358. [Number of Substrings Containing All Three Characters](https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/)
+
+```java
+class Solution {
+    public int numberOfSubstrings(String s) {
+        int left = 0, right = 0, len = s.length();
+        int count = 0;
+        Map<Character, Integer> char2Count = new HashMap<>();
+
+        while (right < len) {
+            if (char2Count.size() < 3) {
+                char2Count.merge(s.charAt(right), 1, Integer::sum);
+                right++;
+            }
+            while (left < right && char2Count.size() == 3) {
+                count += len - right + 1;
+                char2Count.computeIfPresent(s.charAt(left), (k, v) -> v == 1 ? null : v - 1);
+                left++;
+            }
+        }
+
+        return count;
+    }
+}
+```
 
 ### Q1456. [Maximum Number of Vowels in a Substring of Given Length](https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/)
 

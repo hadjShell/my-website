@@ -25,13 +25,12 @@ Additionally, $x$, $f(x)$, and $target$ must satisfy the following conditions:
   - By **shrinking (halving) the search space as much as possible using known information**, we can increase the efficiency of exhaustive search and quickly find the target.
 
 - Details are important:
-  - Integer overflow;
-  - `mid` `+1` or `-1`;
+  - My preference: `[]`;
+  - Integer overflow: `left + (right - left) / 2` instead of `(left + right) / 2`;
+  - Out of boundary problem: When you calculate `mid`, should you add 1 or not, which means when there are two elements in the search range, should `mid` sit at left or right;
   - `<=` or `<` in `while`;
 
-- Two different styles: `[]` or `[)`.
-
-- The two most commonly used scenarios are "**searching for the left boundary**" and "**searching for the right boundary**";
+- **One hint for binary search, which is easy to overlook, is that we know the range of the result and we are trying to find a min or max value within that range that validates some conditions at the same time.**
 
 ## 🛠️ Algorithm
 

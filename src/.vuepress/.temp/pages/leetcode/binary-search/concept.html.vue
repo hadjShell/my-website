@@ -22,16 +22,14 @@
 <li>
 <p>Details are important:</p>
 <ul>
-<li>Integer overflow;</li>
-<li><code v-pre>mid</code> <code v-pre>+1</code> or <code v-pre>-1</code>;</li>
+<li>My preference: <code v-pre>[]</code>;</li>
+<li>Integer overflow: <code v-pre>left + (right - left) / 2</code> instead of <code v-pre>(left + right) / 2</code>;</li>
+<li>Out of boundary problem: When you calculate <code v-pre>mid</code>, should you add 1 or not, which means when there are two elements in the search range, should <code v-pre>mid</code> sit at left or right;</li>
 <li><code v-pre>&lt;=</code> or <code v-pre>&lt;</code> in <code v-pre>while</code>;</li>
 </ul>
 </li>
 <li>
-<p>Two different styles: <code v-pre>[]</code> or <code v-pre>[)</code>.</p>
-</li>
-<li>
-<p>The two most commonly used scenarios are &quot;<strong>searching for the left boundary</strong>&quot; and &quot;<strong>searching for the right boundary</strong>&quot;;</p>
+<p><strong>One hint for binary search, which is easy to overlook, is that we know the range of the result and we are trying to find a min or max value within that range that validates some conditions at the same time.</strong></p>
 </li>
 </ul>
 <h2 id="🛠️-algorithm" tabindex="-1"><a class="header-anchor" href="#🛠️-algorithm"><span>🛠️ Algorithm</span></a></h2>

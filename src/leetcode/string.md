@@ -134,3 +134,18 @@ editLink: false
           return Integer.parseInt(sb.toString());
       }
   ```
+
+### Q1967. [Number of Strings That Appear as Substrings in Word](https://leetcode.com/problems/number-of-strings-that-appear-as-substrings-in-word/)
+
+- ```java
+  class Solution {
+      public int numOfStrings(String[] patterns, String word) {
+          int count = 0;
+
+          for (String pattern : patterns)
+              count += word.contains(pattern) ? 1 : 0;
+
+          return count;
+      }
+  }
+  ```

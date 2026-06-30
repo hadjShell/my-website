@@ -175,6 +175,52 @@ editLink: false
   }
   ```
 
+### :star:Q236. [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
+
+```java
+class Solution {
+    TreeNode lca = null;
+
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        seen(root, p, q);
+
+        return lca;
+    }
+
+    private int seen(TreeNode root, TreeNode p, TreeNode q) {
+        if (root == null || lca != null)   return 0;
+
+        int left = seen(root.left, p, q);
+        int right = seen(root.right, p, q);
+        int seen = left + right +
+                    (root == p ? 1 : 0) +
+                    (root == q ? 1 : 0);
+        if (lca == null && seen == 2)    lca = root;
+
+        return seen;
+    }
+}
+```
+
+```java
+class Solution {
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        if (root == null)
+            return null;
+
+        if (root == p || root == q)
+            return root;
+
+        TreeNode left = lowestCommonAncestor(root.left, p, q);
+        TreeNode right = lowestCommonAncestor(root.right, p, q);
+        if (left != null && right != null)
+            return root;
+
+        return left == null ? right : left;
+    }
+}
+```
+
 ### :star:Q1361. [Validate Binary Tree Nodes](https://leetcode.com/problems/validate-binary-tree-nodes/)
 
 - ```java
@@ -229,3 +275,127 @@ editLink: false
       }
   }
   ```
+
+### :star:Q1373. [Maximum Sum BST in Binary Tree](https://leetcode.com/problems/maximum-sum-bst-in-binary-tree/)
+
+```java
+class Solution {
+    int max = 0;
+
+    public int maxSumBST(TreeNode root) {
+        isBST(root);
+
+        return max;
+    }
+
+    private BST isBST(TreeNode root) {
+        if (root == null)
+            return new BST(0, 0, 0);
+
+        BST left = isBST(root.left);
+        BST right = isBST(root.right);
+
+        if (left == null || right == null)
+            return null;
+
+        if (root.left == null && root.right == null) {
+            max = Math.max(max, root.val);
+            return new BST(root.val, root.val, root.val);
+        }
+        else if (root.left != null && root.right == null) {
+            if (root.val > left.max) {
+                int sum = left.sum + root.val;
+                max = Math.max(max, sum);
+                return new BST(sum, left.min, root.val);
+            }
+        }
+        else if (root.left == null && root.right != null) {
+            if (root.val < right.min) {
+                int sum = right.sum + root.val;
+                max = Math.max(max, sum);
+                return new BST(sum, root.val, right.max);
+            }
+        }
+        else {
+            if (root.val > left.max && root.val < right.min) {
+                int sum = left.sum + right.sum + root.val;
+                max = Math.max(max, sum);
+                return new BST(sum, left.min, right.max);
+            }
+        }
+
+        return null;
+    }
+
+
+    class BST {
+        int sum;
+        int min;
+        int max;
+
+        public BST(int sum, int min, int max) {
+            this.sum = sum;
+            this.min = min;
+            this.max = max;
+        }
+    }
+}
+```
+
+### :star:Q1650. [Lowest Common Ancestor of a Binary Tree III](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/)
+
+- ![](/assets/image/leetcode/leetcode1650.png)
+
+- Equivalent to find the intersection of two linked lists.
+
+- Follow-up: come up with a solution with `O(1)` space.
+  You can get the depth of both, and then advance one of them so they're the same depth. Once they're the same depth, just compare recursively compare parents until they're equal.
+
+```java
+class Solution {
+    public Node lowestCommonAncestor(Node p, Node q) {
+        Set<Node> pAncestor = new HashSet<>();
+
+        while (p != null) {
+            pAncestor.add(p);
+            p = p.parent;
+        }
+
+        while (q != null) {
+            if (pAncestor.contains(q))  break;
+            q = q.parent;
+        }
+
+        return q;
+    }
+}
+```
+
+### :star:Q1676. [Lowest Common Ancestor of a Binary Tree IV](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iv/)
+
+- ![](/assets/image/leetcode/leetcode1676.png)
+
+```java
+class Solution {
+    TreeNode lca;
+
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode[] nodes) {
+        Set<TreeNode> n = new HashSet<>(Arrays.asList(nodes));
+        seen(root, n);
+
+        return lca;
+    }
+
+    private int seen(TreeNode root, Set<TreeNode> nodes) {
+        if (root == null || lca != null)            return 0;
+
+        int leftSeen = seen(root.left, nodes);
+        int rightSeen = seen(root.right, nodes);
+        int seen = leftSeen + rightSeen + (nodes.contains(root) ? 1 : 0);
+
+        if (seen == nodes.size() && lca == null)    lca = root;
+
+        return seen;
+    }
+}
+```

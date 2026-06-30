@@ -1021,3 +1021,51 @@ editLink: false
       }
   }
   ```
+
+### :star:Q3020. [Find the Maximum Number of Elements in Subset](https://leetcode.com/problems/find-the-maximum-number-of-elements-in-subset/)
+
+- Same idea with [Q128](#starq128-longest-consecutive-sequence).
+- ```java
+    // need two x^{}, except for only one x^k
+
+    // 2 4 16 256 16 4 2
+    // 4 16 256 16 4
+    // 16 256 16
+    // 256
+
+    // no need to check 16, 4, 2
+    // we need to find the middle, where its square doesn't exist, or it only exists once
+
+  class Solution {
+      public int maximumLength(int[] nums) {
+          Map<Integer, Integer> num2Count = new HashMap<>();
+          int max = 0;
+
+          for (int num : nums)
+              num2Count.put(num, num2Count.getOrDefault(num, 0) + 1);
+
+          // edge case
+          int ones = num2Count.getOrDefault(1, 0);
+          if (ones > 0)
+              max = ones % 2 == 0 ? ones - 1 : ones;
+
+          for (int num : nums) {
+              if (num2Count.containsKey(num * num) && num2Count.get(num) > 1)
+                  continue;
+
+              int len = 1;
+              while (true) {
+                  int root = (int) Math.sqrt(num);
+                  if (root * root == num && num2Count.getOrDefault(root, 0) >= 2) {
+                      len += 2;
+                      num = root;
+                  }
+                  else    break;
+              }
+              max = Math.max(max, len);
+          }
+
+          return max;
+      }
+  }
+  ```
