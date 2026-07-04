@@ -15,7 +15,6 @@ editLink: false
 - ![Java](/assets/image/java/Java.png)
 
 - JDK
-
   - Java development toolkit
 
   - Versions of JDK get released every 6 months
@@ -23,12 +22,10 @@ editLink: false
   - Release a LTS version every 3 years
 
 - Java is a hybrid language
-
   - `javac` - compile
   - `java` - interpret
 
 - JVM
-
   - Java virtual machine
   - Make Java platform independent
   - ![JVM](/assets/image/java/JVM.png)
@@ -42,7 +39,6 @@ editLink: false
 ### Variables
 
 - Three types of variables
-
   - **Fields** - member variables in a class
 
   - **Local variables** - variables in a method or block of code
@@ -52,7 +48,6 @@ editLink: false
     > ==NOTE==: No global variables in Java
 
 - Data type
-
   - _Primitive data type_
     - `boolean`, `byte`, `short`, `int`, `long`, `float`, `double`, `char`
     - Overflow and underflow
@@ -65,7 +60,6 @@ editLink: false
 - Declaration and Initialisation
 
 - Literals
-
   - **Good habit**: add appropriate data type suffix
 
 ### Operators
@@ -89,10 +83,8 @@ editLink: false
 
 - Expression is formed by combining variables, literals, method return values and operators
 - Statement is an executable line or code block
-
   - Declaration statement
   - Expression statement
-
     - Assignment expressions
     - `++`, `--`
     - Method calls
@@ -127,7 +119,6 @@ editLink: false
   - Type promotion
     - Can cause compile time error if there are more than one methods matched
 - Variable Arguments
-
   - Variable numbers of inputs
 
   - **Must** be the last parameter
@@ -148,7 +139,6 @@ editLink: false
     ```
 
 - Command-line Arguments
-
   - `String[] args` in `main()`
 
 ---
@@ -176,7 +166,6 @@ editLink: false
 - `String trim()`
 - `String substring(int begin)`
 - `String substring(int begin, int end)`
-
   - `[begin, end)`
 
 - `String replace(char old, char new)`
@@ -194,7 +183,6 @@ editLink: false
 - `boolean matches(String regex)`
 - `String[] split(String regex, int limit)`
 - `String[] split(String regex)`
-
   - This method works as if by invoking the two-argument [`split`](<https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html#split(java.lang.String,int)>) method with the given expression and a limit argument of zero
   - Trailing empty strings will therefore be discarded
 
@@ -266,7 +254,6 @@ editLink: false
   Object - properties and behaviors
 
 - Constructor
-
   - A special method is required to create a new instance of the class
   - No return type
   - Every objects has a default constructor
@@ -278,19 +265,16 @@ editLink: false
 - The `getter` and `setter` can also have additional validations instead of just setting or getting the fields values
 
 - Reference vs. Object
-
   - All other types which are not one of the primitive types are reference types
   - References --- pointers
   - The only operators allowed for reference type are assignment via `=` and equality comparison via `==` and `!=` (Strings can use `+`, `+=`)
   - `instance of` operator: verify that an particular object is of a certain type
-
     - Typically used before performing a type casting
 
   - `new` operator instantiates a class by allocating memory for a new object and returning a reference to that memory
   - In Java, there is no way to access an object directly (_no pointer_), everything is done using a reference
 
 - `static` keyword
-
   - Fields that have `static` modifier are called static fields or class variables
   - They are associated with the class, rather than with any object. Every instance of the class shares a class variable, which is in one fixed location in memory
   - `static` methods can't access instance methods and instance variables directly, and can't use `this` keyword
@@ -299,21 +283,16 @@ editLink: false
   - **`static` block**: a code block that will be executed before the creation of any object of that class
 
 - `final` keyword
-
   - Final variables
-
     - `final` means a value cannot be changed **after** initialisation at run-time
-
       - Blank finals -> a final field inside a class can be different from each other, and yet it remains its immutablility
 
     - `static final` means compile-time constant
 
   - Final arguments
-
     - Inside the method you cannot change the argument
 
   - Final methods
-
     - Prevent the method being overridden by the subclass
     - Any private methods in a class are implicitly `final`
 
@@ -339,14 +318,12 @@ editLink: false
   > [A great discussion about this topic](https://www.zhihu.com/question/63183685)
 
 - Values of the inheritance:
-
   - To handle the complexity of the large project
   - Keep common behaviors in one class
   - Split different behaviors into separate classes
   - Keep all of the objects in a single data structure
 
 - `this` vs. `super`
-
   - `super` is used to access/call the parent class members
   - `this` is used to access/call the current class members
   - Both of them can be used anywhere in a class except static areas, any attempt to do so will lead to compile-time errors
@@ -358,13 +335,11 @@ editLink: false
   - A constructor can have a call to `super()` or `this()` but never both
 
 - **Method overloading vs. method overriding**
-
   - Method overloading means providing two or more separate methods in a class with the same name but different parameters
 
   - We can overload static and instance methods
 
   - Overloading rules
-
     - Methods must have the same method name
     - Methods must have different parameters
     - If methods follow the rules above then they may or may ont
@@ -375,7 +350,6 @@ editLink: false
   - Method overriding means defining a method in a child class that already exists in the parent class with same signature
 
   - Overriding rules
-
     - It must have same name and same arguments
 
     - Return type can be a subclass of the return type in the parent class
@@ -409,7 +383,6 @@ editLink: false
   - Can only look in reference type class for method
   - Outputs a method signature
 - Runtime Rules
-
   - Follow exact **runtime type** of object to find the method
   - Must match compile time method signature to appropriate method in actual object's class
 
@@ -441,10 +414,8 @@ editLink: false
   - Make refactoring interface easier
   - Java 9 allows `private` methods in interface that can be used in `default` methods inside interface
 - Type of Interface
-
   - Normal interface
   - **Functional Interface**
-
     - Has only one abstract function
 
   - Marker Interface
@@ -479,7 +450,6 @@ editLink: false
 ## Access Control
 
 - Package
-
   - A collection of similar classes, interfaces, or other packages
   - `package`, `import`
   - Create a library and import it
@@ -489,11 +459,9 @@ editLink: false
 - Scope
 
 - Naming Convention
-
   - Reversed url
 
 - Access control
-
   - At the top level: public or package-private (no explicit modifiers)
 
   - At the member level: public, private, protected, or package-private
@@ -539,11 +507,9 @@ editLink: false
 ### Local and Anonymous Inner Classes
 
 - Local inner class: an inner class defined inside a code block, typically in a method
-
   - A local class can access local variables and parameters of the enclosing block that are final or _effectively final_
 
 - Anonymous inner class: an inner class defined at the time of creation of itself
-
   - In other words, we can say that it a class without the name and can have only one object that is created by its definition
 
   - Useful when you want a class inheriting from a superclass or implementing an interface which only used in a specific method
@@ -599,7 +565,6 @@ editLink: false
 ### `Exception` Class
 
 - Methods
-
   - `String getMessage()`
 
   - `String toString()`
@@ -625,7 +590,6 @@ editLink: false
   D --> N[OutOfMemoryError]
   ```
 - Error
-
   - Error cause the program to exit since they are not recoverable
 
   - Considered as unchecked exceptions
@@ -639,7 +603,6 @@ editLink: false
 - If a `RuntimeException` gets all the way out to `main( )` **without being caught**, `printStackTrace( )` is called for that exception as the program exits; the output is reported to `System.err`
 
 - Creating your own exceptions
-
   - ```java
     class MinBalanceException extends Exception {
       public String toString() {
@@ -672,7 +635,6 @@ editLink: false
 - The finally block will not be executed if program exits (either by calling `System.exit()` or by causing a fatal error that causes the process to abort)
 
 - **Try with resources**
-
   - Java 7 feature
 
   - Support multiple resources, separated by `;`
@@ -693,7 +655,6 @@ editLink: false
 - Java supports termination exception handling instead of resumption
 
 - **Throwing an exception**
-
   - `throw new Exception("");`
   - Exceptions can be rethrown
     - Happen in the `catch` block
@@ -719,7 +680,6 @@ editLink: false
 ## Multiprogramming
 
 - Multiprogramming
-
   - Running more than one programs on a single computer
 
   - ```mermaid
@@ -743,11 +703,9 @@ editLink: false
    - `Thread` class
    - `Runnable` interface
 2. Overriding the `run()` method
-
    - `run()` is the starting point of a thread
 
 3. Start the thread
-
    - If `implements Runnable`, `Thread t = new Thread(new Object()); t.start();`
    - If `extends Thread`, `o.start();`
 
@@ -780,10 +738,8 @@ editLink: false
   - `boolean isDaemon()`
   - `boolean isInterrupted()`
 - Instance methods
-
   - `void inerrupt()`
   - `void join()`
-
     - Wait for this thread to die
 
   - `void join(long milli)`
@@ -791,21 +747,16 @@ editLink: false
   - `void start()`
 
 - Static methods
-
   - `int activeCount()`
-
     - Returns an estimate of the number of active threads in the current thread's `ThreadGroup` and its subgroups
 
   - `Thread currentThread()`
-
     - Returns a reference to the currently executing thread object.
 
   - `void sleep(long milli)`
-
     - Causes the currently executing thread to sleep
 
   - `void yield()`
-
     - A hint to the scheduler that the current thread is willing to yield its current use of a processor
 
   - `void dumpStack()`
@@ -843,7 +794,6 @@ editLink: false
 - Every class is a subclass, direct or indirect, of the `Object` class
 
 - [Interfaces](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html)
-
   - ```java
     /**
      * native 方法，用于返回当前运行时对象的 Class 对象，使用了 final 关键字修饰，故不允许子类重写。
@@ -910,7 +860,6 @@ editLink: false
 - Wrapper objects are **immutable**
 
 - Initialisation
-
   - `Integer myInteger = new Integer(56);`
   - `Integer myInteger = 56;`
     - Will be converted to `Integer myInteger = Integer.valueOf(56);` at compile time
@@ -920,7 +869,6 @@ editLink: false
 - **It's a good practice using `equals()` method to compare wrapper class objects**
 
 - Interfaces
-
   - Autoboxing --- `Integer.valueOf(int)`
 
   - Unboxing --- `intValue()`
@@ -960,7 +908,6 @@ editLink: false
 - Helpful to get information of a class
 
 - Four ways to get a `Class` object
-
   - ```java
     Class alunbarClass = TargetObject.class;
 
@@ -975,7 +922,6 @@ editLink: false
     ```
 
 - Example
-
   - ```java
     package cn.javaguide;
 
@@ -1107,7 +1053,6 @@ editLink: false
 - Instance variables can be accessed and modified
 
 - Use cases
-
   - `Runnable`
   - `Comparator`
   - `Listener`
@@ -1118,7 +1063,6 @@ editLink: false
 > [Oracle tutorial](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/lambda-quickstart/index.html)
 
 - Method references
-
   - Sometimes, a lambda expression does nothing but call an existing method. In those cases, it's often clearer to refer to the existing method by name
 
   - | Kind                                                                        | Syntax                                 | Examples                                                         |
@@ -1236,13 +1180,11 @@ editLink: false
 - This can make a program much less efficient, since each such request often triggers disk access, network activity, or some other operation that is relatively expensive
 
 - Buffer
-
   - A temporary memory object for holding the data
   - The native input and output APIs are called only when the buffer is **empty or full**
   - It often makes sense to write out a buffer at critical points, without waiting for it to fill. This is known as _flushing_ the buffer
 
 - A program can convert an unbuffered stream into a buffered stream using the _wrapping idiom_
-
   - ```java
     in = new BufferedReader(new FileReader("xanadu.txt"));
     out = new BufferedWriter(new FileWriter("characteroutput.txt"));
@@ -1305,7 +1247,6 @@ editLink: false
 - Implements `DataInput` and `DataOutput`
 
 - Constructor
-
   - `RandomAccessFile(File file, String mode)`
 
   - `RandomAccessFile(String name, String mode)`
@@ -1318,7 +1259,6 @@ editLink: false
     | `"rwd"` | Open for reading and writing, as with `"rw"`, and also require that every update to the file's content be written synchronously to the underlying storage device.             |
 
 - Methods
-
   - `long getFilePointer()`
     - Returns the current offset in this file
   - `void seek(long pos)`
@@ -1335,13 +1275,11 @@ editLink: false
 ### File I/O
 
 - `Path`
-
   - A `Path` is **NOT** system independent
 
   - You can think of the `Path` as storing these name elements as a sequence
 
   - `Paths.get(String first, String... more)`
-
     - Creating a `Path`
 
     - ```java
@@ -1357,7 +1295,6 @@ editLink: false
   - `int getNameCount()`
 
   - `Path subpath(int beginIndex, int endIndex)`
-
     - Not including a root element
 
   - `Path getParent()`
@@ -1367,11 +1304,9 @@ editLink: false
   - `URI toUri()`
 
   - `Path toAbsolutePath()`
-
     - The file does not need to exist for this method to work
 
   - `Path toRealPath(LinkOption... option)`
-
     - If `true` is passed to this method and the file system supports symbolic links, this method resolves any symbolic links in the path
     - If the `Path` is relative, it returns an absolute path
     - If the `Path` contains any redundant elements, it returns a path with those elements removed
@@ -1380,11 +1315,9 @@ editLink: false
   - `Path resolve(Path p)`
 
   - `Path resolve(String s)`
-
     - Join two paths
 
   - `Path relativize(Path other)`
-
     - Constructs a relative path between this path and a given path
 
 - `File`
@@ -1415,7 +1348,6 @@ editLink: false
 - **Static generic method cannot use the generic type declared by its class because that type is only accessible after instantiation**
 
 - Bounds
-
   - Allow you to place constraints on the parameter types that can be used with generics
 
   - ```java
@@ -1435,7 +1367,6 @@ editLink: false
     ```
 
 - Wildcard
-
   - Type arguments of parameterized types
 
   - ```java
@@ -1466,7 +1397,6 @@ editLink: false
   - If **the type parameter is only used in method signature**, in the absence of such interdependency between the type(s) of the argument(s), the return type and/or throws type, generic methods are considered bad style, and wildcards are preferred
 
 - Java generics are implemented using _erasure_, which means that any specific type information is erased when you use a generic
-
   - ```java
     // This is not allowed
     T[] t = new T[size]; // compile error
@@ -1509,7 +1439,6 @@ editLink: false
 
 - An ordered collection (a sequence)
 - Methods
-
   - `void add(int index, E e)`
 
   - `boolean addAll(int index, Collection<? extends E> c)`
@@ -1519,7 +1448,6 @@ editLink: false
   - `E remove(int index)`
 
   - `E set(int index, E e)`
-
     - Returns the element previously at the specified position
 
   - `int indexOf(Object o)`
@@ -1527,7 +1455,6 @@ editLink: false
   - `int lastIndexOf(Object o)`
 
   - `List<E> subList(int from, int to)`
-
     - `from` - low endpoint (inclusive) of the subList
     - `to` - high endpoint (exclusive) of the subList
 
@@ -1536,7 +1463,6 @@ editLink: false
   - `ListIterator<E> listIterator(int index)`
 
   - `static List<E> of(E... elements)`
-
     - Returns an **unmodifiable list** containing an arbitrary number of elements
 
   - `static List<E> copyOf(Collection<? extends E> coll)`
@@ -1544,11 +1470,8 @@ editLink: false
     - The given Collection must not be null, and it must not contain any null elements
 
 - More flexible iterator: `listIterator()`
-
   - Can move back
-
     - `previous()`
-
       - logically equivalent to `*(p--)`
 
     - `hasPrevious()`
@@ -1571,29 +1494,22 @@ editLink: false
 - FIFO
 
 - Methods
-
   - `boolean add(E e)`
-
     - Throws an `IllegalStateException` if no space is currently available
 
   - `boolean offer(E e)`
-
     - Returns false instead of throwing `IllegalStateException`
 
   - `E remove()`
-
     - Retrieves and removes the head of this queue, or throws `NoSuchElementException` if this queue is empty
 
   - `E poll()`
-
     - Retrieves and removes the head of this queue, or returns `null` if this queue is empty
 
   - `E element()`
-
     - Retrieves, but does not remove, the head of this queue, or throws `NoSuchElementException` if this queue is empty
 
   - `E peek()`
-
     - Retrieves, but does not remove, the head of this queue, or returns `null` if this queue is empty
 
   - |         | Throws exception | Returns special value |
@@ -1611,7 +1527,6 @@ editLink: false
 - It can be used as **a queue or a stack**
 
 - Methods
-
   - |         | First Element (Head)                                                                                                 |                                                                                                                      | Last Element (Tail)                                                                                                |                                                                                                                    |
     | :------ | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
     |         | Throws exception                                                                                                     | Special value                                                                                                        | Throws exception                                                                                                   | Special value                                                                                                      |
@@ -1620,7 +1535,6 @@ editLink: false
     | Examine | [`getFirst()`](<https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Deque.html#getFirst()>)       | [`peekFirst()`](<https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Deque.html#peekFirst()>)     | [`getLast()`](<https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Deque.html#getLast()>)       | [`peekLast()`](<https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Deque.html#peekLast()>)     |
 
 - Comparison of `Queue` and `Deque` methods
-
   - | `Queue` Method                                                                                               | Equivalent `Deque` Method                                                                                            |
     | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
     | [`add(e)`](<https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Deque.html#add(E)>)       | [`addLast(e)`](<https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Deque.html#addLast(E)>)       |
@@ -1631,7 +1545,6 @@ editLink: false
     | [`peek()`](<https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Deque.html#peek()>)       | [`peekFirst()`](<https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Deque.html#peekFirst()>)     |
 
 - Comparison of `Stack` and `Deque` methods
-
   - | Stack Method                                                                                             | Equivalent `Deque` Method                                                                                            |
     | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
     | [`push(e)`](<https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Deque.html#push(E)>) | [`addFirst(e)`](<https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Deque.html#addFirst(E)>)     |
@@ -1709,7 +1622,6 @@ editLink: false
 - **LRU Cache**
 
 - Override the method `protected boolean removeEldestEntry(Map.Entry<K, V> eldest)`
-
   - ```java
     private static final int MAX_ENTRIES = 100;
 
@@ -1749,7 +1661,6 @@ editLink: false
 - An iterator over a collection
 - Iterators allow the caller to remove elements from the underlying collection during the iteration with well-defined semantics
 - Methods
-
   - `boolean hasNext()`
 
   - `E next()`
@@ -1766,29 +1677,23 @@ editLink: false
 ### `Comparable` and `Comparator`
 
 - `java.lang.Comparable<T>`
-
   - Method
-
     - `int compareTo(T o)`
     - Returns a negative integer, zero, or a positive integer as this object is less than, equal to, or greater than the specified object
 
   - Lists (and arrays) of objects that implement this interface can be sorted automatically by `Collections.sort` (and `Arrays.sort`). Objects that implement this interface can be used as keys in a `SortedMap` or as elements in a `SortedSet`, without the need to specify a comparator
   - **It is a functional interface but not one logically**
-
     - It is more like a trait of an object. "This thing can be compared", rather than "this thing does the comparing"
 
   - How to use `Comparable`?
     - Implement the interface
 
 - `java.util.Comparator<T>`
-
   - A functional interface
-
     - `int compare(T o1, T o2)`
 
   - Comparators can be passed to a sort method (such as `Collections.sort` or `Arrays.sort`) to allow precise control over the sort order. Comparators can also be used to control the order of certain data structures (such as `SortedSet` or `SortedMap`), or to provide an ordering for collections of objects that don't have a natural ordering
   - When to use `Comparator`?
-
     - The objects in collections don't have natural ordering. E.g. their class is provided in an external library without write permission
 
     - The objects do have natural ordering but you want to sort it in a different logic
@@ -1813,9 +1718,7 @@ editLink: false
   ```
 
 - Deep copy
-
   - Deep copy of Java class
-
     - Implement the `Clonable` interface and override the `clone()` method (inherited from `Object`) in the class of objects within the collection
 
       > Note: `Object.clone()` is `native`
@@ -1825,7 +1728,6 @@ editLink: false
     - However, `clone()` is actually shallow copy not deep copy
 
     - Therefore,
-
       - All immutable fields or primitive fields can be used as it is. They don’t require any special treatment. e.g. primitive classes, wrapper classes and `String` class.
       - For all mutable field members, we must create a new object of member and assign it’s value to cloned object.
 
@@ -1843,7 +1745,6 @@ editLink: false
       ```
 
   - Deep copy of Java Collections
-
     1. Create a new instance of collection
     2. Clone all elements from given collection to clone collection
 
@@ -1857,9 +1758,7 @@ editLink: false
 ### Array to Collections
 
 - `List<T> Arrays.asList(T... a)`
-
   - **The array should be an array of object instead of an array of primitive type values**
-
     - ```java
       int[] myArray = {1, 2, 3};
       List myList = Arrays.asList(myArray);
@@ -1871,11 +1770,9 @@ editLink: false
       ```
 
   - The returned list implements the optional `Collection` methods, except those that would change the size of the returned list. Those methods leave the list unchanged and throw `UnsupportedOperationException`
-
     - No `add()`, `remove()`, `clear()`
 
 - How to correctly transform an array to a list
-
   1. `List list = new ArrayList<>(Arrays.asList("a", "b", "c"))`
 
   2. ```java
@@ -1903,97 +1800,6 @@ editLink: false
 
 ---
 
-## JDBC
-
-- JDBC is an API used in java programming to interact with databases
-- Java Database Connectivity
-- ![JDBC](/assets/image/java/JDBC.png)
-- Steps
-  1. Import packages
-  2. Load driver
-  3. Register driver
-  4. Create connection
-  5. Create statement
-  6. Execute statement
-  7. Close
-
-### JDBC Drivers
-
-- Establish connection
-
-- Convert data types from Java language to database data types
-
-- Type-1 driver
-
-  - JDBC-ODBC bridge
-  - Open Database Connectivity (ODBC) is an open standard API that allows application programmers to access any database
-  - A layer between different program languages and different database systems
-  - Partial driver (not fully written in Java)
-
-- Type-2 driver
-
-  - Native-API
-  - API sitting on the database system
-  - Partial
-
-- Type-3 driver
-
-  - Java-Net protocol driver
-  - Use a server to talk to database
-  - Pure
-
-- Type-4 driver
-
-  - Thin driver
-  - Direct driver written in Java
-  - Pure
-
-- ```java
-  import java.sql.Connection;
-  import java.sql.DriverManager;
-  import java.sql.ResultSet;
-  import java.sql.SQLException;
-  import java.sql.Statement;
-
-  public class Sample
-  {
-    public static void main(String[] args)
-    {
-      // NOTE: Connection and Statement are AutoClosable.
-      //       Don't forget to close them both in order to avoid leaks.
-      try
-      (
-        // create a database connection
-        Connection connection = DriverManager.getConnection("jdbc:sqlite:sample.db");
-        Statement statement = connection.createStatement();
-      )
-      {
-        statement.setQueryTimeout(30);  // set timeout to 30 sec.
-
-        statement.executeUpdate("drop table if exists person");
-        statement.executeUpdate("create table person (id integer, name string)");
-        statement.executeUpdate("insert into person values(1, 'leo')");
-        statement.executeUpdate("insert into person values(2, 'yui')");
-        ResultSet rs = statement.executeQuery("select * from person");
-        while(rs.next())
-        {
-          // read the result set
-          System.out.println("name = " + rs.getString("name"));
-          System.out.println("id = " + rs.getInt("id"));
-        }
-      }
-      catch(SQLException e)
-      {
-        // if the error message is "out of memory",
-        // it probably means no database file is found
-        e.printStackTrace(System.err);
-      }
-    }
-  }
-  ```
-
----
-
 ## Hibernate
 
 - A Java-based ORM framework (Object-Ralational Mapping)
@@ -2002,7 +1808,6 @@ editLink: false
 ### Key Concepts
 
 - `Entity` class
-
   - An entity class is a Java class that is mapped to a table in a database
 
   - Each instance of the entity class represents a row in the table
@@ -2034,7 +1839,6 @@ editLink: false
     ```
 
 - `SessionFactory`
-
   - The `SessionFactory` is the main interface to interact with Hibernate
 
   - It is responsible for creating `Session` objects that are used to perform operations on the database
@@ -2047,7 +1851,6 @@ editLink: false
     ```
 
 - `Session`
-
   - A `Session` is a single-threaded unit of work in Hibernate
 
   - It allows you to create, read, update, and delete objects from the database. You perform all database operations within the `Session`
@@ -2059,7 +1862,6 @@ editLink: false
     ```
 
   - Difference
-
     - | **Feature**                | **`getCurrentSession()`**                                                                | **`openSession()`**                                                                 |
       | -------------------------- | ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
       | **Session Lifecycle**      | Tied to the current request or transaction context.                                      | Creates a new session each time it is called.                                       |
@@ -2070,7 +1872,6 @@ editLink: false
       | **Transaction Handling**   | Managed by the container, typically no need to manually start or commit the transaction. | Developer is responsible for managing transactions.                                 |
 
 - `Transaction`
-
   - Hibernate uses transactions to ensure the consistency and integrity of the database
 
   - Transactions are started using `beginTransaction()`, and after performing the necessary operations, they are committed or rolled back
@@ -2086,7 +1887,6 @@ editLink: false
 - Criteria API
 
 - Lazy vs Eager loading
-
   - **Lazy Loading:** Associated entities are loaded only when they are accessed for the first time
 
   - **Eager Loading:** Associated entities are loaded immediately when the parent entity is loaded
@@ -2104,7 +1904,6 @@ editLink: false
 ### Configuration
 
 - `hibernate.cfg.xml`
-
   - The main configuration file for Hibernate, where you specify the database connection properties, dialect, and other Hibernate settings
 
   - ```xml
@@ -2125,14 +1924,12 @@ editLink: false
     ```
 
 - Mapping files
-
   - Define the relationship between entities and the database tables
   - Nowadays we use annotations
 
 ### Features
 
 - CRUD methods
-
   - ```java
     session.beginTransaction();
     // create
@@ -2163,7 +1960,6 @@ editLink: false
     ```
 
 - Mapping relationships
-
   - One to One
     - `@OneToOne`
   - One to Many & Many to One
@@ -2173,7 +1969,6 @@ editLink: false
     - `@ManyToMany(mappedBy = "")`
 
 - Caching
-
   - Hibernate provides caching mechanisms to reduce database access and improve performance. It supports both first-level cache (Session cache) and second-level cache (across Sessions)
     - **First-level cache** is enabled by default, and it stores objects within the current session
     - **Second-level cache** is an optional cache that works across sessions, and can be configured using cache providers like EHCache
@@ -2211,7 +2006,6 @@ editLink: false
 - In fact, annotation is a **special interface** which extends `Annotation` interface
 
 - Built-in annotations
-
   - Annotates the code (**class, method, variable**)
     - `@Override`
     - `@Deprecated`
@@ -2236,7 +2030,6 @@ editLink: false
       - Indicates the annotation can be used multiple times
 
 - User-defined annotations
-
   - ```java
     @interface MyAnno {
       String name();

@@ -598,16 +598,14 @@
 </ul>
 <h3 id="polymorphism" tabindex="-1"><a class="header-anchor" href="#polymorphism"><span>Polymorphism</span></a></h3>
 <ul>
-<li>
-<p>Compile Time Rules</p>
+<li>Compile Time Rules
 <ul>
 <li>Compiler <strong>ONLY</strong> knows reference type</li>
 <li>Can only look in reference type class for method</li>
 <li>Outputs a method signature</li>
 </ul>
 </li>
-<li>
-<p>Runtime Rules</p>
+<li>Runtime Rules
 <ul>
 <li>Follow exact <strong>runtime type</strong> of object to find the method</li>
 <li>Must match compile time method signature to appropriate method in actual object's class</li>
@@ -622,54 +620,34 @@
 </ul>
 <h3 id="interfaces" tabindex="-1"><a class="header-anchor" href="#interfaces"><span>Interfaces</span></a></h3>
 <ul>
-<li>
-<p><code v-pre>implements</code></p>
-</li>
-<li>
-<p>An interface is a contract of what the classes <strong>can</strong> do</p>
-</li>
-<li>
-<p>An abstract class taken to the extreme,thus more flexibility (complete decoupling)</p>
-</li>
-<li>
-<p>Refer to different types of objects with one identical interface type</p>
+<li><code v-pre>implements</code></li>
+<li>An interface is a contract of what the classes <strong>can</strong> do</li>
+<li>An abstract class taken to the extreme,thus more flexibility (complete decoupling)</li>
+<li>Refer to different types of objects with one identical interface type
 <ul>
 <li>Generalisation</li>
 <li>Capability of putting different types of objects into one data structure</li>
 <li>Less effort for code alteration</li>
 </ul>
 </li>
-<li>
-<p>One class can implement several interfaces</p>
+<li>One class can implement several interfaces
 <ul>
 <li>&quot;Multiple inheritance&quot;: A class can be upcast to more than one base type with interfaces</li>
 </ul>
 </li>
-<li>
-<p>Interface cannot be instantiated</p>
-</li>
-<li>
-<p>Methods in interfaces are implicitly <code v-pre>public</code></p>
-</li>
-<li>
-<p>Fields in interfaces are implicitly constant (<code v-pre>public static final</code>)</p>
-</li>
-<li>
-<p>SInce Java 8 interface can have <code v-pre>static</code> methods</p>
-</li>
-<li>
-<p>An interface can extend another interface</p>
-</li>
-<li>
-<p>Interface can have <code v-pre>default</code> methods which can have method body</p>
+<li>Interface cannot be instantiated</li>
+<li>Methods in interfaces are implicitly <code v-pre>public</code></li>
+<li>Fields in interfaces are implicitly constant (<code v-pre>public static final</code>)</li>
+<li>SInce Java 8 interface can have <code v-pre>static</code> methods</li>
+<li>An interface can extend another interface</li>
+<li>Interface can have <code v-pre>default</code> methods which can have method body
 <ul>
 <li>Java 8 feature</li>
 <li>Make refactoring interface easier</li>
 <li>Java 9 allows <code v-pre>private</code> methods in interface that can be used in <code v-pre>default</code> methods inside interface</li>
 </ul>
 </li>
-<li>
-<p>Type of Interface</p>
+<li>Type of Interface
 <ul>
 <li>
 <p>Normal interface</p>
@@ -1062,8 +1040,7 @@
 <hr>
 <h2 id="multiprogramming" tabindex="-1"><a class="header-anchor" href="#multiprogramming"><span>Multiprogramming</span></a></h2>
 <ul>
-<li>
-<p>Multiprogramming</p>
+<li>Multiprogramming
 <ul>
 <li>
 <p>Running more than one programs on a single computer</p>
@@ -1607,8 +1584,7 @@
 <p><a href="https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/lambda-quickstart/index.html" target="_blank" rel="noopener noreferrer">Oracle tutorial</a></p>
 </blockquote>
 <ul>
-<li>
-<p>Method references</p>
+<li>Method references
 <ul>
 <li>
 <p>Sometimes, a lambda expression does nothing but call an existing method. In those cases, it's often clearer to refer to the existing method by name</p>
@@ -2292,8 +2268,7 @@
 <li>
 <p>More flexible iterator: <code v-pre>listIterator()</code></p>
 <ul>
-<li>
-<p>Can move back</p>
+<li>Can move back
 <ul>
 <li>
 <p><code v-pre>previous()</code></p>
@@ -2916,109 +2891,6 @@
 <li><code v-pre>Socket</code>, <code v-pre>ServerSocket</code></li>
 <li>A socket is one endpoint of a two-way communication link between two programs running on the network</li>
 <li><code v-pre>DatagramSocket</code>, <code v-pre>DatagramPacket</code></li>
-</ul>
-<hr>
-<h2 id="jdbc" tabindex="-1"><a class="header-anchor" href="#jdbc"><span>JDBC</span></a></h2>
-<ul>
-<li>JDBC is an API used in java programming to interact with databases</li>
-<li>Java Database Connectivity</li>
-<li><img src="/assets/image/java/JDBC.png" alt="JDBC" tabindex="0" loading="lazy"><figcaption>JDBC</figcaption></li>
-<li>Steps
-<ol>
-<li>Import packages</li>
-<li>Load driver</li>
-<li>Register driver</li>
-<li>Create connection</li>
-<li>Create statement</li>
-<li>Execute statement</li>
-<li>Close</li>
-</ol>
-</li>
-</ul>
-<h3 id="jdbc-drivers" tabindex="-1"><a class="header-anchor" href="#jdbc-drivers"><span>JDBC Drivers</span></a></h3>
-<ul>
-<li>
-<p>Establish connection</p>
-</li>
-<li>
-<p>Convert data types from Java language to database data types</p>
-</li>
-<li>
-<p>Type-1 driver</p>
-<ul>
-<li>JDBC-ODBC bridge</li>
-<li>Open Database Connectivity (ODBC) is an open standard API that allows application programmers to access any database</li>
-<li>A layer between different program languages and different database systems</li>
-<li>Partial driver (not fully written in Java)</li>
-</ul>
-</li>
-<li>
-<p>Type-2 driver</p>
-<ul>
-<li>Native-API</li>
-<li>API sitting on the database system</li>
-<li>Partial</li>
-</ul>
-</li>
-<li>
-<p>Type-3 driver</p>
-<ul>
-<li>Java-Net protocol driver</li>
-<li>Use a server to talk to database</li>
-<li>Pure</li>
-</ul>
-</li>
-<li>
-<p>Type-4 driver</p>
-<ul>
-<li>Thin driver</li>
-<li>Direct driver written in Java</li>
-<li>Pure</li>
-</ul>
-</li>
-<li>
-<div class="language-java line-numbers-mode" data-highlighter="shiki" data-ext="java" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code class="language-java"><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> java.sql.Connection</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
-<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> java.sql.DriverManager</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
-<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> java.sql.ResultSet</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
-<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> java.sql.SQLException</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
-<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> java.sql.Statement</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">public</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> class</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> Sample</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">{</span></span>
-<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">  public</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> static</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> void</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> main</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">String</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">[] </span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">args</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  {</span></span>
-<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    // NOTE: Connection and Statement are AutoClosable.</span></span>
-<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    //       Don't forget to close them both in order to avoid leaks.</span></span>
-<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    try</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    (</span></span>
-<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">      // create a database connection</span></span>
-<span class="line"><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">      Connection</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> connection</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> DriverManager</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">getConnection</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"jdbc:sqlite:sample.db"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">);</span></span>
-<span class="line"><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">      Statement</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> statement</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> connection</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">createStatement</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">();</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    )</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    {</span></span>
-<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">      statement</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">setQueryTimeout</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">30</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">);  </span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">// set timeout to 30 sec.</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">      statement</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">executeUpdate</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"drop table if exists person"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">);</span></span>
-<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">      statement</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">executeUpdate</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"create table person (id integer, name string)"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">);</span></span>
-<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">      statement</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">executeUpdate</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"insert into person values(1, 'leo')"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">);</span></span>
-<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">      statement</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">executeUpdate</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"insert into person values(2, 'yui')"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">);</span></span>
-<span class="line"><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">      ResultSet</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> rs</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> statement</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">executeQuery</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"select * from person"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">);</span></span>
-<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">      while</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">rs</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">next</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">())</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      {</span></span>
-<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        // read the result set</span></span>
-<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        System</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">out</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">println</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"name = "</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> +</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> rs</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">getString</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"name"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">));</span></span>
-<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        System</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">out</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">println</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"id = "</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> +</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B"> rs</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">getInt</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"id"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">));</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      }</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    }</span></span>
-<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    catch</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">SQLException</span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic"> e</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    {</span></span>
-<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">      // if the error message is "out of memory",</span></span>
-<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">      // it probably means no database file is found</span></span>
-<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">      e</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">printStackTrace</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">System</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">err</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">);</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    }</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  }</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 </ul>
 <hr>
 <h2 id="hibernate" tabindex="-1"><a class="header-anchor" href="#hibernate"><span>Hibernate</span></a></h2>

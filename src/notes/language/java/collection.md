@@ -1,6 +1,5 @@
 ---
 title: Collections
-order: 2
 category:
   - Note
 tag:
