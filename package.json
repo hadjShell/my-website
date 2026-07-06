@@ -1,6 +1,6 @@
 {
-  "name": "hadjshell-blog",
-  "description": "Hadjshell's blog",
+  "name": "hadjshell-website",
+  "description": "Hadjshell's Website",
   "version": "2.0.0",
   "license": "CC BY-NC-SA",
   "type": "module",

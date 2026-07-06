@@ -1,3 +1,3 @@
-import comp from "/Users/hadjshell/Documents/OneDrive/Personal-Projects/myblog/my-docs/src/.vuepress/.temp/pages/blog/bq.html.vue"
+import comp from "/Users/hadjshell/Documents/OneDrive/Personal-Projects/my-website/my-docs/src/.vuepress/.temp/pages/blog/bq.html.vue"
 const data = JSON.parse("{\"path\":\"/blog/bq.html\",\"title\":\"Behaviour Questions\",\"lang\":\"en-US\",\"frontmatter\":{\"title\":\"Behaviour Questions\",\"date\":\"2026-04-22T00:00:00.000Z\",\"star\":true,\"footer\":false,\"editLink\":false,\"feed\":false,\"seo\":false,\"head\":[]},\"git\":{\"createdTime\":1777555680000,\"updatedTime\":1779192449000,\"contributors\":[{\"name\":\"张家源\",\"username\":\"\",\"email\":\"davidzhang0880@gmail.com\",\"commits\":2}]},\"readingTime\":{\"minutes\":7.57,\"words\":2270},\"filePathRelative\":\"blog/bq.md\"}")
 export { comp, data }

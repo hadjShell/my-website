@@ -14,7 +14,7 @@ Spring is one of the most popular frameworks for building enterprise application
 
 Spring Boot provides all the features of Spring while being significantly easier to use. Here are its key features:
 
-- **Auto-Configuration**: Spring Boot automatically configures the application based on the dependencies present in the project
+- **Auto-Configuration**: Spring Boot automatically configures the application based on the dependencies present in the project.
 - **Embedded Server**: Spring Boot includes embedded servers like Tomcat, Jetty, or Undertow, allowing applications to run without external server installation.
 - **Easy Deployment**: Spring Boot applications can be packaged as JAR or WAR files and deployed directly to servers or cloud environments. It offers seamless integration with Docker and Kubernetes for easier cloud-native deployment and scaling.
 - **Standalone Application**: Applications can run as executable JAR files using a simple main() method.
@@ -237,7 +237,7 @@ Spring Boot manages dependency versions for you through a curated dependency lis
 
 The starter itself is not magic. The real mechanism is:
 
-- Add starter
+- Add starter.
 - Starter adds dependencies.
 - Dependencies put classes on the classpath.
 - Auto-configuration sees those classes.
@@ -280,13 +280,13 @@ The starter itself is not magic. The real mechanism is:
 
 In Spring Boot, `application.properties` and `application.yml` are the main configuration files for your application.
 
-They let you externalize configuration so that the same code can run in different environments, such as local, dev, test, staging, and production. Spring Boot supports many external configuration sources, including Java properties files, YAML files, environment variables, and command-line arguments. Values can be injected with @Value, accessed through Environment, or bound to structured objects with @ConfigurationProperties.
+They let you **externalize configuration** so that the same code can run in different environments, such as local, dev, test, staging, and production. Spring Boot supports many external configuration sources, including Java properties files, YAML files, environment variables, and command-line arguments. Values can be injected with @Value, accessed through `Environment`, or bound to structured objects with `@ConfigurationProperties`.
 
 ### Where Should These Files Be Placed
 
 Most commonly: `src/main/resources/application.properties`, or: `src/main/resources/application.yml`.
 
-Spring Boot automatically looks for application.properties and application.yaml from several locations, including the classpath root, classpath `/config`, the current directory, `./config/`, and immediate child directories of `./config/`. Later locations can override earlier ones.
+Spring Boot automatically looks for `application.properties` and `application.yml` from several locations, including the classpath root, classpath `/config`, the current directory, `./config/`, and immediate child directories of `./config/`. Later locations can override earlier ones.
 
 ### `application.properties` Syntax
 
@@ -303,7 +303,7 @@ spring.datasource.password=password
 
 ### `application.yml` Syntax
 
-The application.properties file is not very readable when dealing with complex configurations. Most developers prefer using `application.yml` (YAML format) instead. YAML is a superset of JSON and provides a more structured and readable way to define hierarchical configuration data.
+The application.properties file is not very readable when dealing with complex configurations. Most developers prefer using `application.yml` (YAML format) instead. YAML is a superset of JSON and provides a more structured and readable way to define hierarchical configuration data. (**Indentation-sensitive**)
 
 ```yml title="application.yml"
 server:
@@ -389,7 +389,7 @@ payment:
     - EUR
 ```
 
-@tab Java config class
+@tab Java Bean
 
 ```java
 import java.time.Duration;
@@ -445,7 +445,7 @@ public class PaymentService {
 
 :::
 
-Spring Boot supports relaxed binding for @ConfigurationProperties. That means property names do not need to exactly match Java field names. For example, `context-path` can bind to `contextPath`, and uppercase environment variables such as `PORT` can bind to `port`. **We recommend kebab-case for `.properties` and YAML files, such as `my.main-project.person.first-name`.**
+Spring Boot supports relaxed binding for `@ConfigurationProperties`. That means property names do not need to exactly match Java field names. For example, `context-path` can bind to `contextPath`, and uppercase environment variables such as `PORT` can bind to `port`. **We recommend kebab-case for `.properties` and YAML files, such as `my.main-project.person.first-name`.**
 
 ### Profile-specific Config
 
@@ -469,7 +469,7 @@ Activate profile:
 
 ### Environment Variables
 
-In production, configuration often comes from environment variables. Spring Boot’s relaxed binding supports environment variable naming conventions. Because most operating systems do not allow period-separated environment variable names, you can use underscores instead, such as SPRING_CONFIG_NAME for spring.config.name.
+In production, configuration often comes from environment variables. Spring Boot’s relaxed binding supports environment variable naming conventions. Because most operating systems do not allow period-separated environment variable names, you can use underscores instead, such as SPRING_CONFIG_NAME for `spring.config.name`.
 
 ```yml title="application.yml"
 spring:
@@ -482,8 +482,8 @@ spring:
 Then set environment variables:
 
 ```env title=".env"
-export DB_USERNAME=postgres
-export DB_PASSWORD=secret
+DB_USERNAME=postgres
+DB_PASSWORD=secret
 ```
 
 **Avoid this in Git**:
@@ -493,6 +493,17 @@ spring:
   datasource:
     password: real-production-password
 ```
+
+| File type                                 | Where to place it                                                          |                     Commit to Git? | Purpose                                                                |
+| ----------------------------------------- | -------------------------------------------------------------------------- | ---------------------------------: | ---------------------------------------------------------------------- |
+| `application.yml`                         | `src/main/resources/application.yml`                                       |                                Yes | Safe default config                                                    |
+| `application-dev.yml`                     | `src/main/resources/application-dev.yml`                                   |                 Yes, if no secrets | Local/dev profile defaults                                             |
+| `application-test.yml`                    | `src/test/resources/application-test.yml` or `src/main/resources`          |                                Yes | Test config                                                            |
+| `application-prod.yml`                    | Usually external to the JAR, or safe defaults only in `src/main/resources` | Usually no, if it contains secrets | Production config                                                      |
+| `.env`                                    | Project root for local development                                         |                                 No | Local environment variables                                            |
+| `.env.example`                            | Project root                                                               |                                Yes | Documents required to know what env vars are included, only store keys |
+| `secrets.yml` / `secrets.properties`      | Outside project root, or ignored local file                                |                                 No | Local secret values                                                    |
+| Kubernetes Secrets / cloud secret manager | Deployment platform                                                        |                                 No | Production secrets                                                     |
 
 ### Validating Configuration
 
@@ -514,14 +525,14 @@ public class PaymentProperties {
 }
 ```
 
-### Where to Find Included Properties
+### Where to Find Properties
 
-| Source                                                 | What to look for                                                                                             | When to use it                                       |
-| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- |
-| **Official Spring Boot Common Application Properties** | Built-in properties like `server.port`, `spring.datasource.url`, `logging.level.*`, `management.endpoints.*` | First place to check for standard Spring Boot config |
-| **Your starter dependency documentation**              | Properties introduced by specific starters, e.g. JPA, Redis, Security, Actuator                              | When you add a new starter                           |
-| **IDE autocomplete**                                   | Property suggestions inside `application.properties` / `application.yml`                                     | Fastest daily-development method                     |
-| **Your own `@ConfigurationProperties` classes**        | Custom project-specific properties such as `payment.provider`, `app.upload-limit`                            | When defining your own app config                    |
+| Source                                             | What to look for                                                                                             | When to use it                                       |
+| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- |
+| Official Spring Boot Common Application Properties | Built-in properties like `server.port`, `spring.datasource.url`, `logging.level.*`, `management.endpoints.*` | First place to check for standard Spring Boot config |
+| Your starter dependency documentation              | Properties introduced by specific starters, e.g. JPA, Redis, Security, Actuator                              | When you add a new starter                           |
+| IDE autocomplete                                   | Property suggestions inside `application.properties` / `application.yml`                                     | Fastest daily-development method                     |
+| Your own `@ConfigurationProperties` classes        | Custom project-specific properties such as `payment.provider`, `app.upload-limit`                            | When defining your own app config                    |
 
 ## Actuator
 

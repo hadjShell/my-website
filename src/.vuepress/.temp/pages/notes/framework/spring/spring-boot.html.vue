@@ -1,7 +1,7 @@
 <template><div><p>Spring is one of the most popular frameworks for building enterprise applications, but traditional Spring projects require heavy XML configuration, making them complex for beginners. Spring Boot solves this problem by providing a ready-to-use, production-grade framework on top of Spring, eliminating boilerplate configuration and enabling rapid development.</p>
 <p>Spring Boot provides all the features of Spring while being significantly easier to use. Here are its key features:</p>
 <ul>
-<li><strong>Auto-Configuration</strong>: Spring Boot automatically configures the application based on the dependencies present in the project</li>
+<li><strong>Auto-Configuration</strong>: Spring Boot automatically configures the application based on the dependencies present in the project.</li>
 <li><strong>Embedded Server</strong>: Spring Boot includes embedded servers like Tomcat, Jetty, or Undertow, allowing applications to run without external server installation.</li>
 <li><strong>Easy Deployment</strong>: Spring Boot applications can be packaged as JAR or WAR files and deployed directly to servers or cloud environments. It offers seamless integration with Docker and Kubernetes for easier cloud-native deployment and scaling.</li>
 <li><strong>Standalone Application</strong>: Applications can run as executable JAR files using a simple main() method.</li>
@@ -242,7 +242,7 @@
 <h3 id="starter-vs-auto-configuration" tabindex="-1"><a class="header-anchor" href="#starter-vs-auto-configuration"><span>Starter vs. Auto-configuration</span></a></h3>
 <p>The starter itself is not magic. The real mechanism is:</p>
 <ul>
-<li>Add starter</li>
+<li>Add starter.</li>
 <li>Starter adds dependencies.</li>
 <li>Dependencies put classes on the classpath.</li>
 <li>Auto-configuration sees those classes.</li>
@@ -398,10 +398,10 @@
 </table>
 <h2 id="application-properties-application-yml" tabindex="-1"><a class="header-anchor" href="#application-properties-application-yml"><span><code v-pre>application.properties</code> &amp; <code v-pre>application.yml</code></span></a></h2>
 <p>In Spring Boot, <code v-pre>application.properties</code> and <code v-pre>application.yml</code> are the main configuration files for your application.</p>
-<p>They let you externalize configuration so that the same code can run in different environments, such as local, dev, test, staging, and production. Spring Boot supports many external configuration sources, including Java properties files, YAML files, environment variables, and command-line arguments. Values can be injected with @Value, accessed through Environment, or bound to structured objects with @ConfigurationProperties.</p>
+<p>They let you <strong>externalize configuration</strong> so that the same code can run in different environments, such as local, dev, test, staging, and production. Spring Boot supports many external configuration sources, including Java properties files, YAML files, environment variables, and command-line arguments. Values can be injected with @Value, accessed through <code v-pre>Environment</code>, or bound to structured objects with <code v-pre>@ConfigurationProperties</code>.</p>
 <h3 id="where-should-these-files-be-placed" tabindex="-1"><a class="header-anchor" href="#where-should-these-files-be-placed"><span>Where Should These Files Be Placed</span></a></h3>
 <p>Most commonly: <code v-pre>src/main/resources/application.properties</code>, or: <code v-pre>src/main/resources/application.yml</code>.</p>
-<p>Spring Boot automatically looks for application.properties and application.yaml from several locations, including the classpath root, classpath <code v-pre>/config</code>, the current directory, <code v-pre>./config/</code>, and immediate child directories of <code v-pre>./config/</code>. Later locations can override earlier ones.</p>
+<p>Spring Boot automatically looks for <code v-pre>application.properties</code> and <code v-pre>application.yml</code> from several locations, including the classpath root, classpath <code v-pre>/config</code>, the current directory, <code v-pre>./config/</code>, and immediate child directories of <code v-pre>./config/</code>. Later locations can override earlier ones.</p>
 <h3 id="application-properties-syntax" tabindex="-1"><a class="header-anchor" href="#application-properties-syntax"><span><code v-pre>application.properties</code> Syntax</span></a></h3>
 <p><code v-pre>application.properties</code> uses flat key-value pairs.</p>
 <div class="code-block-with-title">
@@ -416,7 +416,7 @@
 <span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">spring.datasource.password</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">password</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>
 </div><h3 id="application-yml-syntax" tabindex="-1"><a class="header-anchor" href="#application-yml-syntax"><span><code v-pre>application.yml</code> Syntax</span></a></h3>
-<p>The application.properties file is not very readable when dealing with complex configurations. Most developers prefer using <code v-pre>application.yml</code> (YAML format) instead. YAML is a superset of JSON and provides a more structured and readable way to define hierarchical configuration data.</p>
+<p>The application.properties file is not very readable when dealing with complex configurations. Most developers prefer using <code v-pre>application.yml</code> (YAML format) instead. YAML is a superset of JSON and provides a more structured and readable way to define hierarchical configuration data. (<strong>Indentation-sensitive</strong>)</p>
 <div class="code-block-with-title">
   <div class="code-block-title-bar" data-title="application.yml">
     <span>application.yml</span>
@@ -480,9 +480,9 @@
 <li>With <code v-pre>@ConfigurationProperties</code></li>
 </ol>
 <p>For real projects, prefer <code v-pre>@ConfigurationProperties</code> when you have grouped config.</p>
-<CodeTabs :data='[{"id":"application.yml"},{"id":"Java config class"},{"id":"Application class"},{"id":"Service"}]'>
+<CodeTabs :data='[{"id":"application.yml"},{"id":"Java Bean"},{"id":"Application class"},{"id":"Service"}]'>
 <template #title0="{ value, isActive }">application.yml</template>
-<template #title1="{ value, isActive }">Java config class</template>
+<template #title1="{ value, isActive }">Java Bean</template>
 <template #title2="{ value, isActive }">Application class</template>
 <template #title3="{ value, isActive }">Service</template>
 <template #tab0="{ value, isActive }">
@@ -541,7 +541,7 @@
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
-<p>Spring Boot supports relaxed binding for @ConfigurationProperties. That means property names do not need to exactly match Java field names. For example, <code v-pre>context-path</code> can bind to <code v-pre>contextPath</code>, and uppercase environment variables such as <code v-pre>PORT</code> can bind to <code v-pre>port</code>. <strong>We recommend kebab-case for <code v-pre>.properties</code> and YAML files, such as <code v-pre>my.main-project.person.first-name</code>.</strong></p>
+<p>Spring Boot supports relaxed binding for <code v-pre>@ConfigurationProperties</code>. That means property names do not need to exactly match Java field names. For example, <code v-pre>context-path</code> can bind to <code v-pre>contextPath</code>, and uppercase environment variables such as <code v-pre>PORT</code> can bind to <code v-pre>port</code>. <strong>We recommend kebab-case for <code v-pre>.properties</code> and YAML files, such as <code v-pre>my.main-project.person.first-name</code>.</strong></p>
 <h3 id="profile-specific-config" tabindex="-1"><a class="header-anchor" href="#profile-specific-config"><span>Profile-specific Config</span></a></h3>
 <p>Profiles let you use different config in different environments. Base file: <code v-pre>application.yml</code>. Profile-specific files: <code v-pre>application-dev.yml, application-test.yml, application-prod.yml</code>.</p>
 <p>Activate profile:</p>
@@ -561,7 +561,7 @@
 <li>Default properties</li>
 </ol>
 <h3 id="environment-variables" tabindex="-1"><a class="header-anchor" href="#environment-variables"><span>Environment Variables</span></a></h3>
-<p>In production, configuration often comes from environment variables. Spring Boot’s relaxed binding supports environment variable naming conventions. Because most operating systems do not allow period-separated environment variable names, you can use underscores instead, such as SPRING_CONFIG_NAME for <a href="http://spring.config.name" target="_blank" rel="noopener noreferrer">spring.config.name</a>.</p>
+<p>In production, configuration often comes from environment variables. Spring Boot’s relaxed binding supports environment variable naming conventions. Because most operating systems do not allow period-separated environment variable names, you can use underscores instead, such as SPRING_CONFIG_NAME for <code v-pre>spring.config.name</code>.</p>
 <div class="code-block-with-title">
   <div class="code-block-title-bar" data-title="application.yml">
     <span>application.yml</span>
@@ -577,14 +577,74 @@
   <div class="code-block-title-bar" data-title=".env">
     <span>.env</span>
   </div>
-  <div class="language-env line-numbers-mode" data-highlighter="shiki" data-ext="env" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code class="language-env"><span class="line"><span>export DB_USERNAME=postgres</span></span>
-<span class="line"><span>export DB_PASSWORD=secret</span></span></code></pre>
+  <div class="language-env line-numbers-mode" data-highlighter="shiki" data-ext="env" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code class="language-env"><span class="line"><span>DB_USERNAME=postgres</span></span>
+<span class="line"><span>DB_PASSWORD=secret</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div>
 </div><p><strong>Avoid this in Git</strong>:</p>
 <div class="language-yml line-numbers-mode" data-highlighter="shiki" data-ext="yml" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code class="language-yml"><span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">spring</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
 <span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">  datasource</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
 <span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    password</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">real-production-password</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="validating-configuration" tabindex="-1"><a class="header-anchor" href="#validating-configuration"><span>Validating Configuration</span></a></h3>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><table>
+<thead>
+<tr>
+<th>File type</th>
+<th>Where to place it</th>
+<th style="text-align:right">Commit to Git?</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code v-pre>application.yml</code></td>
+<td><code v-pre>src/main/resources/application.yml</code></td>
+<td style="text-align:right">Yes</td>
+<td>Safe default config</td>
+</tr>
+<tr>
+<td><code v-pre>application-dev.yml</code></td>
+<td><code v-pre>src/main/resources/application-dev.yml</code></td>
+<td style="text-align:right">Yes, if no secrets</td>
+<td>Local/dev profile defaults</td>
+</tr>
+<tr>
+<td><code v-pre>application-test.yml</code></td>
+<td><code v-pre>src/test/resources/application-test.yml</code> or <code v-pre>src/main/resources</code></td>
+<td style="text-align:right">Yes</td>
+<td>Test config</td>
+</tr>
+<tr>
+<td><code v-pre>application-prod.yml</code></td>
+<td>Usually external to the JAR, or safe defaults only in <code v-pre>src/main/resources</code></td>
+<td style="text-align:right">Usually no, if it contains secrets</td>
+<td>Production config</td>
+</tr>
+<tr>
+<td><code v-pre>.env</code></td>
+<td>Project root for local development</td>
+<td style="text-align:right">No</td>
+<td>Local environment variables</td>
+</tr>
+<tr>
+<td><code v-pre>.env.example</code></td>
+<td>Project root</td>
+<td style="text-align:right">Yes</td>
+<td>Documents required to know what env vars are included, only store keys</td>
+</tr>
+<tr>
+<td><code v-pre>secrets.yml</code> / <code v-pre>secrets.properties</code></td>
+<td>Outside project root, or ignored local file</td>
+<td style="text-align:right">No</td>
+<td>Local secret values</td>
+</tr>
+<tr>
+<td>Kubernetes Secrets / cloud secret manager</td>
+<td>Deployment platform</td>
+<td style="text-align:right">No</td>
+<td>Production secrets</td>
+</tr>
+</tbody>
+</table>
+<h3 id="validating-configuration" tabindex="-1"><a class="header-anchor" href="#validating-configuration"><span>Validating Configuration</span></a></h3>
 <p>You can validate configuration at startup. If required config is missing, the application fails fast at startup.</p>
 <p>Spring Boot validates <code v-pre>@ConfigurationProperties</code> classes when they are annotated with <code v-pre>@Validated</code>, and you can use Jakarta validation constraints directly on the configuration class.</p>
 <div class="language-java line-numbers-mode" data-highlighter="shiki" data-ext="java" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code class="language-java"><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">@</span><span style="--shiki-light:#A626A4;--shiki-dark:#E5C07B">ConfigurationProperties</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">(</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">prefix</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "payment"</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">)</span></span>
@@ -598,7 +658,7 @@
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  // getters and setters</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="where-to-find-included-properties" tabindex="-1"><a class="header-anchor" href="#where-to-find-included-properties"><span>Where to Find Included Properties</span></a></h3>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="where-to-find-properties" tabindex="-1"><a class="header-anchor" href="#where-to-find-properties"><span>Where to Find Properties</span></a></h3>
 <table>
 <thead>
 <tr>
@@ -609,22 +669,22 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Official Spring Boot Common Application Properties</strong></td>
+<td>Official Spring Boot Common Application Properties</td>
 <td>Built-in properties like <code v-pre>server.port</code>, <code v-pre>spring.datasource.url</code>, <code v-pre>logging.level.*</code>, <code v-pre>management.endpoints.*</code></td>
 <td>First place to check for standard Spring Boot config</td>
 </tr>
 <tr>
-<td><strong>Your starter dependency documentation</strong></td>
+<td>Your starter dependency documentation</td>
 <td>Properties introduced by specific starters, e.g. JPA, Redis, Security, Actuator</td>
 <td>When you add a new starter</td>
 </tr>
 <tr>
-<td><strong>IDE autocomplete</strong></td>
+<td>IDE autocomplete</td>
 <td>Property suggestions inside <code v-pre>application.properties</code> / <code v-pre>application.yml</code></td>
 <td>Fastest daily-development method</td>
 </tr>
 <tr>
-<td><strong>Your own <code v-pre>@ConfigurationProperties</code> classes</strong></td>
+<td>Your own <code v-pre>@ConfigurationProperties</code> classes</td>
 <td>Custom project-specific properties such as <code v-pre>payment.provider</code>, <code v-pre>app.upload-limit</code></td>
 <td>When defining your own app config</td>
 </tr>
