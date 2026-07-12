@@ -448,6 +448,7 @@ If key doesn't exist, put key -&gt; newValue; if key exists, replace old value w
 </ul>
 </li>
 </ul>
+<h3 id="enummap" tabindex="-1"><a class="header-anchor" href="#enummap"><span><code v-pre>EnumMap</code></span></a></h3>
 <h3 id="treemap" tabindex="-1"><a class="header-anchor" href="#treemap"><span><code v-pre>TreeMap</code></span></a></h3>
 <ul>
 <li>A red-black tree implementation</li>

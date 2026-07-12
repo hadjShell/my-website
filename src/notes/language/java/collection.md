@@ -312,6 +312,8 @@ If the specified key is not already associated with a value (or is mapped to nul
      }
     ```
 
+### `EnumMap`
+
 ### `TreeMap`
 
 - A red-black tree implementation

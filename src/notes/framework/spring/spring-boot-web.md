@@ -31,8 +31,8 @@ REST APIs are designed around resources. A resource is any object, data, or serv
 
 > [URI syntax](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier#syntax)
 
-- Use path variables to identify a specific resource.
-- Use query parameters for optional filtering, sorting, searching, and pagination.
+- Use **path variables** to identify a specific resource.
+- Use **query parameters** for optional filtering, sorting, searching, and pagination.
 
 Instead of designing URLs around actions, design them around nouns. Use plural nouns for collections. Best practice:
 
@@ -127,13 +127,56 @@ For payment/order APIs, you may use an idempotency key, this helps avoid duplica
 
 ## Spring Boot REST API Example
 
+In a Spring Boot REST application:
+
+- Controller handles HTTP requests and responses, but should stay thin.
+- The service layer contains business logic and coordinates repositories, mappers, and other services.
+- The repository layer handles database access only.
+- Entities represent database tables and should not usually be exposed directly to clients.
+- DTOs define request and response shapes.
+- Mappers convert between entities and DTOs.
+- Exceptions should be thrown from the service layer when business errors occur.
+- A global exception handler should convert exceptions into consistent HTTP error responses.
+- Configuration and security classes should contain application setup, not business logic.
+
+```shell title="Project Structure"
+...
+└── app
+    ├── controller
+    │   └── UserController.java
+    ├── service
+    │   └── UserService.java
+    ├── repo
+    │   └── UserRepository.java
+    ├── dto
+    │   ├── response
+    │   │   └── UserResponse.java
+    │   ├── request
+    │   │   ├── CreateUserRequest.java
+    │   │   ├── UpdateUserRequest.java
+    │   │   └── SearchUserRequest.java
+    │   └── error
+    │       ├── ApiErrorResponse.java
+    │       └── ValidationErrorResponse.java
+    ├── mapper
+    │   └── UserMapper.java
+    ├── entity
+    │   └── User.java
+    ├── exception
+    │   ├── UserNotFoundException.java
+    │   ├── EmailAlreadyUsedException.java
+    │   └── GlobalExceptionHandler.java
+    ├── config
+    └── Application.java
+```
+
 ::: code-tabs
 
-@tab ./controller/UserController.java
+@tab Controller
 
 ```java
 // @RestController combines the functionality of @Controller and @ResponseBody
-// The response is automatically converted to JSON or XML using message converters
+// The response is automatically converted to JSON or XML using Jackson
 @RestController
 @RequestMapping("/api/users")		  // Base URI for all endpoints
 @CrossOrigin(origins = "http://localhost:3000")
@@ -152,21 +195,22 @@ public class UserController {
 
     // You can specify which format you want to produce or consume
     @GetMapping(path = "/{userId}", produces = {"application/json"})
-    // @PathVariable indicates that a method parameter should be bound to a URI template variable
-    // If the path variable name is the same as the parameter name, you don't have to specify it
+    // @PathVariable binds a URI path variable to a method parameter
+    // If the path variable name is the same as the parameter name,
+    // you don't have to specify it
     public UserResponse getUserById(@PathVariable Long userId) {
         return userService.getUserById(id);
     }
 
-    // @RequestParam binds the value of the query String parameter into the method parameter
+    // @RequestParam binds the query String parameter into the method parameter
     // If the query parameter is absent in the request, then defaultValue is used
-    // If @GetMapping is differentiated by @RequestParam only, then add params element specifying which query parameters are gonna be received
+    // If @GetMapping is differentiated by @RequestParam only,
+    // then add params element specifying which query parameters are gonna be received
     @GetMapping
     public Page<UserResponse> searchUsers(
             @RequestParam(required = false) String keyword,
             @RequestParam(defaultValue = "0") Integer page,
-            @RequestParam(defaultValue = "20") Integer size
-    ) {
+            @RequestParam(defaultValue = "20") Integer size) {
         SearchUserRequest request = new SearchUserRequest();
         request.setKeyword(keyword);
         request.setPage(page);
@@ -175,9 +219,10 @@ public class UserController {
         return userService.searchUsers(request);
     }
 
-    // @RequestBody read the request body and deserialized it into an Object
+    // @RequestBody read the request body and deserialized it into an object
     @PostMapping(consumes = {"application/json"})
-    public ResponseEntity<UserResponse> createUser(@Valid @RequestBody CreateUserRequest request) {
+    public ResponseEntity<UserResponse> createUser(
+            @Valid @RequestBody CreateUserRequest request) {
         UserResponse createdUser = userService.createUser(request);
         URI location = URI.create("/api/users/" + createdUser.getId());
 
@@ -185,11 +230,13 @@ public class UserController {
     }
 
     @PutMapping("/{userId}")
-    public UserResponse updateUser(@PathVariable Long userId, @RequestBody CreateUserRequest request) {
+    public UserResponse updateUser(
+            @PathVariable Long userId, @RequestBody UpdateUserRequest request) {
         return userService.updateUser(userId, request);
     }
 
-    // Type conversion is automatically applied if the target method parameter type is not String
+    // Type conversion is automatically applied
+    // if the target method parameter type is not String
     // If the conversion is failed, then respond bad request
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
@@ -199,7 +246,7 @@ public class UserController {
 }
 ```
 
-@tab ./service/UserService.java
+@tab Service
 
 ```java
 @Service
@@ -218,6 +265,42 @@ public class UserService {
         this.passwordEncoder = passwordEncoder;
     }
 
+    public List<UserResponse> getAllUsers() {
+        return userRepository.findAll()
+                .stream()
+                .map(userMapper::toResponse)
+                .toList();
+    }
+
+    public UserResponse getUserById(Long id) {
+        User user = findUserById(id);
+
+        return userMapper.toResponse(user);
+    }
+
+    public Page<UserResponse> searchUsers(SearchUserRequest request) {
+        Pageable pageable = PageRequest.of(
+                request.getPage(),
+                request.getSize()
+        );
+        String keyword = request.getKeyword();
+        Page<User> users;
+
+        if (keyword == null || keyword.isBlank()) {
+            users = userRepository.findAll(pageable);
+        }
+        else {
+            users = userRepository
+                    .findByUsernameContainingIgnoreCaseOrEmailContainingIgnoreCase(
+                            keyword,
+                            keyword,
+                            pageable
+                    );
+        }
+
+        return users.map(userMapper::toResponse);
+    }
+
     public UserResponse createUser(CreateUserRequest request) {
         if (userRepository.existsByEmail(request.getEmail()))
           throw new EmailAlreadyUsedException(request.getEmail());
@@ -229,49 +312,12 @@ public class UserService {
         return userMapper.toResponse(savedUser);
     }
 
-    public UserResponse getUserById(Long id) {
-        User user = findUserById(id);
-
-        return userMapper.toResponse(user);
-    }
-
-    public List<UserResponse> getAllUsers() {
-        return userRepository.findAll()
-                .stream()
-                .map(userMapper::toResponse)
-                .toList();
-    }
-
     public UserResponse updateUser(Long id, UpdateUserRequest request) {
         User user = findUserById(id);
         userMapper.updateEntity(user, request);
         User updatedUser = userRepository.save(user);
 
         return userMapper.toResponse(updatedUser);
-    }
-
-    public Page<UserResponse> searchUsers(SearchUserRequest request) {
-        Pageable pageable = PageRequest.of(
-                request.getPage(),
-                request.getSize()
-        );
-
-        String keyword = request.getKeyword();
-
-        Page<User> users;
-
-        if (keyword == null || keyword.isBlank()) {
-            users = userRepository.findAll(pageable);
-        } else {
-            users = userRepository
-                    .findByUsernameContainingIgnoreCaseOrEmailContainingIgnoreCase(
-                            keyword,
-                            keyword,
-                            pageable
-                    );
-        }
-
-        return users.map(userMapper::toResponse);
     }
 
     public void deleteUser(Long id) {
@@ -286,7 +332,7 @@ public class UserService {
 }
 ```
 
-@tab ./repository/UserRepository.java
+@tab Repository
 
 ```java
 public interface UserRepository extends JpaRepository<User, Long> {
@@ -299,7 +345,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 }
 ```
 
-@tab ./dto/response/UserResponse.java
+@tab ResponseDTO
 
 ```java
 public class UserResponse {
@@ -318,42 +364,7 @@ public class UserResponse {
 }
 ```
 
-@tab ./dto/error/[...]ErrorResponse.java
-
-```java
-public class ApiErrorResponse {
-
-  private int status;
-  private String error;
-  private String message;
-  private String path;
-  private LocalDateTime timestamp;
-
-  public ApiErrorResponse(int status, String error, String message, String path, LocalDateTime timestamp) {
-    this.status = status;
-    this.error = error;
-    this.message = message;
-    this.path = path;
-    this.timestamp = timestamp;
-  }
-
-  // getters
-}
-
-public class ValidationErrorResponse {
-
-  private int status;
-  private Map<String, String> errors,
-  private String message;
-  private LocalDateTime timestamp;
-
-  // constructor
-
-  // getters
-}
-```
-
-@tab ./dto/request/[...]UserRequest.java
+@tab RequestDTO
 
 ```java
 public class CreateUserRequest {
@@ -395,7 +406,42 @@ public class SearchUserRequest {
 }
 ```
 
-@tab ./mapper/UserMapper.java
+@tab ErrorDTO
+
+```java
+public class ApiErrorResponse {
+
+  private int status;
+  private String error;
+  private String message;
+  private String path;
+  private LocalDateTime timestamp;
+
+  public ApiErrorResponse(int status, String error, String message, String path, LocalDateTime timestamp) {
+    this.status = status;
+    this.error = error;
+    this.message = message;
+    this.path = path;
+    this.timestamp = timestamp;
+  }
+
+  // getters
+}
+
+public class ValidationErrorResponse {
+
+  private int status;
+  private Map<String, String> errors,
+  private String message;
+  private LocalDateTime timestamp;
+
+  // constructor
+
+  // getters
+}
+```
+
+@tab Mapper
 
 ```java
 @Component
@@ -419,21 +465,23 @@ public class UserMapper {
 }
 ```
 
-@tab ./entity/User.java
+@tab Entity
 
 ```java
-@Entity public class User {
+@Entity
+public class User {
   @Id
   @GeneratedValue
   private Long id;
   private String username;
   private String email;
+  private String password;
 
   // getters and setters
 }
 ```
 
-@tab ./exception/[...]Exception.java
+@tab Exception
 
 ```java
 public class UserNotFoundException extends RuntimeException {
@@ -445,7 +493,7 @@ public class EmailAlreadyUsedException extends RuntimeException {
 }
 ```
 
-@tab ./exception/GlobalExceptionHandler.java
+@tab GlobalExceptionHandler
 
 ```java
 @RestControllerAdvice
@@ -453,7 +501,7 @@ public class GlobalExceptionHandler {
 
   @ExceptionHandler(UserNotFoundException.class)
   public ResponseEntity<ErrorResponse> handleUserNotFound(UserNotFoundException ex, HttpServletRequest request) {
-    ErrorResponse error = new ErrorResponse(
+    ApiErrorResponse error = new ApiErrorResponse(
               404,
               "NOT FOUND",
               ex.getMessage(),
@@ -573,6 +621,13 @@ The mindset:
 
 Mapping means converting between **entity and DTO**. Mapper can be a Spring bean because it is reusable and usually stateless.
 
+::: tip
+
+DTOs should be simple, explicit, and close to the API contract.
+Avoid abstract DTO base class unless the API itself is polymorphic.
+
+:::
+
 ## `ResponseEntity`
 
 `ResponseEntity` is a Spring class that represents the whole HTTP response.
@@ -683,7 +738,7 @@ public ResponseEntity<byte[]> exportUsers() {
 
 When return plain RTO, Spring automatically returns `200 OK`. Both `ResponseEntity` and `@ResponseStatus` can set HTTP status codes.
 
-- Use plain DTO for simple successful GET.
+- Use plain DTO for simple successful `GET`.
 - Use `@ResponseStatus` for simple fixed status.
 - Use `ResponseEntity` when you need full response control.
 
@@ -705,7 +760,8 @@ If request body validation fails, a `MethodArgumentException` will be thrown.
 
 ```xml
 <dependency>
-  <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-validation</artifactId>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-validation</artifactId>
 </dependency>
 ```
 
@@ -753,11 +809,11 @@ Default exception handling is useful, but it is often not enough for real REST A
 
 2. **Using local `@ExceptionHandler`**
 
-`@ExceptionHandler` lets you handle exceptions thrown by controller methods.
+`@ExceptionHandler` lets you handle exceptions thrown by controller methods inside a controller.
 
 Spring Framework documents that `@Controller` and `@ControllerAdvice` classes can have `@ExceptionHandler` methods to handle exceptions from controller methods. It means if custom exception is thrown in this controller, run the handler method and use its return values as the HTTP response.
 
-However, a local @ExceptionHandler only applies to the controller where it is declared. It cannot automatically handle the same type of exceptions from other controllers.
+However, a local `@ExceptionHandler` only applies to the controller where it is declared. It cannot automatically handle the same type of exceptions from other controllers.
 
 3. **Using `@ControllerAdvice` for global exception handling**
 
@@ -833,7 +889,7 @@ curl -i -X POST http://localhost:8080/api/users \
 
 ## CORS
 
-CORS stands for: Cross-Origin Resource Sharing. It matters when your frontend and backend run on different origins.
+CORS stands for: Cross-Origin Resource Sharing. CORS is a browser security mechanism that controls whether a web page from one origin is allowed to access resources from another origin.
 
 ## API Versioning
 

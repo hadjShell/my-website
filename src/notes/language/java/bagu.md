@@ -1,5 +1,5 @@
 ---
-title: Bagu
+title: 八股
 category:
   - Note
 tag:

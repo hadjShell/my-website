@@ -1,0 +1,234 @@
+<template><div><h2 id="classes-and-objects" tabindex="-1"><a class="header-anchor" href="#classes-and-objects"><span>Classes and Objects</span></a></h2>
+<ul>
+<li>
+<p>Class is the blueprint, objects are the instances of their class</p>
+</li>
+<li>
+<p>Class - fields and methods</p>
+<p>Object - properties and behaviors</p>
+</li>
+<li>
+<p>Constructor</p>
+<ul>
+<li>A special method is required to create a new instance of the class</li>
+<li>No return type</li>
+<li>Every objects has a default constructor</li>
+<li>Constructors can be overloaded, using <code v-pre>this</code> keyword to overload to avoid duplication</li>
+<li><code v-pre>this()</code> must be the first statement in the overloaded constructor body</li>
+<li>If a class doesn't explicitly declare any constructor, Java compiler automatically provides a no-argument constructor. This default constructor calls the class parent's no-argument constructor, or the <code v-pre>Object</code> constructor if the class has no parent. <strong>If the parent doesn't have no-argument constructor, compiler will reject the program.</strong></li>
+<li>It's good to always define a default constructor</li>
+</ul>
+</li>
+<li>
+<p>The <code v-pre>getter</code> and <code v-pre>setter</code> can also have additional validations instead of just setting or getting the fields values</p>
+</li>
+<li>
+<p>Reference vs. Object</p>
+<ul>
+<li>
+<p>All other types which are not one of the primitive types are reference types</p>
+</li>
+<li>
+<p>References --- pointers</p>
+</li>
+<li>
+<p>The only operators allowed for reference type are assignment via <code v-pre>=</code> and equality comparison via <code v-pre>==</code> and <code v-pre>!=</code> (Strings can use <code v-pre>+</code>, <code v-pre>+=</code>)</p>
+</li>
+<li>
+<p><code v-pre>instance of</code> operator: verify that an particular object is of a certain type</p>
+<ul>
+<li>Typically used before performing a type casting</li>
+</ul>
+</li>
+<li>
+<p><code v-pre>new</code> operator instantiates a class by allocating memory for a new object and returning a reference to that memory</p>
+</li>
+<li>
+<p>In Java, there is no way to access an object directly (<em>no pointer</em>), everything is done using a reference</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code v-pre>static</code> keyword</p>
+<ul>
+<li>Fields that have <code v-pre>static</code> modifier are called static fields or class variables</li>
+<li>They are associated with the class, rather than with any object. Every instance of the class shares a class variable, which is in one fixed location in memory</li>
+<li><code v-pre>static</code> methods can't access instance methods and instance variables directly, and can't use <code v-pre>this</code> keyword</li>
+<li>If a method doesn't use instance variables that method should be declared as a static method</li>
+<li>Referring to static fields or methods with an object instance is not encouraged</li>
+<li><strong><code v-pre>static</code> block</strong>: a code block that will be executed before the creation of any object of that class</li>
+</ul>
+</li>
+<li>
+<p><code v-pre>final</code> keyword</p>
+<ul>
+<li>
+<p>Final variables</p>
+<ul>
+<li>
+<p><code v-pre>final</code> means a value cannot be changed <strong>after</strong> initialisation at run-time</p>
+<ul>
+<li>Blank finals -&gt; a final field inside a class can be different from each other, and yet it remains its immutablility</li>
+</ul>
+</li>
+<li>
+<p><code v-pre>static final</code> means compile-time constant</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Final arguments</p>
+<ul>
+<li>Inside the method you cannot change the argument</li>
+</ul>
+</li>
+<li>
+<p>Final methods</p>
+<ul>
+<li>Prevent the method being overridden by the subclass</li>
+<li>Any private methods in a class are implicitly <code v-pre>final</code></li>
+</ul>
+</li>
+<li>
+<p>Final classes</p>
+<ul>
+<li>Prevent the class from being inherited</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="reusing-classes" tabindex="-1"><a class="header-anchor" href="#reusing-classes"><span>Reusing classes</span></a></h2>
+<h3 id="inheritance" tabindex="-1"><a class="header-anchor" href="#inheritance"><span>Inheritance</span></a></h3>
+<ul>
+<li>
+<p><strong>&quot;is-a&quot;</strong> relationship</p>
+</li>
+<li>
+<p><code v-pre>extends</code></p>
+</li>
+<li>
+<p>Excepting <code v-pre>Object</code>, every class has one and only direct superclass</p>
+</li>
+<li>
+<p>Inheritance chain</p>
+</li>
+<li>
+<p>A subclass inherits all the members (fields, methods, and nested classes) from its super class</p>
+</li>
+<li>
+<p>A subclass doesn't &quot;inherit&quot; (cannot directly access) the <code v-pre>private</code> members of its parent class</p>
+<blockquote>
+<p><a href="https://www.zhihu.com/question/63183685" target="_blank" rel="noopener noreferrer">A great discussion about this topic</a></p>
+</blockquote>
+</li>
+<li>
+<p>Values of the inheritance:</p>
+<ul>
+<li>To handle the complexity of the large project</li>
+<li>Keep common behaviors in one class</li>
+<li>Split different behaviors into separate classes</li>
+<li>Keep all of the objects in a single data structure</li>
+</ul>
+</li>
+<li>
+<p><code v-pre>this</code> vs. <code v-pre>super</code></p>
+<ul>
+<li><code v-pre>super</code> is used to access/call the parent class members</li>
+<li><code v-pre>this</code> is used to access/call the current class members</li>
+<li>Both of them can be used anywhere in a class except static areas, any attempt to do so will lead to compile-time errors</li>
+<li><code v-pre>this</code> is commonly used with constructors and setters</li>
+<li><code v-pre>super</code> is commonly used with method overriding</li>
+<li><code v-pre>this()</code> call a constructor from another overloaded constructor in the same class</li>
+<li><code v-pre>super()</code> call a parent constructor</li>
+<li><strong>Java compiler puts a default call to <code v-pre>super()</code> if we don't add it</strong>, and it's always the no-argument <code v-pre>super</code> which is inserted by compiler</li>
+<li>A constructor can have a call to <code v-pre>super()</code> or <code v-pre>this()</code> but never both</li>
+</ul>
+</li>
+<li>
+<p><strong>Method overloading vs. method overriding</strong></p>
+<ul>
+<li>
+<p>Method overloading means providing two or more separate methods in a class with the same name but different parameters</p>
+</li>
+<li>
+<p>We can overload static and instance methods</p>
+</li>
+<li>
+<p>Overloading rules</p>
+<ul>
+<li>Methods must have the same method name</li>
+<li>Methods must have different parameters</li>
+<li>If methods follow the rules above then they may or may ont
+<ul>
+<li>Have different return types</li>
+<li>Have different access modifiers</li>
+<li>Throw different checked or unchecked exceptions</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Method overriding means defining a method in a child class that already exists in the parent class with same signature</p>
+</li>
+<li>
+<p>Overriding rules</p>
+<ul>
+<li>
+<p>It must have same name and same arguments</p>
+</li>
+<li>
+<p>Return type can be a subclass of the return type in the parent class</p>
+<blockquote>
+<p>Covariant return types</p>
+</blockquote>
+</li>
+<li>
+<p>We can't override static methods only instance methods</p>
+</li>
+<li>
+<p>Constructors and private methods cannot be overridden</p>
+</li>
+<li>
+<p>Methods that are final cannot be overridden</p>
+</li>
+<li>
+<p>It can't have a lower access modifier</p>
+</li>
+<li>
+<p>Must not throw a new or broader checked exception</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="composition" tabindex="-1"><a class="header-anchor" href="#composition"><span>Composition</span></a></h3>
+<ul>
+<li><strong>&quot;has-a&quot;</strong> relationship</li>
+<li>Use class type variables as fields</li>
+<li>Consider to use composition prior to inheritance</li>
+</ul>
+<h2 id="encapsulation" tabindex="-1"><a class="header-anchor" href="#encapsulation"><span>Encapsulation</span></a></h2>
+<ul>
+<li>Separate the implementation and the interface</li>
+</ul>
+<h2 id="polymorphism" tabindex="-1"><a class="header-anchor" href="#polymorphism"><span>Polymorphism</span></a></h2>
+<ul>
+<li>Compile Time Rules
+<ul>
+<li>Compiler <strong>ONLY</strong> knows reference type</li>
+<li>Can only look in reference type class for method</li>
+<li>Outputs a method signature</li>
+</ul>
+</li>
+<li>Runtime Rules
+<ul>
+<li>Follow exact <strong>runtime type</strong> of object to find the method</li>
+<li>Must match compile time method signature to appropriate method in actual object's class</li>
+</ul>
+</li>
+</ul>
+</div></template>
+
+

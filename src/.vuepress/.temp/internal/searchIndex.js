@@ -225,6 +225,78 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "海克斯",
+    "headers": [],
+    "path": "/tft/hex.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "装备",
+    "headers": [
+      {
+        "level": 2,
+        "title": "装备价值及格线",
+        "slug": "装备价值及格线",
+        "link": "#装备价值及格线",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "属性与机制价值",
+        "slug": "属性与机制价值",
+        "link": "#属性与机制价值",
+        "children": [
+          {
+            "level": 3,
+            "title": "基础散件数值",
+            "slug": "基础散件数值",
+            "link": "#基础散件数值",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "特殊数值",
+            "slug": "特殊数值",
+            "link": "#特殊数值",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "机制数值",
+            "slug": "机制数值",
+            "link": "#机制数值",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "装备分类及排名",
+        "slug": "装备分类及排名",
+        "link": "#装备分类及排名",
+        "children": []
+      }
+    ],
+    "path": "/tft/item.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "经济",
+    "headers": [],
+    "path": "/tft/money.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "站位",
+    "headers": [],
+    "path": "/tft/pos.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Leetcode Crackbook",
     "headers": [
       {
@@ -613,74 +685,9 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "海克斯",
+    "title": "Programming Notes",
     "headers": [],
-    "path": "/tft/hex.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "装备",
-    "headers": [
-      {
-        "level": 2,
-        "title": "装备价值及格线",
-        "slug": "装备价值及格线",
-        "link": "#装备价值及格线",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "属性与机制价值",
-        "slug": "属性与机制价值",
-        "link": "#属性与机制价值",
-        "children": [
-          {
-            "level": 3,
-            "title": "基础散件数值",
-            "slug": "基础散件数值",
-            "link": "#基础散件数值",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "特殊数值",
-            "slug": "特殊数值",
-            "link": "#特殊数值",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "机制数值",
-            "slug": "机制数值",
-            "link": "#机制数值",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "装备分类及排名",
-        "slug": "装备分类及排名",
-        "link": "#装备分类及排名",
-        "children": []
-      }
-    ],
-    "path": "/tft/item.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "经济",
-    "headers": [],
-    "path": "/tft/money.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "站位",
-    "headers": [],
-    "path": "/tft/pos.html",
+    "path": "/notes/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -1464,13 +1471,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Programming Notes",
-    "headers": [],
-    "path": "/notes/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Backtracking Concept & Pattern",
     "headers": [
       {
@@ -1646,28 +1646,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Array Concept & Pattern",
-    "headers": [
-      {
-        "level": 2,
-        "title": "🧠 Concept",
-        "slug": "🧠-concept",
-        "link": "#🧠-concept",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🛠️ Pattern",
-        "slug": "🛠️-pattern",
-        "link": "#🛠️-pattern",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/array/concept.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Binary Search Concept & Pattern",
     "headers": [
       {
@@ -1815,6 +1793,179 @@ export const SEARCH_INDEX = [
       }
     ],
     "path": "/leetcode/binary-search/problems.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Array Concept & Pattern",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🧠 Concept",
+        "slug": "🧠-concept",
+        "link": "#🧠-concept",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🛠️ Pattern",
+        "slug": "🛠️-pattern",
+        "link": "#🛠️-pattern",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/array/concept.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Binary Search Tree Concept & Pattern",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🧠 Concept",
+        "slug": "🧠-concept",
+        "link": "#🧠-concept",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🛠️ Pattern",
+        "slug": "🛠️-pattern",
+        "link": "#🛠️-pattern",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/bst/concept.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Binary Search Tree Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Q95. Unique Binary Search Trees II",
+        "slug": "q95-unique-binary-search-trees-ii",
+        "link": "#q95-unique-binary-search-trees-ii",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐ Q96. Unique Binary Search Trees",
+        "slug": "q96-unique-binary-search-trees",
+        "link": "#q96-unique-binary-search-trees",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q98. Validate Binary Search Tree",
+        "slug": "q98-validate-binary-search-tree",
+        "link": "#q98-validate-binary-search-tree",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q108. Convert Sorted Array to Binary Search Tree",
+        "slug": "q108-convert-sorted-array-to-binary-search-tree",
+        "link": "#q108-convert-sorted-array-to-binary-search-tree",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q173. Binary Search Tree Iterator",
+        "slug": "q173-binary-search-tree-iterator",
+        "link": "#q173-binary-search-tree-iterator",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q230. Kth Smallest Element in a BST",
+        "slug": "q230-kth-smallest-element-in-a-bst",
+        "link": "#q230-kth-smallest-element-in-a-bst",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q450. Delete Node in a BST",
+        "slug": "q450-delete-node-in-a-bst",
+        "link": "#q450-delete-node-in-a-bst",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q530. Minimum Absolute Difference in BST",
+        "slug": "q530-minimum-absolute-difference-in-bst",
+        "link": "#q530-minimum-absolute-difference-in-bst",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q538. Convert BST to Greater Tree",
+        "slug": "q538-convert-bst-to-greater-tree",
+        "link": "#q538-convert-bst-to-greater-tree",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q700. Search in a Binary Search Tree",
+        "slug": "q700-search-in-a-binary-search-tree",
+        "link": "#q700-search-in-a-binary-search-tree",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q701. Insert into a Binary Search Tree",
+        "slug": "q701-insert-into-a-binary-search-tree",
+        "link": "#q701-insert-into-a-binary-search-tree",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/bst/problems.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Difference Array Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Q1094. Car Pooling",
+        "slug": "q1094-car-pooling",
+        "link": "#q1094-car-pooling",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q1109. Corporate Flight Bookings",
+        "slug": "q1109-corporate-flight-bookings",
+        "link": "#q1109-corporate-flight-bookings",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/difference-array/difference-array.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Difference Array Concept",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🧠 Concept",
+        "slug": "🧠-concept",
+        "link": "#🧠-concept",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Template",
+        "slug": "template",
+        "link": "#template",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/difference-array/pattern.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2234,153 +2385,66 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Difference Array Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Q1094. Car Pooling",
-        "slug": "q1094-car-pooling",
-        "link": "#q1094-car-pooling",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q1109. Corporate Flight Bookings",
-        "slug": "q1109-corporate-flight-bookings",
-        "link": "#q1109-corporate-flight-bookings",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/difference-array/difference-array.html",
+    "title": "Greedy Algorithm Concept & Pattern",
+    "headers": [],
+    "path": "/leetcode/greedy/concept.html",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "Difference Array Concept",
-    "headers": [
-      {
-        "level": 2,
-        "title": "🧠 Concept",
-        "slug": "🧠-concept",
-        "link": "#🧠-concept",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Template",
-        "slug": "template",
-        "link": "#template",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/difference-array/pattern.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Binary Search Tree Concept & Pattern",
-    "headers": [
-      {
-        "level": 2,
-        "title": "🧠 Concept",
-        "slug": "🧠-concept",
-        "link": "#🧠-concept",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🛠️ Pattern",
-        "slug": "🛠️-pattern",
-        "link": "#🛠️-pattern",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/bst/concept.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Binary Search Tree Problems",
+    "title": "Greedy Algorithm Problems",
     "headers": [
       {
         "level": 3,
-        "title": "Q95. Unique Binary Search Trees II",
-        "slug": "q95-unique-binary-search-trees-ii",
-        "link": "#q95-unique-binary-search-trees-ii",
+        "title": "⭐Q45. Jump Game II",
+        "slug": "q45-jump-game-ii",
+        "link": "#q45-jump-game-ii",
         "children": []
       },
       {
         "level": 3,
-        "title": "⭐ Q96. Unique Binary Search Trees",
-        "slug": "q96-unique-binary-search-trees",
-        "link": "#q96-unique-binary-search-trees",
+        "title": "Q55. Jump Game",
+        "slug": "q55-jump-game",
+        "link": "#q55-jump-game",
         "children": []
       },
       {
         "level": 3,
-        "title": "⭐Q98. Validate Binary Search Tree",
-        "slug": "q98-validate-binary-search-tree",
-        "link": "#q98-validate-binary-search-tree",
+        "title": "⭐Q134. Gas Station",
+        "slug": "q134-gas-station",
+        "link": "#q134-gas-station",
         "children": []
       },
       {
         "level": 3,
-        "title": "Q108. Convert Sorted Array to Binary Search Tree",
-        "slug": "q108-convert-sorted-array-to-binary-search-tree",
-        "link": "#q108-convert-sorted-array-to-binary-search-tree",
+        "title": "⭐Q435. Non-overlapping Intervals",
+        "slug": "q435-non-overlapping-intervals",
+        "link": "#q435-non-overlapping-intervals",
         "children": []
       },
       {
         "level": 3,
-        "title": "⭐Q173. Binary Search Tree Iterator",
-        "slug": "q173-binary-search-tree-iterator",
-        "link": "#q173-binary-search-tree-iterator",
+        "title": "Q452. Minimum Number of Arrows to Burst Balloons",
+        "slug": "q452-minimum-number-of-arrows-to-burst-balloons",
+        "link": "#q452-minimum-number-of-arrows-to-burst-balloons",
         "children": []
       },
       {
         "level": 3,
-        "title": "Q230. Kth Smallest Element in a BST",
-        "slug": "q230-kth-smallest-element-in-a-bst",
-        "link": "#q230-kth-smallest-element-in-a-bst",
+        "title": "⭐1024. Video Stitching",
+        "slug": "_1024-video-stitching",
+        "link": "#_1024-video-stitching",
         "children": []
       },
       {
         "level": 3,
-        "title": "⭐Q450. Delete Node in a BST",
-        "slug": "q450-delete-node-in-a-bst",
-        "link": "#q450-delete-node-in-a-bst",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q530. Minimum Absolute Difference in BST",
-        "slug": "q530-minimum-absolute-difference-in-bst",
-        "link": "#q530-minimum-absolute-difference-in-bst",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q538. Convert BST to Greater Tree",
-        "slug": "q538-convert-bst-to-greater-tree",
-        "link": "#q538-convert-bst-to-greater-tree",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q700. Search in a Binary Search Tree",
-        "slug": "q700-search-in-a-binary-search-tree",
-        "link": "#q700-search-in-a-binary-search-tree",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q701. Insert into a Binary Search Tree",
-        "slug": "q701-insert-into-a-binary-search-tree",
-        "link": "#q701-insert-into-a-binary-search-tree",
+        "title": "Q1717. Maximum Score From Removing Substrings",
+        "slug": "q1717-maximum-score-from-removing-substrings",
+        "link": "#q1717-maximum-score-from-removing-substrings",
         "children": []
       }
     ],
-    "path": "/leetcode/bst/problems.html",
+    "path": "/leetcode/greedy/problems.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2498,70 +2562,6 @@ export const SEARCH_INDEX = [
       }
     ],
     "path": "/leetcode/graph/island.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Greedy Algorithm Concept & Pattern",
-    "headers": [],
-    "path": "/leetcode/greedy/concept.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Greedy Algorithm Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "⭐Q45. Jump Game II",
-        "slug": "q45-jump-game-ii",
-        "link": "#q45-jump-game-ii",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q55. Jump Game",
-        "slug": "q55-jump-game",
-        "link": "#q55-jump-game",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q134. Gas Station",
-        "slug": "q134-gas-station",
-        "link": "#q134-gas-station",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q435. Non-overlapping Intervals",
-        "slug": "q435-non-overlapping-intervals",
-        "link": "#q435-non-overlapping-intervals",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q452. Minimum Number of Arrows to Burst Balloons",
-        "slug": "q452-minimum-number-of-arrows-to-burst-balloons",
-        "link": "#q452-minimum-number-of-arrows-to-burst-balloons",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐1024. Video Stitching",
-        "slug": "_1024-video-stitching",
-        "link": "#_1024-video-stitching",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q1717. Maximum Score From Removing Substrings",
-        "slug": "q1717-maximum-score-from-removing-substrings",
-        "link": "#q1717-maximum-score-from-removing-substrings",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/greedy/problems.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2779,35 +2779,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Queue Concept",
-    "headers": [],
-    "path": "/leetcode/queue/concept.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Queue Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "❤️Q649. Dota2 Senate",
-        "slug": "q649-dota2-senate",
-        "link": "#q649-dota2-senate",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q933. Number of Recent Calls",
-        "slug": "q933-number-of-recent-calls",
-        "link": "#q933-number-of-recent-calls",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/queue/problems.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Heap Concept & Implementation",
     "headers": [
       {
@@ -2898,128 +2869,6 @@ export const SEARCH_INDEX = [
     "title": "Other Heap Problems",
     "headers": [],
     "path": "/leetcode/heap/problems.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Prefix Sum Concept & Pattern",
-    "headers": [
-      {
-        "level": 2,
-        "title": "🧠 Concept",
-        "slug": "🧠-concept",
-        "link": "#🧠-concept",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🛠️ Pattern",
-        "slug": "🛠️-pattern",
-        "link": "#🛠️-pattern",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/prefix-sum/pattern.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Prefix Sum Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "⭐Q238. Product of Array Except Self",
-        "slug": "q238-product-of-array-except-self",
-        "link": "#q238-product-of-array-except-self",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q303. Range Sum Query - Immutable",
-        "slug": "q303-range-sum-query-immutable",
-        "link": "#q303-range-sum-query-immutable",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q304. Range Sum Query 2D - Immutable",
-        "slug": "q304-range-sum-query-2d-immutable",
-        "link": "#q304-range-sum-query-2d-immutable",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q724. Find Pivot Index",
-        "slug": "q724-find-pivot-index",
-        "link": "#q724-find-pivot-index",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q1314. Matrix Block Sum",
-        "slug": "q1314-matrix-block-sum",
-        "link": "#q1314-matrix-block-sum",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q1732. Find the Highest Altitude",
-        "slug": "q1732-find-the-highest-altitude",
-        "link": "#q1732-find-the-highest-altitude",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "--- 💡 With Hashtable ---",
-        "slug": "with-hashtable",
-        "link": "#with-hashtable",
-        "children": [
-          {
-            "level": 3,
-            "title": "⭐Q525. Contiguous Array",
-            "slug": "q525-contiguous-array",
-            "link": "#q525-contiguous-array",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Q523. Continuous Subarray Sum",
-            "slug": "q523-continuous-subarray-sum",
-            "link": "#q523-continuous-subarray-sum",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Q560. Subarray Sum Equals K",
-            "slug": "q560-subarray-sum-equals-k",
-            "link": "#q560-subarray-sum-equals-k",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Q974. Subarray Sums Divisible by K",
-            "slug": "q974-subarray-sums-divisible-by-k",
-            "link": "#q974-subarray-sums-divisible-by-k",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "⭐Q1124. Longest Well-Performing Interval",
-            "slug": "q1124-longest-well-performing-interval",
-            "link": "#q1124-longest-well-performing-interval",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "❤️Q1371. Find the Longest Substring Containing Vowels in Even Counts",
-            "slug": "q1371-find-the-longest-substring-containing-vowels-in-even-counts",
-            "link": "#q1371-find-the-longest-substring-containing-vowels-in-even-counts",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/leetcode/prefix-sum/problems.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -3159,13 +3008,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Stack Concept",
-    "headers": [],
-    "path": "/leetcode/stack/concept.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Interval Problems",
     "headers": [
       {
@@ -3217,13 +3059,13 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Two Pointer Concept & Pattern",
+    "title": "Prefix Sum Concept & Pattern",
     "headers": [
       {
         "level": 2,
-        "title": "🧠 Linked List Concept",
-        "slug": "🧠-linked-list-concept",
-        "link": "#🧠-linked-list-concept",
+        "title": "🧠 Concept",
+        "slug": "🧠-concept",
+        "link": "#🧠-concept",
         "children": []
       },
       {
@@ -3234,303 +3076,143 @@ export const SEARCH_INDEX = [
         "children": []
       }
     ],
-    "path": "/leetcode/two-pointer/concept.html",
+    "path": "/leetcode/prefix-sum/pattern.html",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "Economy & Finance",
-    "headers": [],
-    "path": "/books/economy/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "How Countries Go Broke? The Big Cycle - Ray Dalio",
+    "title": "Prefix Sum Problems",
     "headers": [
       {
-        "level": 2,
-        "title": "Part 1 Overview of the Big Debt Cycle",
-        "slug": "part-1-overview-of-the-big-debt-cycle",
-        "link": "#part-1-overview-of-the-big-debt-cycle",
-        "children": [
-          {
-            "level": 3,
-            "title": "Research Questions",
-            "slug": "research-questions",
-            "link": "#research-questions",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Interesting Facts",
-            "slug": "interesting-facts",
-            "link": "#interesting-facts",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Invaluable Ideas",
-            "slug": "invaluable-ideas",
-            "link": "#invaluable-ideas",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Personal Insights",
-            "slug": "personal-insights",
-            "link": "#personal-insights",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/books/economy/how-countries-go-broke-the-big-cycle.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Economy & Finance",
-    "headers": [],
-    "path": "/books/mindset/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "认知觉醒 - 周岭",
-    "headers": [
-      {
-        "level": 2,
-        "title": "内观自己",
-        "slug": "内观自己",
-        "link": "#内观自己",
-        "children": [
-          {
-            "level": 3,
-            "title": "大脑",
-            "slug": "大脑",
-            "link": "#大脑",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "天性",
-            "slug": "天性",
-            "link": "#天性",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "恐惧",
-            "slug": "恐惧",
-            "link": "#恐惧",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "反馈",
-            "slug": "反馈",
-            "link": "#反馈",
-            "children": []
-          }
-        ]
+        "level": 3,
+        "title": "⭐Q238. Product of Array Except Self",
+        "slug": "q238-product-of-array-except-self",
+        "link": "#q238-product-of-array-except-self",
+        "children": []
       },
       {
-        "level": 2,
-        "title": "外观世界",
-        "slug": "外观世界",
-        "link": "#外观世界",
-        "children": [
-          {
-            "level": 3,
-            "title": "专注",
-            "slug": "专注",
-            "link": "#专注",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "学习",
-            "slug": "学习",
-            "link": "#学习",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/books/mindset/%E8%AE%A4%E7%9F%A5%E8%A7%89%E9%86%92.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Clean Code - Robert Martin",
-    "headers": [
+        "level": 3,
+        "title": "Q303. Range Sum Query - Immutable",
+        "slug": "q303-range-sum-query-immutable",
+        "link": "#q303-range-sum-query-immutable",
+        "children": []
+      },
       {
-        "level": 2,
-        "title": "Why Clean Code is Important?",
-        "slug": "why-clean-code-is-important",
-        "link": "#why-clean-code-is-important",
+        "level": 3,
+        "title": "⭐Q304. Range Sum Query 2D - Immutable",
+        "slug": "q304-range-sum-query-2d-immutable",
+        "link": "#q304-range-sum-query-2d-immutable",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q724. Find Pivot Index",
+        "slug": "q724-find-pivot-index",
+        "link": "#q724-find-pivot-index",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q1314. Matrix Block Sum",
+        "slug": "q1314-matrix-block-sum",
+        "link": "#q1314-matrix-block-sum",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q1732. Find the Highest Altitude",
+        "slug": "q1732-find-the-highest-altitude",
+        "link": "#q1732-find-the-highest-altitude",
         "children": []
       },
       {
         "level": 2,
-        "title": "Guideline",
-        "slug": "guideline",
-        "link": "#guideline",
+        "title": "--- 💡 With Hashtable ---",
+        "slug": "with-hashtable",
+        "link": "#with-hashtable",
         "children": [
           {
             "level": 3,
-            "title": "Names",
-            "slug": "names",
-            "link": "#names",
+            "title": "⭐Q525. Contiguous Array",
+            "slug": "q525-contiguous-array",
+            "link": "#q525-contiguous-array",
             "children": []
           },
           {
             "level": 3,
-            "title": "Functions",
-            "slug": "functions",
-            "link": "#functions",
+            "title": "Q523. Continuous Subarray Sum",
+            "slug": "q523-continuous-subarray-sum",
+            "link": "#q523-continuous-subarray-sum",
             "children": []
           },
           {
             "level": 3,
-            "title": "Comments",
-            "slug": "comments",
-            "link": "#comments",
+            "title": "Q560. Subarray Sum Equals K",
+            "slug": "q560-subarray-sum-equals-k",
+            "link": "#q560-subarray-sum-equals-k",
             "children": []
           },
           {
             "level": 3,
-            "title": "Formatting",
-            "slug": "formatting",
-            "link": "#formatting",
+            "title": "Q974. Subarray Sums Divisible by K",
+            "slug": "q974-subarray-sums-divisible-by-k",
+            "link": "#q974-subarray-sums-divisible-by-k",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "⭐Q1124. Longest Well-Performing Interval",
+            "slug": "q1124-longest-well-performing-interval",
+            "link": "#q1124-longest-well-performing-interval",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "❤️Q1371. Find the Longest Substring Containing Vowels in Even Counts",
+            "slug": "q1371-find-the-longest-substring-containing-vowels-in-even-counts",
+            "link": "#q1371-find-the-longest-substring-containing-vowels-in-even-counts",
             "children": []
           }
         ]
       }
     ],
-    "path": "/books/coding/Clean-code.html",
+    "path": "/leetcode/prefix-sum/problems.html",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "Craftsmanship",
+    "title": "Queue Concept",
     "headers": [],
-    "path": "/books/coding/",
+    "path": "/leetcode/queue/concept.html",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "The Pragmatic Programmer - Andrew Hunt & David Thomas",
+    "title": "Queue Problems",
     "headers": [
       {
-        "level": 2,
-        "title": "Intro",
-        "slug": "intro",
-        "link": "#intro",
+        "level": 3,
+        "title": "❤️Q649. Dota2 Senate",
+        "slug": "q649-dota2-senate",
+        "link": "#q649-dota2-senate",
         "children": []
       },
       {
-        "level": 2,
-        "title": "Tips",
-        "slug": "tips",
-        "link": "#tips",
-        "children": [
-          {
-            "level": 3,
-            "title": "Tip 1: Care About Your Craft",
-            "slug": "tip-1-care-about-your-craft",
-            "link": "#tip-1-care-about-your-craft",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Tip 2: Think! About Your Work",
-            "slug": "tip-2-think-about-your-work",
-            "link": "#tip-2-think-about-your-work",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Tip 3: Provide Options. Don't Make Lame Execuses",
-            "slug": "tip-3-provide-options-don-t-make-lame-execuses",
-            "link": "#tip-3-provide-options-don-t-make-lame-execuses",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Tip 4: Don't Live with Broken Windows",
-            "slug": "tip-4-don-t-live-with-broken-windows",
-            "link": "#tip-4-don-t-live-with-broken-windows",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Tip 5: Be a Catalyst for Change",
-            "slug": "tip-5-be-a-catalyst-for-change",
-            "link": "#tip-5-be-a-catalyst-for-change",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Tip 6: Remember the Big Picture",
-            "slug": "tip-6-remember-the-big-picture",
-            "link": "#tip-6-remember-the-big-picture",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Tip 7: Make Quality a Requirements Issue",
-            "slug": "tip-7-make-quality-a-requirements-issue",
-            "link": "#tip-7-make-quality-a-requirements-issue",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Tip 8: Invest Regularly in Your Knowledge Portfolio",
-            "slug": "tip-8-invest-regularly-in-your-knowledge-portfolio",
-            "link": "#tip-8-invest-regularly-in-your-knowledge-portfolio",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Tip 9: Critically Analyse What You Read and Hear",
-            "slug": "tip-9-critically-analyse-what-you-read-and-hear",
-            "link": "#tip-9-critically-analyse-what-you-read-and-hear",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Tip 10: It's both What You Say and the Way You Say It",
-            "slug": "tip-10-it-s-both-what-you-say-and-the-way-you-say-it",
-            "link": "#tip-10-it-s-both-what-you-say-and-the-way-you-say-it",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Tip 11: DRY --- Don't Repeat Yourself",
-            "slug": "tip-11-dry-don-t-repeat-yourself",
-            "link": "#tip-11-dry-don-t-repeat-yourself",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Tip 12: Make It Easy to Reuse",
-            "slug": "tip-12-make-it-easy-to-reuse",
-            "link": "#tip-12-make-it-easy-to-reuse",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Tip 13: Eliminate Effects Between Unrelated Things",
-            "slug": "tip-13-eliminate-effects-between-unrelated-things",
-            "link": "#tip-13-eliminate-effects-between-unrelated-things",
-            "children": []
-          }
-        ]
+        "level": 3,
+        "title": "Q933. Number of Recent Calls",
+        "slug": "q933-number-of-recent-calls",
+        "link": "#q933-number-of-recent-calls",
+        "children": []
       }
     ],
-    "path": "/books/coding/The-Pragmatic-Programmer.html",
+    "path": "/leetcode/queue/problems.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Stack Concept",
+    "headers": [],
+    "path": "/leetcode/stack/concept.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -3564,6 +3246,28 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "Two Pointer Concept & Pattern",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🧠 Linked List Concept",
+        "slug": "🧠-linked-list-concept",
+        "link": "#🧠-linked-list-concept",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🛠️ Pattern",
+        "slug": "🛠️-pattern",
+        "link": "#🛠️-pattern",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/two-pointer/concept.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Framework",
     "headers": [],
     "path": "/notes/framework/",
@@ -3571,38 +3275,9 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Useful Resources",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Algorithms",
-        "slug": "algorithms",
-        "link": "#algorithms",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Operating System",
-        "slug": "operating-system",
-        "link": "#operating-system",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Articles",
-        "slug": "articles",
-        "link": "#articles",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Misc",
-        "slug": "misc",
-        "link": "#misc",
-        "children": []
-      }
-    ],
-    "path": "/notes/resource/",
+    "title": "Language",
+    "headers": [],
+    "path": "/notes/language/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -3812,6 +3487,338 @@ export const SEARCH_INDEX = [
     "title": "References",
     "headers": [],
     "path": "/notes/os/reference.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Economy & Finance",
+    "headers": [],
+    "path": "/books/economy/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "How Countries Go Broke? The Big Cycle - Ray Dalio",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Part 1 Overview of the Big Debt Cycle",
+        "slug": "part-1-overview-of-the-big-debt-cycle",
+        "link": "#part-1-overview-of-the-big-debt-cycle",
+        "children": [
+          {
+            "level": 3,
+            "title": "Research Questions",
+            "slug": "research-questions",
+            "link": "#research-questions",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Interesting Facts",
+            "slug": "interesting-facts",
+            "link": "#interesting-facts",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Invaluable Ideas",
+            "slug": "invaluable-ideas",
+            "link": "#invaluable-ideas",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Personal Insights",
+            "slug": "personal-insights",
+            "link": "#personal-insights",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/books/economy/how-countries-go-broke-the-big-cycle.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Useful Resources",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Algorithms",
+        "slug": "algorithms",
+        "link": "#algorithms",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Operating System",
+        "slug": "operating-system",
+        "link": "#operating-system",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Articles",
+        "slug": "articles",
+        "link": "#articles",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Misc",
+        "slug": "misc",
+        "link": "#misc",
+        "children": []
+      }
+    ],
+    "path": "/notes/resource/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Clean Code - Robert Martin",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Why Clean Code is Important?",
+        "slug": "why-clean-code-is-important",
+        "link": "#why-clean-code-is-important",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Guideline",
+        "slug": "guideline",
+        "link": "#guideline",
+        "children": [
+          {
+            "level": 3,
+            "title": "Names",
+            "slug": "names",
+            "link": "#names",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Functions",
+            "slug": "functions",
+            "link": "#functions",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Comments",
+            "slug": "comments",
+            "link": "#comments",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Formatting",
+            "slug": "formatting",
+            "link": "#formatting",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/books/coding/Clean-code.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Craftsmanship",
+    "headers": [],
+    "path": "/books/coding/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "The Pragmatic Programmer - Andrew Hunt & David Thomas",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Intro",
+        "slug": "intro",
+        "link": "#intro",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Tips",
+        "slug": "tips",
+        "link": "#tips",
+        "children": [
+          {
+            "level": 3,
+            "title": "Tip 1: Care About Your Craft",
+            "slug": "tip-1-care-about-your-craft",
+            "link": "#tip-1-care-about-your-craft",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Tip 2: Think! About Your Work",
+            "slug": "tip-2-think-about-your-work",
+            "link": "#tip-2-think-about-your-work",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Tip 3: Provide Options. Don't Make Lame Execuses",
+            "slug": "tip-3-provide-options-don-t-make-lame-execuses",
+            "link": "#tip-3-provide-options-don-t-make-lame-execuses",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Tip 4: Don't Live with Broken Windows",
+            "slug": "tip-4-don-t-live-with-broken-windows",
+            "link": "#tip-4-don-t-live-with-broken-windows",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Tip 5: Be a Catalyst for Change",
+            "slug": "tip-5-be-a-catalyst-for-change",
+            "link": "#tip-5-be-a-catalyst-for-change",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Tip 6: Remember the Big Picture",
+            "slug": "tip-6-remember-the-big-picture",
+            "link": "#tip-6-remember-the-big-picture",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Tip 7: Make Quality a Requirements Issue",
+            "slug": "tip-7-make-quality-a-requirements-issue",
+            "link": "#tip-7-make-quality-a-requirements-issue",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Tip 8: Invest Regularly in Your Knowledge Portfolio",
+            "slug": "tip-8-invest-regularly-in-your-knowledge-portfolio",
+            "link": "#tip-8-invest-regularly-in-your-knowledge-portfolio",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Tip 9: Critically Analyse What You Read and Hear",
+            "slug": "tip-9-critically-analyse-what-you-read-and-hear",
+            "link": "#tip-9-critically-analyse-what-you-read-and-hear",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Tip 10: It's both What You Say and the Way You Say It",
+            "slug": "tip-10-it-s-both-what-you-say-and-the-way-you-say-it",
+            "link": "#tip-10-it-s-both-what-you-say-and-the-way-you-say-it",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Tip 11: DRY --- Don't Repeat Yourself",
+            "slug": "tip-11-dry-don-t-repeat-yourself",
+            "link": "#tip-11-dry-don-t-repeat-yourself",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Tip 12: Make It Easy to Reuse",
+            "slug": "tip-12-make-it-easy-to-reuse",
+            "link": "#tip-12-make-it-easy-to-reuse",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Tip 13: Eliminate Effects Between Unrelated Things",
+            "slug": "tip-13-eliminate-effects-between-unrelated-things",
+            "link": "#tip-13-eliminate-effects-between-unrelated-things",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/books/coding/The-Pragmatic-Programmer.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Economy & Finance",
+    "headers": [],
+    "path": "/books/mindset/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "认知觉醒 - 周岭",
+    "headers": [
+      {
+        "level": 2,
+        "title": "内观自己",
+        "slug": "内观自己",
+        "link": "#内观自己",
+        "children": [
+          {
+            "level": 3,
+            "title": "大脑",
+            "slug": "大脑",
+            "link": "#大脑",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "天性",
+            "slug": "天性",
+            "link": "#天性",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "恐惧",
+            "slug": "恐惧",
+            "link": "#恐惧",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "反馈",
+            "slug": "反馈",
+            "link": "#反馈",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "外观世界",
+        "slug": "外观世界",
+        "link": "#外观世界",
+        "children": [
+          {
+            "level": 3,
+            "title": "专注",
+            "slug": "专注",
+            "link": "#专注",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "学习",
+            "slug": "学习",
+            "link": "#学习",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/books/mindset/%E8%AE%A4%E7%9F%A5%E8%A7%89%E9%86%92.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -4117,13 +4124,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Language",
-    "headers": [],
-    "path": "/notes/language/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Graph BFS Concept & Pattern",
     "headers": [
       {
@@ -4247,6 +4247,21 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "Shortest Path Concept & Pattern",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🧠 Concept",
+        "slug": "🧠-concept",
+        "link": "#🧠-concept",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/graph/shortest-path/concept.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Eulerian Graph Concept & Pattern",
     "headers": [
       {
@@ -4291,21 +4306,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Shortest Path Concept & Pattern",
-    "headers": [
-      {
-        "level": 2,
-        "title": "🧠 Concept",
-        "slug": "🧠-concept",
-        "link": "#🧠-concept",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/graph/shortest-path/concept.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Topological Sort Concept & Pattern",
     "headers": [
       {
@@ -4346,6 +4346,21 @@ export const SEARCH_INDEX = [
       }
     ],
     "path": "/leetcode/graph/topological-order/problems.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Minimum Spanning Tree Concept & Pattern",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🧠 Concept",
+        "slug": "🧠-concept",
+        "link": "#🧠-concept",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/graph/mst/concept.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -4584,356 +4599,6 @@ export const SEARCH_INDEX = [
       }
     ],
     "path": "/leetcode/stack/problems/valid-parenthese.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Monotonic Stack Concept & Pattern",
-    "headers": [
-      {
-        "level": 2,
-        "title": "🧠 Concept",
-        "slug": "🧠-concept",
-        "link": "#🧠-concept",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🛠️ Pattern",
-        "slug": "🛠️-pattern",
-        "link": "#🛠️-pattern",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/stack/monostack/pattern.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Monotonic Stack Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Q84. Largest Rectangle in Histogram",
-        "slug": "q84-largest-rectangle-in-histogram",
-        "link": "#q84-largest-rectangle-in-histogram",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q402. Remove K Digits",
-        "slug": "q402-remove-k-digits",
-        "link": "#q402-remove-k-digits",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "❤️Q456. 132 Pattern",
-        "slug": "q456-132-pattern",
-        "link": "#q456-132-pattern",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q496. Next Greater Element I",
-        "slug": "q496-next-greater-element-i",
-        "link": "#q496-next-greater-element-i",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q503. Next Greater Element II",
-        "slug": "q503-next-greater-element-ii",
-        "link": "#q503-next-greater-element-ii",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q654. Maximum Binary Tree",
-        "slug": "q654-maximum-binary-tree",
-        "link": "#q654-maximum-binary-tree",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q739. Daily Temperatures",
-        "slug": "q739-daily-temperatures",
-        "link": "#q739-daily-temperatures",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q901. Online Stock Span",
-        "slug": "q901-online-stock-span",
-        "link": "#q901-online-stock-span",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q1019. Next Greater Node In Linked List",
-        "slug": "q1019-next-greater-node-in-linked-list",
-        "link": "#q1019-next-greater-node-in-linked-list",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/stack/monostack/problems.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Minimum Spanning Tree Concept & Pattern",
-    "headers": [
-      {
-        "level": 2,
-        "title": "🧠 Concept",
-        "slug": "🧠-concept",
-        "link": "#🧠-concept",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/graph/mst/concept.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Fast and Slow Two Pointer Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Q141. Linked List Cycle",
-        "slug": "q141-linked-list-cycle",
-        "link": "#q141-linked-list-cycle",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q142. Linked List Cycle II",
-        "slug": "q142-linked-list-cycle-ii",
-        "link": "#q142-linked-list-cycle-ii",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q876. Middle of the Linked List",
-        "slug": "q876-middle-of-the-linked-list",
-        "link": "#q876-middle-of-the-linked-list",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q2095. Delete the Middle Node of a Linked List",
-        "slug": "q2095-delete-the-middle-node-of-a-linked-list",
-        "link": "#q2095-delete-the-middle-node-of-a-linked-list",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q2130. Maximum Twin Sum of a Linked List",
-        "slug": "q2130-maximum-twin-sum-of-a-linked-list",
-        "link": "#q2130-maximum-twin-sum-of-a-linked-list",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/two-pointer/problems/fast-slow.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Left and Right Two Pointer Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "⭐Q11. Container With Most Water",
-        "slug": "q11-container-with-most-water",
-        "link": "#q11-container-with-most-water",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q125. Valid Palindrome",
-        "slug": "q125-valid-palindrome",
-        "link": "#q125-valid-palindrome",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q345. Reverse Vowels of a String",
-        "slug": "q345-reverse-vowels-of-a-string",
-        "link": "#q345-reverse-vowels-of-a-string",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/two-pointer/problems/left-right.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "nSum Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Q1. Two Sum",
-        "slug": "q1-two-sum",
-        "link": "#q1-two-sum",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q15. 3Sum",
-        "slug": "q15-3sum",
-        "link": "#q15-3sum",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q167. Two Sum II - Input Array Is Sorted",
-        "slug": "q167-two-sum-ii-input-array-is-sorted",
-        "link": "#q167-two-sum-ii-input-array-is-sorted",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/two-pointer/problems/nsum.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Two Lists or One List Two Pointer Problems",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Q2. Add Two Numbers",
-        "slug": "q2-add-two-numbers",
-        "link": "#q2-add-two-numbers",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q19. Remove Nth Node From End of List",
-        "slug": "q19-remove-nth-node-from-end-of-list",
-        "link": "#q19-remove-nth-node-from-end-of-list",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q21. Merge Two Sorted Lists",
-        "slug": "q21-merge-two-sorted-lists",
-        "link": "#q21-merge-two-sorted-lists",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q23. Merge k Sorted Lists",
-        "slug": "q23-merge-k-sorted-lists",
-        "link": "#q23-merge-k-sorted-lists",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q25. Reverse Nodes in k-Group",
-        "slug": "q25-reverse-nodes-in-k-group",
-        "link": "#q25-reverse-nodes-in-k-group",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q61. Rotate List",
-        "slug": "q61-rotate-list",
-        "link": "#q61-rotate-list",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q82. Remove Duplicates from Sorted List II",
-        "slug": "q82-remove-duplicates-from-sorted-list-ii",
-        "link": "#q82-remove-duplicates-from-sorted-list-ii",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q86. Partition List",
-        "slug": "q86-partition-list",
-        "link": "#q86-partition-list",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q92. Reverse Linked List II",
-        "slug": "q92-reverse-linked-list-ii",
-        "link": "#q92-reverse-linked-list-ii",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "⭐Q160. Intersection of Two Linked Lists",
-        "slug": "q160-intersection-of-two-linked-lists",
-        "link": "#q160-intersection-of-two-linked-lists",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q328. Odd Even Linked List",
-        "slug": "q328-odd-even-linked-list",
-        "link": "#q328-odd-even-linked-list",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q283. Move Zeroes",
-        "slug": "q283-move-zeroes",
-        "link": "#q283-move-zeroes",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q392. Is Subsequence",
-        "slug": "q392-is-subsequence",
-        "link": "#q392-is-subsequence",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q443. String Compression",
-        "slug": "q443-string-compression",
-        "link": "#q443-string-compression",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q725. Split Linked List in Parts",
-        "slug": "q725-split-linked-list-in-parts",
-        "link": "#q725-split-linked-list-in-parts",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q1047. Remove All Adjacent Duplicates In String",
-        "slug": "q1047-remove-all-adjacent-duplicates-in-string",
-        "link": "#q1047-remove-all-adjacent-duplicates-in-string",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q2807. Insert Greatest Common Divisors in Linked List",
-        "slug": "q2807-insert-greatest-common-divisors-in-linked-list",
-        "link": "#q2807-insert-greatest-common-divisors-in-linked-list",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q2181. Merge Nodes in Between Zeros",
-        "slug": "q2181-merge-nodes-in-between-zeros",
-        "link": "#q2181-merge-nodes-in-between-zeros",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Q3217. Delete Nodes From Linked List Present in Array",
-        "slug": "q3217-delete-nodes-from-linked-list-present-in-array",
-        "link": "#q3217-delete-nodes-from-linked-list-present-in-array",
-        "children": []
-      }
-    ],
-    "path": "/leetcode/two-pointer/problems/two-lists.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -5297,705 +4962,244 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "React Notes",
+    "title": "Fast and Slow Two Pointer Problems",
     "headers": [
       {
-        "level": 2,
-        "title": "Intro",
-        "slug": "intro",
-        "link": "#intro",
+        "level": 3,
+        "title": "Q141. Linked List Cycle",
+        "slug": "q141-linked-list-cycle",
+        "link": "#q141-linked-list-cycle",
         "children": []
       },
       {
-        "level": 2,
-        "title": "Components",
-        "slug": "components",
-        "link": "#components",
-        "children": [
-          {
-            "level": 3,
-            "title": "JSX",
-            "slug": "jsx",
-            "link": "#jsx",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "props",
-            "slug": "props",
-            "link": "#props",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Conditional Rendering",
-            "slug": "conditional-rendering",
-            "link": "#conditional-rendering",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Rendering Lists",
-            "slug": "rendering-lists",
-            "link": "#rendering-lists",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Keep Components Pure",
-            "slug": "keep-components-pure",
-            "link": "#keep-components-pure",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Interactivity",
-        "slug": "interactivity",
-        "link": "#interactivity",
-        "children": [
-          {
-            "level": 3,
-            "title": "Event Handlers",
-            "slug": "event-handlers",
-            "link": "#event-handlers",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "state",
-            "slug": "state",
-            "link": "#state",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Trigger, Render and Commit",
-            "slug": "trigger-render-and-commit",
-            "link": "#trigger-render-and-commit",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Queueing a series of state updates",
-            "slug": "queueing-a-series-of-state-updates",
-            "link": "#queueing-a-series-of-state-updates",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Updating Objects or Arrays in state",
-            "slug": "updating-objects-or-arrays-in-state",
-            "link": "#updating-objects-or-arrays-in-state",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Component Lifecycle",
-            "slug": "component-lifecycle",
-            "link": "#component-lifecycle",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Managing state",
-        "slug": "managing-state",
-        "link": "#managing-state",
-        "children": [
-          {
-            "level": 3,
-            "title": "Thinking about UI declaratively",
-            "slug": "thinking-about-ui-declaratively",
-            "link": "#thinking-about-ui-declaratively",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Principle for structuring state",
-            "slug": "principle-for-structuring-state",
-            "link": "#principle-for-structuring-state",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Sharing state between components",
-            "slug": "sharing-state-between-components",
-            "link": "#sharing-state-between-components",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "React maintain an UI tree (like DOM)",
-            "slug": "react-maintain-an-ui-tree-like-dom",
-            "link": "#react-maintain-an-ui-tree-like-dom",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Context API",
-            "slug": "context-api",
-            "link": "#context-api",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Reducer",
-            "slug": "reducer",
-            "link": "#reducer",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "refs",
-        "slug": "refs",
-        "link": "#refs",
-        "children": [
-          {
-            "level": 3,
-            "title": "What is refs",
-            "slug": "what-is-refs",
-            "link": "#what-is-refs",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Manipulating DOM with refs",
-            "slug": "manipulating-dom-with-refs",
-            "link": "#manipulating-dom-with-refs",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Dealing with Effects",
-        "slug": "dealing-with-effects",
-        "link": "#dealing-with-effects",
-        "children": [
-          {
-            "level": 3,
-            "title": "What is Effects",
-            "slug": "what-is-effects",
-            "link": "#what-is-effects",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "effects & dependencies",
-            "slug": "effects-dependencies",
-            "link": "#effects-dependencies",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "When NOT to use useEffect()",
-            "slug": "when-not-to-use-useeffect",
-            "link": "#when-not-to-use-useeffect",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "React Hooks",
-        "slug": "react-hooks",
-        "link": "#react-hooks",
-        "children": [
-          {
-            "level": 3,
-            "title": "useCallback()",
-            "slug": "usecallback",
-            "link": "#usecallback",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "useMemo()",
-            "slug": "usememo",
-            "link": "#usememo",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Custom Hooks",
-            "slug": "custom-hooks",
-            "link": "#custom-hooks",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Debugging React Apps",
-        "slug": "debugging-react-apps",
-        "link": "#debugging-react-apps",
+        "level": 3,
+        "title": "Q142. Linked List Cycle II",
+        "slug": "q142-linked-list-cycle-ii",
+        "link": "#q142-linked-list-cycle-ii",
         "children": []
       },
       {
-        "level": 2,
-        "title": "Class-Based Components",
-        "slug": "class-based-components",
-        "link": "#class-based-components",
-        "children": [
-          {
-            "level": 3,
-            "title": "What & Why",
-            "slug": "what-why",
-            "link": "#what-why",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Working with Class-Based Components",
-            "slug": "working-with-class-based-components",
-            "link": "#working-with-class-based-components",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Error Boundaries",
-            "slug": "error-boundaries",
-            "link": "#error-boundaries",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Handling HTTP Request",
-        "slug": "handling-http-request",
-        "link": "#handling-http-request",
-        "children": [
-          {
-            "level": 3,
-            "title": "How to Connect a Back-end / Database",
-            "slug": "how-to-connect-a-back-end-database",
-            "link": "#how-to-connect-a-back-end-database",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Fetching Data",
-            "slug": "fetching-data",
-            "link": "#fetching-data",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Sending Data",
-            "slug": "sending-data",
-            "link": "#sending-data",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Working with Forms & User Input",
-        "slug": "working-with-forms-user-input",
-        "link": "#working-with-forms-user-input",
-        "children": [
-          {
-            "level": 3,
-            "title": "What is Form",
-            "slug": "what-is-form",
-            "link": "#what-is-form",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Handling Form Submission",
-            "slug": "handling-form-submission",
-            "link": "#handling-form-submission",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Validating User Input",
-            "slug": "validating-user-input",
-            "link": "#validating-user-input",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Building Custom Solutions",
-            "slug": "building-custom-solutions",
-            "link": "#building-custom-solutions",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Redux",
-        "slug": "redux",
-        "link": "#redux",
-        "children": [
-          {
-            "level": 3,
-            "title": "What is Redux",
-            "slug": "what-is-redux",
-            "link": "#what-is-redux",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Why using Redux",
-            "slug": "why-using-redux",
-            "link": "#why-using-redux",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "How to use Redux",
-            "slug": "how-to-use-redux",
-            "link": "#how-to-use-redux",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Redux Application Data Flow",
-            "slug": "redux-application-data-flow",
-            "link": "#redux-application-data-flow",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "React Router",
-        "slug": "react-router",
-        "link": "#react-router",
+        "level": 3,
+        "title": "Q876. Middle of the Linked List",
+        "slug": "q876-middle-of-the-linked-list",
+        "link": "#q876-middle-of-the-linked-list",
         "children": []
       },
       {
-        "level": 2,
-        "title": "Authentication",
-        "slug": "authentication",
-        "link": "#authentication",
+        "level": 3,
+        "title": "Q2095. Delete the Middle Node of a Linked List",
+        "slug": "q2095-delete-the-middle-node-of-a-linked-list",
+        "link": "#q2095-delete-the-middle-node-of-a-linked-list",
         "children": []
       },
       {
-        "level": 2,
-        "title": "Styling React Components",
-        "slug": "styling-react-components",
-        "link": "#styling-react-components",
-        "children": [
-          {
-            "level": 3,
-            "title": "Styling with vanilla CSS",
-            "slug": "styling-with-vanilla-css",
-            "link": "#styling-with-vanilla-css",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Scoping Styles",
-            "slug": "scoping-styles",
-            "link": "#scoping-styles",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Styling with Tailwind CSS",
-            "slug": "styling-with-tailwind-css",
-            "link": "#styling-with-tailwind-css",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Dynamic Styling",
-            "slug": "dynamic-styling",
-            "link": "#dynamic-styling",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Animating",
-            "slug": "animating",
-            "link": "#animating",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Testing",
-        "slug": "testing",
-        "link": "#testing",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Deployment",
-        "slug": "deployment",
-        "link": "#deployment",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "References",
-        "slug": "references",
-        "link": "#references",
+        "level": 3,
+        "title": "Q2130. Maximum Twin Sum of a Linked List",
+        "slug": "q2130-maximum-twin-sum-of-a-linked-list",
+        "link": "#q2130-maximum-twin-sum-of-a-linked-list",
         "children": []
       }
     ],
-    "path": "/notes/framework/react/react.html",
+    "path": "/leetcode/two-pointer/problems/fast-slow.html",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "C Notes",
+    "title": "Left and Right Two Pointer Problems",
     "headers": [
       {
-        "level": 2,
-        "title": "Reference",
-        "slug": "reference",
-        "link": "#reference",
+        "level": 3,
+        "title": "⭐Q11. Container With Most Water",
+        "slug": "q11-container-with-most-water",
+        "link": "#q11-container-with-most-water",
         "children": []
       },
       {
-        "level": 2,
-        "title": "导论",
-        "slug": "导论",
-        "link": "#导论",
+        "level": 3,
+        "title": "Q125. Valid Palindrome",
+        "slug": "q125-valid-palindrome",
+        "link": "#q125-valid-palindrome",
         "children": []
       },
       {
-        "level": 2,
-        "title": "变量和常量",
-        "slug": "变量和常量",
-        "link": "#变量和常量",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "数据类型",
-        "slug": "数据类型",
-        "link": "#数据类型",
-        "children": [
-          {
-            "level": 3,
-            "title": "整型",
-            "slug": "整型",
-            "link": "#整型",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "浮点类型",
-            "slug": "浮点类型",
-            "link": "#浮点类型",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "字符类型",
-            "slug": "字符类型",
-            "link": "#字符类型",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "类型转换",
-            "slug": "类型转换",
-            "link": "#类型转换",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "逻辑类型",
-            "slug": "逻辑类型",
-            "link": "#逻辑类型",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "运算",
-        "slug": "运算",
-        "link": "#运算",
-        "children": [
-          {
-            "level": 3,
-            "title": "四则",
-            "slug": "四则",
-            "link": "#四则",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "赋值",
-            "slug": "赋值",
-            "link": "#赋值",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "递增递减",
-            "slug": "递增递减",
-            "link": "#递增递减",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "关系",
-            "slug": "关系",
-            "link": "#关系",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "逻辑",
-            "slug": "逻辑",
-            "link": "#逻辑",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "逗号",
-            "slug": "逗号",
-            "link": "#逗号",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "位运算",
-            "slug": "位运算",
-            "link": "#位运算",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "流程控制",
-        "slug": "流程控制",
-        "link": "#流程控制",
-        "children": [
-          {
-            "level": 3,
-            "title": "选择",
-            "slug": "选择",
-            "link": "#选择",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "循环",
-            "slug": "循环",
-            "link": "#循环",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "函数",
-        "slug": "函数",
-        "link": "#函数",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "数组",
-        "slug": "数组",
-        "link": "#数组",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "指针",
-        "slug": "指针",
-        "link": "#指针",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "字符数组和字符串",
-        "slug": "字符数组和字符串",
-        "link": "#字符数组和字符串",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "枚举",
-        "slug": "枚举",
-        "link": "#枚举",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "自定义数据类型",
-        "slug": "自定义数据类型",
-        "link": "#自定义数据类型",
-        "children": [
-          {
-            "level": 3,
-            "title": "结构体",
-            "slug": "结构体",
-            "link": "#结构体",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "typedef",
-            "slug": "typedef",
-            "link": "#typedef",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "联合",
-            "slug": "联合",
-            "link": "#联合",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "宏",
-        "slug": "宏",
-        "link": "#宏",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "多文件程序设计",
-        "slug": "多文件程序设计",
-        "link": "#多文件程序设计",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "简论编译和链接",
-        "slug": "简论编译和链接",
-        "link": "#简论编译和链接",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "输入输出",
-        "slug": "输入输出",
-        "link": "#输入输出",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "程序的基本数据区",
-        "slug": "程序的基本数据区",
-        "link": "#程序的基本数据区",
+        "level": 3,
+        "title": "Q345. Reverse Vowels of a String",
+        "slug": "q345-reverse-vowels-of-a-string",
+        "link": "#q345-reverse-vowels-of-a-string",
         "children": []
       }
     ],
-    "path": "/notes/language/c/C.html",
+    "path": "/leetcode/two-pointer/problems/left-right.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "nSum Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Q1. Two Sum",
+        "slug": "q1-two-sum",
+        "link": "#q1-two-sum",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q15. 3Sum",
+        "slug": "q15-3sum",
+        "link": "#q15-3sum",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q167. Two Sum II - Input Array Is Sorted",
+        "slug": "q167-two-sum-ii-input-array-is-sorted",
+        "link": "#q167-two-sum-ii-input-array-is-sorted",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/two-pointer/problems/nsum.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Two Lists or One List Two Pointer Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Q2. Add Two Numbers",
+        "slug": "q2-add-two-numbers",
+        "link": "#q2-add-two-numbers",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q19. Remove Nth Node From End of List",
+        "slug": "q19-remove-nth-node-from-end-of-list",
+        "link": "#q19-remove-nth-node-from-end-of-list",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q21. Merge Two Sorted Lists",
+        "slug": "q21-merge-two-sorted-lists",
+        "link": "#q21-merge-two-sorted-lists",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q23. Merge k Sorted Lists",
+        "slug": "q23-merge-k-sorted-lists",
+        "link": "#q23-merge-k-sorted-lists",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q25. Reverse Nodes in k-Group",
+        "slug": "q25-reverse-nodes-in-k-group",
+        "link": "#q25-reverse-nodes-in-k-group",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q61. Rotate List",
+        "slug": "q61-rotate-list",
+        "link": "#q61-rotate-list",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q82. Remove Duplicates from Sorted List II",
+        "slug": "q82-remove-duplicates-from-sorted-list-ii",
+        "link": "#q82-remove-duplicates-from-sorted-list-ii",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q86. Partition List",
+        "slug": "q86-partition-list",
+        "link": "#q86-partition-list",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q92. Reverse Linked List II",
+        "slug": "q92-reverse-linked-list-ii",
+        "link": "#q92-reverse-linked-list-ii",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q160. Intersection of Two Linked Lists",
+        "slug": "q160-intersection-of-two-linked-lists",
+        "link": "#q160-intersection-of-two-linked-lists",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q328. Odd Even Linked List",
+        "slug": "q328-odd-even-linked-list",
+        "link": "#q328-odd-even-linked-list",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q283. Move Zeroes",
+        "slug": "q283-move-zeroes",
+        "link": "#q283-move-zeroes",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q392. Is Subsequence",
+        "slug": "q392-is-subsequence",
+        "link": "#q392-is-subsequence",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q443. String Compression",
+        "slug": "q443-string-compression",
+        "link": "#q443-string-compression",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q725. Split Linked List in Parts",
+        "slug": "q725-split-linked-list-in-parts",
+        "link": "#q725-split-linked-list-in-parts",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q1047. Remove All Adjacent Duplicates In String",
+        "slug": "q1047-remove-all-adjacent-duplicates-in-string",
+        "link": "#q1047-remove-all-adjacent-duplicates-in-string",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q2807. Insert Greatest Common Divisors in Linked List",
+        "slug": "q2807-insert-greatest-common-divisors-in-linked-list",
+        "link": "#q2807-insert-greatest-common-divisors-in-linked-list",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q2181. Merge Nodes in Between Zeros",
+        "slug": "q2181-merge-nodes-in-between-zeros",
+        "link": "#q2181-merge-nodes-in-between-zeros",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q3217. Delete Nodes From Linked List Present in Array",
+        "slug": "q3217-delete-nodes-from-linked-list-present-in-array",
+        "link": "#q3217-delete-nodes-from-linked-list-present-in-array",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/two-pointer/problems/two-lists.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -6851,6 +6055,552 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "Monotonic Stack Concept & Pattern",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🧠 Concept",
+        "slug": "🧠-concept",
+        "link": "#🧠-concept",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🛠️ Pattern",
+        "slug": "🛠️-pattern",
+        "link": "#🛠️-pattern",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/stack/monostack/pattern.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Monotonic Stack Problems",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Q84. Largest Rectangle in Histogram",
+        "slug": "q84-largest-rectangle-in-histogram",
+        "link": "#q84-largest-rectangle-in-histogram",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q402. Remove K Digits",
+        "slug": "q402-remove-k-digits",
+        "link": "#q402-remove-k-digits",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "❤️Q456. 132 Pattern",
+        "slug": "q456-132-pattern",
+        "link": "#q456-132-pattern",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q496. Next Greater Element I",
+        "slug": "q496-next-greater-element-i",
+        "link": "#q496-next-greater-element-i",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q503. Next Greater Element II",
+        "slug": "q503-next-greater-element-ii",
+        "link": "#q503-next-greater-element-ii",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "⭐Q654. Maximum Binary Tree",
+        "slug": "q654-maximum-binary-tree",
+        "link": "#q654-maximum-binary-tree",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q739. Daily Temperatures",
+        "slug": "q739-daily-temperatures",
+        "link": "#q739-daily-temperatures",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q901. Online Stock Span",
+        "slug": "q901-online-stock-span",
+        "link": "#q901-online-stock-span",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Q1019. Next Greater Node In Linked List",
+        "slug": "q1019-next-greater-node-in-linked-list",
+        "link": "#q1019-next-greater-node-in-linked-list",
+        "children": []
+      }
+    ],
+    "path": "/leetcode/stack/monostack/problems.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "React Notes",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Intro",
+        "slug": "intro",
+        "link": "#intro",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Components",
+        "slug": "components",
+        "link": "#components",
+        "children": [
+          {
+            "level": 3,
+            "title": "JSX",
+            "slug": "jsx",
+            "link": "#jsx",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "props",
+            "slug": "props",
+            "link": "#props",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Conditional Rendering",
+            "slug": "conditional-rendering",
+            "link": "#conditional-rendering",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Rendering Lists",
+            "slug": "rendering-lists",
+            "link": "#rendering-lists",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Keep Components Pure",
+            "slug": "keep-components-pure",
+            "link": "#keep-components-pure",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Interactivity",
+        "slug": "interactivity",
+        "link": "#interactivity",
+        "children": [
+          {
+            "level": 3,
+            "title": "Event Handlers",
+            "slug": "event-handlers",
+            "link": "#event-handlers",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "state",
+            "slug": "state",
+            "link": "#state",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Trigger, Render and Commit",
+            "slug": "trigger-render-and-commit",
+            "link": "#trigger-render-and-commit",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Queueing a series of state updates",
+            "slug": "queueing-a-series-of-state-updates",
+            "link": "#queueing-a-series-of-state-updates",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Updating Objects or Arrays in state",
+            "slug": "updating-objects-or-arrays-in-state",
+            "link": "#updating-objects-or-arrays-in-state",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Component Lifecycle",
+            "slug": "component-lifecycle",
+            "link": "#component-lifecycle",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Managing state",
+        "slug": "managing-state",
+        "link": "#managing-state",
+        "children": [
+          {
+            "level": 3,
+            "title": "Thinking about UI declaratively",
+            "slug": "thinking-about-ui-declaratively",
+            "link": "#thinking-about-ui-declaratively",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Principle for structuring state",
+            "slug": "principle-for-structuring-state",
+            "link": "#principle-for-structuring-state",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Sharing state between components",
+            "slug": "sharing-state-between-components",
+            "link": "#sharing-state-between-components",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "React maintain an UI tree (like DOM)",
+            "slug": "react-maintain-an-ui-tree-like-dom",
+            "link": "#react-maintain-an-ui-tree-like-dom",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Context API",
+            "slug": "context-api",
+            "link": "#context-api",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Reducer",
+            "slug": "reducer",
+            "link": "#reducer",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "refs",
+        "slug": "refs",
+        "link": "#refs",
+        "children": [
+          {
+            "level": 3,
+            "title": "What is refs",
+            "slug": "what-is-refs",
+            "link": "#what-is-refs",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Manipulating DOM with refs",
+            "slug": "manipulating-dom-with-refs",
+            "link": "#manipulating-dom-with-refs",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Dealing with Effects",
+        "slug": "dealing-with-effects",
+        "link": "#dealing-with-effects",
+        "children": [
+          {
+            "level": 3,
+            "title": "What is Effects",
+            "slug": "what-is-effects",
+            "link": "#what-is-effects",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "effects & dependencies",
+            "slug": "effects-dependencies",
+            "link": "#effects-dependencies",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "When NOT to use useEffect()",
+            "slug": "when-not-to-use-useeffect",
+            "link": "#when-not-to-use-useeffect",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "React Hooks",
+        "slug": "react-hooks",
+        "link": "#react-hooks",
+        "children": [
+          {
+            "level": 3,
+            "title": "useCallback()",
+            "slug": "usecallback",
+            "link": "#usecallback",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "useMemo()",
+            "slug": "usememo",
+            "link": "#usememo",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Custom Hooks",
+            "slug": "custom-hooks",
+            "link": "#custom-hooks",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Debugging React Apps",
+        "slug": "debugging-react-apps",
+        "link": "#debugging-react-apps",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Class-Based Components",
+        "slug": "class-based-components",
+        "link": "#class-based-components",
+        "children": [
+          {
+            "level": 3,
+            "title": "What & Why",
+            "slug": "what-why",
+            "link": "#what-why",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Working with Class-Based Components",
+            "slug": "working-with-class-based-components",
+            "link": "#working-with-class-based-components",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Error Boundaries",
+            "slug": "error-boundaries",
+            "link": "#error-boundaries",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Handling HTTP Request",
+        "slug": "handling-http-request",
+        "link": "#handling-http-request",
+        "children": [
+          {
+            "level": 3,
+            "title": "How to Connect a Back-end / Database",
+            "slug": "how-to-connect-a-back-end-database",
+            "link": "#how-to-connect-a-back-end-database",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Fetching Data",
+            "slug": "fetching-data",
+            "link": "#fetching-data",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Sending Data",
+            "slug": "sending-data",
+            "link": "#sending-data",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Working with Forms & User Input",
+        "slug": "working-with-forms-user-input",
+        "link": "#working-with-forms-user-input",
+        "children": [
+          {
+            "level": 3,
+            "title": "What is Form",
+            "slug": "what-is-form",
+            "link": "#what-is-form",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Handling Form Submission",
+            "slug": "handling-form-submission",
+            "link": "#handling-form-submission",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Validating User Input",
+            "slug": "validating-user-input",
+            "link": "#validating-user-input",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Building Custom Solutions",
+            "slug": "building-custom-solutions",
+            "link": "#building-custom-solutions",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Redux",
+        "slug": "redux",
+        "link": "#redux",
+        "children": [
+          {
+            "level": 3,
+            "title": "What is Redux",
+            "slug": "what-is-redux",
+            "link": "#what-is-redux",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Why using Redux",
+            "slug": "why-using-redux",
+            "link": "#why-using-redux",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "How to use Redux",
+            "slug": "how-to-use-redux",
+            "link": "#how-to-use-redux",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Redux Application Data Flow",
+            "slug": "redux-application-data-flow",
+            "link": "#redux-application-data-flow",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "React Router",
+        "slug": "react-router",
+        "link": "#react-router",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Authentication",
+        "slug": "authentication",
+        "link": "#authentication",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Styling React Components",
+        "slug": "styling-react-components",
+        "link": "#styling-react-components",
+        "children": [
+          {
+            "level": 3,
+            "title": "Styling with vanilla CSS",
+            "slug": "styling-with-vanilla-css",
+            "link": "#styling-with-vanilla-css",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Scoping Styles",
+            "slug": "scoping-styles",
+            "link": "#scoping-styles",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Styling with Tailwind CSS",
+            "slug": "styling-with-tailwind-css",
+            "link": "#styling-with-tailwind-css",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Dynamic Styling",
+            "slug": "dynamic-styling",
+            "link": "#dynamic-styling",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Animating",
+            "slug": "animating",
+            "link": "#animating",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Testing",
+        "slug": "testing",
+        "link": "#testing",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Deployment",
+        "slug": "deployment",
+        "link": "#deployment",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "References",
+        "slug": "references",
+        "link": "#references",
+        "children": []
+      }
+    ],
+    "path": "/notes/framework/react/react.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "CSS Notes",
     "headers": [
       {
@@ -7156,6 +6906,920 @@ export const SEARCH_INDEX = [
       }
     ],
     "path": "/notes/language/html/HTML.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "JDBC",
+    "headers": [
+      {
+        "level": 2,
+        "title": "What is JDBC",
+        "slug": "what-is-jdbc",
+        "link": "#what-is-jdbc",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "JDBC Drivers",
+        "slug": "jdbc-drivers",
+        "link": "#jdbc-drivers",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Example",
+        "slug": "example",
+        "link": "#example",
+        "children": []
+      }
+    ],
+    "path": "/notes/language/java/JDBC.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Access Control",
+    "headers": [],
+    "path": "/notes/language/java/access-control.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Annotations",
+    "headers": [],
+    "path": "/notes/language/java/annotation.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Array",
+    "headers": [],
+    "path": "/notes/language/java/array.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "八股",
+    "headers": [
+      {
+        "level": 2,
+        "title": "What are the basic principals of OOP?",
+        "slug": "what-are-the-basic-principals-of-oop",
+        "link": "#what-are-the-basic-principals-of-oop",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "What happened when you create an array object in Java?",
+        "slug": "what-happened-when-you-create-an-array-object-in-java",
+        "link": "#what-happened-when-you-create-an-array-object-in-java",
+        "children": []
+      }
+    ],
+    "path": "/notes/language/java/bagu.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Basic Syntax and Concepts",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Variables",
+        "slug": "variables",
+        "link": "#variables",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Operators",
+        "slug": "operators",
+        "link": "#operators",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Expressions and Statements",
+        "slug": "expressions-and-statements",
+        "link": "#expressions-and-statements",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Flow control",
+        "slug": "flow-control",
+        "link": "#flow-control",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Method",
+        "slug": "method",
+        "link": "#method",
+        "children": []
+      }
+    ],
+    "path": "/notes/language/java/basic-syntax.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Collections",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Java Collection Framework",
+        "slug": "java-collection-framework",
+        "link": "#java-collection-framework",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Collection",
+        "slug": "collection",
+        "link": "#collection",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "List",
+        "slug": "list",
+        "link": "#list",
+        "children": [
+          {
+            "level": 3,
+            "title": "ArrayList",
+            "slug": "arraylist",
+            "link": "#arraylist",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "LinkedList",
+            "slug": "linkedlist",
+            "link": "#linkedlist",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Queue",
+        "slug": "queue",
+        "link": "#queue",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Deque",
+        "slug": "deque",
+        "link": "#deque",
+        "children": [
+          {
+            "level": 3,
+            "title": "ArrayDeque",
+            "slug": "arraydeque",
+            "link": "#arraydeque",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "PriorityQueue",
+            "slug": "priorityqueue",
+            "link": "#priorityqueue",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Set",
+        "slug": "set",
+        "link": "#set",
+        "children": [
+          {
+            "level": 3,
+            "title": "HashSet",
+            "slug": "hashset",
+            "link": "#hashset",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "LinkedHashSet",
+            "slug": "linkedhashset",
+            "link": "#linkedhashset",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "TreeSet",
+            "slug": "treeset",
+            "link": "#treeset",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Map",
+        "slug": "map",
+        "link": "#map",
+        "children": [
+          {
+            "level": 3,
+            "title": "HashMap",
+            "slug": "hashmap",
+            "link": "#hashmap",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "LinkedHashMap",
+            "slug": "linkedhashmap",
+            "link": "#linkedhashmap",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "EnumMap",
+            "slug": "enummap",
+            "link": "#enummap",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "TreeMap",
+            "slug": "treemap",
+            "link": "#treemap",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "BitSet",
+        "slug": "bitset",
+        "link": "#bitset",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Collections",
+        "slug": "collections",
+        "link": "#collections",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Iterator",
+        "slug": "iterator",
+        "link": "#iterator",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Comparable and Comparator",
+        "slug": "comparable-and-comparator",
+        "link": "#comparable-and-comparator",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Shallow Copy vs. Deep Copy",
+        "slug": "shallow-copy-vs-deep-copy",
+        "link": "#shallow-copy-vs-deep-copy",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Collections to Array",
+        "slug": "collections-to-array",
+        "link": "#collections-to-array",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Array to Collections",
+        "slug": "array-to-collections",
+        "link": "#array-to-collections",
+        "children": []
+      }
+    ],
+    "path": "/notes/language/java/collection.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Date and Time API",
+    "headers": [],
+    "path": "/notes/language/java/date-time.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Enum",
+    "headers": [
+      {
+        "level": 2,
+        "title": "What Is Enum?",
+        "slug": "what-is-enum",
+        "link": "#what-is-enum",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "How to Use Enum",
+        "slug": "how-to-use-enum",
+        "link": "#how-to-use-enum",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Fields",
+        "slug": "fields",
+        "link": "#fields",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Methods",
+        "slug": "methods",
+        "link": "#methods",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "values()",
+        "slug": "values",
+        "link": "#values",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "valueOf()",
+        "slug": "valueof",
+        "link": "#valueof",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "name() and toString()",
+        "slug": "name-and-tostring",
+        "link": "#name-and-tostring",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "ordinal()",
+        "slug": "ordinal",
+        "link": "#ordinal",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Enum Under the Hood",
+        "slug": "enum-under-the-hood",
+        "link": "#enum-under-the-hood",
+        "children": []
+      }
+    ],
+    "path": "/notes/language/java/enum.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Exception Handling",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Type of Errors",
+        "slug": "type-of-errors",
+        "link": "#type-of-errors",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Exception Class",
+        "slug": "exception-class",
+        "link": "#exception-class",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "How to Handle Exceptions",
+        "slug": "how-to-handle-exceptions",
+        "link": "#how-to-handle-exceptions",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Exception Specification",
+        "slug": "exception-specification",
+        "link": "#exception-specification",
+        "children": []
+      }
+    ],
+    "path": "/notes/language/java/exception.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Generics",
+    "headers": [],
+    "path": "/notes/language/java/generic.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Hibernate",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Key Concepts",
+        "slug": "key-concepts",
+        "link": "#key-concepts",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Configuration",
+        "slug": "configuration",
+        "link": "#configuration",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Features",
+        "slug": "features",
+        "link": "#features",
+        "children": []
+      }
+    ],
+    "path": "/notes/language/java/hibernate.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Interfaces and Abstract Classes",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Interfaces",
+        "slug": "interfaces",
+        "link": "#interfaces",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Abstract Classes",
+        "slug": "abstract-classes",
+        "link": "#abstract-classes",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Interfaces vs. Abstract Classes",
+        "slug": "interfaces-vs-abstract-classes",
+        "link": "#interfaces-vs-abstract-classes",
+        "children": []
+      }
+    ],
+    "path": "/notes/language/java/interface.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Introduction",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Reference",
+        "slug": "reference",
+        "link": "#reference",
+        "children": []
+      }
+    ],
+    "path": "/notes/language/java/introduction.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Java IO Streams",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Stream",
+        "slug": "stream",
+        "link": "#stream",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Byte Streams",
+        "slug": "byte-streams",
+        "link": "#byte-streams",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Character Streams",
+        "slug": "character-streams",
+        "link": "#character-streams",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Buffered Streams",
+        "slug": "buffered-streams",
+        "link": "#buffered-streams",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Formatting Streams",
+        "slug": "formatting-streams",
+        "link": "#formatting-streams",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Data Streams",
+        "slug": "data-streams",
+        "link": "#data-streams",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Object Streams",
+        "slug": "object-streams",
+        "link": "#object-streams",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "RandomAccessFile",
+        "slug": "randomaccessfile",
+        "link": "#randomaccessfile",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Piped Streams",
+        "slug": "piped-streams",
+        "link": "#piped-streams",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "File I/O",
+        "slug": "file-i-o",
+        "link": "#file-i-o",
+        "children": []
+      }
+    ],
+    "path": "/notes/language/java/io.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Java Doc",
+    "headers": [],
+    "path": "/notes/language/java/javadoc.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Lambda Expression",
+    "headers": [],
+    "path": "/notes/language/java/lambda.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "java.lang",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Object",
+        "slug": "object",
+        "link": "#object",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Wrapper Class",
+        "slug": "wrapper-class",
+        "link": "#wrapper-class",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Math",
+        "slug": "math",
+        "link": "#math",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Enum",
+        "slug": "enum",
+        "link": "#enum",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Java.lang.reflect",
+        "slug": "java-lang-reflect",
+        "link": "#java-lang-reflect",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Serializable",
+        "slug": "serializable",
+        "link": "#serializable",
+        "children": []
+      }
+    ],
+    "path": "/notes/language/java/lang.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Multiprogramming",
+    "headers": [
+      {
+        "level": 2,
+        "title": "How to Implement Multithreading",
+        "slug": "how-to-implement-multithreading",
+        "link": "#how-to-implement-multithreading",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Thread class",
+        "slug": "thread-class",
+        "link": "#thread-class",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Synchronisation",
+        "slug": "synchronisation",
+        "link": "#synchronisation",
+        "children": []
+      }
+    ],
+    "path": "/notes/language/java/multiprogramming.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Nested Classes",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Inner Classes",
+        "slug": "inner-classes",
+        "link": "#inner-classes",
+        "children": [
+          {
+            "level": 3,
+            "title": "Local and Anonymous Inner Classes",
+            "slug": "local-and-anonymous-inner-classes",
+            "link": "#local-and-anonymous-inner-classes",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Static Nested Classes",
+        "slug": "static-nested-classes",
+        "link": "#static-nested-classes",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Why Nested Classes?",
+        "slug": "why-nested-classes",
+        "link": "#why-nested-classes",
+        "children": []
+      }
+    ],
+    "path": "/notes/language/java/nested-class.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Networking Programming",
+    "headers": [],
+    "path": "/notes/language/java/networking.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "OOP",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Classes and Objects",
+        "slug": "classes-and-objects",
+        "link": "#classes-and-objects",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Reusing classes",
+        "slug": "reusing-classes",
+        "link": "#reusing-classes",
+        "children": [
+          {
+            "level": 3,
+            "title": "Inheritance",
+            "slug": "inheritance",
+            "link": "#inheritance",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Composition",
+            "slug": "composition",
+            "link": "#composition",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Encapsulation",
+        "slug": "encapsulation",
+        "link": "#encapsulation",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Polymorphism",
+        "slug": "polymorphism",
+        "link": "#polymorphism",
+        "children": []
+      }
+    ],
+    "path": "/notes/language/java/oop.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Record",
+    "headers": [
+      {
+        "level": 2,
+        "title": "What Is a Java Record",
+        "slug": "what-is-a-java-record",
+        "link": "#what-is-a-java-record",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Syntax",
+        "slug": "syntax",
+        "link": "#syntax",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Record vs. Normal Class",
+        "slug": "record-vs-normal-class",
+        "link": "#record-vs-normal-class",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Constructor",
+        "slug": "constructor",
+        "link": "#constructor",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Adding Methods to Records",
+        "slug": "adding-methods-to-records",
+        "link": "#adding-methods-to-records",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Inheritance",
+        "slug": "inheritance",
+        "link": "#inheritance",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Defensive Copying",
+        "slug": "defensive-copying",
+        "link": "#defensive-copying",
+        "children": []
+      }
+    ],
+    "path": "/notes/language/java/record.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Stream API",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Stream Model",
+        "slug": "stream-model",
+        "link": "#stream-model",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Stream Operation",
+        "slug": "stream-operation",
+        "link": "#stream-operation",
+        "children": [
+          {
+            "level": 3,
+            "title": "Intermediate Operations",
+            "slug": "intermediate-operations",
+            "link": "#intermediate-operations",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Terminal Operations",
+            "slug": "terminal-operations",
+            "link": "#terminal-operations",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Common Collectors used with collect()",
+            "slug": "common-collectors-used-with-collect",
+            "link": "#common-collectors-used-with-collect",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Stream or For Loop",
+        "slug": "stream-or-for-loop",
+        "link": "#stream-or-for-loop",
+        "children": []
+      }
+    ],
+    "path": "/notes/language/java/stream-api.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "String",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Creating String",
+        "slug": "creating-string",
+        "link": "#creating-string",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Common String Methods",
+        "slug": "common-string-methods",
+        "link": "#common-string-methods",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Regualr Expression",
+        "slug": "regualr-expression",
+        "link": "#regualr-expression",
+        "children": [
+          {
+            "level": 3,
+            "title": "StringBuffer & StringBuilder",
+            "slug": "stringbuffer-stringbuilder",
+            "link": "#stringbuffer-stringbuilder",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Printing",
+        "slug": "printing",
+        "link": "#printing",
+        "children": []
+      }
+    ],
+    "path": "/notes/language/java/string.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -7475,877 +8139,252 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "JDBC",
+    "title": "C Notes",
     "headers": [
-      {
-        "level": 2,
-        "title": "What is JDBC",
-        "slug": "what-is-jdbc",
-        "link": "#what-is-jdbc",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "JDBC Drivers",
-        "slug": "jdbc-drivers",
-        "link": "#jdbc-drivers",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Example",
-        "slug": "example",
-        "link": "#example",
-        "children": []
-      }
-    ],
-    "path": "/notes/language/java/JDBC.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Bagu",
-    "headers": [
-      {
-        "level": 2,
-        "title": "What are the basic principals of OOP?",
-        "slug": "what-are-the-basic-principals-of-oop",
-        "link": "#what-are-the-basic-principals-of-oop",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "What happened when you create an array object in Java?",
-        "slug": "what-happened-when-you-create-an-array-object-in-java",
-        "link": "#what-happened-when-you-create-an-array-object-in-java",
-        "children": []
-      }
-    ],
-    "path": "/notes/language/java/bagu.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Collections",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Java Collection Framework",
-        "slug": "java-collection-framework",
-        "link": "#java-collection-framework",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Collection",
-        "slug": "collection",
-        "link": "#collection",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "List",
-        "slug": "list",
-        "link": "#list",
-        "children": [
-          {
-            "level": 3,
-            "title": "ArrayList",
-            "slug": "arraylist",
-            "link": "#arraylist",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "LinkedList",
-            "slug": "linkedlist",
-            "link": "#linkedlist",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Queue",
-        "slug": "queue",
-        "link": "#queue",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Deque",
-        "slug": "deque",
-        "link": "#deque",
-        "children": [
-          {
-            "level": 3,
-            "title": "ArrayDeque",
-            "slug": "arraydeque",
-            "link": "#arraydeque",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "PriorityQueue",
-            "slug": "priorityqueue",
-            "link": "#priorityqueue",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Set",
-        "slug": "set",
-        "link": "#set",
-        "children": [
-          {
-            "level": 3,
-            "title": "HashSet",
-            "slug": "hashset",
-            "link": "#hashset",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "LinkedHashSet",
-            "slug": "linkedhashset",
-            "link": "#linkedhashset",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "TreeSet",
-            "slug": "treeset",
-            "link": "#treeset",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Map",
-        "slug": "map",
-        "link": "#map",
-        "children": [
-          {
-            "level": 3,
-            "title": "HashMap",
-            "slug": "hashmap",
-            "link": "#hashmap",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "LinkedHashMap",
-            "slug": "linkedhashmap",
-            "link": "#linkedhashmap",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "TreeMap",
-            "slug": "treemap",
-            "link": "#treemap",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "BitSet",
-        "slug": "bitset",
-        "link": "#bitset",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Collections",
-        "slug": "collections",
-        "link": "#collections",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Iterator",
-        "slug": "iterator",
-        "link": "#iterator",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Comparable and Comparator",
-        "slug": "comparable-and-comparator",
-        "link": "#comparable-and-comparator",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Shallow Copy vs. Deep Copy",
-        "slug": "shallow-copy-vs-deep-copy",
-        "link": "#shallow-copy-vs-deep-copy",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Collections to Array",
-        "slug": "collections-to-array",
-        "link": "#collections-to-array",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Array to Collections",
-        "slug": "array-to-collections",
-        "link": "#array-to-collections",
-        "children": []
-      }
-    ],
-    "path": "/notes/language/java/collection.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Java Notes",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Introduction",
-        "slug": "introduction",
-        "link": "#introduction",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Basic Syntax and Concepts",
-        "slug": "basic-syntax-and-concepts",
-        "link": "#basic-syntax-and-concepts",
-        "children": [
-          {
-            "level": 3,
-            "title": "Variables",
-            "slug": "variables",
-            "link": "#variables",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Operators",
-            "slug": "operators",
-            "link": "#operators",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Expressions and Statements",
-            "slug": "expressions-and-statements",
-            "link": "#expressions-and-statements",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Flow control",
-            "slug": "flow-control",
-            "link": "#flow-control",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Method",
-            "slug": "method",
-            "link": "#method",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "String",
-        "slug": "string",
-        "link": "#string",
-        "children": [
-          {
-            "level": 3,
-            "title": "Creating String",
-            "slug": "creating-string",
-            "link": "#creating-string",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Common String Methods",
-            "slug": "common-string-methods",
-            "link": "#common-string-methods",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Regualr Expression",
-            "slug": "regualr-expression",
-            "link": "#regualr-expression",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "StringBuffer & StringBuilder",
-            "slug": "stringbuffer-stringbuilder",
-            "link": "#stringbuffer-stringbuilder",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Printing",
-            "slug": "printing",
-            "link": "#printing",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Array",
-        "slug": "array",
-        "link": "#array",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "OOP",
-        "slug": "oop",
-        "link": "#oop",
-        "children": [
-          {
-            "level": 3,
-            "title": "Classes and Objects",
-            "slug": "classes-and-objects",
-            "link": "#classes-and-objects",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Reusing classes",
-            "slug": "reusing-classes",
-            "link": "#reusing-classes",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Encapsulation",
-            "slug": "encapsulation",
-            "link": "#encapsulation",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Polymorphism",
-            "slug": "polymorphism",
-            "link": "#polymorphism",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Interfaces and Abstract Classes",
-        "slug": "interfaces-and-abstract-classes",
-        "link": "#interfaces-and-abstract-classes",
-        "children": [
-          {
-            "level": 3,
-            "title": "Interfaces",
-            "slug": "interfaces",
-            "link": "#interfaces",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Abstract Classes",
-            "slug": "abstract-classes",
-            "link": "#abstract-classes",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Interfaces vs. Abstract Classes",
-            "slug": "interfaces-vs-abstract-classes",
-            "link": "#interfaces-vs-abstract-classes",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Access Control",
-        "slug": "access-control",
-        "link": "#access-control",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Nested Classes",
-        "slug": "nested-classes",
-        "link": "#nested-classes",
-        "children": [
-          {
-            "level": 3,
-            "title": "Inner Classes",
-            "slug": "inner-classes",
-            "link": "#inner-classes",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Local and Anonymous Inner Classes",
-            "slug": "local-and-anonymous-inner-classes",
-            "link": "#local-and-anonymous-inner-classes",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Static Nested Classes",
-            "slug": "static-nested-classes",
-            "link": "#static-nested-classes",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Why Nested Classes?",
-            "slug": "why-nested-classes",
-            "link": "#why-nested-classes",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Exception Handling",
-        "slug": "exception-handling",
-        "link": "#exception-handling",
-        "children": [
-          {
-            "level": 3,
-            "title": "Type of Errors",
-            "slug": "type-of-errors",
-            "link": "#type-of-errors",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Exception Class",
-            "slug": "exception-class",
-            "link": "#exception-class",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "How to Handle Exceptions",
-            "slug": "how-to-handle-exceptions",
-            "link": "#how-to-handle-exceptions",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Exception Specification",
-            "slug": "exception-specification",
-            "link": "#exception-specification",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Multiprogramming",
-        "slug": "multiprogramming",
-        "link": "#multiprogramming",
-        "children": [
-          {
-            "level": 3,
-            "title": "How to Implement Multithreading",
-            "slug": "how-to-implement-multithreading",
-            "link": "#how-to-implement-multithreading",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Thread class",
-            "slug": "thread-class",
-            "link": "#thread-class",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Synchronisation",
-            "slug": "synchronisation",
-            "link": "#synchronisation",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Java.lang",
-        "slug": "java-lang",
-        "link": "#java-lang",
-        "children": [
-          {
-            "level": 3,
-            "title": "Object",
-            "slug": "object",
-            "link": "#object",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Wrapper Class",
-            "slug": "wrapper-class",
-            "link": "#wrapper-class",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Math",
-            "slug": "math",
-            "link": "#math",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Enum",
-            "slug": "enum",
-            "link": "#enum",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Java.lang.reflect",
-            "slug": "java-lang-reflect",
-            "link": "#java-lang-reflect",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Serializabale",
-            "slug": "serializabale",
-            "link": "#serializabale",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Date and Time API",
-        "slug": "date-and-time-api",
-        "link": "#date-and-time-api",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Lamda Expression",
-        "slug": "lamda-expression",
-        "link": "#lamda-expression",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Java IO Streams",
-        "slug": "java-io-streams",
-        "link": "#java-io-streams",
-        "children": [
-          {
-            "level": 3,
-            "title": "Stream",
-            "slug": "stream",
-            "link": "#stream",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Byte Streams",
-            "slug": "byte-streams",
-            "link": "#byte-streams",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Character Streams",
-            "slug": "character-streams",
-            "link": "#character-streams",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Buffered Streams",
-            "slug": "buffered-streams",
-            "link": "#buffered-streams",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Formatting Streams",
-            "slug": "formatting-streams",
-            "link": "#formatting-streams",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Data Streams",
-            "slug": "data-streams",
-            "link": "#data-streams",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Object Streams",
-            "slug": "object-streams",
-            "link": "#object-streams",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "RandomAccessFile",
-            "slug": "randomaccessfile",
-            "link": "#randomaccessfile",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Piped Streams",
-            "slug": "piped-streams",
-            "link": "#piped-streams",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "File I/O",
-            "slug": "file-i-o",
-            "link": "#file-i-o",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Generics",
-        "slug": "generics",
-        "link": "#generics",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Collections",
-        "slug": "collections",
-        "link": "#collections",
-        "children": [
-          {
-            "level": 3,
-            "title": "Java Collection Framework",
-            "slug": "java-collection-framework",
-            "link": "#java-collection-framework",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Collection",
-            "slug": "collection",
-            "link": "#collection",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "List",
-            "slug": "list",
-            "link": "#list",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Queue",
-            "slug": "queue",
-            "link": "#queue",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Set",
-            "slug": "set",
-            "link": "#set",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Map",
-            "slug": "map",
-            "link": "#map",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "BitSet",
-            "slug": "bitset",
-            "link": "#bitset",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Collections",
-            "slug": "collections-1",
-            "link": "#collections-1",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Iterator",
-            "slug": "iterator",
-            "link": "#iterator",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Comparable and Comparator",
-            "slug": "comparable-and-comparator",
-            "link": "#comparable-and-comparator",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Shallow Copy vs. Deep Copy",
-            "slug": "shallow-copy-vs-deep-copy",
-            "link": "#shallow-copy-vs-deep-copy",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Collections to Array",
-            "slug": "collections-to-array",
-            "link": "#collections-to-array",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Array to Collections",
-            "slug": "array-to-collections",
-            "link": "#array-to-collections",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Stream API",
-        "slug": "stream-api",
-        "link": "#stream-api",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Networking Programming",
-        "slug": "networking-programming",
-        "link": "#networking-programming",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Hibernate",
-        "slug": "hibernate",
-        "link": "#hibernate",
-        "children": [
-          {
-            "level": 3,
-            "title": "Key Concepts",
-            "slug": "key-concepts",
-            "link": "#key-concepts",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Configuration",
-            "slug": "configuration",
-            "link": "#configuration",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Features",
-            "slug": "features",
-            "link": "#features",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "JavaDoc",
-        "slug": "javadoc",
-        "link": "#javadoc",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Annotations",
-        "slug": "annotations",
-        "link": "#annotations",
-        "children": []
-      },
       {
         "level": 2,
         "title": "Reference",
         "slug": "reference",
         "link": "#reference",
         "children": []
-      }
-    ],
-    "path": "/notes/language/java/java.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Stream API",
-    "headers": [
+      },
       {
         "level": 2,
-        "title": "Stream Model",
-        "slug": "stream-model",
-        "link": "#stream-model",
+        "title": "导论",
+        "slug": "导论",
+        "link": "#导论",
         "children": []
       },
       {
         "level": 2,
-        "title": "Stream Operation",
-        "slug": "stream-operation",
-        "link": "#stream-operation",
+        "title": "变量和常量",
+        "slug": "变量和常量",
+        "link": "#变量和常量",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "数据类型",
+        "slug": "数据类型",
+        "link": "#数据类型",
         "children": [
           {
             "level": 3,
-            "title": "Intermediate Operations",
-            "slug": "intermediate-operations",
-            "link": "#intermediate-operations",
+            "title": "整型",
+            "slug": "整型",
+            "link": "#整型",
             "children": []
           },
           {
             "level": 3,
-            "title": "Terminal Operations",
-            "slug": "terminal-operations",
-            "link": "#terminal-operations",
+            "title": "浮点类型",
+            "slug": "浮点类型",
+            "link": "#浮点类型",
             "children": []
           },
           {
             "level": 3,
-            "title": "Common Collectors used with collect()",
-            "slug": "common-collectors-used-with-collect",
-            "link": "#common-collectors-used-with-collect",
+            "title": "字符类型",
+            "slug": "字符类型",
+            "link": "#字符类型",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "类型转换",
+            "slug": "类型转换",
+            "link": "#类型转换",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "逻辑类型",
+            "slug": "逻辑类型",
+            "link": "#逻辑类型",
             "children": []
           }
         ]
       },
       {
         "level": 2,
-        "title": "Stream or For Loop",
-        "slug": "stream-or-for-loop",
-        "link": "#stream-or-for-loop",
+        "title": "运算",
+        "slug": "运算",
+        "link": "#运算",
+        "children": [
+          {
+            "level": 3,
+            "title": "四则",
+            "slug": "四则",
+            "link": "#四则",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "赋值",
+            "slug": "赋值",
+            "link": "#赋值",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "递增递减",
+            "slug": "递增递减",
+            "link": "#递增递减",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "关系",
+            "slug": "关系",
+            "link": "#关系",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "逻辑",
+            "slug": "逻辑",
+            "link": "#逻辑",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "逗号",
+            "slug": "逗号",
+            "link": "#逗号",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "位运算",
+            "slug": "位运算",
+            "link": "#位运算",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "流程控制",
+        "slug": "流程控制",
+        "link": "#流程控制",
+        "children": [
+          {
+            "level": 3,
+            "title": "选择",
+            "slug": "选择",
+            "link": "#选择",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "循环",
+            "slug": "循环",
+            "link": "#循环",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "函数",
+        "slug": "函数",
+        "link": "#函数",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "数组",
+        "slug": "数组",
+        "link": "#数组",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "指针",
+        "slug": "指针",
+        "link": "#指针",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "字符数组和字符串",
+        "slug": "字符数组和字符串",
+        "link": "#字符数组和字符串",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "枚举",
+        "slug": "枚举",
+        "link": "#枚举",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "自定义数据类型",
+        "slug": "自定义数据类型",
+        "link": "#自定义数据类型",
+        "children": [
+          {
+            "level": 3,
+            "title": "结构体",
+            "slug": "结构体",
+            "link": "#结构体",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "typedef",
+            "slug": "typedef",
+            "link": "#typedef",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "联合",
+            "slug": "联合",
+            "link": "#联合",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "宏",
+        "slug": "宏",
+        "link": "#宏",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "多文件程序设计",
+        "slug": "多文件程序设计",
+        "link": "#多文件程序设计",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "简论编译和链接",
+        "slug": "简论编译和链接",
+        "link": "#简论编译和链接",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "输入输出",
+        "slug": "输入输出",
+        "link": "#输入输出",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "程序的基本数据区",
+        "slug": "程序的基本数据区",
+        "link": "#程序的基本数据区",
         "children": []
       }
     ],
-    "path": "/notes/language/java/stream-api.html",
+    "path": "/notes/language/c/C.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -8545,13 +8584,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Array",
-    "headers": [],
-    "path": "/leetcode/array/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Binary Search",
     "headers": [],
     "path": "/leetcode/binary-search/",
@@ -8559,16 +8591,9 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Dp",
+    "title": "Array",
     "headers": [],
-    "path": "/leetcode/dp/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Difference Array",
-    "headers": [],
-    "path": "/leetcode/difference-array/",
+    "path": "/leetcode/array/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -8580,9 +8605,16 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Graph",
+    "title": "Difference Array",
     "headers": [],
-    "path": "/leetcode/graph/",
+    "path": "/leetcode/difference-array/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Dp",
+    "headers": [],
+    "path": "/leetcode/dp/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -8594,16 +8626,16 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Hashtable",
+    "title": "Graph",
     "headers": [],
-    "path": "/leetcode/hashtable/",
+    "path": "/leetcode/graph/",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "Queue",
+    "title": "Hashtable",
     "headers": [],
-    "path": "/leetcode/queue/",
+    "path": "/leetcode/hashtable/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -8615,23 +8647,9 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Prefix Sum",
-    "headers": [],
-    "path": "/leetcode/prefix-sum/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Sliding Window",
     "headers": [],
     "path": "/leetcode/sliding-window/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Stack",
-    "headers": [],
-    "path": "/leetcode/stack/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -8643,9 +8661,23 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Two Pointer",
+    "title": "Prefix Sum",
     "headers": [],
-    "path": "/leetcode/two-pointer/",
+    "path": "/leetcode/prefix-sum/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Queue",
+    "headers": [],
+    "path": "/leetcode/queue/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Stack",
+    "headers": [],
+    "path": "/leetcode/stack/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -8653,6 +8685,13 @@ export const SEARCH_INDEX = [
     "title": "Tree",
     "headers": [],
     "path": "/leetcode/tree/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Two Pointer",
+    "headers": [],
+    "path": "/leetcode/two-pointer/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -8692,13 +8731,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Eulerian Graph",
-    "headers": [],
-    "path": "/leetcode/graph/eulerian-graph/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Shortest Path",
     "headers": [],
     "path": "/leetcode/graph/shortest-path/",
@@ -8706,9 +8738,23 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "Eulerian Graph",
+    "headers": [],
+    "path": "/leetcode/graph/eulerian-graph/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Topological Order",
     "headers": [],
     "path": "/leetcode/graph/topological-order/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Mst",
+    "headers": [],
+    "path": "/leetcode/graph/mst/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -8734,16 +8780,9 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Monostack",
+    "title": "Problems",
     "headers": [],
-    "path": "/leetcode/stack/monostack/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Mst",
-    "headers": [],
-    "path": "/leetcode/graph/mst/",
+    "path": "/leetcode/tree/problems/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -8755,9 +8794,9 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Problems",
+    "title": "Monostack",
     "headers": [],
-    "path": "/leetcode/tree/problems/",
+    "path": "/leetcode/stack/monostack/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -8769,16 +8808,16 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "C",
+    "title": "Html",
     "headers": [],
-    "path": "/notes/language/c/",
+    "path": "/notes/language/html/",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "Html",
+    "title": "Java",
     "headers": [],
-    "path": "/notes/language/html/",
+    "path": "/notes/language/java/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -8797,9 +8836,9 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Java",
+    "title": "C",
     "headers": [],
-    "path": "/notes/language/java/",
+    "path": "/notes/language/c/",
     "pathLocale": "/",
     "extraFields": []
   },
