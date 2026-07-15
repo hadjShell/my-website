@@ -16,26 +16,21 @@ editLink: false
 - A superset of non-binary tree
 
 - Degree
-
   - How many edges does a vertex have
 
   - **Indegree and outdegree** for a directed graph
 
 - Simple graph
-
-  - Graphs without **self loop** or **multiple edges**
+  - Graphs without **self edges** or **parallel edges**
 
   - $E = [0, V*(V - 1) / 2] \approx [0, V^2]$
   - [**Sparse graph** -> **Dense graph**]
 
 - Subgraph
-
   - **Spanning subgraph**
-
     - A subgraph which contains **all vertices and some edges**
 
   - **Induced subgraph**
-
     - A subgraph which contains **some vertices and all edges connecting them**
 
 ### Types
@@ -52,15 +47,12 @@ editLink: false
 ### Connectivity
 
 - **Connected graph**
-
   - If there is **a path** between any pair of vertices in an **undirected graph**, it is a connected graph
 
 - **Strongly Connected Graph**
-
   - If there is **a directed path** between any pair of vertices in a **directed graph**, it is a strongly connected graph
 
 - **Weakly Connected Graph**
-
   - If there is **a path** between any pair of vertices in a **directed graph after turning into an undirected graph**, it is a weakly connected graph
 
 - **Connected component**
@@ -70,21 +62,17 @@ editLink: false
 - **Edge list**
 
 - **Adjacent list**
-
   - Vertices are stored as records or objects, and every vertex stores a list of adjacent vertices
 
 - **Adjacent matrix**
-
   - A two-dimensional matrix, in which the rows represent source vertices and columns represent destination vertices
   - Data on edges and vertices must be stored externally. Only the cost for one edge can be stored between each pair of vertices
 
 - **Incidence matrix**
-
   - A two-dimensional matrix, in which the rows represent the vertices and columns represent the edges
   - The entries indicate the incidence relation between the vertex at a row and edge at a column
 
 - Examples
-
   - Undirected and unweighted
     ![](/assets/image/leetcode/uduw_graph.png)
   - Directed and weighted
@@ -104,11 +92,11 @@ editLink: false
 
 ::: important Tricks
 
-- **Adjacency lists** are generally preferred for **sparse graphs**, while an **adjacency matrix** is preferred for **dense graphs**
+- **Adjacency lists** are generally preferred for **sparse graphs**, while an **adjacency matrix** is preferred for **dense graphs**.
 
-- Adjacency matrix can leverage matrix operations to solve some subtle problems
+- Adjacency matrix can leverage matrix operations to solve some subtle problems.
 
-- **The time complexity of operations in the adjacency list** representation can be improved by storing the sets of **adjacent vertices** in more efficient data structures, such as **hash tables** or **balanced BST**
+- **The time complexity of operations in the adjacency list** representation can be improved by storing the sets of **adjacent vertices** in more efficient data structures, such as **hash tables** or **balanced BST**.
 
 :::
 
@@ -117,6 +105,8 @@ editLink: false
 ::: tip
 
 Just like tree, think what to do and when to do on a vertex.
+
+Prefer using adjacent list for leetcode problem.
 
 :::
 
@@ -154,6 +144,13 @@ In general, DFS finds all paths, BFS finds the shortest path.
   }
   ```
 
+::: tip
+
+DFS visits every reachable node and examines every reachable edge, but it only uses a subset of the edges—called **DFS tree edges**—to discover nodes.
+For a connected graph, that subset contains `V - 1` edges, even when the graph contains many more than `V - 1` edges.
+
+:::
+
 - ```java
   // 遍历所有边
   // O(E + V^2)
@@ -175,6 +172,14 @@ In general, DFS finds all paths, BFS finds the shortest path.
       }
   }
   ```
+
+::: tip Why do we need DFS all vertices?
+
+Suppose you want to perform an operation on every edge exactly once.
+For a directed graph, you can process each edge as it appears using DFS all vertices code.
+But for an undirected graph, this processes every edge twice: `a -> b, b -> a`. To process each undirected edge only once, you need to identify or mark edges.
+
+:::
 
 - ```java
   // 遍历图的所有路径，寻找从 src 到 dest 的所有路径
@@ -209,15 +214,14 @@ In general, DFS finds all paths, BFS finds the shortest path.
       onPath[src] = false;
   }
 
-  // 因为前文遍历节点的代码中，visited 数组的职责是保证每个节点只会被访问一次。而对于图结构来说，要想遍历所有路径，可能会多次访问同一个节点，这是关键的区别。
+  // 因为前文遍历节点的代码中，visited 数组的职责是保证每个节点只会被访问一次。
+  // 而对于图结构来说，要想遍历所有路径，可能会多次访问同一个节点，这是关键的区别。
   ```
 
 - **同时使用`visited` and `onPath`**
-
   - 遍历所有路径的算法复杂度较高，大部分情况下我们可能并不需要穷举完所有路径，而是仅需要找到某一条符合条件的路径。这种场景下，我们可能会借助 `visited` 数组进行剪枝，提前排除一些不符合条件的路径，从而降低复杂度。
 
 - **不使用`visited` and `onPath`**
-
   - Acyclic graph
 
 ::: tip

@@ -25,27 +25,27 @@ editLink: false
 
 ### :heart:Q101. [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
 
-- ```java
-  class Solution {
-      public boolean isSymmetric(TreeNode root) {
-          return isSym(root.left, root.right);
-      }
+```java
+class Solution {
+    public boolean isSymmetric(TreeNode root) {
+        if (root == null)
+            return true;
 
-      public boolean isSym(TreeNode left, TreeNode right) {
-          if (left == null && right == null)
-              return true;
-          else if (left != null && right != null) {
-              if (left.val != right.val)
-                  return false;
-              else
-                  return isSym(left.left, right.right) &&
-                          isSym(right.left, left.right);
-          }
-          else
-              return false;
-      }
-  }
-  ```
+        return isMirror(root.left, root.right);
+    }
+
+    private boolean isMirror(TreeNode left, TreeNode right) {
+        if (left == null && right == null)
+            return true;
+        if (left == null || right == null)
+            return false;
+        if (left.val != right.val)
+            return false;
+
+        return isMirror(left.left, right.right) && isMirror(left.right, right.left);
+    }
+}
+```
 
 ### Q114. [Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)
 
@@ -221,122 +221,144 @@ class Solution {
 }
 ```
 
-### :star:Q1361. [Validate Binary Tree Nodes](https://leetcode.com/problems/validate-binary-tree-nodes/)
+### :heart:Q1361. [Validate Binary Tree Nodes](https://leetcode.com/problems/validate-binary-tree-nodes/)
 
-- ```java
-  class Solution {
-      public boolean validateBinaryTreeNodes(int n, int[] leftChild, int[] rightChild) {
-          // only one root node doesn't have in edge, others have only one
-          // all nodes connected to root node
+```java
+// rules:
+// 1. a node can only have one parent, except for root
+// 2. a node can have at most 2 children (no need to check for this question)
+// 3. a node's left children and right children must be different
+// 4. a node's children cannot be itself
+// 5. no circles: exact one node without parent
+class Solution {
+    public boolean validateBinaryTreeNodes(int n, int[] leftChild, int[] rightChild) {
+        boolean isBinaryTree = true;
+        int[] parent = new int[n];
+        Arrays.fill(parent, -1);
 
-          boolean isBinaryTree = true;
-          int[] parent = new int[n];
-          Arrays.fill(parent, -1);
+        for (int p = 0; p < n; p++) {
+            if (!isBinaryTree)      break;
+            int left = leftChild[p], right = rightChild[p];
 
-          for (int p = 0; p < n; p++) {
-              if (!isBinaryTree)      break;
-              int left = leftChild[p], right = rightChild[p];
+            if (left == right && left != -1)
+                isBinaryTree = false;
+            if (root == left || root == right)
+                isBinaryTree = false;
+            if (left != -1) {
+                if (parent[left] != -1 && parent[left] != p)
+                    isBinaryTree = false;
+                else
+                    parent[left] = p;
+            }
 
-              if (left != -1) {
-                  if (parent[left] != -1 && parent[left] != p)
-                      isBinaryTree = false;
-                  else
-                      parent[left] = p;
-              }
+            if (right != -1) {
+                if (parent[right] != -1 && parent[right] != p)
+                    isBinaryTree = false;
+                else
+                    parent[right] = p;
+            }
+        }
 
-              if (right != -1) {
-                  if (parent[right] != -1 && parent[right] != p)
-                      isBinaryTree = false;
-                  else
-                      parent[right] = p;
-              }
-          }
+        int count = 0, root = -1;
+        for (int p = 0; p < n; p++) {
+            if (parent[p] == -1) {
+                count++;
+                root = p;
+            }
+        }
+        // only one root node doesn't have in edge, others have only one
+        // all nodes connected to root node
+        if (count != 1 || treeSize(root, leftChild, rightChild) != n)
+            isBinaryTree = false;
 
-          int count = 0, root = -1;
-          for (int p = 0; p < n; p++) {
-              if (parent[p] == -1) {
-                  count++;
-                  root = p;
-              }
-          }
-          if (count != 1 || treeSize(root, leftChild, rightChild) != n)
-              isBinaryTree = false;
+        return isBinaryTree;
+    }
 
-          return isBinaryTree;
-      }
+    private int treeSize(int root, int[] leftChild, int[] rightChild) {
+        if (root == -1)
+            return 0;
 
-      private int treeSize(int root, int[] leftChild, int[] rightChild) {
-          if (root == -1)
-              return 0;
-
-          return treeSize(leftChild[root], leftChild, rightChild) +
-                  treeSize(rightChild[root], leftChild, rightChild) +
-                  1;
-      }
-  }
-  ```
+        return treeSize(leftChild[root], leftChild, rightChild) +
+                treeSize(rightChild[root], leftChild, rightChild) +
+                1;
+    }
+}
+```
 
 ### :star:Q1373. [Maximum Sum BST in Binary Tree](https://leetcode.com/problems/maximum-sum-bst-in-binary-tree/)
 
 ```java
 class Solution {
-    int max = 0;
+    int maxSum = 0;
 
     public int maxSumBST(TreeNode root) {
-        isBST(root);
+        getTree(root);
 
-        return max;
+        return maxSum;
     }
 
-    private BST isBST(TreeNode root) {
+    private Tree getTree(TreeNode root) {
         if (root == null)
-            return new BST(0, 0, 0);
-
-        BST left = isBST(root.left);
-        BST right = isBST(root.right);
-
-        if (left == null || right == null)
             return null;
 
-        if (root.left == null && root.right == null) {
-            max = Math.max(max, root.val);
-            return new BST(root.val, root.val, root.val);
+        Tree left = getTree(root.left), right = getTree(root.right);
+        int min = 0, max = 0, sum = 0;
+        boolean isBST = false;
+
+        if (left == null && right == null) {
+            min = root.val;
+            max = root.val;
+            sum = root.val;
+            isBST = true;
         }
-        else if (root.left != null && root.right == null) {
-            if (root.val > left.max) {
-                int sum = left.sum + root.val;
-                max = Math.max(max, sum);
-                return new BST(sum, left.min, root.val);
+        else if (left != null && right == null) {
+            isBST = left.isBST && root.val > left.max;
+            if (isBST) {
+                min = left.min;
+                max = root.val;
+                sum = left.sum + root.val;
             }
         }
-        else if (root.left == null && root.right != null) {
-            if (root.val < right.min) {
-                int sum = right.sum + root.val;
-                max = Math.max(max, sum);
-                return new BST(sum, root.val, right.max);
+        else if (left == null && right != null) {
+            isBST = right.isBST && root.val < right.min;
+            if (isBST) {
+                min = root.val;
+                max = right.max;
+                sum = right.sum + root.val;
             }
         }
         else {
-            if (root.val > left.max && root.val < right.min) {
-                int sum = left.sum + right.sum + root.val;
-                max = Math.max(max, sum);
-                return new BST(sum, left.min, right.max);
+            isBST = (left.isBST && root.val > left.max) && (right.isBST && root.val < right.min);
+            if (isBST) {
+                min = left.min;
+                max = right.max;
+                sum = left.sum + right.sum + root.val;
             }
         }
 
-        return null;
+        if (isBST) {
+            maxSum = Math.max(sum, maxSum);
+            return new Tree(min, max, sum, true);
+        }
+        else
+            return new Tree(false);
     }
 
-
-    class BST {
-        int sum;
+    class Tree {
         int min;
         int max;
+        int sum;
+        boolean isBST;
 
-        public BST(int sum, int min, int max) {
-            this.sum = sum;
+        public Tree(boolean isBST) {
+            this.isBST = isBST;
+        }
+
+        public Tree(int min, int max, int sum, boolean isBST) {
             this.min = min;
             this.max = max;
+            this.sum = sum;
+            this.isBST = isBST;
         }
     }
 }

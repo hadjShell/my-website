@@ -9,98 +9,91 @@ editLink: false
 
 ### :star:Q785. [Is Graph Bipartite?](https://leetcode.com/problems/is-graph-bipartite/)
 
-- ```java
-  class Solution {
-      private boolean isBipartite = true;
+```java
+class Solution {
+    boolean isBipartite = true;
 
-      public boolean isBipartite(int[][] graph) {
-          // 0: not visited, 1: red, -1:green
-          int[] visited = new int[graph.length];
+    // simple undirected unconnected graph
+    public boolean isBipartite(int[][] graph) {
+        int size = graph.length;
+        // 0: non-visited, 1: red, -1: green
+        int[] visited = new int[size];
+        int color = 1;
 
-          // graph may not be connected
-          for (int v = 0; v < graph.length; v++) {
-              if (visited[v] == 0)    traverse(graph, v, 1, visited);
-          }
+        for (int v = 0; v < size; v++) {
+            if (visited[v] == 0)
+                dfs(v, graph, color, visited);
+        }
 
-          return isBipartite;
-      }
+        return isBipartite;
+    }
 
-      private void traverse(int[][] graph, int vertex, int fromColor, int[] visited) {
-          if (!isBipartite)
-              return;
+    private void dfs(int v, int[][] graph, int color, int[] visited) {
+        if (!isBipartite)
+            return;
 
-          if (vertex < 0 || vertex > graph.length)
-              return;
+        if (visited[v] != 0) {
+            isBipartite = visited[v] == color;
+            return;
+        }
 
-          if (visited[vertex] != 0) {
-              isBipartite = visited[vertex] != fromColor;
-              return;
-          }
-
-          visited[vertex] = -fromColor;
-          for (int v : graph[vertex]) {
-              traverse(graph, v, visited[vertex], visited);
-          }
-      }
-  }
-  ```
+        visited[v] = color;
+        for (int adjacency : graph[v]) {
+            dfs(adjacency, graph, -color, visited);
+        }
+    }
+}
+```
 
 ### Q886. [Possible Bipartition](https://leetcode.com/problems/possible-bipartition/)
 
-- ```java
-  class Solution {
-      private boolean isBipartite = true;
+```java
+class Solution {
+    boolean isBipartite = true;
 
-      public boolean possibleBipartition(int n, int[][] dislikes) {
-          List<Integer>[] graph = buildGraph(n, dislikes);
+    public boolean possibleBipartition(int n, int[][] dislikes) {
+        List<Integer>[] graph = buildGraph(n, dislikes);
+        int[] visited = new int[n];
+        int color = 1;
 
-          return isBipartite(graph);
-      }
+        for (int v = 0; v < n; v++) {
+            if (visited[v] == 0)
+                dfs(v, graph, color, visited);
+        }
 
-      private List<Integer>[] buildGraph(int n, int[][] dislikes) {
-          List<Integer>[] graph = new List[n + 1];
+        return isBipartite;
+    }
 
-          for (int i = 1; i <= n; i++)
-              graph[i] = new ArrayList<>();
+    private List<Integer>[] buildGraph(int n, int[][] edges) {
+        // undirected
+        List<Integer>[] graph = new List[n];
 
-          for (int[] edge : dislikes) {
-              int p1 = edge[0], p2 = edge[1];
+        for (int i = 0; i < graph.length; i++) {
+            graph[i] = new ArrayList<>();
+        }
 
-              graph[p1].add(p2);
-              graph[p2].add(p1);
-          }
+        for (int[] e : edges) {
+            int v1 = e[0] - 1, v2 = e[1] - 1;
+            graph[v1].add(v2);
+            graph[v2].add(v1);
+        }
 
-          return graph;
-      }
+        return graph;
+    }
 
-      private boolean isBipartite(List<Integer>[] graph) {
-          // 0: not visited, 1: red, -1:green
-          int[] visited = new int[graph.length];
+    private void dfs(int v, List<Integer>[] graph, int color, int[] visited) {
+        if (!isBipartite)
+            return;
 
-          // graph may not be connected
-          for (int v = 1; v < graph.length; v++) {
-              if (visited[v] == 0)    traverse(graph, v, 1, visited);
-          }
+        if (visited[v] != 0) {
+            isBipartite = visited[v] == color;
+            return;
+        }
 
-          return isBipartite;
-      }
-
-      private void traverse(List<Integer>[] graph, int vertex, int fromColor, int[] visited) {
-          if (!isBipartite)
-              return;
-
-          if (vertex < 1 || vertex > graph.length)
-              return;
-
-          if (visited[vertex] != 0) {
-              isBipartite = visited[vertex] != fromColor;
-              return;
-          }
-
-          visited[vertex] = -fromColor;
-          for (int v : graph[vertex]) {
-              traverse(graph, v, visited[vertex], visited);
-          }
-      }
-  }
-  ```
+        visited[v] = color;
+        for (int adj : graph[v]) {
+            dfs(adj, graph, -color, visited);
+        }
+    }
+}
+```

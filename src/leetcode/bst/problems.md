@@ -40,27 +40,29 @@ editLink: false
 
 ### :star: Q96. [Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees/)
 
-- ```java
-  class Solution {
-      private Map<Integer, Integer> result = new HashMap<>();
+- 分解 + DP
 
-      public int numTrees(int n) {
-          if (result.containsKey(n))
-              return result.get(n);
+```java
+class Solution {
+    int[] memo = new int[20];
 
-          if (n == 0 || n == 1)
-              return 1;
+    public int numTrees(int n) {
+        if (n == 0 || n == 1)
+            return 1;
 
-          int sum = 0;
-          for (int i = 1; i <= n; i++) {
-              sum += numTrees(i - 1) * numTrees(n - i);
-          }
+        if (memo[n] != 0)
+            return memo[n];
 
-          result.put(n, sum);
-          return sum;
-      }
-  }
-  ```
+        int result = 0;
+        for (int i = 1; i <= n; i++) {
+            result += numTrees(i - 1) * numTrees(n - i);
+        }
+        memo[n] = result;
+
+        return result;
+    }
+}
+```
 
 ### :star:Q98. [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
 
@@ -209,49 +211,49 @@ editLink: false
 - Follow up solution
   - Every `TreeNode` maintain another information `size` which store the size of current subtree whose root node is current node
 
-### :star:Q450. [Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/)
+### :heart:Q450. [Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/)
 
-- ```java
-  class Solution {
-      public TreeNode deleteNode(TreeNode root, int key) {
-          if (root == null)
-              return null;
+```java
+class Solution {
+    public TreeNode deleteNode(TreeNode root, int key) {
+        if (root == null)
+            return null;
 
-          if (root.val > key)
-              root.left = deleteNode(root.left, key);
-          else if (root.val < key)
-              root.right = deleteNode(root.right, key);
-          else {
-              if (isLeaf(root))
-                  root = null;
-              else if (root.left == null)
-                  root = root.right;
-              else if (root.right == null)
-                  root = root.left;
-              else {
-                  TreeNode leftMax = getMax(root.left);
-                  leftMax.left = deleteNode(root.left, leftMax.val);
-                  leftMax.right = root.right;
+        if (root.val > key)
+            root.left = deleteNode(root.left, key);
+        else if (root.val < key)
+            root.right = deleteNode(root.right, key);
+        else {
+            if (isLeaf(root))
+                root = null;
+            else if (root.left == null)
+                root = root.right;
+            else if (root.right == null)
+                root = root.left;
+            else {
+                TreeNode leftMax = getMax(root.left);
+                leftMax.left = deleteNode(root.left, leftMax.val);
+                leftMax.right = root.right;
 
-                  root = leftMax;
-              }
-          }
+                root = leftMax;
+            }
+        }
 
-          return root;
-      }
+        return root;
+    }
 
-      private TreeNode getMax(TreeNode root) {
-          while (root.right != null)
-              root = root.right;
+    private TreeNode getMax(TreeNode root) {
+        while (root.right != null)
+            root = root.right;
 
-          return root;
-      }
+        return root;
+    }
 
-      private boolean isLeaf(TreeNode root) {
-          return root.left == null && root.right == null;
-      }
-  }
-  ```
+    private boolean isLeaf(TreeNode root) {
+        return root.left == null && root.right == null;
+    }
+}
+```
 
 ### Q530. [Minimum Absolute Difference in BST](https://leetcode.com/problems/minimum-absolute-difference-in-bst/)
 

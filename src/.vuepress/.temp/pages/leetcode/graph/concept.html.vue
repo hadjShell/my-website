@@ -22,7 +22,7 @@
 <p>Simple graph</p>
 <ul>
 <li>
-<p>Graphs without <strong>self loop</strong> or <strong>multiple edges</strong></p>
+<p>Graphs without <strong>self edges</strong> or <strong>parallel edges</strong></p>
 </li>
 <li>
 <p><span v-pre class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mi>V</mi><mo>∗</mo><mo stretchy="false">(</mo><mi>V</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mi mathvariant="normal">/</mi><mn>2</mn><mo stretchy="false">]</mo><mo>≈</mo><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><msup><mi>V</mi><mn>2</mn></msup><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">E = [0, V*(V - 1) / 2] \approx [0, V^2]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mord">/2</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">]</span></span></span></span></p>
@@ -194,13 +194,13 @@
 <p class="hint-container-title">Tricks</p>
 <ul>
 <li>
-<p><strong>Adjacency lists</strong> are generally preferred for <strong>sparse graphs</strong>, while an <strong>adjacency matrix</strong> is preferred for <strong>dense graphs</strong></p>
+<p><strong>Adjacency lists</strong> are generally preferred for <strong>sparse graphs</strong>, while an <strong>adjacency matrix</strong> is preferred for <strong>dense graphs</strong>.</p>
 </li>
 <li>
-<p>Adjacency matrix can leverage matrix operations to solve some subtle problems</p>
+<p>Adjacency matrix can leverage matrix operations to solve some subtle problems.</p>
 </li>
 <li>
-<p><strong>The time complexity of operations in the adjacency list</strong> representation can be improved by storing the sets of <strong>adjacent vertices</strong> in more efficient data structures, such as <strong>hash tables</strong> or <strong>balanced BST</strong></p>
+<p><strong>The time complexity of operations in the adjacency list</strong> representation can be improved by storing the sets of <strong>adjacent vertices</strong> in more efficient data structures, such as <strong>hash tables</strong> or <strong>balanced BST</strong>.</p>
 </li>
 </ul>
 </div>
@@ -208,6 +208,7 @@
 <div class="hint-container tip">
 <p class="hint-container-title">Tips</p>
 <p>Just like tree, think what to do and when to do on a vertex.</p>
+<p>Prefer using adjacent list for leetcode problem.</p>
 </div>
 <h3 id="traversal" tabindex="-1"><a class="header-anchor" href="#traversal"><span>Traversal</span></a></h3>
 <div class="hint-container info">
@@ -239,6 +240,13 @@
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    // 后序位置</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">}</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+</ul>
+<div class="hint-container tip">
+<p class="hint-container-title">Tips</p>
+<p>DFS visits every reachable node and examines every reachable edge, but it only uses a subset of the edges—called <strong>DFS tree edges</strong>—to discover nodes.<br>
+For a connected graph, that subset contains <code v-pre>V - 1</code> edges, even when the graph contains many more than <code v-pre>V - 1</code> edges.</p>
+</div>
+<ul>
 <li>
 <div class="language-java line-numbers-mode" data-highlighter="shiki" data-ext="java" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code class="language-java"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">// 遍历所有边</span></span>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">// O(E + V^2)</span></span>
@@ -260,6 +268,14 @@
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">    }</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">}</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+</ul>
+<div class="hint-container tip">
+<p class="hint-container-title">Why do we need DFS all vertices?</p>
+<p>Suppose you want to perform an operation on every edge exactly once.<br>
+For a directed graph, you can process each edge as it appears using DFS all vertices code.<br>
+But for an undirected graph, this processes every edge twice: <code v-pre>a -&gt; b, b -&gt; a</code>. To process each undirected edge only once, you need to identify or mark edges.</p>
+</div>
+<ul>
 <li>
 <div class="language-java line-numbers-mode" data-highlighter="shiki" data-ext="java" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code class="language-java"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">// 遍历图的所有路径，寻找从 src 到 dest 的所有路径</span></span>
 <span class="line"></span>
@@ -293,8 +309,9 @@
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">    onPath[src] </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> false</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">}</span></span>
 <span class="line"></span>
-<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">// 因为前文遍历节点的代码中，visited 数组的职责是保证每个节点只会被访问一次。而对于图结构来说，要想遍历所有路径，可能会多次访问同一个节点，这是关键的区别。</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">// 因为前文遍历节点的代码中，visited 数组的职责是保证每个节点只会被访问一次。</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">// 而对于图结构来说，要想遍历所有路径，可能会多次访问同一个节点，这是关键的区别。</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 <li>
 <p><strong>同时使用<code v-pre>visited</code> and <code v-pre>onPath</code></strong></p>
 <ul>
