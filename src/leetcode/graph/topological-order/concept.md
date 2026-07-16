@@ -20,12 +20,12 @@ Dependecy Problem
 - **DAG** - Directed Acyclic Graph
 
 - Definition
-
   - A topological order of a directed graph G = (V, E) is an ordering of its nodes as v1, v2, …, vn so that for every edge (vi , vj ) we have i < j
   - ![](/assets/image/leetcode/topological.png)
+  - A **sink vertex** has no outgoing edges.
+  - A **source vertex** has no incoming edges.
 
 - Properties
-
   - If G is a **DAG**, then G has **a node with no entering edges (sink vertex)**
   - If G is a **DAG**, then **G has a topological ordering**
 
@@ -41,4 +41,4 @@ Dependecy Problem
 
 2. **把图结构后序遍历的结果进行反转，就是拓扑排序的结果** (可以和第一步同步进行)
 
-> 不前序的原因是一开始进去遍历的点不一定是 sink vertex
+> 不前序的原因是一开始进去遍历的点不一定是 source vertex.

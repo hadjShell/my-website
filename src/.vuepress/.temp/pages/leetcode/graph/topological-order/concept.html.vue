@@ -13,6 +13,8 @@
 <ul>
 <li>A topological order of a directed graph G = (V, E) is an ordering of its nodes as v1, v2, …, vn so that for every edge (vi , vj ) we have i &lt; j</li>
 <li><img src="/assets/image/leetcode/topological.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></li>
+<li>A <strong>sink vertex</strong> has no outgoing edges.</li>
+<li>A <strong>source vertex</strong> has no incoming edges.</li>
 </ul>
 </li>
 <li>
@@ -35,7 +37,7 @@
 <li><strong>把图结构后序遍历的结果进行反转，就是拓扑排序的结果</strong> (可以和第一步同步进行)</li>
 </ol>
 <blockquote>
-<p>不前序的原因是一开始进去遍历的点不一定是 sink vertex</p>
+<p>不前序的原因是一开始进去遍历的点不一定是 source vertex.</p>
 </blockquote>
 </div></template>
 
