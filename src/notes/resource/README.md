@@ -30,6 +30,12 @@ This repo contains useful resource related to various aspects of computing. Feel
 - [Memory Layout](https://upscfever.com/upsc-fever/en/gatecse/en-gatecse-chp159.html)
 - [Aleph1. Smashing the Stack for Fun and Profit. Phrack #49](https://phrack.org/issues/49/14#article)
 
+## Coding Style
+
+- [Google Style Guide](https://google.github.io/styleguide/)
+- [How to Write a Git Commit Message](https://cbea.ms/git-commit/)
+- [The Art of Writing Meaningful Git Commit Messages](https://medium.com/@iambonitheuri/the-art-of-writing-meaningful-git-commit-messages-a56887a4cb49)
+
 ## Articles
 
 - [The 7 Phases of the Internet](https://spectrum.ieee.org/history-of-internet-7-phases)
