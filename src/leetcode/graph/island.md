@@ -8,7 +8,7 @@ editLink: false
 
 ::: important Problem Domain
 
-DFS 2D array
+DFS 2D array. DFS every vertex.
 
 :::
 

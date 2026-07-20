@@ -11,7 +11,7 @@ editLink: false
 
 ::: important Problem Domain
 
-Two-color problem
+Two-color problem. DFS every vertex.
 
 :::
 

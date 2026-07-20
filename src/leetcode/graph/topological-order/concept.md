@@ -11,7 +11,7 @@ editLink: false
 
 ::: important Problem Domain
 
-Dependecy Problem
+Dependecy Problem. DFS path.
 
 依赖问题，首先想到的就是把问题转化成「**有向图**」这种数据结构，只要图中存在环，那就说明存在循环依赖
 
@@ -26,8 +26,9 @@ Dependecy Problem
   - A **source vertex** has no incoming edges.
 
 - Properties
-  - If G is a **DAG**, then G has **a node with no entering edges (sink vertex)**
-  - If G is a **DAG**, then **G has a topological ordering**
+  - If G is a **DAG**, then G has **a node with no entering edges (source vertex)**. (It can have multiple sink vertices.)
+    > If a DAG is not connected, it can have multiple source vertices.
+  - If G is a **DAG**, then **G has a topological ordering**.
 
 ## 🛠️ Algorithm
 
