@@ -1,7 +1,7 @@
 <template><div><h2 id="🧠-concept" tabindex="-1"><a class="header-anchor" href="#🧠-concept"><span>🧠 Concept</span></a></h2>
 <div class="hint-container important">
 <p class="hint-container-title">Problem Domain</p>
-<p>Dependecy Problem</p>
+<p>Dependecy Problem. DFS path.</p>
 <p>依赖问题，首先想到的就是把问题转化成「<strong>有向图</strong>」这种数据结构，只要图中存在环，那就说明存在循环依赖</p>
 </div>
 <ul>
@@ -20,8 +20,12 @@
 <li>
 <p>Properties</p>
 <ul>
-<li>If G is a <strong>DAG</strong>, then G has <strong>a node with no entering edges (sink vertex)</strong></li>
-<li>If G is a <strong>DAG</strong>, then <strong>G has a topological ordering</strong></li>
+<li>If G is a <strong>DAG</strong>, then G has <strong>a node with no entering edges (source vertex)</strong>. (It can have multiple sink vertices.)
+<blockquote>
+<p>If a DAG is not connected, it can have multiple source vertices.</p>
+</blockquote>
+</li>
+<li>If G is a <strong>DAG</strong>, then <strong>G has a topological ordering</strong>.</li>
 </ul>
 </li>
 </ul>

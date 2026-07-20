@@ -16,6 +16,12 @@
 <li><a href="https://upscfever.com/upsc-fever/en/gatecse/en-gatecse-chp159.html" target="_blank" rel="noopener noreferrer">Memory Layout</a></li>
 <li><a href="https://phrack.org/issues/49/14#article" target="_blank" rel="noopener noreferrer">Aleph1. Smashing the Stack for Fun and Profit. Phrack #49</a></li>
 </ul>
+<h2 id="coding-style" tabindex="-1"><a class="header-anchor" href="#coding-style"><span>Coding Style</span></a></h2>
+<ul>
+<li><a href="https://google.github.io/styleguide/" target="_blank" rel="noopener noreferrer">Google Style Guide</a></li>
+<li><a href="https://cbea.ms/git-commit/" target="_blank" rel="noopener noreferrer">How to Write a Git Commit Message</a></li>
+<li><a href="https://medium.com/@iambonitheuri/the-art-of-writing-meaningful-git-commit-messages-a56887a4cb49" target="_blank" rel="noopener noreferrer">The Art of Writing Meaningful Git Commit Messages</a></li>
+</ul>
 <h2 id="articles" tabindex="-1"><a class="header-anchor" href="#articles"><span>Articles</span></a></h2>
 <ul>
 <li><a href="https://spectrum.ieee.org/history-of-internet-7-phases" target="_blank" rel="noopener noreferrer">The 7 Phases of the Internet</a></li>

@@ -1,7 +1,7 @@
 <template><div><h2 id="🧠-concept" tabindex="-1"><a class="header-anchor" href="#🧠-concept"><span>🧠 Concept</span></a></h2>
 <div class="hint-container important">
 <p class="hint-container-title">Problem Domain</p>
-<p>Two-color problem</p>
+<p>Two-color problem. DFS every vertex.</p>
 </div>
 <ul>
 <li>

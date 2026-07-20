@@ -247,10 +247,8 @@ export const enSidebar = sidebar({
               children: "structure",
             },
             {
-              text: "⭐️Topological Sort",
-              collapsible: true,
-              prefix: "topological-order/",
-              children: "structure",
+              text: "⭐️Island Problem",
+              link: "island.md",
             },
             {
               text: "⭐️Eulerian Graph",
@@ -259,14 +257,16 @@ export const enSidebar = sidebar({
               children: "structure",
             },
             {
+              text: "⭐️Topological Sort",
+              collapsible: true,
+              prefix: "topological-order/",
+              children: "structure",
+            },
+            {
               text: "⭐️Union Find",
               collapsible: true,
               prefix: "union-find/",
               children: "structure",
-            },
-            {
-              text: "⭐️Island Problem",
-              link: "island.md",
             },
             {
               text: "⭐️BFS",
