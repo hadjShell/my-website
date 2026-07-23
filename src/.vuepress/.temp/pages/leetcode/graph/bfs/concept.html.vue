@@ -1,14 +1,10 @@
 <template><div><div class="hint-container important">
 <p class="hint-container-title">Problem Domain</p>
-<p><strong>Shortest path problem from one state to another state, edge weight == 1</strong>.<br>
-Normally the start state and end state is given, so bidirectional BFS can be used.</p>
+<p><strong>Shortest path problem</strong> from one node to another node. Normally the start node and end node is given, so bidirectional BFS can be used.</p>
+<p>The hardest part is to <strong>abstract the graph from the real-world scenario</strong>. Any graph problem that is given to you will not be written in a very clear manner that it is a graph problem. You have to deduce this fact by yourself.</p>
+<p>A graph is a collection of nodes and edges, where each node represents a state or an object and each edge represents a relationship or a transition between nodes.</p>
 </div>
 <h2 id="🧠-concept" tabindex="-1"><a class="header-anchor" href="#🧠-concept"><span>🧠 Concept</span></a></h2>
-<ul>
-<li>
-<p>Hardest part is to abstract the graph from the real-world scenario</p>
-</li>
-<li>
 <div class="language-java line-numbers-mode" data-highlighter="shiki" data-ext="java" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code class="language-java"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">// 从 s 开始 BFS 遍历图的所有节点，且记录遍历的步数</span></span>
 <span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">void</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> bfs</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">(</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">Graph</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> graph</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> int</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> s) {</span></span>
 <span class="line"><span style="--shiki-light:#C18401;--shiki-dark:#C678DD">    boolean</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">[] visited </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> new</span><span style="--shiki-light:#C18401;--shiki-dark:#C678DD"> boolean</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">[</span><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">graph</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">size</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">]</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
@@ -34,8 +30,10 @@ Normally the start state and end state is given, so bidirectional BFS can be use
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">        step</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">++;</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">    }</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">}</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-</ul>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container tip">
+<p class="hint-container-title">Tips</p>
+<p>Be creative with the data structure selection on <code v-pre>queue</code> and <code v-pre>visited</code>. For example, <code v-pre>queue</code> may be better with hash set; sometimes we may not need <code v-pre>visited</code> at all if we have fixed and unused options on each level.</p>
+</div>
 <h2 id="🛠️-trick-bidirectional-bfs" tabindex="-1"><a class="header-anchor" href="#🛠️-trick-bidirectional-bfs"><span>🛠️ Trick: Bidirectional BFS</span></a></h2>
 <ul>
 <li>

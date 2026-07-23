@@ -269,6 +269,12 @@ export const enSidebar = sidebar({
               children: "structure",
             },
             {
+              text: "⭐️DFS",
+              collapsible: true,
+              prefix: "dfs/",
+              children: "structure",
+            },
+            {
               text: "⭐️BFS",
               collapsible: true,
               prefix: "bfs/",
