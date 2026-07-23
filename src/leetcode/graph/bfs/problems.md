@@ -9,67 +9,284 @@ editLink: false
 
 ### :star:Q127. [Word Ladder](https://leetcode.com/problems/word-ladder/)
 
-- ```java
-  class Solution {
-      static char[] alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+```java
+class Solution {
 
-      public int ladderLength(String beginWord, String endWord, List<String> wordList) {
-          Set<String> dictionary = new HashSet<>(wordList);
+    static final char[] ALPHABET = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
 
-          if (!dictionary.contains(endWord))      return 0;
+    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+        int depth = 1;
+        boolean found = false;
+        Set<String> visited = new HashSet<>();
+        Deque<String> queue = new ArrayDeque<>();
+        Set<String> dict = new HashSet<>(wordList);
 
-          Set<String> q1 = new HashSet<>();
-          Set<String> q2 = new HashSet<>();
-          Set<String> visited = new HashSet<>();
-          int step = 0;
+        if (!dict.contains(endWord))
+            return 0;
 
-          q1.add(beginWord);
-          q2.add(endWord);
+        queue.offer(beginWord);
+        visited.add(beginWord);
+        while (!queue.isEmpty()) {
+            if (found)
+                break;
 
-          while (!q1.isEmpty() && !q2.isEmpty()) {
-              Set<String> temp = new HashSet<>();
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                if (found)
+                    break;
 
-              for (String word : q1) {
-                  if (q2.contains(word))
-                      return step + 1;
+                String word = queue.poll();
+                List<String> nextWords = getAdjacents(word);
+                for (String next : nextWords) {
+                    if (!visited.contains(next) && dict.contains(next)) {
+                        if (next.equals(endWord)) {
+                            found = true;
+                            break;
+                        }
+                        queue.offer(next);
+                        visited.add(next);
+                    }
+                }
+            }
+            depth++;
+        }
 
-                  visited.add(word);
-                  for (String next : neighbors(word)) {
-                      if (!dictionary.contains(next) || visited.contains(next))   continue;
-                      temp.add(next);
-                  }
-              }
+        return found ? depth : 0;
+    }
 
-              if (temp.size() < q2.size())
-                  q1 = temp;
-              else {
-                  q1 = q2;
-                  q2 = temp;
-              }
+    private List<String> getAdjacents(String word) {
+        List<String> result = new ArrayList<>();
 
-              step++;
-          }
+        for (int i = 0; i < word.length(); i++) {
+            for (char c : ALPHABET) {
+                StringBuilder sb = new StringBuilder(word);
+                if (c != word.charAt(i)) {
+                    sb.setCharAt(i, c);
+                    result.add(sb.toString());
+                }
+            }
+        }
 
-          return 0;
-      }
+        return result;
+    }
+}
+```
 
-      private List<String> neighbors(String s) {
-          List<String> l = new ArrayList<>();
+### :heart:Q126. [Word Ladder II](https://leetcode.com/problems/word-ladder-ii/description/)
 
-          for (int i = 0; i < s.length(); i++) {
-              for (char c : alphabet) {
-                  if (s.charAt(i) == c)      continue;
+- Idea:
+  1. BFS find the end vertex at the smallest level while forming the sequence tree from the end vertex to start vertex;
+  2. Backtracking the sequence tree to get all sequences.
 
-                  char[] chars = s.toCharArray();
-                  chars[i] = c;
-                  l.add(new String(chars));
-              }
-          }
+- Understand the level deletion in BFS, without it we may end up with:
+  1. Miss valid answer because we skip the visited vertex which may be able to form a correct shortest sequence;
+  2. Stack overflow because we try to build parent list for every vertex even though it's visited, and we end up in loops.
 
-          return l;
-      }
-  }
-  ```
+```java
+class Solution {
+
+    public List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {
+        List<List<String>> result = new ArrayList<>();
+        Set<String> dict = new HashSet<>(wordList);
+
+        if (!dict.contains(endWord))
+            return result;
+
+        boolean found = false;
+        Set<String> level = new HashSet<>();
+        Map<String, Set<String>> parents = new HashMap<>();
+
+        level.add(beginWord);
+        while (!level.isEmpty() && !found) {
+            dict.removeAll(level);
+            Set<String> nextLevel = new HashSet<>();
+
+            for (String word : level) {
+                for (String next : dict) {
+                    if (!isAdjacent(word, next)) {
+                        continue;
+                    }
+                    nextLevel.add(next);
+                    parents.computeIfAbsent(next, _ -> new HashSet<>()).add(word);
+                    if (next.equals(endWord)) {
+                        found = true;
+                    }
+                }
+            }
+
+            level = nextLevel;
+        }
+
+        if (!found)
+            return result;
+
+        List<String> path = new ArrayList<>();
+        path.add(endWord);
+        backtrack(endWord, beginWord, parents, path, result);
+
+        return result;
+    }
+
+    private void backtrack(String root, String end, Map<String, Set<String>> edges, List<String> path, List<List<String>> result) {
+        if (root.equals(end)) {
+            result.add(List.copyOf(path.reversed()));
+            return;
+        }
+
+        for (String next : edges.get(root)) {
+            path.add(next);
+            backtrack(next, end, edges, path, result);
+            path.removeLast();
+        }
+    }
+
+    private boolean isAdjacent(String w1, String w2) {
+        int diff = 0;
+        for (int i = 0; i < w1.length(); i++) {
+            if (diff > 1)
+                break;
+            if (w1.charAt(i) != w2.charAt(i)) {
+                diff++;
+            }
+        }
+
+        return diff == 1;
+    }
+}
+```
+
+### Q133. [Clone Graph](https://leetcode.com/problems/clone-graph/)
+
+```java
+class Solution {
+    public Node cloneGraph(Node node) {
+        if (node == null)
+            return null;
+
+        Deque<Node> queue = new ArrayDeque<>();
+        Set<Node> visited = new HashSet<>();
+        Map<Node, Node> oldToNew = new HashMap<>();
+
+        queue.add(node);
+        visited.add(node);
+        copyVal(node, oldToNew);
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                Node oldNode = queue.poll();
+                for (Node oldNeighbor : oldNode.neighbors) {
+                    if (!oldToNew.containsKey(oldNeighbor)) {
+                        copyVal(oldNeighbor, oldToNew);
+                    }
+                    if (!visited.contains(oldNeighbor)) {
+                        queue.offer(oldNeighbor);
+                        visited.add(oldNeighbor);
+                    }
+                }
+                copyNeighbors(oldNode, oldToNew);
+            }
+        }
+
+        return oldToNew.get(node);
+    }
+
+    private Node copyVal(Node old, Map<Node, Node> oldToNew) {
+        Node newNode = new Node(old.val);
+        oldToNew.put(old, newNode);
+
+        return newNode;
+    }
+
+    private void copyNeighbors(Node old, Map<Node, Node> oldToNew) {
+        Node newNode = oldToNew.get(old);
+        for (Node oldNeighbor : old.neighbors) {
+            newNode.neighbors.add(oldToNew.get(oldNeighbor));
+        }
+    }
+}
+```
+
+### :star:Q301. [Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/)
+
+```java
+class Solution {
+    public List<String> removeInvalidParentheses(String s) {
+        List<String> result = new ArrayList<>();
+
+        if (isValidString(s)) {
+            result.add(s);
+            return result;
+        }
+
+
+        Deque<String> queue = new ArrayDeque<>();
+        Set<String> visited = new HashSet<>();
+        boolean foundValidLevel = false;
+
+        queue.offer(s);
+        visited.add(s);
+        while (!queue.isEmpty() && !foundValidLevel) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                String curr = queue.poll();
+                for (String next : deleteOneParenthesis(curr)) {
+                    if (isValidString(next)) {
+                        if (!visited.contains(next))
+                            result.add(next);
+                        visited.add(next);
+                        foundValidLevel = true;
+                    }
+                    if (!visited.contains(next)) {
+                        queue.offer(next);
+                        visited.add(next);
+                    }
+                }
+            }
+        }
+
+        return result;
+    }
+
+    private List<String> deleteOneParenthesis(String s) {
+        List<String> result = new ArrayList<>();
+
+        if (s.isEmpty())
+            return result;
+
+        for (int i = 0; i < s.length(); i++) {
+            if (Character.isLetter(s.charAt(i)))
+                continue;
+
+            StringBuilder sb = new StringBuilder(s);
+            sb.deleteCharAt(i);
+            result.add(sb.toString());
+        }
+
+        return result;
+    }
+
+    private boolean isValidString(String s) {
+        Deque<Character> stack = new ArrayDeque<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (c == '(') {
+                stack.push(c);
+            }
+            else if (c == ')') {
+                if (stack.isEmpty())
+                    return false;
+                else
+                    stack.pop();
+            }
+            else
+                continue;
+        }
+
+        return stack.isEmpty();
+    }
+}
+```
 
 ### Q365. [Water and Jug Problem](https://leetcode.com/problems/water-and-jug-problem/)
 
@@ -189,69 +406,70 @@ editLink: false
 
 ### :heart:Q752. [Open the Lock](https://leetcode.com/problems/open-the-lock/)
 
-- ```java
-  // Bidirectional BFS
-  class Solution {
-      public int openLock(String[] deadends, String target) {
-          Set<String> q1 = new HashSet<>();
-          Set<String> q2 = new HashSet<>();
-          Set<String> visited = new HashSet<>();
-          int turn = 0;
-          String start = "0000";
+- Bidirectional BFS
 
-          for (String d : deadends) {
-              if (d.equals(start) || d.equals(target))
-                  return -1;
+```java
+class Solution {
+    public int openLock(String[] deadends, String target) {
+        Set<String> visited = new HashSet<>(Arrays.stream(deadends).toList());
 
-              visited.add(d);
-          }
+        if (visited.contains("0000"))
+            return -1;
+        if (target.equals("0000"))
+            return 0;
 
-          q1.add(start);
-          q2.add(target);
+        Set<String> levelStart = new HashSet<>();
+        Set<String> levelEnd = new HashSet<>();
+        int step = 0;
+        boolean found = false;
 
-          while (!q1.isEmpty() && !q2.isEmpty()) {
-              Set<String> temp = new HashSet<>();
+        levelStart.add("0000");
+        visited.add("0000");
+        levelEnd.add(target);
+        visited.add(target);
 
-              for (String state : q1) {
-                  if (q2.contains(state))
-                      return turn;
+        while (!levelStart.isEmpty() && !levelEnd.isEmpty() && !found) {
+            Set<String> levelSmall = levelStart.size() < levelEnd.size() ? levelStart : levelEnd;
+            Set<String> levelBig = levelSmall == levelStart ? levelEnd : levelStart;
+            Set<String> level = new HashSet<>();
+            for (String state : levelSmall) {
+                for (String next : getNextMoves(state)) {
+                    if (levelBig.contains(next)) {
+                        found = true;
+                        break;
+                    }
+                    if (!visited.contains(next)) {
+                        level.add(next);
+                        visited.add(next);
+                    }
+                }
+            }
+            levelSmall.clear();
+            levelSmall.addAll(level);
+            step++;
+        }
 
-                  // notice when to set visited true
-                  visited.add(state);
-                  for (int k = 0; k < state.length(); k++) {
-                      String up = rotateUp(state, k), down = rotateDown(state, k);
+        return found ? step : -1;
+    }
 
-                      if (!visited.contains(up))      temp.add(up);
-                      if (!visited.contains(down))    temp.add(down);
-                  }
-              }
+    private List<String> getNextMoves(String state) {
+        List<String> result = new ArrayList<>();
+        StringBuilder sb = new StringBuilder(state);
+        for (int i = 0; i < sb.length(); i++) {
+            char c = sb.charAt(i);
+            char c1 = c == '0' ? '9' : (char) (c - 1);
+            char c2 = c == '9' ? '0' : (char) (c + 1);
+            sb.setCharAt(i, c1);
+            result.add(sb.toString());
+            sb.setCharAt(i, c2);
+            result.add(sb.toString());
+            sb.setCharAt(i, c);
+        }
 
-              if (q2.size() < temp.size()) {
-                  q1 = q2;
-                  q2 = temp;
-              }
-              else
-                  q1 = temp;
-
-              turn++;
-          }
-
-          return -1;
-      }
-
-      private String rotateUp(String s, int i) {
-          char[] c = s.toCharArray();
-          c[i] = c[i] == '9' ? '0' : (char) (c[i] + 1);
-          return new String(c);
-      }
-
-      private String rotateDown(String s, int i) {
-          char[] c = s.toCharArray();
-          c[i] = c[i] == '0' ? '9' : (char) (c[i] - 1);
-          return new String(c);
-      }
-  }
-  ```
+        return result;
+    }
+}
+```
 
 ### Q773. [Sliding Puzzle](https://leetcode.com/problems/sliding-puzzle/)
 
@@ -312,6 +530,75 @@ editLink: false
       }
   }
   ```
+
+### :star:Q778. [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)
+
+```java
+class Solution {
+
+    static final int[][] DIR = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+
+    public int swimInWater(int[][] grid) {
+        int n = grid.length;
+        Deque<Record> queue = new ArrayDeque<>();
+        Map<Integer, Record> visited = new HashMap<>();
+
+        Record start = new Record(0, 0, grid[0][0], grid[0][0]);
+        queue.offer(start);
+        visited.put(hash(0, 0, n), start);
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int c = 0; c < size; c++) {
+                Record curr = queue.poll();
+                for (int[] d : DIR) {
+                    int i = curr.i + d[0], j = curr.j + d[1];
+                    if (i < 0 || i >= n || j < 0 || j >= n)
+                        continue;
+
+                    int hash = hash(i, j, n);
+                    int time = curr.elevation >= grid[i][j] ? curr.time : curr.time + grid[i][j] - curr.elevation;
+                    int elevation = Math.max(curr.elevation, grid[i][j]);
+
+                    if (!visited.containsKey(hash)) {
+                        Record r = new Record(i, j, time, elevation);
+                        visited.put(hash, r);
+                        queue.offer(r);
+                    }
+                    else {
+                        Record prev = visited.get(hash);
+                        if (time < prev.time) {
+                            prev.time = time;
+                            prev.elevation = elevation;
+                            queue.offer(prev);
+                        }
+                    }
+                }
+            }
+        }
+
+        return visited.get(hash(n - 1, n - 1, n)).time;
+    }
+
+    class Record {
+        int i;
+        int j;
+        // minimum time reach node (i, j)
+        int time;
+        int elevation;
+
+        public Record(int i, int j, int time, int elevation) {
+            this.i = i;
+            this.j = j;
+            this.time = time;
+            this.elevation = elevation;
+        }
+    }
+
+    private int hash(int i, int j, int n) {
+        return i * n + j;
+    }
+}
+```
 
 ### Q909. [Snakes and Ladders](https://leetcode.com/problems/snakes-and-ladders/)
 
